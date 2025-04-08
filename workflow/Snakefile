@@ -1,0 +1,4 @@
+from snakemake.utils import min_version
+min_version("9.0")
+
+include: "rules/athena_dev.smk"
