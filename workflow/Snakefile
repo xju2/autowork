@@ -1,4 +1,5 @@
 from snakemake.utils import min_version
 min_version("9.0")
 
+configfile: "config/config.yaml"
 include: "rules/athena_dev.smk"
