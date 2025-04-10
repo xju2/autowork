@@ -1,1 +1,2 @@
 athena_dev_container: "docexoty/alma9-atlasos-dev:latest"
+athean_dev_gpu_container: "beojan/mpicuda9-2:latest"

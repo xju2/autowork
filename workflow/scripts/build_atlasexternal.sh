@@ -1,12 +1,14 @@
 #!/bin/bash
-AtlasExternals_URL="https://gitlab.cern.ch/xju/atlasexternals.git"
+AtlasExternals_URL="https://gitlab.cern.ch/athena/atlasexternals.git"
 AtlasExternals_REF="origin/debug_mr_triton"
 NWORKERS=32
 CLONE_SOURCE=false
+SOURCEDIR=$(pwd)
+OUTFILE="build.log"
 
-HELP_MSG="Usage: $0 [-s] [-u url] [-r ref] [-j nworkers] <output_file> <source_directory>"
+HELP_MSG="Usage: $0 [-s] [-u url] [-r ref] [-j nworkers] [-d source_directory] [-o output_file]"
 
-while getopts ":su:r:j:" opt; do
+while getopts ":su:r:j:d:o:" opt; do
   case ${opt} in
     u )
       AtlasExternals_URL=$OPTARG
@@ -20,22 +22,20 @@ while getopts ":su:r:j:" opt; do
     s )
       CLONE_SOURCE=true
       ;;
+    d )
+      SOURCEDIR=$OPTARG
+      ;;
+    o )
+      OUTFILE=$OPTARG
+      ;;
     \? )
       echo $HELP_MSG
       exit 1
       ;;
   esac
 done
-shift $((OPTIND -1))
 
-
-if [ "$#" -ne 2 ]; then
-    echo $HELP_MSG
-    exit 1
-fi
-
-OUTFILE=$(realpath "$1")
-SOURCEDIR=$2
+OUTFILE=$(realpath "$OUTFILE")
 
 ## log the parameters...
 echo "Running $0 on $(date) @ $(hostname)" > $OUTFILE
