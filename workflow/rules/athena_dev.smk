@@ -8,7 +8,7 @@ rule build_atlasexternal:
         external_ref = "origin/main",
         num_workers = 32,
     shell:
-        "shifter --image={config[athean_dev_gpu_container]} --module=cvmfs workflow/scripts/build_athena.sh -u {params.external_url} -r {params.external_ref} -d {params.source_dir} -j {params.num_workers} -o {output[0]}"
+        "shifter --image={config[athean_dev_gpu_container]} --module=cvmfs,gpu workflow/scripts/build_athena.sh -u {params.external_url} -r {params.external_ref} -d {params.source_dir} -j {params.num_workers} -o {output[0]}"
 
 
 rule build_athena_with_external:
@@ -20,5 +20,13 @@ rule build_athena_with_external:
         source_dir = "/pscratch/sd/x/xju/athena_dev/check_ort_cuda",
         num_workers = 32,
     shell:
-        "shifter --image={config[athean_dev_gpu_container]} --module=cvmfs workflow/scripts/build_athena.sh -a -d {params.source_dir} -j {params.num_workers} -o {output[0]}"
-        
+        "shifter --image={config[athean_dev_gpu_container]} --module=cvmfs,gpu workflow/scripts/build_athena.sh -a -d {params.source_dir} -j {params.num_workers} -o {output[0]}"
+
+
+rule build_traccc:
+    output:
+        "build_traccc.out"
+    params:
+        source_dir = "/pscratch/sd/x/xju/code/G-200",
+    shell:
+        "shifter --image={config[athean_dev_gpu_container]} --module=cvmfs,gpu workflow/scripts/build_traccc.sh -o {output[0]}"
