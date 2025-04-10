@@ -20,4 +20,5 @@ rule build_athena_with_external:
         source_dir = "/pscratch/sd/x/xju/athena_dev/check_ort_cuda",
         num_workers = 32,
     shell:
-        "shifter --image={config[athean_dev_gpu_container]} --module=cvmfs workflow/scripts/build_athena_with_external.sh -d {params.source_dir} -e {params.external_dir} -j {params.num_workers} -o {output[0]}"
+        "shifter --image={config[athean_dev_gpu_container]} --module=cvmfs workflow/scripts/build_athena.sh -a -d {params.source_dir} -j {params.num_workers} -o {output[0]}"
+        
