@@ -28,5 +28,6 @@ rule build_traccc:
         "build_traccc.out"
     params:
         source_dir = "/pscratch/sd/x/xju/code/G-200",
+        num_workers = 32,
     shell:
-        "shifter --image={config[athean_dev_gpu_container]} --module=cvmfs,gpu workflow/scripts/build_traccc.sh -o {output[0]}"
+        "shifter --image={config[athean_dev_gpu_container]} --module=cvmfs,gpu workflow/scripts/build_traccc.sh -d {params.source_dir} -j {params.num_workers} -o {output[0]}"

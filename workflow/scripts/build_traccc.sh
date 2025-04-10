@@ -4,9 +4,9 @@ SOURCEDIR=$(pwd)
 OUTFILE="build.log"
 NWORKERS=32
 
-HELP_MSG="Usage: $0 [-d source_directory] [-o output_file] [-j nworkers]\n"
+HELP_MSG="Usage: $0 [-d source_directory] [-o output_file] [-j nworkers]"
 
-while getopts ":d:o:" opt; do
+while getopts ":d:o:j:" opt; do
   case ${opt} in
     d )
       SOURCEDIR=$OPTARG
