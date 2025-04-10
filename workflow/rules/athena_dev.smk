@@ -8,4 +8,16 @@ rule build_atlasexternal:
         external_ref = "origin/main",
         num_workers = 32,
     shell:
-        "shifter --image={config[athean_dev_gpu_container]} --module=cvmfs workflow/scripts/build_atlasexternal.sh -u {params.external_url} -r {params.external_ref} -d {params.source_dir} -j {params.num_workers} -o {output[0]}"
+        "shifter --image={config[athean_dev_gpu_container]} --module=cvmfs workflow/scripts/build_athena.sh -u {params.external_url} -r {params.external_ref} -d {params.source_dir} -j {params.num_workers} -o {output[0]}"
+
+
+rule build_athena_with_external:
+    input:
+        "build_atlasexternal.out"
+    output:
+        "build_athena_with_external.out"
+    params:
+        source_dir = "/pscratch/sd/x/xju/athena_dev/check_ort_cuda",
+        num_workers = 32,
+    shell:
+        "shifter --image={config[athean_dev_gpu_container]} --module=cvmfs workflow/scripts/build_athena_with_external.sh -d {params.source_dir} -e {params.external_dir} -j {params.num_workers} -o {output[0]}"

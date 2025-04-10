@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 AtlasExternals_URL="https://gitlab.cern.ch/athena/atlasexternals.git"
 AtlasExternals_REF="origin/debug_mr_triton"
 NWORKERS=32
@@ -61,8 +61,6 @@ source /global/cfs/cdirs/atlas/scripts/setupATLAS.sh
 setupATLAS
 asetup none,gcc13,cmakesetup --cmakeversion=3.30.5
 
-export PATH=/cvmfs/sft.cern.ch/lcg/contrib/ninja/1.11.1/Linux-x86_64/bin:$PATH
-export ATLASAuthXML=/global/cfs/cdirs/atlas/xju/data/xml
 
 export AtlasExternals_URL=$AtlasExternals_URL
 export AtlasExternals_REF=$AtlasExternals_REF
@@ -70,7 +68,7 @@ export AtlasExternals_REF=$AtlasExternals_REF
 export G4PATH=/cvmfs/atlas-nightlies.cern.ch/repo/sw/main_Athena_x86_64-el9-gcc13-opt/Geant4
 
 rm -rf build && mkdir build
-./athena/Projects/Athena/build_externals.sh -t Release -k "-j${NWORKERS}" 2>&1 | tee build/log.external.txt
+time ./athena/Projects/Athena/build_externals.sh -t Release -k "-j${NWORKERS}" 2>&1 | tee build/log.external.txt
 
 echo "-----------------------------------" >> $OUTFILE
 echo "DONE on $(date)" >> $OUTFILE
