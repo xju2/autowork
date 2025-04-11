@@ -36,13 +36,26 @@ echo "NWORKERS: ${NWORKERS}" >> $OUTFILE
 
 cd $SOURCEDIR || { echo "Failed to change directory to $SOURCEDIR"; exit 1; }
 
+# deactivate the herited python environment.
+deactivate
+
+# load the ATLAS environment
 source /global/cfs/cdirs/atlas/scripts/setupATLAS.sh
 setupATLAS
 asetup Athena,main,here,latest
-# asetup main,Athena,2025-03-03T2101
 
-CUDACXX=/usr/local/cuda/bin/nvcc cmake -S traccc-athena -B build -DCMAKE_CUDA_ARCHITECTURES=80
-cmake --build build -- -j $NWORKERS
+cd build || { echo "Failed to change directory to `build`"; exit 1; }
+env > envlog.log
+source */setup.sh
+export `grep CMAKE_PREFIX_PATH envlog.log`
 
-echo "-----------------------------------" >> $OUTFILE
-echo "Date: $(date)" >> $OUTFILE
+cd ../run
+
+# run the G300 chain:
+Reco_tf.py --CA \
+    --preInclude "InDetConfig.ConfigurationHelpers.OnlyTrackingPreInclude" \
+    --inputRDOFile '/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/PhaseIIUpgrade/RDO/ATLAS-P2-RUN4-03-00-00/mc21_14TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.recon.RDO.e8481_s4149_r14700/RDO.33629020._000047.pool.root.1' \
+    --outputAODFile AOD.test.root \
+    --steering doRAWtoALL  \
+    --postInclude "EFTracking.TrackingAlgG300Config.TrackingAlgG300Cfg" \
+    --maxEvents 1

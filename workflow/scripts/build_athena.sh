@@ -6,10 +6,11 @@ CLONE_SOURCE=false
 SOURCEDIR=$(pwd)
 OUTFILE="build.log"
 DO_EXTERNAL=true
+EXCMAKEARGS=""
 
-HELP_MSG="Usage: $0 [-s] [-u url] [-r ref] [-j nworkers] [-d source_directory] [-o output_file] [-a]"
+HELP_MSG="Usage: $0 [-s] [-u url] [-r ref] [-j nworkers] [-d source_directory] [-o output_file] [-a] [-x cmakeargs]"
 
-while getopts ":su:r:j:d:o:" opt; do
+while getopts ":su:r:j:d:o:x:a" opt; do
   case ${opt} in
     u )
       AtlasExternals_URL=$OPTARG
@@ -32,6 +33,9 @@ while getopts ":su:r:j:d:o:" opt; do
     a )
       DO_EXTERNAL=false
       ;;
+    x )
+      EXCMAKEARGS=$OPTARG
+      ;;
     \? )
       echo $HELP_MSG
       exit 1
@@ -51,7 +55,7 @@ echo "CLONE_SOURCE: ${CLONE_SOURCE}" >> $OUTFILE
 echo "Output file: ${OUTFILE}" >> $OUTFILE
 echo "Source directory: ${SOURCEDIR}" >> $OUTFILE
 echo "DO_EXTERNAL: ${DO_EXTERNAL}" >> $OUTFILE
-
+echo "EXCMAKEARGS: ${EXCMAKEARGS}" >> $OUTFILE
 
 # if [ "$CLONE_SOURCE" = true ]; then
 #     echo "Cloning source code from $AtlasExternals_URL" >> $OUTFILE
@@ -61,6 +65,41 @@ echo "DO_EXTERNAL: ${DO_EXTERNAL}" >> $OUTFILE
 # fi
 
 cd $SOURCEDIR || { echo "Failed to change directory to $SOURCEDIR"; exit 1; }
+
+# deactivate the inherited python environment.
+function deactivate () {
+    # reset old environment variables
+    if [ -n "${_OLD_VIRTUAL_PATH:-}" ] ; then
+        PATH="${_OLD_VIRTUAL_PATH:-}"
+        export PATH
+        unset _OLD_VIRTUAL_PATH
+    fi
+    if [ -n "${_OLD_VIRTUAL_PYTHONHOME:-}" ] ; then
+        PYTHONHOME="${_OLD_VIRTUAL_PYTHONHOME:-}"
+        export PYTHONHOME
+        unset _OLD_VIRTUAL_PYTHONHOME
+    fi
+
+    # Call hash to forget past commands. Without forgetting
+    # past commands the $PATH changes we made may not be respected
+    hash -r 2> /dev/null
+
+    if [ -n "${_OLD_VIRTUAL_PS1:-}" ] ; then
+        PS1="${_OLD_VIRTUAL_PS1:-}"
+        export PS1
+        unset _OLD_VIRTUAL_PS1
+    fi
+
+    unset VIRTUAL_ENV
+    unset VIRTUAL_ENV_PROMPT
+    if [ ! "${1:-}" = "nondestructive" ] ; then
+    # Self destruct!
+        unset -f deactivate
+    fi
+}
+
+# unset irrelevant variables
+deactivate nondestructive
 
 source /global/cfs/cdirs/atlas/scripts/setupATLAS.sh 
 setupATLAS
@@ -72,14 +111,15 @@ export AtlasExternals_REF=$AtlasExternals_REF
 
 export G4PATH=/cvmfs/atlas-nightlies.cern.ch/repo/sw/main_Athena_x86_64-el9-gcc13-opt/Geant4
 
-if [ "$DO_EXTERNAL" = true ]; then
+if [ "$DO_EXTERNAL" = "true" ]; then
   echo "Building external dependencies..." >> $OUTFILE
   time ./athena/Projects/Athena/build_externals.sh -t Release \
+      -x "${EXCMAKEARGS}" \
       -k "-j${NWORKERS}" 2>&1 | tee build/log.external.txt
 else
   echo "Building Athena on top of the external dependencies build..." >> $OUTFILE
   time ./athena/Projects/Athena/build.sh -acmi \
-    -x "-DATLAS_ENABLE_CI_TESTS=TRUE -DATLAS_EXTERNAL=${ATLASAuthXML} -DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE " \
+    -x "-DATLAS_ENABLE_CI_TESTS=TRUE -DATLAS_EXTERNAL=${ATLASAuthXML} -DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE ${EXCMAKEARGS}" \
     -k "-j${NWORKERS}" 2>&1 | tee build/log.build.athena.txt
 fi
 
