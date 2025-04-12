@@ -39,7 +39,6 @@ cd $SOURCEDIR || { echo "Failed to change directory to $SOURCEDIR"; exit 1; }
 source /global/cfs/cdirs/atlas/scripts/setupATLAS.sh
 setupATLAS
 asetup Athena,main,here,latest
-# asetup main,Athena,2025-03-03T2101
 
 CUDACXX=/usr/local/cuda/bin/nvcc cmake -S traccc-athena -B build -DCMAKE_CUDA_ARCHITECTURES=80
 cmake --build build -- -j $NWORKERS
