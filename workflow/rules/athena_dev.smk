@@ -34,6 +34,18 @@ rule build_athena_with_external:
           -j {params.num_workers} -o "{output[0]}"
         """
 
+rule test_athena_with_external:
+    input:
+        "build_athena_with_external.out"
+    output:
+        "test_athena_with_external.out"
+    params:
+        source_dir = "/pscratch/sd/x/xju/athena_dev/check_ort_cuda",
+        release = "25.0.30",
+    shell:
+        """shifter --image={config[athena_dev_gpu_container]} --module=cvmfs,gpu \
+        workflow/scripts/test_athena.sh -d {params.source_dir} -o "{output[0]}"
+        """
 
 rule build_traccc:
     output:
