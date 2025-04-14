@@ -54,7 +54,10 @@ rule build_traccc:
         source_dir = "/pscratch/sd/x/xju/code/G-200",
         num_workers = 32,
     shell:
-        "shifter --image={config[athean_dev_gpu_container]} --module=cvmfs,gpu workflow/scripts/build_traccc.sh -d {params.source_dir} -j {params.num_workers} -o {output[0]}"
+        """shifter --image={config[athena_dev_gpu_container]} --module=cvmfs,gpu \
+        workflow/scripts/build_traccc.sh -d "{params.source_dir}" \
+        -j {params.num_workers} -o "{output[0]}"
+        """
 
 rule run_traccc:
     input:
@@ -65,4 +68,7 @@ rule run_traccc:
         source_dir = "/pscratch/sd/x/xju/code/G-200",
         num_workers = 32,
     shell:
-        "shifter --image={config[athean_dev_gpu_container]} --module=cvmfs,gpu workflow/scripts/run_traccc.sh -d {params.source_dir} -j {params.num_workers} -o {output[0]}"
+        """shifter --image={config[athena_dev_gpu_container]} --module=cvmfs,gpu \
+         workflow/scripts/run_traccc.sh -d "{params.source_dir}" \
+         -j {params.num_workers} -o "{output[0]}"
+         """
