@@ -50,32 +50,28 @@ rule test_athena_with_external:
         workflow/scripts/test_athena.sh -d {params.source_dir} -o "{output}"
         """
 
-rule build_traccc:
+
+rule build_custom_athena:
+    input:
+        "projects/athena/custom_config.{trialname}.json"
     output:
-        "build_traccc.out"
+        "projects/athena/custom_config.{trialname}.out"
     params:
-        source_dir = config["traccc_source_dir"],
         num_workers = 32,
         container_name = config["athena_dev_gpu_container"],
+    log:
+        "projects/athena/custom_config.{trialname}.log"
     shell:
         """shifter --image={params.container_name} --module=cvmfs,gpu \
-        workflow/scripts/build_traccc.sh -d "{params.source_dir}" \
-        -j {params.num_workers} -o "{output}"
+        workflow/scripts/local_athena.sh -i "{input}" -o "{output}" \
+        > "{log}" 2>&1
         """
 
-rule run_traccc:
+rule build_custom_athena_gnn4itkTool:
     input:
-        "build_traccc.out"
+        "projects/athena/custom_config.gnn4itkTool.out"
     output:
-        "run_traccc.out"
-    params:
-        source_dir = config["traccc_source_dir"],
-        num_workers = 32,
-        do_G300 = "true",
-        container_name = config["athena_dev_gpu_container"],
+        "projects/athena/custom_config.gnn4itkTool.done"
     shell:
-        """shifter --image={params.container_name} --module=cvmfs,gpu \
-         workflow/scripts/run_traccc.sh -d "{params.source_dir}" \
-         -j {params.num_workers} -o "{output}" \
-         -g {params.do_G300}
-         """
+        """touch {output}"""
+

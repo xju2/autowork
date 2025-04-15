@@ -6,9 +6,10 @@ report: "report/workflow.rst"
 
 
 include: "rules/athena_dev.smk"
-include: "rules/gnn4itk.smk"
+include: "rules/traccc.smk"
+include: "rules/tracking.smk"
 
 rule all:
     input:
-        "workarea/gnn4itk/ttbar/aod.gnn4itkMLLocal.ttbar.root"
-        # "workarea/gnn4itk/ttbar/aod.ckf.ttbar.root"
+        "workarea/tracking/ttbar/aod.gnn4itkMLLocal.ttbar.root"
+        # "workarea/tracking/ttbar/aod.ckf.ttbar.root"

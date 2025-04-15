@@ -104,7 +104,6 @@ elif [[ "$CHAINNAME" == "GNN4ITk_ML_LOCAL" ]]; then
         --digiSteeringConf 'StandardInTimeOnlyTruth' \
         --postInclude 'all:PyJobTransforms.UseFrontier' \
         --preInclude 'all:Campaigns.PhaseIIPileUp200' 'InDetConfig.ConfigurationHelpers.OnlyTrackingPreInclude' 'InDetGNNTracking.InDetGNNTrackingFlags.gnnFinderValidation' \
-        --preExec "flags.Tracking.GNN.Triton.model = \"${ModelName}\";' \
         --inputRDOFile "${RDO_FILENAME}" \
         --outputAODFile "${OUTFILE}"  \
         --jobNumber '1' \
