@@ -1,10 +1,10 @@
 rule run_legacy_ckf:
     input:
-        "projects/gnn4itk/rdo_files.{dataset}.txt",
+        "projects/tracking/rdo_files.{dataset}.txt",
     output:
-        "workarea/gnn4itk/{dataset}/aod.ckf.{dataset}.root",
+        "workarea/tracking/{dataset}/aod.ckf.{dataset}.root",
     log:
-        "projects/gnn4itk/run_legacy_ckf.{dataset}.log",
+        "projects/tracking/run_legacy_ckf.{dataset}.log",
     params:
         max_evts = 1,
         container_name = config["athena_dev_container"],
@@ -22,11 +22,11 @@ rule run_legacy_ckf:
 
 rule run_gnn4itk_ml_local:
     input:
-        "projects/gnn4itk/rdo_files.{dataset}.txt",
+        "projects/tracking/rdo_files.{dataset}.txt",
     output:
-        "workarea/gnn4itk/{dataset}/aod.gnn4itkMLLocal.{dataset}.root",
+        "workarea/tracking/{dataset}/aod.gnn4itkMLLocal.{dataset}.root",
     log:
-        "projects/gnn4itk/run_gnn4itk_ml_local.{dataset}.log",
+        "projects/tracking/run_gnn4itk_ml_local.{dataset}.log",
     params:
         max_evts = 1,
         container_name = config["athena_dev_container"],
