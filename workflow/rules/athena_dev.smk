@@ -67,8 +67,10 @@ rule run_traccc:
     params:
         source_dir = "/pscratch/sd/x/xju/code/G-200",
         num_workers = 32,
+        do_G300 = "true",
     shell:
         """shifter --image={config[athena_dev_gpu_container]} --module=cvmfs,gpu \
          workflow/scripts/run_traccc.sh -d "{params.source_dir}" \
-         -j {params.num_workers} -o "{output[0]}"
+         -j {params.num_workers} -o "{output[0]}" \
+         -g {params.do_G300}
          """
