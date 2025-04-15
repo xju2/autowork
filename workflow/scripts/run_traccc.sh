@@ -40,12 +40,13 @@ echo "Source directory: ${SOURCEDIR}" >> $OUTFILE
 echo "NWORKERS: ${NWORKERS}" >> $OUTFILE
 echo "DOG300: ${DOG300}" >> $OUTFILE
 
+# deactivate the herited python environment.
+SCRIPT_DIR=$(realpath "${BASH_SOURCE[0]}")
+SCRIPT_DIR=$(dirname "$SCRIPT_DIR")
+source "$SCRIPT_DIR/deactivate_python_env.sh"
 
 cd $SOURCEDIR || { echo "Failed to change directory to $SOURCEDIR"; exit 1; }
 
-# deactivate the herited python environment.
-SCRIPT_DIR=$(realpath "${BASH_SOURCE[0]}")
-source "$SCRIPT_DIR/deactivate_python_env.sh"
 
 # load the ATLAS environment
 source /global/cfs/cdirs/atlas/scripts/setupATLAS.sh

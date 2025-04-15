@@ -94,6 +94,12 @@ for package in ${PACKAGES}; do
 done
 echo "- .*" >> "$package_filer_file"
 
+# deactivate the herited python environment.
+SCRIPT_DIR=$(realpath "${BASH_SOURCE[0]}")
+SCRIPT_DIR=$(dirname "$SCRIPT_DIR")
+source "$SCRIPT_DIR/deactivate_python_env.sh"
+which python
+
 
 cd ${SOURCE_DIR} || { echo "Failed to change directory to $SOURCE_DIR"; exit 1; }
 
@@ -101,14 +107,22 @@ source /global/cfs/cdirs/atlas/scripts/setupATLAS.sh
 setupATLAS
 asetup Athena,${RELEASE},here
 
-if [[ "$MODE" == "build"]]; then
-    cmake -B build -S athena/Projects/WorkDir -DATLAS_PACKAGE_FILTER_FILE=../package_filters.txt
+which python
+
+if [[ "$MODE" == "build" ]]; then
+    rm -rf build
+    cmake -B build -S athena/Projects/WorkDir -DATLAS_PACKAGE_FILTER_FILE=./package_filters.txt
     cmake --build build --target install -j 8
 else
     # Run the Athena job
     echo "Running Athena job..."
-    source build/x*86_64*/setup.sh
+    source build/x86_64-el9-gcc11-opt/setup.sh
     export ATHENA_CORE_NUMBER=8
+fi
+# check if the job was successful
+if [[ $? -ne 0 ]]; then
+    echo "Error: Athena job failed."
+    exit 1
 fi
 
 # Write output log
