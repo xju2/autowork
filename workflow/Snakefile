@@ -2,6 +2,12 @@ from snakemake.utils import min_version
 min_version("9.0")
 
 configfile: "config/config.yaml"
+report: "report/workflow.rst"
+
 
 include: "rules/athena_dev.smk"
 include: "rules/gnn4itk.smk"
+
+rule all:
+    input:
+        "workarea/gnn4itk/ttbar/aod.ckf.ttbar.root"

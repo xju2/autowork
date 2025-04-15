@@ -1,2 +1,7 @@
 athena_dev_container: "docexoty/alma9-atlasos-dev:latest"
 athena_dev_gpu_container: "beojan/mpicuda9-2:latest"
+
+atlas_external_source_dir: /pscratch/sd/x/xju/athena_dev/check_ort_cuda
+traccc_source_dir: "/pscratch/sd/x/xju/code/G-200"
+
+run_athena_dir: /pscratch/sd/x/xju/ITk/run_athena
