@@ -5,6 +5,7 @@ INPUT_FILE=""
 OUTFILE=""
 NUM_WORKERS=6
 MAX_EVENTS=1
+CHAINNAME="CKF_LEGACY"
 
 # Function to display usage
 usage() {
@@ -13,16 +14,18 @@ usage() {
     echo "  -o <output_file>  : Output file"
     echo "  -j <num_workers>  : Number of workers (default: $NUM_WORKERS)"
     echo "  -m <max_events>  : Maximum number of events to process (default: $MAX_EVENTS)"
+    echo "  -c <chainname>   : Chain name (default: $CHAINNAME)"
     exit 1
 }
 
 # Parse arguments
-while getopts "i:o:j:m:" opt; do
+while getopts "i:o:j:m:c:" opt; do
     case $opt in
         i) INPUT_FILE="$OPTARG" ;;
         o) OUTFILE="$OPTARG" ;;
         j) NUM_WORKERS="$OPTARG" ;;
         m) MAX_EVENTS="$OPTARG" ;;
+        c) CHAINNAME="$OPTARG" ;;
         \?) usage exit 1 ;;
     esac
 done
@@ -45,6 +48,14 @@ echo "Working Directory: $WORK_DIR"
 echo "Output File: $OUTFILE"
 echo "Number of Workers: $NUM_WORKERS"
 echo "Max Events: $MAX_EVENTS"
+echo "Chain Name: $CHAINNAME"
+
+# check if chain name is in
+# ["CKF_LEGACY", "GNN4ITk_ML_LOCAL", "GNN4ITK_ML_TRITON"]
+if [[ "$CHAINNAME" != "CKF_LEGACY" && "$CHAINNAME" != "GNN4ITk_ML_LOCAL" && "$CHAINNAME" != "GNN4ITK_ML_TRITON" ]]; then
+    echo "Error: Invalid chain name. Must be one of [CKF_LEGACY, GNN4ITk_ML_LOCAL, GNN4ITK_ML_TRITON]."
+    exit 1
+fi
 
 RDO_FILENAME=$(cat ${INPUT_FILE} | paste -sd ',')
 echo $RDO_FILENAME
@@ -64,20 +75,26 @@ asetup Athena,main,here,latest
 
 export ATHENA_CORE_NUMBER=$NUM_WORKERS
 
-Reco_tf.py \
-    --CA 'all:True' --autoConfiguration 'everything' \
-    --conditionsTag 'all:OFLCOND-MC15c-SDR-14-05' \
-    --geometryVersion 'all:ATLAS-P2-RUN4-03-00-00' \
-    --multithreaded 'True' \
-    --steering 'doRAWtoALL' \
-    --digiSteeringConf 'StandardInTimeOnlyTruth' \
-    --postInclude 'all:PyJobTransforms.UseFrontier' \
-    --preInclude 'all:Campaigns.PhaseIIPileUp200' 'InDetConfig.ConfigurationHelpers.OnlyTrackingPreInclude' \
-    --inputRDOFile "${RDO_FILENAME}" \
-    --outputAODFile "${OUTFILE}"  \
-    --jobNumber '1' \
-    --athenaopts='--loglevel=INFO' \
-    --maxEvents ${MAX_EVENTS}
+if [[ "$CHAINNAME" == "CKF_LEGACY" ]]; then
+    echo "Running CKF_LEGACY"
+    Reco_tf.py \
+        --CA 'all:True' --autoConfiguration 'everything' \
+        --conditionsTag 'all:OFLCOND-MC15c-SDR-14-05' \
+        --geometryVersion 'all:ATLAS-P2-RUN4-03-00-00' \
+        --multithreaded 'True' \
+        --steering 'doRAWtoALL' \
+        --digiSteeringConf 'StandardInTimeOnlyTruth' \
+        --postInclude 'all:PyJobTransforms.UseFrontier' \
+        --preInclude 'all:Campaigns.PhaseIIPileUp200' 'InDetConfig.ConfigurationHelpers.OnlyTrackingPreInclude' \
+        --inputRDOFile "${RDO_FILENAME}" \
+        --outputAODFile "${OUTFILE}"  \
+        --jobNumber '1' \
+        --athenaopts='--loglevel=INFO' \
+        --maxEvents ${MAX_EVENTS}
+else
+    echo "not implemented yet."
+    exit 1
+fi
 
 # Check for errors
 if [ $? -ne 0 ]; then

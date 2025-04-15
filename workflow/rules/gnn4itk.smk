@@ -7,12 +7,15 @@ rule run_legacy_ckf:
         "projects/gnn4itk/run_legacy_ckf.{dataset}.log",
     params:
         max_evts = 1,
+        container_name = config["athena_dev_container"],
+        chain_name = "CKF_LEGACY",
     threads:
         6
     shell:
-        """shifter --image={config[athena_dev_container]} --module=cvmfs \
+        """shifter --image={params.container_name} --module=cvmfs \
         workflow/scripts/run_tracking.sh -i "{input}" \
         -j {threads} \
         -m {params.max_evts} \
+        -c {params.chain_name} \
         -o "{output}" > "{log}" 2>&1 \
         """
