@@ -1,0 +1,10 @@
+/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.603008.PhPy8_ggH_H125_a55a55_4b_ctau100.recon.RDO.e8481_s4149_r14700/RDO.38106881._000003.pool.root.1
+/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.603008.PhPy8_ggH_H125_a55a55_4b_ctau100.recon.RDO.e8481_s4149_r14700/RDO.38106881._000010.pool.root.1
+/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.603008.PhPy8_ggH_H125_a55a55_4b_ctau100.recon.RDO.e8481_s4149_r14700/RDO.38106881._000013.pool.root.1
+/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.603008.PhPy8_ggH_H125_a55a55_4b_ctau100.recon.RDO.e8481_s4149_r14700/RDO.38106881._000020.pool.root.1
+/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.603008.PhPy8_ggH_H125_a55a55_4b_ctau100.recon.RDO.e8481_s4149_r14700/RDO.38106881._000023.pool.root.1
+/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.603008.PhPy8_ggH_H125_a55a55_4b_ctau100.recon.RDO.e8481_s4149_r14700/RDO.38106881._000024.pool.root.1
+/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.603008.PhPy8_ggH_H125_a55a55_4b_ctau100.recon.RDO.e8481_s4149_r14700/RDO.38106881._000027.pool.root.1
+/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.603008.PhPy8_ggH_H125_a55a55_4b_ctau100.recon.RDO.e8481_s4149_r14700/RDO.38106881._000028.pool.root.1
+/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.603008.PhPy8_ggH_H125_a55a55_4b_ctau100.recon.RDO.e8481_s4149_r14700/RDO.38106881._000047.pool.root.1
+/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.603008.PhPy8_ggH_H125_a55a55_4b_ctau100.recon.RDO.e8481_s4149_r14700/RDO.38106881._000048.pool.root.1

@@ -1,0 +1,6 @@
+/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000002.pool.root.1
+/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000022.pool.root.1
+/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000028.pool.root.1
+/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000047.pool.root.1
+/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000067.pool.root.1
+/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000085.pool.root.1
