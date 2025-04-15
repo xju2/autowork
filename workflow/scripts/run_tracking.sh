@@ -52,8 +52,8 @@ echo "Chain Name: $CHAINNAME"
 
 # check if chain name is in
 # ["CKF_LEGACY", "GNN4ITk_ML_LOCAL", "GNN4ITK_ML_TRITON"]
-if [[ "$CHAINNAME" != "CKF_LEGACY" && "$CHAINNAME" != "GNN4ITk_ML_LOCAL" && "$CHAINNAME" != "GNN4ITK_ML_TRITON" ]]; then
-    echo "Error: Invalid chain name. Must be one of [CKF_LEGACY, GNN4ITk_ML_LOCAL, GNN4ITK_ML_TRITON]."
+if [[ "$CHAINNAME" != "CKF_LEGACY" && "$CHAINNAME" != "GNN4ITk_ML_LOCAL" && "$CHAINNAME" != "GNN4ITk_ML_TRITON" ]]; then
+    echo "Error: Invalid chain name. Must be one of [CKF_LEGACY, GNN4ITk_ML_LOCAL, GNN4ITk_ML_TRITON]."
     exit 1
 fi
 
@@ -75,17 +75,36 @@ asetup Athena,main,here,latest
 
 export ATHENA_CORE_NUMBER=$NUM_WORKERS
 
+DETECTOR_CONDITIONS="all:OFLCOND-MC15c-SDR-14-05"
+GEOMETRY_VERSION="all:ATLAS-P2-RUN4-03-00-00"
+
+echo "Running ${CHAINNAME} with ${NUM_WORKERS} workers"
 if [[ "$CHAINNAME" == "CKF_LEGACY" ]]; then
-    echo "Running CKF_LEGACY"
     Reco_tf.py \
         --CA 'all:True' --autoConfiguration 'everything' \
-        --conditionsTag 'all:OFLCOND-MC15c-SDR-14-05' \
-        --geometryVersion 'all:ATLAS-P2-RUN4-03-00-00' \
+        --conditionsTag ${DETECTOR_CONDITIONS} \
+        --geometryVersion ${GEOMETRY_VERSION} \
         --multithreaded 'True' \
         --steering 'doRAWtoALL' \
         --digiSteeringConf 'StandardInTimeOnlyTruth' \
         --postInclude 'all:PyJobTransforms.UseFrontier' \
         --preInclude 'all:Campaigns.PhaseIIPileUp200' 'InDetConfig.ConfigurationHelpers.OnlyTrackingPreInclude' \
+        --inputRDOFile "${RDO_FILENAME}" \
+        --outputAODFile "${OUTFILE}"  \
+        --jobNumber '1' \
+        --athenaopts='--loglevel=INFO' \
+        --maxEvents ${MAX_EVENTS}
+elif [[ "$CHAINNAME" == "GNN4ITk_ML_LOCAL" ]]; then
+    Reco_tf.py \
+        --CA 'all:True' --autoConfiguration 'everything' \
+        --conditionsTag ${DETECTOR_CONDITIONS} \
+        --geometryVersion ${GEOMETRY_VERSION} \
+        --multithreaded 'True' \
+        --steering 'doRAWtoALL' \
+        --digiSteeringConf 'StandardInTimeOnlyTruth' \
+        --postInclude 'all:PyJobTransforms.UseFrontier' \
+        --preInclude 'all:Campaigns.PhaseIIPileUp200' 'InDetConfig.ConfigurationHelpers.OnlyTrackingPreInclude' 'InDetGNNTracking.InDetGNNTrackingFlags.gnnFinderValidation' \
+        --preExec "flags.Tracking.GNN.Triton.model = \"${ModelName}\";' \
         --inputRDOFile "${RDO_FILENAME}" \
         --outputAODFile "${OUTFILE}"  \
         --jobNumber '1' \

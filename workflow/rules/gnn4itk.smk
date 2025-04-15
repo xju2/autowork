@@ -19,3 +19,25 @@ rule run_legacy_ckf:
         -c {params.chain_name} \
         -o "{output}" > "{log}" 2>&1 \
         """
+
+rule run_gnn4itk_ml_local:
+    input:
+        "projects/gnn4itk/rdo_files.{dataset}.txt",
+    output:
+        "workarea/gnn4itk/{dataset}/aod.gnn4itkMLLocal.{dataset}.root",
+    log:
+        "projects/gnn4itk/run_gnn4itk_ml_local.{dataset}.log",
+    params:
+        max_evts = 1,
+        container_name = config["athena_dev_container"],
+        chain_name = "GNN4ITk_ML_LOCAL",
+    threads:
+        6
+    shell:
+        """shifter --image={params.container_name} --module=cvmfs \
+        workflow/scripts/run_tracking.sh -i "{input}" \
+        -j {threads} \
+        -m {params.max_evts} \
+        -c {params.chain_name} \
+        -o "{output}" > "{log}" 2>&1 \
+        """

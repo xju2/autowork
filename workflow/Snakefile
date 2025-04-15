@@ -10,4 +10,5 @@ include: "rules/gnn4itk.smk"
 
 rule all:
     input:
-        "workarea/gnn4itk/ttbar/aod.ckf.ttbar.root"
+        "workarea/gnn4itk/ttbar/aod.gnn4itkMLLocal.ttbar.root"
+        # "workarea/gnn4itk/ttbar/aod.ckf.ttbar.root"
