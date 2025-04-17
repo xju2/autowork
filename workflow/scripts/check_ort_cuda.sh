@@ -1,8 +1,10 @@
 #!/bin/bash
 
+source "workflow/scripts/deactivate_python_env.sh"
+
 cd $SOURCEDIR || { echo "Failed to change directory to $SOURCEDIR"; exit 1; }
 
-git clone ssh://git@gitlab.cern.ch:7999/xju/athena.git --single-branch && cd athena 
+git clone ssh://git@gitlab.cern.ch:7999/xju/athena.git --single-branch && cd athena
 
 
 git remote add atlas https://gitlab.cern.ch/atlas/athena.git

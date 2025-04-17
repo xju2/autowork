@@ -33,6 +33,7 @@ echo "Output file: ${OUTFILE}" >> $OUTFILE
 echo "Source directory: ${SOURCEDIR}" >> $OUTFILE
 echo "NWORKERS: ${NWORKERS}" >> $OUTFILE
 
+source "workflow/scripts/deactivate_python_env.sh"
 
 cd $SOURCEDIR || { echo "Failed to change directory to $SOURCEDIR"; exit 1; }
 

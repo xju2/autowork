@@ -4,10 +4,10 @@ rule build_atlasexternal:
         "projects/atlasexternal/build_atlasexternal.out"
     params:
         source_dir = config["atlas_external_source_dir"],
-        external_url = "https://gitlab.cern.ch/atlas/atlasexternals.git",
-        external_ref = "origin/main",
+        external_url = "https://gitlab.cern.ch/xju/atlasexternals.git",
+        external_ref = "origin/triton_disable_typeinfo",
         num_workers = 64,
-        extra_cmake_config_args = "-DATLAS_ONNXRUNTIME_USE_CUDA=True -DCUDNN_INCLUDE_DIR=/usr/include",
+        extra_cmake_config_args = "-DATLAS_ONNXRUNTIME_USE_CUDA=True -DCUDNN_INCLUDE_DIR=/usr/include -G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE",
         container_name = config["athena_dev_gpu_container"],
     shell:
         """shifter --image={params.container_name} --module=cvmfs,gpu \
@@ -19,7 +19,6 @@ rule build_atlasexternal:
             -o "{output}" \
             -x "{params.extra_cmake_config_args}"
         """
-
 
 rule build_athena_with_external:
     input:

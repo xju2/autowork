@@ -57,6 +57,8 @@ echo "Source directory: ${SOURCEDIR}" >> $OUTFILE
 echo "DO_EXTERNAL: ${DO_EXTERNAL}" >> $OUTFILE
 echo "EXCMAKEARGS: ${EXCMAKEARGS}" >> $OUTFILE
 
+source "workflow/scripts/deactivate_python_env.sh"
+
 cd $SOURCEDIR || { echo "Failed to change directory to $SOURCEDIR"; exit 1; }
 
 # # unset the python environment
@@ -75,6 +77,8 @@ export G4PATH=/cvmfs/atlas-nightlies.cern.ch/repo/sw/main_Athena_x86_64-el9-gcc1
 
 mkdir build
 
+export PATH=/cvmfs/sft.cern.ch/lcg/contrib/ninja/1.11.1/Linux-x86_64/bin:$PATH
+
 if [ "$DO_EXTERNAL" = "true" ]; then
   echo "Building external dependencies..." >> $OUTFILE
   time ./athena/Projects/Athena/build_externals.sh -t Release \
@@ -85,12 +89,6 @@ else
   time ./athena/Projects/Athena/build.sh -acmi \
     -x "-DATLAS_ENABLE_CI_TESTS=TRUE -DATLAS_EXTERNAL=${ATLASAuthXML} -DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE ${EXCMAKEARGS}" \
     -k "-j${NWORKERS}" 2>&1 | tee build/log.build.athena.txt
-fi
-
-# check if the build was successful
-if [ $? -ne 0 ]; then
-  echo "Build failed!" >> $OUTFILE
-  exit 1
 fi
 
 echo "-----------------------------------" >> $OUTFILE

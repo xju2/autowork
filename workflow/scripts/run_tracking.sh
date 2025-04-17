@@ -60,6 +60,8 @@ fi
 RDO_FILENAME=$(cat ${INPUT_FILE} | paste -sd ',')
 echo $RDO_FILENAME
 
+source "workflow/scripts/deactivate_python_env.sh"
+
 
 cd $WORK_DIR || { echo "Failed to change directory to $WORK_DIR"; exit 1; }
 

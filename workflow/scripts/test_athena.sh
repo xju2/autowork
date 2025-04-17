@@ -32,6 +32,8 @@ echo "Output file: ${OUTFILE}" >> $OUTFILE
 echo "Source directory: ${SOURCEDIR}" >> $OUTFILE
 echo "Release: ${RELEASE}" >> $OUTFILE
 
+source "workflow/scripts/deactivate_python_env.sh"
+
 cd $SOURCEDIR || { echo "Failed to change directory to $SOURCEDIR"; exit 1; }
 
 # deactivate the inherited python environment.
