@@ -73,4 +73,9 @@ Reco_tf.py --CA \
     --postInclude "EFTracking.TrackingAlgConfig.TrackingAlgCfg" \
     --maxEvents 1
 
+if [ "$?" -ne 0 ]; then
+    echo "Error: Athena job failed."
+    exit 1
+fi
+
 echo "DONE on $(date +%Y-%m-%dT%H:%M:%S)" >> "$OUTFILE"

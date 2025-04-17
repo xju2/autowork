@@ -10,7 +10,7 @@ EXCMAKEARGS=""
 
 HELP_MSG="Usage: $0 [-s] [-u url] [-r ref] [-j nworkers] [-d source_directory] [-o output_file] [-a] [-x cmakeargs]"
 
-while getopts ":su:r:j:d:o:x:a" opt; do
+while getopts "asu:r:j:d:o:x:b:" opt; do
   case ${opt} in
     u )
       AtlasExternals_URL=$OPTARG
@@ -73,6 +73,8 @@ export AtlasExternals_REF=$AtlasExternals_REF
 
 export G4PATH=/cvmfs/atlas-nightlies.cern.ch/repo/sw/main_Athena_x86_64-el9-gcc13-opt/Geant4
 
+mkdir build
+
 if [ "$DO_EXTERNAL" = "true" ]; then
   echo "Building external dependencies..." >> $OUTFILE
   time ./athena/Projects/Athena/build_externals.sh -t Release \
@@ -83,6 +85,12 @@ else
   time ./athena/Projects/Athena/build.sh -acmi \
     -x "-DATLAS_ENABLE_CI_TESTS=TRUE -DATLAS_EXTERNAL=${ATLASAuthXML} -DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE ${EXCMAKEARGS}" \
     -k "-j${NWORKERS}" 2>&1 | tee build/log.build.athena.txt
+fi
+
+# check if the build was successful
+if [ $? -ne 0 ]; then
+  echo "Build failed!" >> $OUTFILE
+  exit 1
 fi
 
 echo "-----------------------------------" >> $OUTFILE
