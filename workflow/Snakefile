@@ -8,6 +8,7 @@ report: "report/workflow.rst"
 include: "rules/athena_dev.smk"
 include: "rules/traccc.smk"
 include: "rules/tracking.smk"
+include: "rules/triton.smk"
 
 rule all:
     input:

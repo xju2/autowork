@@ -1,27 +1,42 @@
 #!/bin/bash
 
 # Parse arguments
-while getopts "c:k:t:o:d:s:" opt; do
+while getopts "c:k:t:o:d:i:" opt; do
   case $opt in
     c) TRITON_COMMON_VERSION="$OPTARG" ;;
     k) TRITON_CORE_VERSION="$OPTARG" ;;
     t) CLIENT_VERSION="$OPTARG" ;;
     o) OUTPUT="$OPTARG" ;;
     d) SOURCEDIR="$OPTARG" ;;
-    s) SERVER_URL="$OPTARG" ;;
+    i) INPUTFILE="$OPTARG" ;;
     *) echo "Invalid option: -$OPTARG" >&2; exit 1 ;;
   esac
 done
 
+INPUTFILE=$(realpath "$INPUTFILE")
+OUTPUT=$(realpath "$OUTPUT")
+
+if [ -f "$INPUTFILE" ]; then
+  echo "Input file: $INPUTFILE"
+else
+  echo "Input file not found: $INPUTFILE"
+  exit 1
+fi
+SERVER_URL=`cat $INPUTFILE`
+
 # Ensure all required arguments are provided
-if [[ -z "$TRITON_COMMON_VERSION" || -z "$TRITON_CORE_VERSION" || -z "$CLIENT_VERSION" || -z "$OUTPUT" || -z "$SERVER_URL" ]]; then
-  echo "Usage: $0 -c <triton_common_version> -k <triton_core_version> -t <client_version> -o <output> -z <SERVER_URL> -d <SOURCEDIR>"
+if [[ -z "$TRITON_COMMON_VERSION" || -z "$TRITON_CORE_VERSION" || -z "$CLIENT_VERSION" || -z "$OUTPUT" ]]; then
+  echo "Usage: $0 -c <triton_common_version> -k <triton_core_version> -t <client_version> -o <output> -d <SOURCEDIR>"
   exit 1
 fi
 
-echo "Start valiating Triton on $(date)"
 NUM_JOBS=8
+
+echo "Start valiating Triton on $(date)"
 echo "Number of jobs: $NUM_JOBS"
+echo "Output: $OUTPUT"
+echo "SOURCEDIR: $SOURCEDIR"
+echo "SERVER_URL: $SERVER_URL"
 
 source workflow/scripts/deactivate_python_env.sh
 
@@ -73,3 +88,5 @@ echo "DONE Building validate_triton_client on $(date)"
 
 # run the validation.
 ./build/bin/test_resnet50  -u "${SERVER_URL}:8001" -i models/resnet50/img1.txt
+
+touch $OUTPUT
