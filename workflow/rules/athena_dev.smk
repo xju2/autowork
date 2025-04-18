@@ -52,7 +52,7 @@ rule test_athena_with_external:
         """
 
 
-rule build_custom_athena:
+rule build_custom_athena_template:
     input:
         "projects/athena/custom_config.{trialname}.json"
     output:
@@ -69,11 +69,11 @@ rule build_custom_athena:
         > "{log}" 2>&1
         """
 
-rule build_custom_athena_gnn4itkTool:
+build_runs = ["gnn4itkTool", "mr_tritontool"]
+rule build_custom_athena:
     input:
-        "projects/athena/custom_config.gnn4itkTool.out"
+        "projects/athena/custom_config.mr_tritontool.out"
     output:
-        "projects/athena/custom_config.gnn4itkTool.done"
+        "projects/athena/custom_config.mr_tritontool.done"
     shell:
         """touch {output}"""
-

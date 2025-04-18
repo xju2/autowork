@@ -1,0 +1,7 @@
+{
+    "source_dir": "/pscratch/sd/x/xju/athena_dev/mr_tritontools_20250418",
+    "release": "main,latest",
+    "packages": [
+        "Control/AthOnnx/AthTritonComps"
+    ]
+}

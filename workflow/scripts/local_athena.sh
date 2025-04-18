@@ -30,6 +30,7 @@ if [[ -z "$INPUT_FILE" || -z "$OUTPUT_FILE" ]]; then
     usage
 fi
 
+OUTPUT_FILE=$(realpath "$OUTPUT_FILE")
 # Main script logic
 echo "Running custom Athena build with the following parameters:"
 echo "Input File: $INPUT_FILE"
@@ -95,10 +96,7 @@ done
 echo "- .*" >> "$package_filer_file"
 
 # deactivate the herited python environment.
-SCRIPT_DIR=$(realpath "${BASH_SOURCE[0]}")
-SCRIPT_DIR=$(dirname "$SCRIPT_DIR")
-source "$SCRIPT_DIR/deactivate_python_env.sh"
-which python
+source workflow/scripts/deactivate_python_env.sh
 
 
 cd ${SOURCE_DIR} || { echo "Failed to change directory to $SOURCE_DIR"; exit 1; }
