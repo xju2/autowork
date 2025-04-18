@@ -4,6 +4,7 @@
 INPUT_FILE=""
 OUTPUT_FILE=""
 MODE="build"
+WORKERS=16
 
 # Function to display usage
 usage() {
@@ -11,15 +12,17 @@ usage() {
     echo "  -i <input_file>   : Input JSON configuration file"
     echo "  -o <output_file>  : Output file for build logs"
     echo "  -m <mode>         : Mode of operation (default: $MODE)"
+    echo "  -t <threads>      : Number of threads to use (default: $WORKERS)"
     exit 1
 }
 
 # Parse arguments
-while getopts "i:o:m:" opt; do
+while getopts "i:o:m:t:" opt; do
     case $opt in
         i) INPUT_FILE="$OPTARG" ;;
         o) OUTPUT_FILE="$OPTARG" ;;
         m) MODE="$OPTARG" ;;
+        t) WORKERS="$OPTARG" ;;
         *) usage ;;
     esac
 done
@@ -36,6 +39,7 @@ echo "Running custom Athena build with the following parameters:"
 echo "Input File: $INPUT_FILE"
 echo "Output File: $OUTPUT_FILE"
 echo "Mode: $MODE"
+echo "Number of Threads: $WORKERS"
 
 # mode must be in ["build", "run"]
 if [[ "$MODE" != "build" && "$MODE" != "run" ]]; then
@@ -64,6 +68,7 @@ parse_json() {
     SOURCE_DIR=$(jq -r '.source_dir' "$json_file")
     RELEASE=$(jq -r '.release' "$json_file")
     PACKAGES=$(jq -r '.packages[]' "$json_file")
+    VALIDATION=$(jq -r '.validation_cmd[]' "$json_file")
 
         # Validate parsed values
     if [[ -z "$SOURCE_DIR" || -z "$RELEASE" || -z "$PACKAGES" ]]; then
@@ -106,20 +111,20 @@ setupATLAS
 asetup Athena,${RELEASE},here
 
 which python
+export PATH=/cvmfs/sft.cern.ch/lcg/contrib/ninja/1.11.1/Linux-x86_64/bin:$PATH
 
 if [[ "$MODE" == "build" ]]; then
-    cmake -B build -S athena/Projects/WorkDir -DATLAS_PACKAGE_FILTER_FILE=./package_filters.txt
-    cmake --build build -- -j 8
+    cmake -B build -S athena/Projects/WorkDir -DATLAS_PACKAGE_FILTER_FILE=./package_filters.txt -G "Ninja" -DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE || { echo "Error: CMake configuration failed."; exit 1; }
+    cmake --build build -- -j ${WORKERS} || { echo "Error: CMake build failed."; exit 1; }
 else
     # Run the Athena job
     echo "Running Athena job..."
-    source build/x86_64-el9-gcc11-opt/setup.sh
-    export ATHENA_CORE_NUMBER=8
-fi
-# check if the job was successful
-if [[ $? -ne 0 ]]; then
-    echo "Error: Athena job failed."
-    exit 1
+    source build/x86_64-el9-gcc*-opt/setup.sh
+    export ATHENA_CORE_NUMBER=${WORKERS}
+    while IFS= read -r validation; do
+        echo "Running validation command: $validation"
+        eval "$validation" || { echo "Error: Validation command failed."; exit 1; }
+    done <<< "${VALIDATION}"
 fi
 
 # Write output log

@@ -4,5 +4,9 @@
     "packages": [
         "Control/AthOnnx/AthTritonComps",
         "Control/AthenaExamples/AthExOnnxRuntime"
+    ],
+    "validation_cmd": [
+        "ln -s $SOURCE_DIR/athena/Control/AthenaExamples/AthExOnnxRuntime/python/AthExOnnxRuntime_test_infer.py .",
+        "athena --CA AthExOnnxRuntime_test_infer.py"
     ]
 }
