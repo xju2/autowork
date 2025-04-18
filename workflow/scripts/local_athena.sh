@@ -108,7 +108,6 @@ asetup Athena,${RELEASE},here
 which python
 
 if [[ "$MODE" == "build" ]]; then
-    # rm -rf build
     cmake -B build -S athena/Projects/WorkDir -DATLAS_PACKAGE_FILTER_FILE=./package_filters.txt
     cmake --build build -- -j 8
 else
