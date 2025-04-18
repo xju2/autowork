@@ -4,5 +4,6 @@ athena_dev_gpu_container: "beojan/mpicuda9-2:latest"
 atlas_external_source_dir: /pscratch/sd/x/xju/athena_dev/triton_20250417
 
 traccc_source_dir: "/pscratch/sd/x/xju/code/G-200"
+triton_source_dir: /pscratch/sd/x/xju/athena_dev/triton_20250408_nosystemmd
 
 run_athena_dir: /pscratch/sd/x/xju/ITk/run_athena

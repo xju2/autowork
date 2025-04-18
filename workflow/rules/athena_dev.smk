@@ -6,16 +6,17 @@ rule build_atlasexternal:
         source_dir = config["atlas_external_source_dir"],
         external_url = "https://gitlab.cern.ch/xju/atlasexternals.git",
         external_ref = "origin/triton_disable_typeinfo",
-        num_workers = 64,
         extra_cmake_config_args = "-DATLAS_ONNXRUNTIME_USE_CUDA=True -DCUDNN_INCLUDE_DIR=/usr/include -G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE",
         container_name = config["athena_dev_gpu_container"],
+    threads:
+        16
     shell:
         """shifter --image={params.container_name} --module=cvmfs,gpu \
           workflow/scripts/build_athena.sh \
             -u {params.external_url} \
             -r {params.external_ref} \
             -d "{params.source_dir}" \
-            -j {params.num_workers} \
+            -j {threads} \
             -o "{output}" \
             -x "{params.extra_cmake_config_args}"
         """
@@ -27,12 +28,13 @@ rule build_athena_with_external:
         "build_athena_with_external.out"
     params:
         source_dir = config["atlas_external_source_dir"],
-        num_workers = 32,
         container_name = config["athena_dev_gpu_container"],
+    threads:
+        16
     shell:
         """shifter --image={params.container_name} --module=cvmfs,gpu \
         workflow/scripts/build_athena.sh -a -d {params.source_dir} \
-          -j {params.num_workers} -o "{output}"
+          -j {threads} -o "{output}"
         """
 
 rule test_athena_with_external:
@@ -56,10 +58,11 @@ rule build_custom_athena:
     output:
         "projects/athena/custom_config.{trialname}.out"
     params:
-        num_workers = 32,
         container_name = config["athena_dev_gpu_container"],
     log:
         "projects/athena/custom_config.{trialname}.log"
+    threads:
+        16
     shell:
         """shifter --image={params.container_name} --module=cvmfs,gpu \
         workflow/scripts/local_athena.sh -i "{input}" -o "{output}" \
