@@ -117,10 +117,14 @@ if [[ "$MODE" == "build" ]]; then
     cmake -B build -S athena/Projects/WorkDir -DATLAS_PACKAGE_FILTER_FILE=./package_filters.txt -G "Ninja" -DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE || { echo "Error: CMake configuration failed."; exit 1; }
     cmake --build build -- -j ${WORKERS} || { echo "Error: CMake build failed."; exit 1; }
 else
+
     # Run the Athena job
-    echo "Running Athena job..."
     source build/x86_64-el9-gcc*-opt/setup.sh
     export ATHENA_CORE_NUMBER=${WORKERS}
+
+    mkdir run
+    cd run
+    echo "Running Athena job $(realpath run)"
     while IFS= read -r validation; do
         echo "Running validation command: $validation"
         eval "$validation" || { echo "Error: Validation command failed."; exit 1; }

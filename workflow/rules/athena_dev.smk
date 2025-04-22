@@ -80,6 +80,8 @@ rule validate_custom_athena:
         container_name = config["athena_dev_gpu_container"]
     log:
         "projects/athena/custom_config.mr_tritontool.validated.log"
+    threads:
+        4
     shell:
         """shifter --image={params.container_name} --module=cvmfs,gpu \
         workflow/scripts/local_athena.sh -i {input[0]} -o "{output}" -m run -t {threads} \
