@@ -51,17 +51,17 @@ rule test_athena_with_external:
         workflow/scripts/test_athena.sh -d {params.source_dir} -o "{output}"
         """
 
-build_runs = ["gnn4itkTool", "mr_tritontool"]
+ath_dev_names = ["gnn4itkTool", "mr_tritontool"]
 
 rule build_custom_athena:
     input:
-        "projects/athena/custom_config.mr_tritontool.json"
+        "projects/athena/config.{ath_dev_name}.json"
     output:
-        "projects/athena/custom_config.mr_tritontool.built"
+        "projects/athena/config.{ath_dev_name}.built"
     params:
         container_name = config["athena_dev_gpu_container"],
     log:
-        "projects/athena/custom_config.mr_tritontool.built.log"
+        "projects/athena/config.{ath_dev_name}.built.log"
     threads:
         16
     shell:
@@ -72,14 +72,14 @@ rule build_custom_athena:
 
 rule validate_custom_athena:
     input:
-        "projects/athena/custom_config.mr_tritontool.json",
-        "projects/athena/custom_config.mr_tritontool.built"
+        "projects/athena/config.{ath_dev_name}.json",
+        "projects/athena/config.{ath_dev_name}.built"
     output:
-        "projects/athena/custom_config.mr_tritontool.validated"
+        "projects/athena/config.{ath_dev_name}.validated"
     params:
         container_name = config["athena_dev_gpu_container"]
     log:
-        "projects/athena/custom_config.mr_tritontool.validated.log"
+        "projects/athena/config.{ath_dev_name}.validated.log"
     threads:
         4
     shell:

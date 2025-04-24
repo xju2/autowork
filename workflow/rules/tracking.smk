@@ -20,6 +20,7 @@ rule run_legacy_ckf:
         -o "{output}" > "{log}" 2>&1 \
         """
 
+datasets = ["ttbar"]
 rule run_gnn4itk_ml_local:
     input:
         "projects/tracking/rdo_files.{dataset}.txt",
