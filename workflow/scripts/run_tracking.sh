@@ -6,7 +6,7 @@ OUTFILE=""
 NUM_WORKERS=6
 MAX_EVENTS=1
 CHAINNAME="CKF_LEGACY"
-SOURCE_DIR=$(pwd)
+SETUP_FILE=""
 
 # Function to display usage
 usage() {
@@ -16,19 +16,19 @@ usage() {
     echo "  -j <num_workers>  : Number of workers (default: $NUM_WORKERS)"
     echo "  -m <max_events>  : Maximum number of events to process (default: $MAX_EVENTS)"
     echo "  -c <chainname>   : Chain name (default: $CHAINNAME)"
-    echo "  -d <source_dir>   : Working directory (default: $SOURCE_DIR)"
+    echo "  -s <setup_file>   : Setup file (default: $SETUP_FILE)"
     exit 1
 }
 
 # Parse arguments
-while getopts "i:o:j:m:c:d:" opt; do
+while getopts "i:o:j:m:c:s:" opt; do
     case $opt in
         i) INPUT_FILE="$OPTARG" ;;
         o) OUTFILE="$OPTARG" ;;
         j) NUM_WORKERS="$OPTARG" ;;
         m) MAX_EVENTS="$OPTARG" ;;
         c) CHAINNAME="$OPTARG" ;;
-        d) SOURCE_DIR="$OPTARG" ;;
+        s) SETUP_FILE="$OPTARG" ;;
         \?) usage exit 1 ;;
     esac
 done
@@ -67,14 +67,15 @@ echo $RDO_FILENAME
 
 source "workflow/scripts/deactivate_python_env.sh"
 
-
-cd $SOURCE_DIR || { echo "Failed to change directory to $SOURCE_DIR"; exit 1; }
-
 source /global/cfs/cdirs/atlas/scripts/setupATLAS.sh
 setupATLAS
-asetup Athena,main,here,latest
 
-source build/x86_64-el9-gcc*-opt/setup.sh
+if [[ -f "$SETUP_FILE" ]]; then
+    source "$SETUP_FILE"
+else
+    echo "Warning: Setup file $SETUP_FILE not found. Proceeding without it."
+fi
+
 export ATHENA_CORE_NUMBER=$NUM_WORKERS
 
 cd ${RUN_DIR} || { echo "Failed to change directory to ${RUN_DIR}"; exit 1; }

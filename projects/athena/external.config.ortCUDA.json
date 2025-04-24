@@ -1,11 +1,7 @@
 {
     "source_dir": "/pscratch/sd/x/xju/athena_dev/check_ort_cuda",
-    "release": "Athena,25.0.30 --releasepath=${SOURCE_DIR}/build/install",
     "external_url": "https://gitlab.cern.ch/xju/atlasexternals.git",
     "external_ref": "origin/triton_disable_typeinfo",
     "extra_cmake_args": "-DATLAS_ONNXRUNTIME_USE_CUDA=True -DCUDNN_INCLUDE_DIR=/usr/include -G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE",
-    "external_asetup": "none,gcc13,cmakesetup --cmakeversion=3.30.5",
-    "packages": [
-        "InnerDetector/InDetGNNTracking"
-    ]
+    "external_asetup": "none,gcc13,cmakesetup --cmakeversion=3.30.5"
 }

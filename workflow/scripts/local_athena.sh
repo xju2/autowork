@@ -5,6 +5,7 @@ INPUT_FILE=""
 OUTPUT_FILE=""
 MODE="build"
 WORKERS=1
+SETUP_FILE=""
 
 # Function to display usage
 usage() {
@@ -13,16 +14,18 @@ usage() {
     echo "  -o <output_file>  : Output file for build logs"
     echo "  -m <mode>         : Mode of operation (default: $MODE)"
     echo "  -t <threads>      : Number of threads to use (default: $WORKERS)"
+    echo "  -s <setup_file>   : Setup file (default: $SETUP_FILE)"
     exit 1
 }
 
 # Parse arguments
-while getopts "i:o:m:t:" opt; do
+while getopts "i:o:m:t:s:" opt; do
     case $opt in
         i) INPUT_FILE="$OPTARG" ;;
         o) OUTPUT_FILE="$OPTARG" ;;
         m) MODE="$OPTARG" ;;
         t) WORKERS="$OPTARG" ;;
+        s) SETUP_FILE="$OPTARG" ;;
         *) usage ;;
     esac
 done
@@ -34,12 +37,15 @@ if [[ -z "$INPUT_FILE" || -z "$OUTPUT_FILE" ]]; then
 fi
 
 OUTPUT_FILE=$(realpath "$OUTPUT_FILE")
+SETUP_FILE=$(realpath "$SETUP_FILE")
+
 # Main script logic
 echo "Running custom Athena build with the following parameters:"
 echo "Input File: $INPUT_FILE"
 echo "Output File: $OUTPUT_FILE"
 echo "Mode: $MODE"
 echo "Number of Threads: $WORKERS"
+echo "Setup File: $SETUP_FILE"
 
 # mode must be in ["build", "run"]
 if [[ "$MODE" != "build_athena" && "$MODE" != "run_athena" && "${MODE}" != "build_external" && "${MODE}" != "build_external_athena" ]]; then
@@ -80,7 +86,6 @@ parse_json() {
 # Example usage
 parse_json "${INPUT_FILE}"
 
-
 # deactivate the herited python environment.
 source workflow/scripts/deactivate_python_env.sh
 
@@ -97,9 +102,24 @@ SPARSE_BUILD_DIR="sparse_build"
 
 if [[ "$MODE" == "build_athena" ]]; then
 
-    echo "Building Athena in $SOURCE_DIR"
+    # check if SETUP_FILE is provided.
+    # If so, setup the source_dir and athena environment from there.
+    if [[ -f "$SETUP_FILE" ]]; then
+        echo "Setting up environment from $SETUP_FILE"
+        source "$SETUP_FILE"
+        cat "$SETUP_FILE" >> "$OUTPUT_FILE"
+    else
+        echo "SOURCE_DIR=${SOURCE_DIR}" > "$OUTPUT_FILE"
+        echo 'cd ${SOURCE_DIR} || { echo "Failed to change directory to $SOURCE_DIR"; exit 1; }' >> "$OUTPUT_FILE"
+        echo "asetup ${RELEASE}" >> "$OUTPUT_FILE"
+        asetup ${RELEASE}
+    fi
+
+    echo "Building customized Athena in $SOURCE_DIR"
+    echo "Original athena: $(which athena)"
+
     # check if required variables are in the json file
-    if [[ -z "$RELEASE" || -z "$PACKAGES" ]]; then
+    if [[ -z "$PACKAGES" ]]; then
         echo "Error: Missing required fields in the JSON file."
         exit 1
     fi
@@ -116,11 +136,10 @@ if [[ "$MODE" == "build_athena" ]]; then
     done
     echo "- .*" >> "$package_filer_file"
 
-    asetup ${RELEASE}
-
     cmake -B ${SPARSE_BUILD_DIR} -S athena/Projects/WorkDir -DATLAS_PACKAGE_FILTER_FILE=./package_filters.txt -G "Ninja" -DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE || { echo "Error: CMake configuration failed."; exit 1; }
     cmake --build ${SPARSE_BUILD_DIR} -- -j ${WORKERS} || { echo "Error: CMake build failed."; exit 1; }
-    echo "${SOURCE_DIR}" > "$OUTPUT_FILE"
+
+    echo "source ${SPARSE_BUILD_DIR}/x86_64-el9-gcc*-opt/setup.sh" >> "${OUTPUT_FILE}"
 
 elif [[ "$MODE" == "run_athena" ]]; then
 
@@ -163,7 +182,7 @@ elif [[ "$MODE" == "build_external" ]]; then
 
     export G4PATH=/cvmfs/atlas-nightlies.cern.ch/repo/sw/main_Athena_x86_64-el9-gcc13-opt/Geant4
 
-    time ./athena/Projects/Athena/build_externals.sh -t Release \
+    time ./athena/Projects/Athena/build_externals.sh -i -t Release \
       -x "${EXCMAKEARGS}" \
       -k "-j ${WORKERS}" 2>&1
 
@@ -176,7 +195,7 @@ elif [[ "$MODE" == "build_external_athena" ]]; then
     echo "Building athena on top of atlasexternals in $SOURCE_DIR"
     time ./athena/Projects/Athena/build.sh -acmi \
       -x "-DATLAS_ENABLE_CI_TESTS=TRUE -DATLAS_EXTERNAL=${ATLASAuthXML} -DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE ${EXCMAKEARGS}" \
-      -k "-j${NWORKERS}" 2>&1
+      -k "-j ${WORKERS}" 2>&1
 
     echo "${SOURCE_DIR}" > "$OUTPUT_FILE"
     echo "asetup Athena,${Athena_VERSION} --releasepath=${SOURCE_DIR}/build/install" >> "$OUTPUT_FILE"
