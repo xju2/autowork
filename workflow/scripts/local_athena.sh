@@ -132,4 +132,4 @@ else
 fi
 
 # Write output log
-echo "DONE $(date)" > "$OUTPUT_FILE"
+echo "${SOURCE_DIR}" > "$OUTPUT_FILE"

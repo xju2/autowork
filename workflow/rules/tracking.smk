@@ -23,6 +23,7 @@ rule run_legacy_ckf:
 datasets = ["ttbar"]
 rule run_gnn4itk_ml_local:
     input:
+        "projects/athena/config.gnn4itkTool.built",
         "projects/tracking/rdo_files.{dataset}.txt",
     output:
         "workarea/tracking/{dataset}/aod.gnn4itkMLLocal.{dataset}.root",
@@ -33,12 +34,13 @@ rule run_gnn4itk_ml_local:
         container_name = config["athena_dev_container"],
         chain_name = "GNN4ITk_ML_LOCAL",
     threads:
-        6
+        1
     shell:
         """shifter --image={params.container_name} --module=cvmfs \
-        workflow/scripts/run_tracking.sh -i "{input}" \
+        workflow/scripts/run_tracking.sh -i "{input[1]}" \
         -j {threads} \
         -m {params.max_evts} \
         -c {params.chain_name} \
+        -d `cat {input[0]}` \
         -o "{output}" > "{log}" 2>&1 \
         """

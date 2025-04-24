@@ -1,5 +1,5 @@
 {
-    "source_dir": "/pscratch/sd/x/xju/athena_dev/triton_mr_20250415",
+    "source_dir": "/pscratch/sd/x/xju/athena_dev/gnn4itk_20250423",
     "release": "main,latest",
     "packages": [
         "InnerDetector/InDetGNNTracking"
