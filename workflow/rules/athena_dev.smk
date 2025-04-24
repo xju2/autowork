@@ -1,47 +1,49 @@
 
 rule build_atlasexternal:
+    input:
+        "projects/athena/external.config.{ath_dev_name}.json"
     output:
-        "projects/atlasexternal/build_atlasexternal.out"
+        "projects/athena/external.{ath_dev_name}.built"
+    log:
+        "projects/athena/external.{ath_dev_name}.built.log"
     params:
-        source_dir = config["atlas_external_source_dir"],
-        external_url = "https://gitlab.cern.ch/xju/atlasexternals.git",
-        external_ref = "origin/triton_disable_typeinfo",
-        extra_cmake_config_args = "-DATLAS_ONNXRUNTIME_USE_CUDA=True -DCUDNN_INCLUDE_DIR=/usr/include -G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE",
         container_name = config["athena_dev_gpu_container"],
     threads:
         16
     shell:
         """shifter --image={params.container_name} --module=cvmfs,gpu \
-          workflow/scripts/build_athena.sh \
-            -u {params.external_url} \
-            -r {params.external_ref} \
-            -d "{params.source_dir}" \
-            -j {threads} \
+          workflow/scripts/local_athena.sh -m build_external \
+            -i "{input}" \
+            -t {threads} \
             -o "{output}" \
-            -x "{params.extra_cmake_config_args}"
+            > "{log}" 2>&1
         """
 
 rule build_athena_with_external:
     input:
-        "build_atlasexternal.out"
+        "projects/athena/external.{ath_dev_name}.built"
     output:
-        "build_athena_with_external.out"
+        "projects/athena/athena_external.{ath_dev_name}.built"
+    log:
+        "projects/athena/athena_external.{ath_dev_name}.built.log"
     params:
-        source_dir = config["atlas_external_source_dir"],
         container_name = config["athena_dev_gpu_container"],
     threads:
         16
     shell:
         """shifter --image={params.container_name} --module=cvmfs,gpu \
-        workflow/scripts/build_athena.sh -a -d {params.source_dir} \
-          -j {threads} -o "{output}"
+        workflow/scripts/build_athena_with_external.sh -i "{input}" -o "{output}" \
+          -t {threads} > "{log}" 2>&1
         """
 
 rule test_athena_with_external:
     input:
-        "build_athena_with_external.out"
+        "projects/athena/config.{ath_dev_name}.json",
+        "projects/athena/athena_external.{ath_dev_name}.built"
     output:
-        "test_athena_with_external.out"
+        "projects/athena/test_athena_with_external.{ath_dev_name}.tested"
+    log:
+        "projects/athena/test_athena_with_external.{ath_dev_name}.tested.log"
     params:
         source_dir = config["atlas_external_source_dir"],
         release = "25.0.30",
@@ -57,11 +59,11 @@ rule build_custom_athena:
     input:
         "projects/athena/config.{ath_dev_name}.json"
     output:
-        "projects/athena/config.{ath_dev_name}.built"
+        "projects/athena/athena.{ath_dev_name}.built"
     params:
         container_name = config["athena_dev_gpu_container"],
     log:
-        "projects/athena/config.{ath_dev_name}.built.log"
+        "projects/athena/athena.{ath_dev_name}.built.log"
     threads:
         16
     shell:
@@ -73,13 +75,13 @@ rule build_custom_athena:
 rule validate_custom_athena:
     input:
         "projects/athena/config.{ath_dev_name}.json",
-        "projects/athena/config.{ath_dev_name}.built"
+        "projects/athena/athena.{ath_dev_name}.built"
     output:
-        "projects/athena/config.{ath_dev_name}.validated"
+        "projects/athena/athena.{ath_dev_name}.validated"
     params:
         container_name = config["athena_dev_gpu_container"]
     log:
-        "projects/athena/config.{ath_dev_name}.validated.log"
+        "projects/athena/athena.{ath_dev_name}.validated.log"
     threads:
         4
     shell:

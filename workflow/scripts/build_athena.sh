@@ -78,6 +78,7 @@ export G4PATH=/cvmfs/atlas-nightlies.cern.ch/repo/sw/main_Athena_x86_64-el9-gcc1
 mkdir build
 
 export PATH=/cvmfs/sft.cern.ch/lcg/contrib/ninja/1.11.1/Linux-x86_64/bin:$PATH
+export ATLASAuthXML=/global/cfs/cdirs/atlas/xju/data/xml
 
 if [ "$DO_EXTERNAL" = "true" ]; then
   echo "Building external dependencies..." >> $OUTFILE

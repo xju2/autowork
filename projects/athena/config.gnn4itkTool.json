@@ -1,6 +1,6 @@
 {
     "source_dir": "/pscratch/sd/x/xju/athena_dev/gnn4itk_20250423",
-    "release": "main,latest",
+    "release": "Athena,main,latest,here",
     "packages": [
         "InnerDetector/InDetGNNTracking"
     ]

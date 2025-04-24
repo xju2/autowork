@@ -4,7 +4,7 @@
 INPUT_FILE=""
 OUTPUT_FILE=""
 MODE="build"
-WORKERS=16
+WORKERS=1
 
 # Function to display usage
 usage() {
@@ -42,8 +42,8 @@ echo "Mode: $MODE"
 echo "Number of Threads: $WORKERS"
 
 # mode must be in ["build", "run"]
-if [[ "$MODE" != "build" && "$MODE" != "run" ]]; then
-    echo "Error: Invalid mode. Must be one of [build, run]."
+if [[ "$MODE" != "build_athena" && "$MODE" != "run_athena" && "${MODE}" != "build_external" && "${MODE}" != "build_external_athena" ]]; then
+    echo "Error: Invalid mode. Must be one of [build_athena, run_athena, build_external, build_external_athena]."
     exit 1
 fi
 
@@ -68,68 +68,123 @@ parse_json() {
     SOURCE_DIR=$(jq -r '.source_dir' "$json_file")
     RELEASE=$(jq -r '.release' "$json_file")
     PACKAGES=$(jq -r '.packages[]' "$json_file")
-    VALIDATION=$(jq -r '.validation_cmd[]' "$json_file")
+    EXE_CMDS=$(jq -r '.exe_cmd[]' "$json_file")
 
-        # Validate parsed values
-    if [[ -z "$SOURCE_DIR" || -z "$RELEASE" || -z "$PACKAGES" ]]; then
-        echo "Error: Failed to parse JSON file or missing required fields."
-        exit 1
-    fi
-
-    # Print parsed values (optional, for debugging)
-    echo "Parsed JSON Configuration:"
-    echo "Source Directory: $SOURCE_DIR"
-    echo "Release: $RELEASE"
-    echo "Packages: $PACKAGES"
+    # atlasexternal related variables
+    EXTERNAL_URL=$(jq -r '.external_url' "$json_file")
+    EXTERNAL_REF=$(jq -r '.external_ref' "$json_file")
+    EXCMAKEARGS=$(jq -r '.extra_cmake_args' "$json_file")
+    EXTERNAL_ASETUP=$(jq -r '.external_asetup' "$json_file")
 }
 
 # Example usage
 parse_json "${INPUT_FILE}"
 
-SOURCE_DIR=$(realpath "$SOURCE_DIR")
-
-package_filer_file=${SOURCE_DIR}/package_filters.txt
-# loop over the packages and create a package filter file
-if [[ -f "$package_filer_file" ]]; then
-    echo "Package filter file already exists. Overwriting..."
-    rm "$package_filer_file"
-fi
-echo "Creating package filter file at: $package_filer_file"
-for package in ${PACKAGES}; do
-    echo "+ $package" >> "$package_filer_file"
-done
-echo "- .*" >> "$package_filer_file"
 
 # deactivate the herited python environment.
 source workflow/scripts/deactivate_python_env.sh
 
-
+SOURCE_DIR=$(realpath "$SOURCE_DIR")
 cd ${SOURCE_DIR} || { echo "Failed to change directory to $SOURCE_DIR"; exit 1; }
 
 source /global/cfs/cdirs/atlas/scripts/setupATLAS.sh
 setupATLAS
-asetup Athena,${RELEASE},here
 
 which python
 export PATH=/cvmfs/sft.cern.ch/lcg/contrib/ninja/1.11.1/Linux-x86_64/bin:$PATH
 
-if [[ "$MODE" == "build" ]]; then
-    cmake -B build -S athena/Projects/WorkDir -DATLAS_PACKAGE_FILTER_FILE=./package_filters.txt -G "Ninja" -DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE || { echo "Error: CMake configuration failed."; exit 1; }
-    cmake --build build -- -j ${WORKERS} || { echo "Error: CMake build failed."; exit 1; }
-else
+SPARSE_BUILD_DIR="sparse_build"
+
+if [[ "$MODE" == "build_athena" ]]; then
+
+    echo "Building Athena in $SOURCE_DIR"
+    # check if required variables are in the json file
+    if [[ -z "$RELEASE" || -z "$PACKAGES" ]]; then
+        echo "Error: Missing required fields in the JSON file."
+        exit 1
+    fi
+
+    package_filer_file=${SOURCE_DIR}/package_filters.txt
+    # loop over the packages and create a package filter file
+    if [[ -f "$package_filer_file" ]]; then
+        echo "Package filter file already exists. Overwriting..."
+        rm "$package_filer_file"
+    fi
+    echo "Creating package filter file at: $package_filer_file"
+    for package in ${PACKAGES}; do
+        echo "+ $package" >> "$package_filer_file"
+    done
+    echo "- .*" >> "$package_filer_file"
+
+    asetup ${RELEASE}
+
+    cmake -B ${SPARSE_BUILD_DIR} -S athena/Projects/WorkDir -DATLAS_PACKAGE_FILTER_FILE=./package_filters.txt -G "Ninja" -DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE || { echo "Error: CMake configuration failed."; exit 1; }
+    cmake --build ${SPARSE_BUILD_DIR} -- -j ${WORKERS} || { echo "Error: CMake build failed."; exit 1; }
+    echo "${SOURCE_DIR}" > "$OUTPUT_FILE"
+
+elif [[ "$MODE" == "run_athena" ]]; then
+
+    echo "Running Athena in $SOURCE_DIR"
+    # check if required variables are in the json file
+    if [[ -z "$RELEASE" || -z "$EXE_CMDS" ]]; then
+        echo "Error: Missing required fields in the JSON file."
+        exit 1
+    fi
 
     # Run the Athena job
-    source build/x86_64-el9-gcc*-opt/setup.sh
+    asetup ${RELEASE}
+    source ${SPARSE_BUILD_DIR}/x86_64-el9-gcc*-opt/setup.sh
     export ATHENA_CORE_NUMBER=${WORKERS}
 
-    mkdir run
-    cd run
-    echo "Running Athena job $(realpath run)"
-    while IFS= read -r validation; do
-        echo "Running validation command: $validation"
-        eval "$validation" || { echo "Error: Validation command failed."; exit 1; }
-    done <<< "${VALIDATION}"
+    echo "Executing command: " > "${OUTPUT_FILE}"
+    while IFS= read -r cmd; do
+        echo "Running validation command: $cmd"
+        eval "$cmd" || { echo "Error: Validation command failed."; exit 1; }
+        echo $cmd >> "${OUTPUT_FILE}"
+    done <<< "${EXE_CMDS}"
+
+elif [[ "$MODE" == "build_external" ]]; then
+    echo "Building atlasexternals in $SOURCE_DIR"
+    # check if required variables are in the json file
+    if [[ -z "$EXTERNAL_URL" || -z "$EXTERNAL_REF" ]]; then
+        echo "Error: Missing required fields in the JSON file."
+        exit 1
+    fi
+    # check if athena directory is there.
+    if [[ ! -d "athena" ]]; then
+        echo "Error: athena directory does not exist."
+        exit 1
+    fi
+
+
+    asetup ${EXTERNAL_ASETUP}
+    export AtlasExternals_URL=$EXTERNAL_URL
+    export AtlasExternals_REF=$EXTERNAL_REF
+
+    export G4PATH=/cvmfs/atlas-nightlies.cern.ch/repo/sw/main_Athena_x86_64-el9-gcc13-opt/Geant4
+
+    time ./athena/Projects/Athena/build_externals.sh -t Release \
+      -x "${EXCMAKEARGS}" \
+      -k "-j ${WORKERS}" 2>&1
+
+    echo "SOURCE_DIR=${SOURCE_DIR}" > "$OUTPUT_FILE"
+    echo 'cd ${SOURCE_DIR} || { echo "Failed to change directory to $SOURCE_DIR"; exit 1; }' >> "$OUTPUT_FILE"
+    echo "asetup ${EXTERNAL_ASETUP}" >> "$OUTPUT_FILE"
+
+elif [[ "$MODE" == "build_external_athena" ]]; then
+
+    echo "Building athena on top of atlasexternals in $SOURCE_DIR"
+    time ./athena/Projects/Athena/build.sh -acmi \
+      -x "-DATLAS_ENABLE_CI_TESTS=TRUE -DATLAS_EXTERNAL=${ATLASAuthXML} -DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE ${EXCMAKEARGS}" \
+      -k "-j${NWORKERS}" 2>&1
+
+    echo "${SOURCE_DIR}" > "$OUTPUT_FILE"
+    echo "asetup Athena,${Athena_VERSION} --releasepath=${SOURCE_DIR}/build/install" >> "$OUTPUT_FILE"
+
+else
+    echo "Error: Invalid mode. Must be one of [build_athena, run_athena, build_external, build_external_athena]."
+    exit 1
 fi
 
-# Write output log
-echo "${SOURCE_DIR}" > "$OUTPUT_FILE"
+
+

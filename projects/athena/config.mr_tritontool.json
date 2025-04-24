@@ -1,11 +1,12 @@
 {
     "source_dir": "/pscratch/sd/x/xju/athena_dev/mr_tritontools_20250418",
-    "release": "main,latest",
+    "release": "Athena,main,latest,here",
     "packages": [
         "Control/AthOnnx/AthTritonComps",
         "Control/AthenaExamples/AthExOnnxRuntime"
     ],
-    "validation_cmd": [
+    "exe_cmd": [
+        "mkdir run ; cd run",
         "[[ -f AthExOnnxRuntime_test_infer.py ]] || ln -s $SOURCE_DIR/athena/Control/AthenaExamples/AthExOnnxRuntime/python/AthExOnnxRuntime_test_infer.py .",
         "athena --CA AthExOnnxRuntime_test_infer.py"
     ]
