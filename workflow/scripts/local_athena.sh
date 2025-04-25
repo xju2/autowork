@@ -172,7 +172,16 @@ elif [[ "$MODE" == "build_external" ]]; then
     # check if athena directory is there.
     if [[ ! -d "athena" ]]; then
         echo "Error: athena directory does not exist."
-        exit 1
+        echo "Checkout the latest ATLAS athena code from git."
+        echo "and create a new branch."
+        git clone ssh://git@gitlab.cern.ch:7999/xju/athena.git --single-branch
+        cd athena
+        git remote add atlas ssh://git@gitlab.cern.ch:7999/athena.git
+        git fetch atlas
+        git checkout -b atlas_main atlas/main
+        git branch debug_atlas_main
+        git checkout debug_atlas_main
+        cd ..
     fi
 
 
