@@ -12,12 +12,11 @@ rule build_atlasexternal:
         atime = "4:00:00",
         nodes = 1,
         account = "m3443",
-        partition = "gpu",
-        gpu = 1,
+        partition = "cpu",
         queue = "interactive",
         workers = 32
     shell:
-        """{params.mpi} -N {params.nodes} -G {params.gpu} -A {params.account} \
+        """{params.mpi} -N {params.nodes} -A {params.account} \
         -t {params.atime} \
         -q {params.queue} \
         -C {params.partition} -c 32 -n 1 \
@@ -40,16 +39,15 @@ rule build_athena_with_external:
         container_name = config["athena_dev_gpu_container"],
         mpi = "srun",
         nodes = 1,
-        gpu = 1,
         account = "m3443",
         atime = "4:00:00",
         queue = "interactive",
-        partition = "gpu",
+        partition = "cpu",
         workers = 32
     resources:
         tasks = 1
     shell:
-        """{params.mpi} -N {params.nodes} -G {params.gpu} -A {params.account} \
+        """{params.mpi} -N {params.nodes} -A {params.account} \
         -t {params.atime} \
         -q {params.queue} \
         -C {params.partition} -c 32 -n 1 \
