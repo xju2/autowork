@@ -2,7 +2,7 @@ rule build_traccc:
     output:
         "build_traccc.out"
     params:
-        source_dir = config["traccc_source_dir"],
+        source_dir = "",
         container_name = config["athena_dev_gpu_container"],
     threads:
         16
@@ -18,7 +18,7 @@ rule run_traccc:
     output:
         "run_traccc.out"
     params:
-        source_dir = config["traccc_source_dir"],
+        source_dir = "",
         do_G300 = "true",
         container_name = config["athena_dev_gpu_container"],
     threads:

@@ -2,7 +2,7 @@ rule start_triton_server_for_validation:
     output:
         "projects/triton/triton_server_for_validation.out"
     params:
-        source_dir = config["triton_source_dir"],
+        source_dir = "",
     threads: 2
     log:
         "projects/triton/start_triton_server_for_validation.log"
@@ -18,7 +18,7 @@ rule validate_triton_client:
     output:
         "projects/triton/validate_triton_client.out"
     params:
-        source_dir = config["triton_source_dir"],
+        source_dir = "",
         triton_common_version = "a6b410343234f9acaa5d615c19f5b38690b45dff",
         triton_core_version = "ce46b95dcaa860a524f91324c146877c018dcf13",
         client_version = "r24.12",

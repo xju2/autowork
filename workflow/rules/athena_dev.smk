@@ -8,26 +8,23 @@ rule build_atlasexternal:
         "projects/athena/external.{ex_dev_name}.built.log"
     params:
         container_name = config["athena_dev_gpu_container"],
-    threads:
-        32
-    resources:
-        mpi="srun",
+        mpi = "srun",
         atime = "4:00:00",
         nodes = 1,
         account = "m3443",
-        tasks = 32,
         partition = "gpu",
         gpu = 1,
-        queue = "interactive"
+        queue = "interactive",
+        workers = 32
     shell:
-        """{resources.mpi} -N {resources.nodes} -G {resources.gpu} -A {resources.account} \
-        -t {resources.atime} \
-        -q {resources.queue} \
-        -C {resources.partition} -c 32 \
+        """{params.mpi} -N {params.nodes} -G {params.gpu} -A {params.account} \
+        -t {params.atime} \
+        -q {params.queue} \
+        -C {params.partition} -c 32 -n 1 \
         shifter --image={params.container_name} --module=cvmfs,gpu \
           workflow/scripts/local_athena.sh -m build_external \
             -i "{input}" \
-            -t {threads} \
+            -t {params.workers} \
             -o "{output}" \
             > "{log}" 2>&1
         """
@@ -41,12 +38,24 @@ rule build_athena_with_external:
         "projects/athena/athena.{ex_dev_name}.default.built.log"
     params:
         container_name = config["athena_dev_gpu_container"],
-    threads:
-        8
+        mpi = "srun",
+        nodes = 1,
+        gpu = 1,
+        account = "m3443",
+        atime = "4:00:00",
+        queue = "interactive",
+        partition = "gpu",
+        workers = 32
+    resources:
+        tasks = 1
     shell:
-        """shifter --image={params.container_name} --module=cvmfs,gpu \
+        """{params.mpi} -N {params.nodes} -G {params.gpu} -A {params.account} \
+        -t {params.atime} \
+        -q {params.queue} \
+        -C {params.partition} -c 32 -n 1 \
+        shifter --image={params.container_name} --module=cvmfs,gpu \
         workflow/scripts/build_athena_with_external.sh -i "{input}" -o "{output}" \
-          -t {threads} > "{log}" 2>&1
+          -t {params.workers} > "{log}" 2>&1
         """
 
 rule ctest_athena_with_external:
@@ -58,12 +67,10 @@ rule ctest_athena_with_external:
     log:
         "projects/athena/test_athena_with_external.{ex_dev_name}.tested.log"
     params:
-        source_dir = config["atlas_external_source_dir"],
-        release = "25.0.30",
         container_name = config["athena_dev_gpu_container"],
     shell:
         """shifter --image={params.container_name} --module=cvmfs,gpu \
-        workflow/scripts/test_athena.sh -d {params.source_dir} -o "{output}"
+        workflow/scripts/test_athena.sh -i "{input[0]}" -s "{input[1]}" -o "{output}"
         """
 
 ath_dev_names = ["gnn4itkTool", "mr_tritontool"]

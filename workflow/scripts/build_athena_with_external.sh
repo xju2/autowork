@@ -49,7 +49,7 @@ which python
 which gcc
 
 time ./athena/Projects/Athena/build.sh -acmi \
-  -x "-DATLAS_ENABLE_CI_TESTS=TRUE -DATLAS_EXTERNAL=${ATLASAuthXML} -DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE \
+  -x "-DATLAS_ENABLE_CI_TESTS=TRUE -DATLAS_EXTERNAL=${ATLASAuthXML} -DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE" \
   -k "-j ${WORKERS}" 2>&1 || { echo "Error: Athena build failed."; exit 1; }
 
 echo "SOURCE_DIR=${SOURCE_DIR}" > "$OUTPUT_FILE"
