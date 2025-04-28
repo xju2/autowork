@@ -32,7 +32,7 @@ rule build_athena_with_external:
     input:
         "projects/athena/external.{ex_dev_name}.built"
     output:
-        "projects/athena/athena.{ex_dev_name}.default.built"
+        "projects/athena/athena.{ex_dev_name}.default.built.json"
     log:
         "projects/athena/athena.{ex_dev_name}.default.built.log"
     params:
@@ -94,9 +94,9 @@ rule build_custom_athena:
 rule build_custom_athena_with_external:
     input:
         "projects/athena/athena.config.{ath_dev_name}.json",
-        "projects/athena/athena.{ex_dev_name}.default.built",
+        "projects/athena/athena.{ex_dev_name}.default.built.json",
     output:
-        "projects/athena/athena.{ex_dev_name}.{ath_dev_name}.built"
+        "projects/athena/athena.{ex_dev_name}.{ath_dev_name}.built.json"
     params:
         container_name = config["athena_dev_gpu_container"],
     log:

@@ -1,0 +1,6 @@
+{
+  "source_dir": "/pscratch/sd/x/xju/athena_dev/check_ort_cuda",
+  "release": "Athena,25.0.30 --releasepath=/pscratch/sd/x/xju/athena_dev/check_ort_cuda/build/install",
+  "local_setup": "sparse_build/x86_64-el9-gcc*-opt/setup.sh"
+}
+

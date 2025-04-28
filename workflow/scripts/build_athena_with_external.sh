@@ -54,5 +54,14 @@ time ./athena/Projects/Athena/build.sh -acmi -t Release \
   -x "-DATLAS_ENABLE_CI_TESTS=TRUE -DATLAS_EXTERNAL=${ATLASAuthXML} -G "Ninja" -DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE" \
   -k "-j ${WORKERS}" 2>&1 || { echo "Error: Athena build failed."; exit 1; }
 
-echo "SOURCE_DIR=${SOURCE_DIR}" > "$OUTPUT_FILE"
-echo "asetup Athena,${Athena_VERSION} --releasepath=${SOURCE_DIR}/build/install" >> "$OUTPUT_FILE"
+
+Athena_VERSION=$(\ls build/install/Athena/)
+## write output to a json file.
+echo "{" > "$OUTPUT_FILE"
+echo "  \"source_dir\": \"${SOURCE_DIR}\"," >> "$OUTPUT_FILE"
+echo "  \"release\": \"Athena,${Athena_VERSION} --releasepath=${SOURCE_DIR}/build/install\"" >> "$OUTPUT_FILE"
+echo "}" >> "$OUTPUT_FILE"
+
+## prettify the json file.
+jq . "$OUTPUT_FILE" > "${OUTPUT_FILE}.tmp" && mv "${OUTPUT_FILE}.tmp" "$OUTPUT_FILE"
+echo "Athena build completed successfully. Output written to $OUTPUT_FILE"

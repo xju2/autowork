@@ -37,7 +37,6 @@ if [[ -z "$INPUT_FILE" || -z "$OUTPUT_FILE" ]]; then
 fi
 
 OUTPUT_FILE=$(realpath "$OUTPUT_FILE")
-SETUP_FILE=$(realpath "$SETUP_FILE")
 
 # Main script logic
 echo "Running custom Athena build with the following parameters:"
@@ -52,7 +51,6 @@ if [[ "$MODE" != "build_athena" && "$MODE" != "run_athena" && "${MODE}" != "buil
     echo "Error: Invalid mode. Must be one of [build_athena, run_athena, build_external, build_external_athena]."
     exit 1
 fi
-
 
 # Ensure the input file exists
 if [[ ! -f "$INPUT_FILE" ]]; then
@@ -89,14 +87,21 @@ parse_json "${INPUT_FILE}"
 # deactivate the herited python environment.
 source workflow/scripts/deactivate_python_env.sh
 
-SOURCE_DIR=$(realpath "$SOURCE_DIR")
-cd ${SOURCE_DIR} || { echo "Failed to change directory to $SOURCE_DIR"; exit 1; }
-
 source /global/cfs/cdirs/atlas/scripts/setupATLAS.sh
 setupATLAS
-
-which python
 export PATH=/cvmfs/sft.cern.ch/lcg/contrib/ninja/1.11.1/Linux-x86_64/bin:$PATH
+
+# ! only after parsing the input JSON file.
+# ! do not change the location of this line.
+if [[ -f "$SETUP_FILE" ]]; then
+    SETUP_FILE=$(realpath "$SETUP_FILE")
+    echo "Set up environment from $SETUP_FILE"
+    SOURCE_DIR=$(jq -r '.source_dir' "$SETUP_FILE")
+    RELEASE=$(jq -r '.release' "$SETUP_FILE")
+fi
+
+SOURCE_DIR=$(realpath "$SOURCE_DIR")
+cd ${SOURCE_DIR} || { echo "Failed to change directory to $SOURCE_DIR"; exit 1; }
 
 SPARSE_BUILD_DIR="sparse_build"
 
@@ -104,16 +109,11 @@ if [[ "$MODE" == "build_athena" ]]; then
 
     # check if SETUP_FILE is provided.
     # If so, setup the source_dir and athena environment from there.
-    if [[ -f "$SETUP_FILE" ]]; then
-        echo "Setting up environment from $SETUP_FILE"
-        source "$SETUP_FILE"
-        cat "$SETUP_FILE" >> "$OUTPUT_FILE"
-    else
-        echo "SOURCE_DIR=${SOURCE_DIR}" > "$OUTPUT_FILE"
-        echo 'cd ${SOURCE_DIR} || { echo "Failed to change directory to $SOURCE_DIR"; exit 1; }' >> "$OUTPUT_FILE"
-        echo "asetup ${RELEASE}" >> "$OUTPUT_FILE"
-        asetup ${RELEASE}
-    fi
+    echo "{" > "$OUTPUT_FILE"
+    echo "  \"source_dir\": \"${SOURCE_DIR}\"," >> "$OUTPUT_FILE"
+    echo "  \"release\": \"${RELEASE}\"," >> "$OUTPUT_FILE"
+
+    asetup ${RELEASE}
 
     echo "Building customized Athena in $SOURCE_DIR"
     echo "Original athena: $(which athena)"
@@ -139,7 +139,8 @@ if [[ "$MODE" == "build_athena" ]]; then
     cmake -B ${SPARSE_BUILD_DIR} -S athena/Projects/WorkDir -DATLAS_PACKAGE_FILTER_FILE=./package_filters.txt -G "Ninja" -DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE || { echo "Error: CMake configuration failed."; exit 1; }
     cmake --build ${SPARSE_BUILD_DIR} -- -j ${WORKERS} || { echo "Error: CMake build failed."; exit 1; }
 
-    echo "source ${SPARSE_BUILD_DIR}/x86_64-el9-gcc*-opt/setup.sh" >> "${OUTPUT_FILE}"
+    echo "  \"local_setup\": ${SPARSE_BUILD_DIR}/x86_64-el9-gcc*-opt/setup.sh" >> "${OUTPUT_FILE}"\
+    echo "}" >> "$OUTPUT_FILE"
 
 elif [[ "$MODE" == "run_athena" ]]; then
 
