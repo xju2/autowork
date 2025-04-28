@@ -21,14 +21,14 @@ rule run_legacy_ckf:
         """
 
 datasets = ["ttbar"]
-rule run_gnn4itk_ml_local:
+rule run_gnn4itk_local:
     input:
         "projects/athena/athena.default.gnn4itkTool.built",
         "projects/tracking/rdo_files.{dataset}.txt",
     output:
         "workarea/tracking/{dataset}/aod.gnn4itkMLLocal.{dataset}.root",
     log:
-        "projects/tracking/run_gnn4itk_ml_local.{dataset}.log",
+        "projects/tracking/gnn4itk_local.{dataset}.log",
     params:
         max_evts = 1,
         container_name = config["athena_dev_gpu_container"],
@@ -45,24 +45,34 @@ rule run_gnn4itk_ml_local:
         -o "{output}" > "{log}" 2>&1 \
         """
 
-rule run_gnn4itk_ml_local_external:
+rule run_gnn4itk_local_external:
     input:
-        "projects/athena/athena.ortCUDA.{ath_dev_name}.built",
+        "projects/athena/athena.{ex_dev_name}.{ath_dev_name}.built.json",
         "projects/tracking/rdo_files.{dataset}.txt",
     output:
-        "workarea/tracking/{dataset}/aod.ortCUDA.gnn4itkTool.{dataset}.root",
+        "workarea/tracking/{dataset}/aod.{ex_dev_name}.{ath_dev_name}.{dataset}.root",
     log:
-        "projects/tracking/log.run_gnn4itk_ml_local_external.{dataset}.txt",
+        "projects/tracking/gnn4itk_local_external.{ex_dev_name}.{ath_dev_name}.{dataset}.log",
     params:
         max_evts = 1,
         container_name = config["athena_dev_gpu_container"],
         chain_name = "GNN4ITk_ML_LOCAL_EXTERNAL",
-    threads:
-        1
+        mpi = "srun",
+        atime = "4:00:00",
+        nodes = 1,
+        gpu = 1,
+        account = "m3443",
+        partition = "gpu&hbm80g",
+        queue = "interactive",
+        workers = 1,
     shell:
-        """shifter --image={params.container_name} --module=cvmfs,gpu \
+        """{params.mpi} -N {params.nodes} -A {params.account} \
+        -t {params.atime} \
+        -q {params.queue} \
+        -C {params.partition} -c 32 -n 1  -G 1 \
+        shifter --image={params.container_name} --module=cvmfs,gpu \
         workflow/scripts/run_tracking.sh -i "{input[1]}" \
-        -j {threads} \
+        -j {params.workers} \
         -m {params.max_evts} \
         -c {params.chain_name} \
         -s {input[0]} \

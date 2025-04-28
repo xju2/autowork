@@ -32,7 +32,8 @@ fi
 
 NUM_JOBS=8
 
-echo "Start valiating Triton on $(date)"
+echo "Running $0 \n $(date) @ $(hostname)"
+echo "Start valiating Triton on"
 echo "Number of jobs: $NUM_JOBS"
 echo "Output: $OUTPUT"
 echo "SOURCEDIR: $SOURCEDIR"

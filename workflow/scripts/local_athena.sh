@@ -39,6 +39,7 @@ fi
 OUTPUT_FILE=$(realpath "$OUTPUT_FILE")
 
 # Main script logic
+echo "Running $0 \n $(date) @ $(hostname)"
 echo "Running custom Athena build with the following parameters:"
 echo "Input File: $INPUT_FILE"
 echo "Output File: $OUTPUT_FILE"

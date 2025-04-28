@@ -24,7 +24,8 @@ done
 OUTPUT_FILE=$(realpath "$OUTPUT_FILE")
 
 # Log the parameters
-echo "Running Athena build on top of atlasexternal. $(date)"
+echo "Running $0 \n $(date) @ $(hostname)"
+echo "Running Athena build on top of atlasexternal"
 echo "Input File: $INPUT_FILE"
 echo "Output File: $OUTPUT_FILE"
 echo "Number of Threads: $WORKERS"

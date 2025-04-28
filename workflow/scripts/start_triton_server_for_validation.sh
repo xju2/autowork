@@ -11,6 +11,7 @@ done
 
 OUTPUT=$(realpath "$OUTPUT")
 
+echo "Running $0 \n $(date) @ $(hostname)"
 echo "Start Triton Server for validation"
 echo "on $(date)"
 echo "SOURCE_DIR: $SOURCE_DIR"

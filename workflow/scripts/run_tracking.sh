@@ -54,6 +54,7 @@ echo "Output File: $OUTFILE"
 echo "Number of Workers: $NUM_WORKERS"
 echo "Max Events: $MAX_EVENTS"
 echo "Chain Name: $CHAINNAME"
+echo "Setup File: $SETUP_FILE"
 
 # check if chain name is in
 # ["CKF_LEGACY", "GNN4ITk_ML_LOCAL", "GNN4ITK_ML_TRITON"]
@@ -71,9 +72,14 @@ source /global/cfs/cdirs/atlas/scripts/setupATLAS.sh
 setupATLAS
 
 if [[ -f "$SETUP_FILE" ]]; then
-    source "$SETUP_FILE"
+    SETUP_FILE=$(realpath "$SETUP_FILE")
+    echo "Set up environment from $SETUP_FILE"
+    source workflow/scripts/setup_athena_from_json.sh
+    setup_athena_from_json "$SETUP_FILE"
 else
-    echo "Warning: Setup file $SETUP_FILE not found. Proceeding without it."
+    echo "Warning: Setup file $SETUP_FILE not found"
+    echo "Using the default setup: \"Athena,main,latest,here\""
+    asetup Athena,main,latest,here
 fi
 
 export ATHENA_CORE_NUMBER=$NUM_WORKERS
