@@ -140,7 +140,7 @@ if [[ "$MODE" == "build_athena" ]]; then
     cmake -B ${SPARSE_BUILD_DIR} -S athena/Projects/WorkDir -DATLAS_PACKAGE_FILTER_FILE=./package_filters.txt -G "Ninja" -DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE || { echo "Error: CMake configuration failed."; exit 1; }
     cmake --build ${SPARSE_BUILD_DIR} -- -j ${WORKERS} || { echo "Error: CMake build failed."; exit 1; }
 
-    echo "  \"local_setup\": ${SPARSE_BUILD_DIR}/x86_64-el9-gcc*-opt/setup.sh" >> "${OUTPUT_FILE}"\
+    echo "  \"local_setup\": \"${SPARSE_BUILD_DIR}/x86_64-el9-gcc*-opt/setup.sh\"" >> "${OUTPUT_FILE}"
     echo "}" >> "$OUTPUT_FILE"
 
 elif [[ "$MODE" == "run_athena" ]]; then

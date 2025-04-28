@@ -56,7 +56,7 @@ rule run_gnn4itk_local_external:
     params:
         max_evts = 1,
         container_name = config["athena_dev_gpu_container"],
-        chain_name = "GNN4ITk_ML_LOCAL_EXTERNAL",
+        chain_name = "GNN4ITk_ML_LOCAL",
         mpi = "srun",
         atime = "4:00:00",
         nodes = 1,
@@ -67,9 +67,9 @@ rule run_gnn4itk_local_external:
         workers = 1,
     shell:
         """{params.mpi} -N {params.nodes} -A {params.account} \
-        -t {params.atime} \
+        -t "{params.atime}" \
         -q {params.queue} \
-        -C {params.partition} -c 32 -n 1  -G 1 \
+        -C "{params.partition}" -c 32 -n 1  -G 1 \
         shifter --image={params.container_name} --module=cvmfs,gpu \
         workflow/scripts/run_tracking.sh -i "{input[1]}" \
         -j {params.workers} \

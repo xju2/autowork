@@ -62,7 +62,3 @@ echo "{" > "$OUTPUT_FILE"
 echo "  \"source_dir\": \"${SOURCE_DIR}\"," >> "$OUTPUT_FILE"
 echo "  \"release\": \"Athena,${Athena_VERSION} --releasepath=${SOURCE_DIR}/build/install\"" >> "$OUTPUT_FILE"
 echo "}" >> "$OUTPUT_FILE"
-
-## prettify the json file.
-jq . "$OUTPUT_FILE" > "${OUTPUT_FILE}.tmp" && mv "${OUTPUT_FILE}.tmp" "$OUTPUT_FILE"
-echo "Athena build completed successfully. Output written to $OUTPUT_FILE"
