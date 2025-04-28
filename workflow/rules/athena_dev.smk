@@ -50,7 +50,7 @@ rule build_athena_with_external:
         """{params.mpi} -N {params.nodes} -A {params.account} \
         -t {params.atime} \
         -q {params.queue} \
-        -C {params.partition} -c 32 -n 1 \
+        -C {params.partition} -c 128 -n 1 \
         shifter --image={params.container_name} --module=cvmfs,gpu \
         workflow/scripts/build_athena_with_external.sh -i "{input}" -o "{output}" \
           -t {params.workers} > "{log}" 2>&1
