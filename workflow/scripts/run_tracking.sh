@@ -42,14 +42,12 @@ fi
 OUTFILE=$(realpath "$OUTFILE")
 RUN_DIR=$(dirname "$OUTFILE")
 RUN_DIR=$(realpath "$RUN_DIR")
-SOURCE_DIR=$(realpath "$SOURCE_DIR")
 
 # Main script logic
 echo "Running $0 \n $(date) @ $(hostname)"
 echo "-----------------------------------"
 echo "Input File: $INPUT_FILE"
 echo "Run Directory: $RUN_DIR"
-echo "Build directory: $SOURCE_DIR"
 echo "Output File: $OUTFILE"
 echo "Number of Workers: $NUM_WORKERS"
 echo "Max Events: $MAX_EVENTS"

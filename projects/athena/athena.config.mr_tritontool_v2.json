@@ -1,0 +1,13 @@
+{
+    "source_dir": "/pscratch/sd/x/xju/athena_dev/mr_tritontools_20250418",
+    "release": "Athena,main,latest,here",
+    "packages": [
+        "Control/AthTriton",
+        "Control/AthenaExamples/AthExTriton"
+    ],
+    "exe_cmd": [
+        "mkdir run ; cd run",
+        "[[ -f AthExTriton_test.py ]] || ln -s $SOURCE_DIR/athena/Control/AthenaExamples/AthExTriton/python/AthExTriton_test.py .",
+        "athena --CA AthExTriton_test.py"
+    ]
+}

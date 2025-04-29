@@ -77,7 +77,7 @@ rule build_custom_athena:
     input:
         "projects/athena/athena.config.{ath_dev_name}.json"
     output:
-        "projects/athena/athena.default.{ath_dev_name}.built"
+        "projects/athena/athena.default.{ath_dev_name}.built.json"
     params:
         container_name = config["athena_dev_gpu_container"],
     log:
@@ -114,7 +114,7 @@ rule build_custom_athena_with_external:
 rule validate_custom_athena:
     input:
         "projects/athena/athena.config.{ath_dev_name}.json",
-        "projects/athena/athena.{ath_dev_name}.built"
+        "projects/athena/athena.default.{ath_dev_name}.built.json"
     output:
         "projects/athena/athena.{ath_dev_name}.validated"
     params:
@@ -125,6 +125,7 @@ rule validate_custom_athena:
         4
     shell:
         """shifter --image={params.container_name} --module=cvmfs,gpu \
-        workflow/scripts/local_athena.sh -i {input[0]} -o "{output}" -m run -t {threads} \
+        workflow/scripts/local_athena.sh -m run_athena \
+        -i {input[0]} -o "{output}" -t {threads} \
         > "{log}" 2>&1
         """
