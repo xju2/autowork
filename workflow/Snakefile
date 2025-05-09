@@ -9,6 +9,7 @@ include: "rules/athena_dev.smk"
 include: "rules/traccc.smk"
 include: "rules/tracking.smk"
 include: "rules/triton.smk"
+include: "rules/test.smk"
 
 rule all:
     input:

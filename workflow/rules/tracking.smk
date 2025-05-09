@@ -47,10 +47,10 @@ rule run_gnn4itk_local:
 
 rule run_gnn4itk_local_external:
     input:
-        "projects/athena/athena.{ex_dev_name}.{ath_dev_name}.built.json",
-        "projects/tracking/rdo_files.{dataset}.txt",
+        ath_config="projects/athena/athena.{ex_dev_name}.{ath_dev_name}.built.json",
+        data_cfg="projects/tracking/rdo_files.{dataset}.txt",
     output:
-        "workarea/tracking/{dataset}/aod.{ex_dev_name}.{ath_dev_name}.{dataset}.root",
+        "workarea/tracking/{dataset}/aod.gnn4itkML.local.{ex_dev_name}.{ath_dev_name}.{dataset}.root",
     log:
         "projects/tracking/gnn4itk_local_external.{ex_dev_name}.{ath_dev_name}.{dataset}.log",
     params:
@@ -71,10 +71,37 @@ rule run_gnn4itk_local_external:
         -q {params.queue} \
         -C "{params.partition}" -c 32 -n 1  -G 1 \
         shifter --image={params.container_name} --module=cvmfs,gpu \
-        workflow/scripts/run_tracking.sh -i "{input[1]}" \
+        workflow/scripts/run_tracking.sh -i "{input.data_cfg}" \
         -j {params.workers} \
         -m {params.max_evts} \
         -c {params.chain_name} \
-        -s {input[0]} \
+        -s {input.ath_config} \
+        -o "{output}" > "{log}" 2>&1 \
+        """
+
+rule run_gnn4itk_triton:
+    input:
+        ath_cfg="projects/athena/athena.default.{ath_dev_name}.built.json",
+        data_cfg="projects/tracking/rdo_files.{dataset}.txt",
+        server_cfg="projects/triton/triton_server.{triton_dev_name}.ready.txt",
+    output:
+        "workarea/tracking/{dataset}/aod.gnn4itkML.triton.{ath_dev_name}.{triton_dev_name}.{dataset}.root",
+    log:
+        "projects/tracking/gnn4itkML.triton.{ath_dev_name}.{triton_dev_name}.{dataset}.log",
+    params:
+        max_evts = -1,
+        container_name = config["athena_dev_gpu_container"],
+        model_name = "MetricLearning",
+    threads:
+        1
+    shell:
+        """shifter --image={params.container_name} --module=cvmfs,gpu \
+        workflow/scripts/run_tracking.sh -i "{input.data_cfg}" \
+        -j {threads} \
+        -m {params.max_evts} \
+        -c "GNN4ITk_ML_TRITON" \
+        -s {input.ath_cfg} \
+        -u `cat {input.server_cfg}` \
+        -p {params.model_name} \
         -o "{output}" > "{log}" 2>&1 \
         """

@@ -7,6 +7,8 @@ NUM_WORKERS=6
 MAX_EVENTS=1
 CHAINNAME="CKF_LEGACY"
 SETUP_FILE=""
+TRITON_MODEL_NAME="metriclearning"
+TRITON_URL="localhost"
 
 # Function to display usage
 usage() {
@@ -17,11 +19,14 @@ usage() {
     echo "  -m <max_events>  : Maximum number of events to process (default: $MAX_EVENTS)"
     echo "  -c <chainname>   : Chain name (default: $CHAINNAME)"
     echo "  -s <setup_file>   : Setup file (default: $SETUP_FILE)"
+    echo "  -p <triton_model_name> : Triton model name (default: $TRITON_MODEL_NAME)"
+    echo "  -u <triton_url>   : Triton URL (default: $TRITON_URL)"
+    echo "  -h                : Display this help message"
     exit 1
 }
 
 # Parse arguments
-while getopts "i:o:j:m:c:s:" opt; do
+while getopts "i:o:j:m:c:s:p:u:" opt; do
     case $opt in
         i) INPUT_FILE="$OPTARG" ;;
         o) OUTFILE="$OPTARG" ;;
@@ -29,15 +34,12 @@ while getopts "i:o:j:m:c:s:" opt; do
         m) MAX_EVENTS="$OPTARG" ;;
         c) CHAINNAME="$OPTARG" ;;
         s) SETUP_FILE="$OPTARG" ;;
-        \?) usage exit 1 ;;
+        p) TRITON_MODEL_NAME="$OPTARG" ;;
+        u) TRITON_URL="$OPTARG" ;;
+        h) usage ;;
+        \?) echo "Invalid option: -$OPTARG" >&2; usage exit 1 ;;
     esac
 done
-
-# Check for mandatory arguments
-if [[ -z "$INPUT_FILE" || -z "$OUTFILE" ]]; then
-    echo "Error: Missing required arguments."
-    usage
-fi
 
 OUTFILE=$(realpath "$OUTFILE")
 RUN_DIR=$(dirname "$OUTFILE")
@@ -53,6 +55,8 @@ echo "Number of Workers: $NUM_WORKERS"
 echo "Max Events: $MAX_EVENTS"
 echo "Chain Name: $CHAINNAME"
 echo "Setup File: $SETUP_FILE"
+echo "Triton Model Name: $TRITON_MODEL_NAME"
+echo "Triton URL: $TRITON_URL"
 
 # check if chain name is in
 # ["CKF_LEGACY", "GNN4ITk_ML_LOCAL", "GNN4ITK_ML_TRITON"]
@@ -118,6 +122,22 @@ elif [[ "$CHAINNAME" == "GNN4ITk_ML_LOCAL" ]]; then
         --digiSteeringConf 'StandardInTimeOnlyTruth' \
         --postInclude 'all:PyJobTransforms.UseFrontier' \
         --preInclude 'all:Campaigns.PhaseIIPileUp200' 'InDetConfig.ConfigurationHelpers.OnlyTrackingPreInclude' 'InDetGNNTracking.InDetGNNTrackingFlags.gnnFinderValidation' \
+        --inputRDOFile "${RDO_FILENAME}" \
+        --outputAODFile "${OUTFILE}"  \
+        --jobNumber '1' \
+        --athenaopts='--loglevel=INFO' \
+        --maxEvents ${MAX_EVENTS}
+elif [[ "$CHAINNAME" == "GNN4ITk_ML_TRITON" ]]; then
+    Reco_tf.py \
+        --CA 'all:True' --autoConfiguration 'everything' \
+        --conditionsTag ${DETECTOR_CONDITIONS} \
+        --geometryVersion ${GEOMETRY_VERSION} \
+        --multithreaded 'True' \
+        --steering 'doRAWtoALL' \
+        --digiSteeringConf 'StandardInTimeOnlyTruth' \
+        --postInclude 'all:PyJobTransforms.UseFrontier' \
+        --preInclude 'all:Campaigns.PhaseIIPileUp200' 'InDetConfig.ConfigurationHelpers.OnlyTrackingPreInclude' 'InDetGNNTracking.InDetGNNTrackingFlags.gnnTritonValidation' \
+        --preExec "flags.Tracking.GNN.Triton.model = \"$TRITON_MODEL_NAME\"; flags.Tracking.GNN.Triton.url = \"$TRITON_URL\";" \
         --inputRDOFile "${RDO_FILENAME}" \
         --outputAODFile "${OUTFILE}"  \
         --jobNumber '1' \
