@@ -6,8 +6,8 @@ rule start_triton_server_for_validation:
     threads: 2
     log:
         "projects/triton/triton_server.{triton_dev_name}.log"
-    script:
-        """scripts/start_triton_server_for_validation.sh \
+    shell:
+        """workflow/scripts/start_triton_server_for_validation.sh \
         -i {input} \
         -o "{output}" > "{log}" 2>&1
         """
@@ -42,7 +42,7 @@ rule check_triton_server:
     log:
         "projects/triton/check_triton_server.log"
     threads: 4
-    script:
-        """scripts/check_triton_server.sh -i "{input}" \
+    shell:
+        """workflow/scripts/check_triton_server.sh -i "{input}" \
         > "{log}" 2>&1
         """

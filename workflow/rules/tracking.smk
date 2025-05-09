@@ -23,8 +23,8 @@ rule run_legacy_ckf:
 datasets = ["ttbar"]
 rule run_gnn4itk_local:
     input:
-        ath_cfg="projects/athena/athena.default.gnn4itkTool.built.json",
-        data_cfg="projects/tracking/rdo_files.{dataset}.txt",
+        "projects/athena/athena.default.gnn4itkTool.built.json",
+        "projects/tracking/rdo_files.{dataset}.txt",
     output:
         "workarea/tracking/{dataset}/aod.gnn4itkMLLocal.{dataset}.root",
     log:
@@ -37,18 +37,18 @@ rule run_gnn4itk_local:
         1
     shell:
         """shifter --image={params.container_name} --module=cvmfs,gpu \
-        workflow/scripts/run_tracking.sh -i "{input.data_cfg}" \
+        workflow/scripts/run_tracking.sh -i "{input[1]}" \
         -j {threads} \
         -m {params.max_evts} \
         -c {params.chain_name} \
-        -s {input.ath_cfg} \
+        -s {input[0]} \
         -o "{output}" > "{log}" 2>&1 \
         """
 
 rule run_gnn4itk_local_external:
     input:
-        ath_config="projects/athena/athena.{ex_dev_name}.{ath_dev_name}.built.json",
-        data_cfg="projects/tracking/rdo_files.{dataset}.txt",
+        "projects/athena/athena.{ex_dev_name}.{ath_dev_name}.built.json",
+        "projects/tracking/rdo_files.{dataset}.txt",
     output:
         "workarea/tracking/{dataset}/aod.gnn4itkML.local.{ex_dev_name}.{ath_dev_name}.{dataset}.root",
     log:
@@ -71,23 +71,23 @@ rule run_gnn4itk_local_external:
         -q {params.queue} \
         -C "{params.partition}" -c 32 -n 1  -G 1 \
         shifter --image={params.container_name} --module=cvmfs,gpu \
-        workflow/scripts/run_tracking.sh -i "{input.data_cfg}" \
+        workflow/scripts/run_tracking.sh -i "{input[1]}" \
         -j {params.workers} \
         -m {params.max_evts} \
         -c {params.chain_name} \
-        -s {input.ath_config} \
+        -s {input[0]} \
         -o "{output}" > "{log}" 2>&1 \
         """
 
 rule run_gnn4itk_triton:
     input:
-        ath_cfg="projects/athena/athena.default.{ath_dev_name}.built.json",
-        data_cfg="projects/tracking/rdo_files.{dataset}.txt",
-        server_cfg="projects/triton/triton_server.{triton_dev_name}.ready.txt",
+        "projects/athena/athena.default.{ath_dev_name}.built.json",
+        "projects/tracking/rdo_files.{dataset}.txt",
+        "projects/triton/triton_server.{triton_dev_name}.ready.txt"
     output:
-        "workarea/tracking/{dataset}/aod.gnn4itkML.triton.{ath_dev_name}.{triton_dev_name}.{dataset}.root",
+        "workarea/tracking/{dataset}/aod.gnn4itkML.triton.{ath_dev_name}.{triton_dev_name}.{dataset}.root"
     log:
-        "projects/tracking/gnn4itkML.triton.{ath_dev_name}.{triton_dev_name}.{dataset}.log",
+        "projects/tracking/gnn4itkML.triton.{ath_dev_name}.{triton_dev_name}.{dataset}.log"
     params:
         max_evts = -1,
         container_name = config["athena_dev_gpu_container"],
@@ -96,20 +96,20 @@ rule run_gnn4itk_triton:
         1
     shell:
         """shifter --image={params.container_name} --module=cvmfs,gpu \
-        workflow/scripts/run_tracking.sh -i "{input.data_cfg}" \
+        workflow/scripts/run_tracking.sh -i "{input[1]}" \
         -j {threads} \
         -m {params.max_evts} \
         -c "GNN4ITk_ML_TRITON" \
-        -s {input.ath_cfg} \
-        -u `cat {input.server_cfg}` \
+        -s {input[0]} \
+        -u `cat {input[2]}` \
         -p {params.model_name} \
         -o "{output}" > "{log}" 2>&1 \
         """
 
 rule run_idpvm:
     input:
-        ath_cfg="projects/athena/athena.default.{ath_dev_name}.built.json",
-        aod_file="workarea/tracking/{dataset}/aod.gnn4itkML.triton.{ath_dev_name}.{dev_conf_name}.{dataset}.root",
+        "projects/athena/athena.default.{ath_dev_name}.built.json",
+        "workarea/tracking/{dataset}/aod.gnn4itkML.triton.{ath_dev_name}.{dev_conf_name}.{dataset}.root"
     output:
         "workarea/tracking/{dataset}/idpvm.{ath_dev_name}.{dev_conf_name}.{dataset}.root",
     log:
@@ -121,8 +121,8 @@ rule run_idpvm:
         6
     shell:
         """shifter --image={params.container_name} --module=cvmfs,gpu \
-        workflow/scripts/run_idpvm.sh -i "{input.aod_file}" \
-        -s {input.ath_cfg} \
+        workflow/scripts/run_idpvm.sh -i "{input[1]}" \
+        -s {input[0]} \
         -j {threads} \
         -m {params.max_evts} \
         -o "{output}" > "{log}" 2>&1 \
