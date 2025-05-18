@@ -1,22 +1,23 @@
 rule run_legacy_ckf:
     input:
+        "projects/athena/athena.default.{ath_dev_name}.built.json",
         "projects/tracking/rdo_files.{dataset}.txt",
     output:
-        "workarea/tracking/{dataset}/aod.ckf.{dataset}.root",
+        "workarea/tracking/{dataset}/aod.ckf.local.{ath_dev_name}.none.{dataset}.root",
     log:
-        "projects/tracking/run_legacy_ckf.{dataset}.log",
+        "projects/tracking/legacy_ckf.{ath_dev_name}.{dataset}.log",
     params:
         max_evts = config.get("max_evts", 1),
         container_name = config["athena_dev_container"],
-        chain_name = "CKF_LEGACY",
     threads:
         6
     shell:
         """shifter --image={params.container_name} --module=cvmfs \
-        workflow/scripts/run_tracking.sh -i "{input}" \
+        workflow/scripts/run_tracking.sh -i "{input[1]}" \
         -j {threads} \
         -m {params.max_evts} \
-        -c {params.chain_name} \
+        -c "CKF_LEGACY" \
+        -s {input[0]} \
         -o "{output}" > "{log}" 2>&1 \
         """
 
@@ -109,11 +110,11 @@ rule run_gnn4itk_triton:
 rule run_idpvm:
     input:
         "projects/athena/athena.default.{ath_dev_name}.built.json",
-        "workarea/tracking/{dataset}/aod.gnn4itkML.triton.{ath_dev_name}.{dev_conf_name}.{dataset}.root"
+        "workarea/tracking/{dataset}/aod.{chain_name}.{ath_mode}.{ath_dev_name}.{triton_dev_name}.{dataset}.root"
     output:
-        "workarea/tracking/{dataset}/idpvm.{ath_dev_name}.{dev_conf_name}.{dataset}.root",
+        "workarea/tracking/{dataset}/idpvm.{chain_name}.{ath_mode}.{ath_dev_name}.{triton_dev_name}.{dataset}.root",
     log:
-        "projects/tracking/idpvm.{ath_dev_name}.{dev_conf_name}.{dataset}.log",
+        "projects/tracking/idpvm.{chain_name}.{ath_mode}.{ath_dev_name}.{triton_dev_name}.{dataset}.log",
     params:
         max_evts = -1,
         container_name = config["athena_dev_gpu_container"],
