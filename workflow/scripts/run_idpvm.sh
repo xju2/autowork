@@ -1,6 +1,6 @@
 #!/bin/bash
-set -eo pipefail  # -e to exit on error, -u to treat unset variables as errors, -o pipefail to catch errors in pipelines
-IFS=$'\n\t'
+# set -eo pipefail  # -e to exit on error, -u to treat unset variables as errors, -o pipefail to catch errors in pipelines
+# IFS=$'\n\t'
 
 # Default values for arguments
 INPUT_FILE=""
@@ -77,12 +77,9 @@ if [ -f "PoolFileCatalog.xml" ]; then
     rm InDetIdDict.xml PoolFileCatalog.xml hostnamelookup.tmp eventLoopHeartBeat.txt
 fi
 
-DETECTOR_CONDITIONS="all:OFLCOND-MC15c-SDR-14-05"
-GEOMETRY_VERSION="all:ATLAS-P2-RUN4-03-00-00"
-
 runIDPVM.py --filesInput ${INFILE} \
     --outputFile ${OUTFILE} \
-    --doTightPrimary \
-    --doLoose \
     --truthMinPt 1000 \
-    --HSFlag "All"
+    --HSFlag "All" \
+    --doTruthToRecoNtuple \
+    --doLoose

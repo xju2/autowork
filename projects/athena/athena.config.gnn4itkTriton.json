@@ -1,0 +1,9 @@
+{
+    "source_dir": "/pscratch/sd/x/xju/athena_dev/20250507_gnn4itk_triton",
+    "release": "Athena,25.0.30,here",
+    "packages": [
+        "InnerDetector/InDetGNNTracking",
+        "Control/AthTriton/AthTritonInterfaces",
+        "Control/AthTriton/AthTritonComps"
+    ]
+}

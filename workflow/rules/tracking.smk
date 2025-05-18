@@ -6,7 +6,7 @@ rule run_legacy_ckf:
     log:
         "projects/tracking/run_legacy_ckf.{dataset}.log",
     params:
-        max_evts = 1,
+        max_evts = config.get("max_evts", 1),
         container_name = config["athena_dev_container"],
         chain_name = "CKF_LEGACY",
     threads:
@@ -30,7 +30,7 @@ rule run_gnn4itk_local:
     log:
         "projects/tracking/gnn4itk_local.{dataset}.log",
     params:
-        max_evts = 1,
+        max_evts = config.get("max_evts", 1),
         container_name = config["athena_dev_gpu_container"],
         chain_name = "GNN4ITk_ML_LOCAL",
     threads:
@@ -54,7 +54,7 @@ rule run_gnn4itk_local_external:
     log:
         "projects/tracking/gnn4itk_local_external.{ex_dev_name}.{ath_dev_name}.{dataset}.log",
     params:
-        max_evts = 1,
+        max_evts = config.get("max_evts", 1),
         container_name = config["athena_dev_gpu_container"],
         chain_name = "GNN4ITk_ML_LOCAL",
         mpi = "srun",
@@ -89,7 +89,7 @@ rule run_gnn4itk_triton:
     log:
         "projects/tracking/gnn4itkML.triton.{ath_dev_name}.{triton_dev_name}.{dataset}.log"
     params:
-        max_evts = -1,
+        max_evts = config.get("max_evts", 1),
         container_name = config["athena_dev_gpu_container"],
         model_name = "MetricLearning",
     threads:
