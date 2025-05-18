@@ -15,7 +15,8 @@ done
 INPUT_FILE=$(realpath "$INPUT_FILE")
 OUTPUT=$(realpath "$OUTPUT")
 
-echo "Running $0"
+echo "Running $0 $(date) @ $(hostname)"
+echo "-----------------------------------"
 echo "$(date) $(hostname)"
 echo "Input File: $INPUT_FILE"
 echo "Output File: $OUTPUT"
@@ -74,3 +75,4 @@ srun -C gpu -N 1 -G 1 -c 10 -n 1 -t 4:00:00 -A m3443 \
 
 # wait for the Triton server to start.
 sleep 30
+echo "DONE $(date +%Y-%m-%dT%H:%M:%S)"

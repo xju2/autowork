@@ -91,3 +91,5 @@ echo "DONE Building validate_triton_client on $(date)"
 ./build/bin/test_resnet50  -u "${SERVER_URL}:8001" -i models/resnet50/img1.txt
 
 touch $OUTPUT
+
+echo "DONE $(date +%Y-%m-%dT%H:%M:%S)"

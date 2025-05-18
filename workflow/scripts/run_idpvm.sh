@@ -83,3 +83,5 @@ runIDPVM.py --filesInput ${INFILE} \
     --HSFlag "All" \
     --doTruthToRecoNtuple \
     --doLoose
+
+echo "DONE $(date +%Y-%m-%dT%H:%M:%S)"
