@@ -14,5 +14,6 @@ include: "rules/test.smk"
 SAMPLES = ["MuonPU0", "HaaPU0", "HaaPU200"]
 rule all:
     input:
-        expand("workarea/tracking/{sample}/idpvm.ckf.local.gnn4itkTriton.none.{sample}.root", sample=SAMPLES)
+        # expand("workarea/tracking/{sample}/idpvm.ckf.local.gnn4itkTriton.none.{sample}.root", sample=SAMPLES)
+        expand("workarea/tracking/{sample}/idpvm.gnn4itkML.triton.gnn4itkTriton.tracking.{sample}.root", sample=SAMPLES)
         # "workarea/tracking/ttbar/aod.ckf.ttbar.root"
