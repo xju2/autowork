@@ -11,6 +11,7 @@ include: "rules/tracking.smk"
 include: "rules/triton.smk"
 include: "rules/test.smk"
 
+SAMPLES = ["MuonPU0", "HaaPU0", "HaaPU200"]
 rule all:
     input:
         "workarea/tracking/ttbar/aod.gnn4itkMLLocal.ttbar.root"
