@@ -56,7 +56,6 @@ cover/
 *.pot
 
 # Django stuff:
-*.log*
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
@@ -176,5 +175,5 @@ cython_debug/
 .snakemake
 *.out
 *.done
-*.built
 *workarea*
+*asetup.save

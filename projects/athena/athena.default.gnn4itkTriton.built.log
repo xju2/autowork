@@ -1,0 +1,173 @@
+Running workflow/scripts/local_athena.sh \n Wed May  7 12:49:11 PDT 2025 @ login34
+Running custom Athena build with the following parameters:
+Input File: projects/athena/athena.config.gnn4itkTriton.json
+Output File: /pscratch/sd/x/xju/code/autowork/projects/athena/athena.default.gnn4itkTriton.built.json
+Mode: build_athena
+Number of Threads: 16
+Setup File: 
+jq: error (at projects/athena/athena.config.gnn4itkTriton.json:9): Cannot iterate over null (null)
+virtual environment detected, deactivating...
+[7mlsetup              [0m lsetup <tool1> [ <tool2> ...] (see lsetup -h):
+[7m lsetup asetup      [0m  (or asetup) to setup an Athena release
+[7m lsetup astyle      [0m  ATLAS style macros
+[7m lsetup atlantis    [0m  Atlantis: event display
+[7m lsetup centralpage [0m  Find samples
+[7m lsetup eiclient    [0m  Event Index 
+[7m lsetup emi         [0m  EMI: grid middleware user interface 
+[7m lsetup lcgenv      [0m  lcgenv: setup tools from cvmfs SFT repository
+[7m lsetup panda       [0m  Panda: Production ANd Distributed Analysis
+[7m lsetup pyami       [0m  pyAMI: ATLAS Metadata Interface python client
+[7m lsetup root        [0m  ROOT data processing framework
+[7m lsetup rucio       [0m  distributed data management system client
+[7m lsetup scikit      [0m  python data analysis ecosystem
+[7m lsetup views       [0m  Set up a full LCG release
+[7m lsetup xcache      [0m  XRootD local proxy cache
+[7m lsetup xrootd      [0m  XRootD data access
+[7madvancedTools       [0m advanced tools menu
+[7mdiagnostics         [0m diagnostic tools menu
+[7mhelpMe              [0m more help
+[7minstallPip          [0m install relocatable pip modules locally
+[7minstallRpm          [0m install relocatable rpms locally
+[7mprintMenu           [0m show this menu
+[7mqueryC              [0m find / whatis container query
+[7mshowVersions        [0m show versions of installed software
+
+
+[1m[4m30 Nov 2023[0m 
+
+A serious security issue in ROOT's web-based GUI has been identified:
+
+  You should not use the web-based browser until further notice and instead 
+  set the old-style TBrowser as the default. Please see the Twiki page linked 
+  below for instructions on how to do this.
+
+  https://twiki.cern.ch/twiki/bin/view/AtlasComputing/AtlasComputingArchive/RootBrowserSecurityIssue
+
+  More details of this issue:
+  https://root.cern/about/security/#2023-11-26-open-port-for-control-of-web-gui-allows-read-and-write-access-to-file-system
+
+  [0;31mReason for this message: $HOME/.rootrc is missing[0m 
+
+Using Athena/25.0.30 [cmake] with platform x86_64-el9-gcc13-opt
+	at /cvmfs/atlas.cern.ch/repo/sw/software/25.0
+Test area: /pscratch/sd/x/xju/athena_dev/20250507_gnn4itk_triton
+Unchanged: COOL_ORA_ENABLE_ADAPTIVE_OPT=Y
+
+[1;31;40mlcgPkg[0m tool now available. Run [1;31;40mlcgPkg -h[0m for details.
+Building customized Athena in /pscratch/sd/x/xju/athena_dev/20250507_gnn4itk_triton
+Original athena: /cvmfs/atlas.cern.ch/repo/sw/software/25.0/Athena/25.0.30/InstallArea/x86_64-el9-gcc13-opt/bin/athena
+Package filter file already exists. Overwriting...
+Creating package filter file at: /pscratch/sd/x/xju/athena_dev/20250507_gnn4itk_triton/package_filters.txt
+-- Setting up LCG release "LCG_107a_ATLAS_5" for platform: x86_64-el9-gcc13-opt
+-- found Acts version 41.0.0 commit GITDIR-NO-dirty
+-- loading components:
+--   Core
+--   PluginGeoModel
+--   PluginJson
+--   Fatras
+-- Found Python: /cvmfs/atlas.cern.ch/repo/sw/software/25.0/sw/lcg/releases/LCG_107a_ATLAS_5/Python/3.11.9/x86_64-el9-gcc13-opt/bin/python3.11 (found suitable version "3.11.9", minimum required is "3.11") found components: Interpreter
+-- Setting up the tdaq-common externals...
+-- Setting ATLAS specific build flags
+-- Found checker_gccplugins library under: /cvmfs/atlas.cern.ch/repo/sw/software/25.0/AthenaExternals/25.0.30/InstallArea/x86_64-el9-gcc13-opt/lib/libchecker_gccplugins.so
+-- Enabling Python code checker: /cvmfs/atlas.cern.ch/repo/sw/software/25.0/AthenaExternals/25.0.30/InstallArea/x86_64-el9-gcc13-opt/bin/flake8_atlas
+-- Setting up LCG release "LCG_107a_ATLAS_5" for platform: x86_64-el9-gcc13-opt
+-- Found ROOT: /cvmfs/atlas.cern.ch/repo/sw/software/25.0/sw/lcg/releases/LCG_107a_ATLAS_5/ROOT/6.34.04/x86_64-el9-gcc13-opt/cmake (found version 6.34.04)
+-- Found Gaudi: /cvmfs/atlas.cern.ch/repo/sw/software/25.0/AthenaExternals/25.0.30/InstallArea/x86_64-el9-gcc13-opt/lib/cmake/Gaudi (found version 39.4)
+-- Checking C/C++ files with: /cvmfs/atlas.cern.ch/repo/sw/software/25.0/Athena/25.0.30/InstallArea/x86_64-el9-gcc13-opt/bin/cppcheck_atlas --enable=warning,portability,performance --quiet --inline-suppr --template=gcc -D__CPPCHECK__ -DATOMIC_POINTER_LOCK_FREE=2 --library=boost --library=googletest --library=python --library=/pscratch/sd/x/xju/athena_dev/20250507_gnn4itk_triton/athena/Control/CxxUtils/share/cppcheck_athena.cfg --suppressions-list=/pscratch/sd/x/xju/athena_dev/20250507_gnn4itk_triton/athena/Control/CxxUtils/share/cppcheck_suppress.txt --suppress=*:/cvmfs/atlas.cern.ch/repo/sw/software/25.0/sw/lcg/releases/* --suppress=*:/cvmfs/atlas.cern.ch/repo/sw/tdaq/offline/tdaq-common/tdaq-common-12-01-01/installed/include/* --suppress=*:/cvmfs/atlas.cern.ch/repo/sw/software/25.0/AthenaExternals/25.0.30/InstallArea/x86_64-el9-gcc13-opt/include/*
+-- Configuring ATLAS project with name "WorkDir" and version "25.0.30"
+-- Using build type: RelWithDebInfo
+-- Using platform name: x86_64-el9-gcc13-opt
+-- Cleaning stale files from build area
+-- Unit tests will be built by default
+-- Found 1994 package(s)
+-- Considering package 1 / 1994
+-- Package filtering rules read:
+--   + InnerDetector/InDetGNNTracking
+--   + Control/AthTriton/AthTritonInterfaces
+--   + Control/AthTriton/AthTritonComps
+--   - .*
+-- Configuring the build of package: AthTritonComps
+-- Configuring the build of package: AthTritonInterfaces
+-- Considering package 100 / 1994
+-- Considering package 199 / 1994
+-- Considering package 298 / 1994
+-- Considering package 397 / 1994
+-- Considering package 496 / 1994
+-- Considering package 595 / 1994
+-- Configuring the build of package: InDetGNNTracking
+-- Considering package 694 / 1994
+-- Considering package 793 / 1994
+-- Considering package 892 / 1994
+-- Considering package 991 / 1994
+-- Considering package 1090 / 1994
+-- Considering package 1189 / 1994
+-- Considering package 1288 / 1994
+-- Considering package 1387 / 1994
+-- Considering package 1486 / 1994
+-- Considering package 1585 / 1994
+-- Considering package 1684 / 1994
+-- Considering package 1783 / 1994
+-- Considering package 1882 / 1994
+-- Considering package 1981 / 1994
+-- Number of packages configured: 3
+-- Time for package configuration: 3 second(s)
+-- Generated file: /pscratch/sd/x/xju/athena_dev/20250507_gnn4itk_triton/sparse_build/x86_64-el9-gcc13-opt/packages.txt
+-- Including the packages from project Athena - 25.0.30...
+-- Including the packages from project AthenaExternals - 25.0.30...
+-- Generated file: /pscratch/sd/x/xju/athena_dev/20250507_gnn4itk_triton/sparse_build/x86_64-el9-gcc13-opt/compilers.txt
+-- Setting up the 'doc' target using Doxygen
+-- Generated file: /pscratch/sd/x/xju/athena_dev/20250507_gnn4itk_triton/sparse_build/x86_64-el9-gcc13-opt/ReleaseData
+-- Generating external environment configuration
+-- Writing runtime environment to file: /pscratch/sd/x/xju/athena_dev/20250507_gnn4itk_triton/sparse_build/x86_64-el9-gcc13-opt/env_setup.sh
+-- 
+--             In order to test your updates, please don't forget to
+--             set up the environment with e.g.:
+--             --->   source x86_64-el9-gcc13-opt/setup.sh
+-- 
+-- Configuring done (38.9s)
+-- Generating done (0.5s)
+-- Build files have been written to: /pscratch/sd/x/xju/athena_dev/20250507_gnn4itk_triton/sparse_build
+[0/2] Re-checking globbed directories...
+[1/43] Generating ../../../x86_64-el9-gcc13-opt/include/AthTritonInterfaces
+[2/43] Generating ../../../x86_64-el9-gcc13-opt/include/AthTritonComps
+[3/43] Generating ../../../x86_64-el9-gcc13-opt/python/AthTritonComps/__init__.py
+[4/43] Generating ../../../x86_64-el9-gcc13-opt/python/AthTritonComps/TritonToolConfig.py
+[5/43] Generating ../../x86_64-el9-gcc13-opt/python/InDetGNNTracking/InDetGNNTrackingConfig.py
+[6/43] Generating ../../x86_64-el9-gcc13-opt/python/InDetGNNTracking/InDetGNNTrackingConfigFlags.py
+[7/43] Generating ../../x86_64-el9-gcc13-opt/python/InDetGNNTracking/InDetGNNTrackingFlags.py
+[8/43] Generating ../../x86_64-el9-gcc13-opt/python/InDetGNNTracking/__init__.py
+[9/43] Compiling python modules
+[10/43] Compiling python modules
+[11/43] Running AthTritonCompsPythonInstall post-command
+[12/43] Running InDetGNNTrackingPythonInstall post-command
+[13/43] Generating AthTritonInterfacesDictReflexDict.cxx
+[14/43] Building CXX object Control/AthTriton/AthTritonInterfaces/CMakeFiles/AthTritonInterfacesDict.dir/CMakeFiles/AthTritonInterfacesDictReflexDict.cxx.o
+[15/43] Building CXX object InnerDetector/InDetGNNTracking/CMakeFiles/InDetGNNTracking.dir/src/GNNTrackReaderTool.cxx.o
+[16/43] Linking CXX shared library x86_64-el9-gcc13-opt/lib/libAthTritonInterfacesDict.so
+[17/43] Building CXX object InnerDetector/InDetGNNTracking/CMakeFiles/InDetGNNTracking.dir/src/ExaTrkXUtils.cxx.o
+[18/43] Building CXX object InnerDetector/InDetGNNTracking/CMakeFiles/InDetGNNTracking.dir/src/SpacepointFeatureTool.cxx.o
+[19/43] Building CXX object InnerDetector/InDetGNNTracking/CMakeFiles/InDetGNNTracking.dir/src/SeedFitterTool.cxx.o
+[20/43] Building CXX object InnerDetector/InDetGNNTracking/CMakeFiles/InDetGNNTracking.dir/src/SiGNNTrackFinderTool.cxx.o
+[21/43] Building CXX object InnerDetector/InDetGNNTracking/CMakeFiles/InDetGNNTracking.dir/src/SiSPGNNTrackMaker.cxx.o
+[22/43] Building CXX object Control/AthTriton/AthTritonComps/CMakeFiles/AthTritonComps.dir/src/components/AthTritonComps_entries.cxx.o
+[23/43] Building CXX object InnerDetector/InDetGNNTracking/CMakeFiles/InDetGNNTracking.dir/src/components/InDetGNNTracking_entries.cxx.o
+[24/43] Generating AthTritonCompsDictReflexDict.cxx
+[25/43] Building CXX object Control/AthTriton/AthTritonComps/CMakeFiles/AthTritonCompsLib.dir/src/TritonTool.cxx.o
+[26/43] Built /pscratch/sd/x/xju/athena_dev/20250507_gnn4itk_triton/sparse_build/x86_64-el9-gcc13-opt/lib/WorkDir.rootmap
+[27/43] Building CXX object InnerDetector/InDetGNNTracking/CMakeFiles/InDetGNNTracking.dir/src/GNNSeedingTrackMaker.cxx.o
+[28/43] Linking CXX shared library x86_64-el9-gcc13-opt/lib/libAthTritonCompsLib.so
+[29/43] Building CXX object InnerDetector/InDetGNNTracking/CMakeFiles/InDetGNNTracking.dir/src/DumpObjects.cxx.o
+[30/43] Linking CXX shared module x86_64-el9-gcc13-opt/lib/libAthTritonComps.so
+[31/43] Generating ../../../x86_64-el9-gcc13-opt/lib/libAthTritonComps.components
+[32/43] Generating AthTritonComps_clid.db
+[33/43] Generating ../../../x86_64-el9-gcc13-opt/python/AthTritonComps/AthTritonCompsConf.py, ../../../x86_64-el9-gcc13-opt/lib/libAthTritonComps.confdb, genConf/AthTritonComps.confdb2_part
+[34/43] Building CXX object Control/AthTriton/AthTritonComps/CMakeFiles/AthTritonCompsDict.dir/CMakeFiles/AthTritonCompsDictReflexDict.cxx.o
+[35/43] Linking CXX shared module x86_64-el9-gcc13-opt/lib/libInDetGNNTracking.so
+[36/43] Linking CXX shared library x86_64-el9-gcc13-opt/lib/libAthTritonCompsDict.so
+[37/43] Generating ../../x86_64-el9-gcc13-opt/lib/libInDetGNNTracking.components
+[38/43] Built /pscratch/sd/x/xju/athena_dev/20250507_gnn4itk_triton/sparse_build/x86_64-el9-gcc13-opt/lib/WorkDir.components
+[39/43] Generating InDetGNNTracking_clid.db
+[40/43] Generating ../../x86_64-el9-gcc13-opt/python/InDetGNNTracking/InDetGNNTrackingConf.py, ../../x86_64-el9-gcc13-opt/lib/libInDetGNNTracking.confdb, genConf/InDetGNNTracking.confdb2_part
+[41/43] Built /pscratch/sd/x/xju/athena_dev/20250507_gnn4itk_triton/sparse_build/x86_64-el9-gcc13-opt/share/clid.db
+[42/43] Built /pscratch/sd/x/xju/athena_dev/20250507_gnn4itk_triton/sparse_build/x86_64-el9-gcc13-opt/lib/WorkDir.confdb
+[43/43] Built /pscratch/sd/x/xju/athena_dev/20250507_gnn4itk_triton/sparse_build/x86_64-el9-gcc13-opt/lib/WorkDir.confdb2

@@ -1,0 +1,109 @@
+srun: job 38167139 queued and waiting for resources
+srun: job 38167139 has been allocated resources
+Running workflow/scripts/run_tracking.sh \n Mon Apr 28 12:47:39 PDT 2025 @ nid008700
+-----------------------------------
+Input File: projects/tracking/rdo_files.ttbar.txt
+Run Directory: /pscratch/sd/x/xju/workflow/workarea/tracking/ttbar
+Output File: /pscratch/sd/x/xju/workflow/workarea/tracking/ttbar/aod.ortCUDA.gnn4itkTool.ttbar.root
+Number of Workers: 1
+Max Events: 1
+Chain Name: GNN4ITk_ML_LOCAL
+Setup File: projects/athena/athena.ortCUDA.gnn4itkTool.built.json
+/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/rel24_ttbar_testing/RDO.37737772._000213.pool.root.1
+virtual environment detected, deactivating...
+[7mlsetup              [0m lsetup <tool1> [ <tool2> ...] (see lsetup -h):
+[7m lsetup asetup      [0m  (or asetup) to setup an Athena release
+[7m lsetup astyle      [0m  ATLAS style macros
+[7m lsetup atlantis    [0m  Atlantis: event display
+[7m lsetup centralpage [0m  Find samples
+[7m lsetup eiclient    [0m  Event Index 
+[7m lsetup emi         [0m  EMI: grid middleware user interface 
+[7m lsetup lcgenv      [0m  lcgenv: setup tools from cvmfs SFT repository
+[7m lsetup panda       [0m  Panda: Production ANd Distributed Analysis
+[7m lsetup pyami       [0m  pyAMI: ATLAS Metadata Interface python client
+[7m lsetup root        [0m  ROOT data processing framework
+[7m lsetup rucio       [0m  distributed data management system client
+[7m lsetup scikit      [0m  python data analysis ecosystem
+[7m lsetup views       [0m  Set up a full LCG release
+[7m lsetup xcache      [0m  XRootD local proxy cache
+[7m lsetup xrootd      [0m  XRootD data access
+[7madvancedTools       [0m advanced tools menu
+[7mdiagnostics         [0m diagnostic tools menu
+[7mhelpMe              [0m more help
+[7minstallPip          [0m install relocatable pip modules locally
+[7minstallRpm          [0m install relocatable rpms locally
+[7mprintMenu           [0m show this menu
+[7mqueryC              [0m find / whatis container query
+[7mshowVersions        [0m show versions of installed software
+
+
+[1m[4m30 Nov 2023[0m 
+
+A serious security issue in ROOT's web-based GUI has been identified:
+
+  You should not use the web-based browser until further notice and instead 
+  set the old-style TBrowser as the default. Please see the Twiki page linked 
+  below for instructions on how to do this.
+
+  https://twiki.cern.ch/twiki/bin/view/AtlasComputing/AtlasComputingArchive/RootBrowserSecurityIssue
+
+  More details of this issue:
+  https://root.cern/about/security/#2023-11-26-open-port-for-control-of-web-gui-allows-read-and-write-access-to-file-system
+
+  [0;31mReason for this message: $HOME/.rootrc is missing[0m 
+
+Set up environment from /pscratch/sd/x/xju/code/autowork/projects/athena/athena.ortCUDA.gnn4itkTool.built.json
+Setup Athena from JSON file: /pscratch/sd/x/xju/code/autowork/projects/athena/athena.ortCUDA.gnn4itkTool.built.json
+Current directory: /pscratch/sd/x/xju/code/autowork
+Move to /pscratch/sd/x/xju/athena_dev/check_ort_cuda and setup Athena Athena,25.0.30 --releasepath=/pscratch/sd/x/xju/athena_dev/check_ort_cuda/build/install.
+Using Athena/25.0.30 [cmake] with platform x86_64-el9-gcc13-opt
+	at /pscratch/sd/x/xju/athena_dev/check_ort_cuda/build/install
+Note: Release is setup from /afs/cern.ch.
+Unchanged: COOL_ORA_ENABLE_ADAPTIVE_OPT=Y
+/pscratch/sd/x/xju/athena_dev/check_ort_cuda/build/install/Athena/25.0.30/InstallArea/x86_64-el9-gcc13-opt/bin/athena
+Setting up local environment from sparse_build/x86_64-el9-gcc*-opt/setup.sh
+Athena environment set up successfully.
+Returned to original directory: /pscratch/sd/x/xju/code/autowork
+Running GNN4ITk_ML_LOCAL in /pscratch/sd/x/xju/workflow/workarea/tracking/ttbar with 1 workers
+PyJobTransforms.<module> 2025-04-28 12:48:07,480 INFO logging set in /pscratch/sd/x/xju/athena_dev/check_ort_cuda/build/install/Athena/25.0.30/InstallArea/x86_64-el9-gcc13-opt/bin/Reco_tf.py
+PyJobTransforms.main 2025-04-28 12:48:07,690 INFO This is /pscratch/sd/x/xju/athena_dev/check_ort_cuda/build/install/Athena/25.0.30/InstallArea/x86_64-el9-gcc13-opt/bin/Reco_tf.py
+PyJobTransforms.transform.parseCmdLineArgs 2025-04-28 12:48:07,720 INFO Transform command line was: '/pscratch/sd/x/xju/athena_dev/check_ort_cuda/build/install/Athena/25.0.30/InstallArea/x86_64-el9-gcc13-opt/bin/Reco_tf.py' '--CA' 'all:True' '--autoConfiguration' 'everything' '--conditionsTag' 'all:OFLCOND-MC15c-SDR-14-05' '--geometryVersion' 'all:ATLAS-P2-RUN4-03-00-00' '--multithreaded' 'True' '--steering' 'doRAWtoALL' '--digiSteeringConf' 'StandardInTimeOnlyTruth' '--postInclude' 'all:PyJobTransforms.UseFrontier' '--preInclude' 'all:Campaigns.PhaseIIPileUp200' 'InDetConfig.ConfigurationHelpers.OnlyTrackingPreInclude' 'InDetGNNTracking.InDetGNNTrackingFlags.gnnFinderValidation' '--inputRDOFile' '/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/rel24_ttbar_testing/RDO.37737772._000213.pool.root.1' '--outputAODFile' '/pscratch/sd/x/xju/workflow/workarea/tracking/ttbar/aod.ortCUDA.gnn4itkTool.ttbar.root' '--jobNumber' '1' '--athenaopts=--loglevel=INFO' '--maxEvents' '1'
+PyJobTransforms.transform.execute 2025-04-28 12:48:07,724 INFO Resolving execution graph
+PyJobTransforms.trfGraph.__init__ 2025-04-28 12:48:07,724 INFO Transform graph input data: ['RDO']; output data ['AOD']
+PyJobTransforms.transform.execute 2025-04-28 12:48:07,739 INFO Starting to trace execution path
+PyJobTransforms.transform.execute 2025-04-28 12:48:07,740 INFO Execution path found with 1 step(s): RAWtoALL
+PyJobTransforms.transform.validateInFiles 2025-04-28 12:48:07,740 INFO Validating input files
+PyJobTransforms.trfValidation.performStandardFileValidation 2025-04-28 12:48:07,740 INFO Starting legacy (serial) file validation
+PyJobTransforms.trfValidation.performStandardFileValidation 2025-04-28 12:48:07,740 INFO Validating data type RDO...
+PyJobTransforms.trfValidation.performStandardFileValidation 2025-04-28 12:48:07,740 INFO Validating file /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/rel24_ttbar_testing/RDO.37737772._000213.pool.root.1...
+PyJobTransforms.trfValidation.performStandardFileValidation 2025-04-28 12:48:07,740 INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/rel24_ttbar_testing/RDO.37737772._000213.pool.root.1: Testing event count...
+PyJobTransforms.trfArgClasses._readMetadata 2025-04-28 12:48:07,741 INFO Metadata generator called to obtain nentries for ('/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/rel24_ttbar_testing/RDO.37737772._000213.pool.root.1',)
+Py:MetaReader        INFO Current mode used: lite
+Py:MetaReader        INFO Current filenames: ['/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/rel24_ttbar_testing/RDO.37737772._000213.pool.root.1']
+Py:MetaReader        INFO MetaReader is called with the parameter "unique_tag_info_values" set to True. This is a workaround to remove all duplicate values from "/TagInfo" key
+PyJobTransforms.trfValidation.performStandardFileValidation 2025-04-28 12:48:15,985 INFO Event counting test passed (50 events).
+PyJobTransforms.trfValidation.performStandardFileValidation 2025-04-28 12:48:15,985 INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/rel24_ttbar_testing/RDO.37737772._000213.pool.root.1: Checking if guid exists...
+PyJobTransforms.trfValidation.performStandardFileValidation 2025-04-28 12:48:15,985 INFO Guid is A05E93C4-61E9-AB4E-AD0B-1C0E039DA2B0
+PyJobTransforms.trfValidation.performStandardFileValidation 2025-04-28 12:48:15,985 INFO Stopping legacy (serial) file validation
+PyJobTransforms.trfExe.preExecute 2025-04-28 12:48:15,985 INFO Asetup report: 	AtlasBaseDir=/pscratch/sd/x/xju/athena_dev/check_ort_cuda/build/install
+	AtlasProject=Athena
+	AtlasVersion=25.0.30
+	TestArea=/pscratch/sd/x/xju/athena_dev/check_ort_cuda
+	Athena_PLATFORM=x86_64-el9-gcc13-opt
+PyJobTransforms.trfMTTools.detectAthenaMTThreads 2025-04-28 12:48:15,985 INFO AthenaMT detected from ATHENA_CORE_NUMBER with 1 threads
+PyJobTransforms.trfJobOptions.writeRunArgs 2025-04-28 12:48:15,985 INFO Writing runArgs to file "runargs.RAWtoALL.py"
+PyJobTransforms.trfJobOptions.writeRunArgs 2025-04-28 12:48:15,987 INFO Successfully wrote runargs file runargs.RAWtoALL.py
+PyJobTransforms.trfEnv.probeTcmallocSettings 2025-04-28 12:48:15,987 INFO Skipping inclusion of tcmalloc
+PyJobTransforms.trfExe._prepAthenaCommandLine 2025-04-28 12:48:15,987 INFO Setting athena preloadlibs for substep RAWtoALL to: $ATLASMKLLIBDIR_PRELOAD/libintlc.so.5:$ATLASMKLLIBDIR_PRELOAD/libimf.so
+PyJobTransforms.trfExe._prepAthenaCommandLine 2025-04-28 12:48:15,987 INFO ignoring "--drop-and-reload" for CA-based transforms, config cleaned up anyway
+PyJobTransforms.trfExe._prepAthenaCommandLine 2025-04-28 12:48:15,987 INFO Updated script arguments with topoptions: ['athena.py', '--loglevel=INFO', '--preloadlib=$ATLASMKLLIBDIR_PRELOAD/libintlc.so.5:$ATLASMKLLIBDIR_PRELOAD/libimf.so', 'runargs.RAWtoALL.py']
+PyJobTransforms.trfExe.preExecute 2025-04-28 12:48:15,987 INFO Will execute script as ['athena.py', '--loglevel=INFO', '--preloadlib=$ATLASMKLLIBDIR_PRELOAD/libintlc.so.5:$ATLASMKLLIBDIR_PRELOAD/libimf.so', 'runargs.RAWtoALL.py']
+PyJobTransforms.trfExe.preExecute 2025-04-28 12:48:15,987 INFO Batch/grid running - command outputs will not be echoed. Logs for RAWtoALL are in log.RAWtoALL
+PyJobTransforms.trfExe.preExecute 2025-04-28 12:48:15,988 INFO Now writing wrapper for substep executor RAWtoALL
+PyJobTransforms.trfExe._writeAthenaWrapper 2025-04-28 12:48:15,991 INFO Valgrind/VTune not engaged
+PyJobTransforms.trfExe.preExecute 2025-04-28 12:48:15,991 INFO Athena will be executed in a subshell via ['./runwrapper.RAWtoALL.sh']
+PyJobTransforms.trfExe.execute 2025-04-28 12:48:15,991 INFO Starting execution of RAWtoALL (['./runwrapper.RAWtoALL.sh'])
+slurmstepd: error: *** STEP 38167139.0 ON nid008700 CANCELLED AT 2025-04-28T19:56:44 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: nid008700: task 0: Terminated
+srun: Terminating StepId=38167139.0

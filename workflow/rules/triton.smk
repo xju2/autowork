@@ -2,7 +2,7 @@ rule start_triton_server_for_validation:
     input:
         "projects/triton/triton_server.config.{triton_dev_name}.json",
     output:
-        ensure("projects/triton/triton_server.{triton_dev_name}.ready.txt", non_empty=True)
+        service("projects/triton/triton_server.{triton_dev_name}.ready.txt")
     threads: 2
     log:
         "projects/triton/triton_server.{triton_dev_name}.log"
