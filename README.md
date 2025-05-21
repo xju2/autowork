@@ -16,3 +16,8 @@ Run all processes:
 ```bash
 snakemake --config max_evts=1000
 ```
+
+Build atlas with customized atlas externals.
+```bash
+snakemake projects/athena/athena.external.ortCUDA.default.built.json
+```

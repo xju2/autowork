@@ -1,0 +1,4 @@
+{
+  "source_dir": "/pscratch/sd/x/xju/athena_dev/check_ort_cuda_for_testing",
+  "release": "none,gcc13,cmakesetup --cmakeversion=3.30.5"
+}
