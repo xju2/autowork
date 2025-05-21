@@ -2,10 +2,10 @@ rule start_triton_server_for_validation:
     input:
         "projects/triton/triton_server.config.{triton_dev_name}.json",
     output:
-        service("projects/triton/triton_server.{triton_dev_name}.ready.txt")
+        service("results/triton/triton_server.{triton_dev_name}.ready.txt")
     threads: 2
     log:
-        "projects/triton/triton_server.{triton_dev_name}.log"
+        "logs/triton/triton_server.{triton_dev_name}.log"
     shell:
         """workflow/scripts/start_triton_server_for_validation.sh \
         -i {input} \
@@ -16,7 +16,7 @@ rule validate_triton_client:
     input:
         "projects/triton/triton_server_for_validation.out"
     output:
-        "projects/triton/validate_triton_client.out"
+        "results/triton/validate_triton_client.out"
     params:
         source_dir = "",
         triton_common_version = "a6b410343234f9acaa5d615c19f5b38690b45dff",
@@ -24,7 +24,7 @@ rule validate_triton_client:
         client_version = "r24.12",
         container_name = config["athena_dev_gpu_container"],
     log:
-        "projects/triton/validate_triton_client.log"
+        "logs/triton/validate_triton_client.log"
     threads: 4
     shell:
         """shifter --image={params.container_name} --module=cvmfs,gpu \
@@ -40,7 +40,7 @@ rule check_triton_server:
     input:
         "projects/triton/triton_server.{triton_dev_name}.ready.txt",
     log:
-        "projects/triton/check_triton_server.log"
+        "logs/triton/check_triton_server.log"
     threads: 4
     shell:
         """workflow/scripts/check_triton_server.sh -i "{input}" \

@@ -3,9 +3,9 @@ rule build_atlasexternal:
     input:
         "projects/athena/external.config.{ex_dev_name}.json"
     output:
-        "projects/athena/external.{ex_dev_name}.built.json"
+        "results/athena/external.{ex_dev_name}.built.json"
     log:
-        "projects/athena/external.{ex_dev_name}.built.log"
+        "logs/athena/external.{ex_dev_name}.built.log"
     params:
         container_name = config["athena_dev_gpu_container"],
         mpi = "srun",
@@ -30,11 +30,11 @@ rule build_atlasexternal:
 
 rule build_athena_with_external:
     input:
-        "projects/athena/external.{ex_dev_name}.built.json"
+        "results/athena/external.{ex_dev_name}.built.json"
     output:
-        "projects/athena/athena.external.{ex_dev_name}.default.built.json"
+        "results/athena/athena.external.{ex_dev_name}.default.built.json"
     log:
-        "projects/athena/athena.external.{ex_dev_name}.default.built.log"
+        "logs/athena/athena.external.{ex_dev_name}.default.built.log"
     params:
         container_name = config["athena_dev_gpu_container"],
         mpi = "srun",
@@ -63,11 +63,11 @@ rule build_custom_athena:
     input:
         "projects/athena/athena.config.{ath_dev_name}.json"
     output:
-        "projects/athena/athena.default.{ath_dev_name}.built.json"
+        "results/athena/athena.default.{ath_dev_name}.built.json"
     params:
         container_name = config["athena_dev_gpu_container"],
     log:
-        "projects/athena/athena.default.{ath_dev_name}.built.log"
+        "logs/athena/athena.default.{ath_dev_name}.built.log"
     threads:
         16
     shell:
@@ -80,13 +80,13 @@ rule build_custom_athena:
 rule build_custom_athena_with_external:
     input:
         "projects/athena/athena.config.{ath_dev_name}.json",
-        "projects/athena/athena.external.{ex_dev_name}.default.built.json",
+        "results/athena/athena.external.{ex_dev_name}.default.built.json",
     output:
-        "projects/athena/athena.external.{ex_dev_name}.{ath_dev_name}.built.json"
+        "results/athena/athena.external.{ex_dev_name}.{ath_dev_name}.built.json"
     params:
         container_name = config["athena_dev_gpu_container"],
     log:
-        "projects/athena/athena.{ex_dev_name}.{ath_dev_name}.built.log"
+        "logs/athena/athena.{ex_dev_name}.{ath_dev_name}.built.log"
     threads:
         16
     shell:
@@ -100,13 +100,13 @@ rule build_custom_athena_with_external:
 rule validate_custom_athena:
     input:
         "projects/athena/athena.config.{ath_dev_name}.json",
-        "projects/athena/athena.custom.{ath_dev_name}.built.json"
+        "results/athena/athena.custom.{ath_dev_name}.built.json"
     output:
-        "projects/athena/athena.{ath_dev_name}.validated"
+        "results/athena/athena.{ath_dev_name}.validated"
     params:
         container_name = config["athena_dev_gpu_container"]
     log:
-        "projects/athena/athena.{ath_dev_name}.validated.log"
+        "logs/athena/athena.{ath_dev_name}.validated.log"
     threads:
         4
     shell:

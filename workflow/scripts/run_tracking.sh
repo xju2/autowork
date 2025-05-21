@@ -60,7 +60,11 @@ echo "Triton URL: $TRITON_URL"
 
 # check if chain name is in
 # ["CKF_LEGACY", "GNN4ITk_ML_LOCAL", "GNN4ITK_ML_TRITON"]
-if [[ "$CHAINNAME" != "CKF_LEGACY" && "$CHAINNAME" != "GNN4ITk_ML_LOCAL" && "$CHAINNAME" != "GNN4ITk_ML_TRITON" ]]; then
+if [[ "$CHAINNAME" != "CKF_LEGACY" \
+   && "$CHAINNAME" != "GNN4ITk_ML_LOCAL" \
+   && "$CHAINNAME" != "GNN4ITk_ML_TRITON" \
+   && "$CHAINNAME" != "CKF_LEGACY_LRT" \
+]]; then
     echo "Error: Invalid chain name. Must be one of [CKF_LEGACY, GNN4ITk_ML_LOCAL, GNN4ITk_ML_TRITON]."
     exit 1
 fi
@@ -142,6 +146,18 @@ elif [[ "$CHAINNAME" == "GNN4ITk_ML_TRITON" ]]; then
         --outputAODFile "${OUTFILE}"  \
         --jobNumber '1' \
         --athenaopts='--loglevel=INFO' \
+        --maxEvents ${MAX_EVENTS}
+elif [[ "$CHAINNAME" == "CKF_LEGACY_LRT" ]]; then
+    Reco_tf.py --CA 'all:True' \
+        --inputRDOFile "${RDO_FILENAME}" \
+        --outputAODFile "${OUTFILE}"  \
+        --conditionsTag ${DETECTOR_CONDITIONS} \
+        --geometryVersion ${GEOMETRY_VERSION} \
+        --multithreaded 'True' \
+        --steering doRAWtoALL \
+        --digiSteeringConf 'StandardInTimeOnlyTruth' \
+        --preInclude 'all:Campaigns.PhaseIIPileUp200' 'InDetConfig.ConfigurationHelpers.OnlyTrackingPreInclude' \
+        --preExec "flags.Tracking.doLargeD0=True;" \
         --maxEvents ${MAX_EVENTS}
 else
     echo "not implemented yet."

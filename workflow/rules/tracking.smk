@@ -1,11 +1,11 @@
 rule run_legacy_ckf:
     input:
-        "projects/athena/athena.default.{ath_dev_name}.built.json",
+        "results/athena/athena.default.{ath_dev_name}.built.json",
         "projects/tracking/rdo_files.{dataset}.txt",
     output:
         "workarea/tracking/{dataset}/aod.ckf.local.{ath_dev_name}.none.{dataset}.root",
     log:
-        "projects/tracking/legacy_ckf.{ath_dev_name}.{dataset}.log",
+        "logs/tracking/legacy_ckf.{ath_dev_name}.{dataset}.log",
     params:
         max_evts = config.get("max_evts", 1),
         container_name = config["athena_dev_container"],
@@ -21,15 +21,38 @@ rule run_legacy_ckf:
         -o "{output}" > "{log}" 2>&1 \
         """
 
+rule run_legacy_ckf_lrt:
+    input:
+        "results/athena/athena.default.{ath_dev_name}.built.json",
+        "projects/tracking/rdo_files.{dataset}.txt",
+    output:
+        "workarea/tracking/{dataset}/aod.ckfLRT.local.{ath_dev_name}.none.{dataset}.root",
+    log:
+        "logs/tracking/LRT-legacy_ckf.{ath_dev_name}.{dataset}.log",
+    params:
+        max_evts = config.get("max_evts", 1),
+        container_name = config["athena_dev_container"],
+    threads:
+        6
+    shell:
+        """shifter --image={params.container_name} --module=cvmfs \
+        workflow/scripts/run_tracking.sh -i "{input[1]}" \
+        -j {threads} \
+        -m {params.max_evts} \
+        -c "CKF_LEGACY_LRT" \
+        -s {input[0]} \
+        -o "{output}" > "{log}" 2>&1 \
+        """
+
 datasets = ["ttbar"]
 rule run_gnn4itk_local:
     input:
-        "projects/athena/athena.default.gnn4itkTool.built.json",
+        "results/athena/athena.default.gnn4itkTool.built.json",
         "projects/tracking/rdo_files.{dataset}.txt",
     output:
         "workarea/tracking/{dataset}/aod.gnn4itkMLLocal.{dataset}.root",
     log:
-        "projects/tracking/gnn4itk_local.{dataset}.log",
+        "logs/tracking/gnn4itk_local.{dataset}.log",
     params:
         max_evts = config.get("max_evts", 1),
         container_name = config["athena_dev_gpu_container"],
@@ -48,12 +71,12 @@ rule run_gnn4itk_local:
 
 rule run_gnn4itk_local_external:
     input:
-        "projects/athena/athena.{ex_dev_name}.{ath_dev_name}.built.json",
+        "results/athena/athena.{ex_dev_name}.{ath_dev_name}.built.json",
         "projects/tracking/rdo_files.{dataset}.txt",
     output:
         "workarea/tracking/{dataset}/aod.gnn4itkML.local.{ex_dev_name}.{ath_dev_name}.{dataset}.root",
     log:
-        "projects/tracking/gnn4itk_local_external.{ex_dev_name}.{ath_dev_name}.{dataset}.log",
+        "logs/tracking/gnn4itk_local_external.{ex_dev_name}.{ath_dev_name}.{dataset}.log",
     params:
         max_evts = config.get("max_evts", 1),
         container_name = config["athena_dev_gpu_container"],
@@ -82,13 +105,13 @@ rule run_gnn4itk_local_external:
 
 rule run_gnn4itk_triton:
     input:
-        "projects/athena/athena.default.{ath_dev_name}.built.json",
+        "results/athena/athena.default.{ath_dev_name}.built.json",
         "projects/tracking/rdo_files.{dataset}.txt",
-        "projects/triton/triton_server.{triton_dev_name}.ready.txt"
+        "results/triton/triton_server.{triton_dev_name}.ready.txt"
     output:
         "workarea/tracking/{dataset}/aod.gnn4itkML.triton.{ath_dev_name}.{triton_dev_name}.{dataset}.root"
     log:
-        "projects/tracking/gnn4itkML.triton.{ath_dev_name}.{triton_dev_name}.{dataset}.log"
+        "logs/tracking/gnn4itkML.triton.{ath_dev_name}.{triton_dev_name}.{dataset}.log"
     params:
         max_evts = config.get("max_evts", 1),
         container_name = config["athena_dev_gpu_container"],
@@ -109,12 +132,12 @@ rule run_gnn4itk_triton:
 
 rule run_idpvm:
     input:
-        "projects/athena/athena.default.{ath_dev_name}.built.json",
+        "results/athena/athena.default.{ath_dev_name}.built.json",
         "workarea/tracking/{dataset}/aod.{chain_name}.{ath_mode}.{ath_dev_name}.{triton_dev_name}.{dataset}.root"
     output:
         "workarea/tracking/{dataset}/idpvm.{chain_name}.{ath_mode}.{ath_dev_name}.{triton_dev_name}.{dataset}.root",
     log:
-        "projects/tracking/idpvm.{chain_name}.{ath_mode}.{ath_dev_name}.{triton_dev_name}.{dataset}.log",
+        "logs/tracking/idpvm.{chain_name}.{ath_mode}.{ath_dev_name}.{triton_dev_name}.{dataset}.log",
     params:
         max_evts = -1,
         container_name = config["athena_dev_gpu_container"],
