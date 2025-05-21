@@ -1,0 +1,8 @@
+name: snakemake-test
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - jupyterlab
+  - jupyterlab_code_formatter
+  - pip
