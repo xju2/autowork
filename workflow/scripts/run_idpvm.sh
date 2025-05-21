@@ -82,6 +82,11 @@ runIDPVM.py --filesInput ${INFILE} \
     --truthMinPt 1000 \
     --HSFlag "All" \
     --doTruthToRecoNtuple \
-    --doLoose
+    --doLoose \
+    --doTightPrimary \
+    --doLargeD0Tracks \
+    --doHitLevelPlots \
+    --OnlyTrackingPreInclude \
+    --ancestorIDList 36 \
 
 echo "DONE $(date +%Y-%m-%dT%H:%M:%S)"
