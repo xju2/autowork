@@ -4,6 +4,6 @@ rule hello:
     log:
         notebook="logs/notebooks/processed_notebook.ipynb"
     conda:
-        "envs/test.yaml"
+        "../envs/test.yaml"
     notebook:
-        "notebooks/hello.py.ipynb"
+        "../notebooks/hello.py.ipynb"

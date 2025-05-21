@@ -21,3 +21,18 @@ Build atlas with customized atlas externals.
 ```bash
 snakemake projects/athena/athena.external.ortCUDA.default.built.json
 ```
+
+Test Jupyter notebook
+```bash
+snakemake -c 1 --draft-notebook hello.txt --sdm conda
+```
+
+Code tracking
+```bash
+snakemake -R `snakemake --list-code-changes`
+```
+
+LRT tracking
+```bash
+snakemake --cores 6 workarea/tracking/HaaPU0/idpvm.ckfLRT.local.gnn4itkTriton.none.HaaPU0.root --config max_evts=-1
+```
