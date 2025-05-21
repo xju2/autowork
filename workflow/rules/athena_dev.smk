@@ -3,7 +3,7 @@ rule build_atlasexternal:
     input:
         "projects/athena/external.config.{ex_dev_name}.json"
     output:
-        "projects/athena/external.{ex_dev_name}.built"
+        "projects/athena/external.{ex_dev_name}.built.json"
     log:
         "projects/athena/external.{ex_dev_name}.built.log"
     params:
@@ -11,7 +11,7 @@ rule build_atlasexternal:
         mpi = "srun",
         atime = "4:00:00",
         nodes = 1,
-        account = "m3443",
+        account = config.get("nersc_project_name", "m3443"),
         partition = "cpu",
         queue = "interactive",
         workers = 32
@@ -30,7 +30,7 @@ rule build_atlasexternal:
 
 rule build_athena_with_external:
     input:
-        "projects/athena/external.{ex_dev_name}.built"
+        "projects/athena/external.{ex_dev_name}.built.json"
     output:
         "projects/athena/athena.external.{ex_dev_name}.default.built.json"
     log:
@@ -39,7 +39,7 @@ rule build_athena_with_external:
         container_name = config["athena_dev_gpu_container"],
         mpi = "srun",
         nodes = 1,
-        account = "m3443",
+        account = config.get("nersc_project_name", "m3443"),
         atime = "4:00:00",
         queue = "interactive",
         partition = "cpu",
@@ -52,7 +52,8 @@ rule build_athena_with_external:
         -q {params.queue} \
         -C {params.partition} -c 128 -n 1 \
         shifter --image={params.container_name} --module=cvmfs,gpu \
-        workflow/scripts/build_athena_with_external.sh -i "{input}" -o "{output}" \
+        workflow/scripts/local_athena.sh -m build_external_athena \
+          -i "{input}" -o "{output}" \
           -t {params.workers} > "{log}" 2>&1
         """
 

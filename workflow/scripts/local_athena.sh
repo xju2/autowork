@@ -176,13 +176,10 @@ elif [[ "$MODE" == "build_external" ]]; then
         echo "Error: athena directory does not exist."
         echo "Checkout the latest ATLAS athena code from git."
         echo "and create a new branch."
-        git clone ssh://git@gitlab.cern.ch:7999/xju/athena.git --single-branch
+        git clone ssh://git@gitlab.cern.ch:7999/atlas/athena.git --single-branch
         cd athena
-        git remote add atlas ssh://git@gitlab.cern.ch:7999/athena.git
-        git fetch atlas
-        git checkout -b atlas_main atlas/main
-        git branch debug_atlas_main
-        git checkout debug_atlas_main
+        git branch debug_main
+        git checkout debug_main
         cd ..
     fi
 
@@ -197,24 +194,28 @@ elif [[ "$MODE" == "build_external" ]]; then
       -x "${EXCMAKEARGS}" \
       -k "-j ${WORKERS}" 2>&1
 
-    echo "SOURCE_DIR=${SOURCE_DIR}" > "$OUTPUT_FILE"
-    echo 'cd ${SOURCE_DIR} || { echo "Failed to change directory to $SOURCE_DIR"; exit 1; }' >> "$OUTPUT_FILE"
-    echo "asetup ${EXTERNAL_ASETUP}" >> "$OUTPUT_FILE"
+    echo "{" > "$OUTPUT_FILE"
+    echo "  \"source_dir\": \"${SOURCE_DIR}\"," >> "$OUTPUT_FILE"
+    echo "  \"release\": \"${EXTERNAL_ASETUP}\"" >> "$OUTPUT_FILE"
+    echo "}" >> "$OUTPUT_FILE"
 
 elif [[ "$MODE" == "build_external_athena" ]]; then
 
     echo "Building athena on top of atlasexternals in $SOURCE_DIR"
     time ./athena/Projects/Athena/build.sh -acmi \
-      -x "-DATLAS_ENABLE_CI_TESTS=TRUE -DATLAS_EXTERNAL=${ATLASAuthXML} -DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE ${EXCMAKEARGS}" \
-      -k "-j ${WORKERS}" 2>&1
+      -x "-DATLAS_ENABLE_CI_TESTS=TRUE -DATLAS_EXTERNAL=${ATLASAuthXML} -DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE -G Ninja" \
+      -k "-j ${WORKERS}" 2>&1 || { echo "Error: Athena build failed."; exit 1; }
 
-    echo "${SOURCE_DIR}" > "$OUTPUT_FILE"
-    echo "asetup Athena,${Athena_VERSION} --releasepath=${SOURCE_DIR}/build/install" >> "$OUTPUT_FILE"
+    Athena_VERSION=$(\ls build/install/Athena/)
+    ## write output to a json file.
+    echo "{" > "$OUTPUT_FILE"
+    echo "  \"source_dir\": \"${SOURCE_DIR}\"," >> "$OUTPUT_FILE"
+    echo "  \"release\": \"Athena,${Athena_VERSION} --releasepath=${SOURCE_DIR}/build/install\"" >> "$OUTPUT_FILE"
+    echo "}" >> "$OUTPUT_FILE"
 
 else
     echo "Error: Invalid mode. Must be one of [build_athena, run_athena, build_external, build_external_athena]."
     exit 1
 fi
 
-
-
+echo "DONE on $(date +%Y-%m-%dT%H:%M:%S)"
