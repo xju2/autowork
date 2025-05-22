@@ -36,3 +36,12 @@ LRT tracking
 ```bash
 snakemake --cores 6 workarea/tracking/HaaPU0/idpvm.ckfLRT.local.gnn4itkTriton.none.HaaPU0.root --config max_evts=-1
 ```
+
+For triton jobs, you need to add `--cores 6 --latency-wait 30 --wait-for-files`
+
+
+History:
+```bash
+snakemake --cores 6 workarea/tracking/MuonPU0/idpvm.gnn4itkML.triton.gnn4itkTriton.tracking.MuonPU0.root --config max_evts=-1
+snakemake --cores 6 workarea/tracking/MuonPU0/idpvm.ckf.local.gnn4itkTriton.none.MuonPU0.root --config max_evts=-1
+```
