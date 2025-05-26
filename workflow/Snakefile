@@ -1,6 +1,8 @@
 from snakemake.utils import min_version
 min_version("9.0")
 
+# configfile path is interpreted relative to the working directory
+# not relative to the location of the snakefile that contains the statement.
 configfile: "config/config.yaml"
 report: "report/workflow.rst"
 

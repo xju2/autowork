@@ -133,14 +133,15 @@ rule run_gnn4itk_triton:
 rule run_idpvm:
     input:
         "results/athena/athena.default.{ath_dev_name}.built.json",
-        "workarea/tracking/{dataset}/aod.{chain_name}.{ath_mode}.{ath_dev_name}.{triton_dev_name}.{dataset}.root"
+        "workarea/tracking/{dataset}/aod.{trk_chain_name}.{ath_mode}.{ath_dev_name}.{triton_dev_name}.{dataset}.root"
     output:
-        "workarea/tracking/{dataset}/idpvm.{chain_name}.{ath_mode}.{ath_dev_name}.{triton_dev_name}.{dataset}.root",
+        "workarea/tracking/{dataset}/idpvm.{trk_chain_name}.{idpvm_mode}.{ath_mode}.{ath_dev_name}.{triton_dev_name}.{dataset}.root",
     log:
-        "logs/tracking/idpvm.{chain_name}.{ath_mode}.{ath_dev_name}.{triton_dev_name}.{dataset}.log",
+        "logs/tracking/idpvm.{trk_chain_name}.{idpvm_mode}.{ath_mode}.{ath_dev_name}.{triton_dev_name}.{dataset}.log",
     params:
         max_evts = -1,
         container_name = config["athena_dev_gpu_container"],
+        chain_name = lambda wildcards: f"{wildcards.idpvm_mode}".upper(),
     threads:
         6
     shell:
@@ -148,6 +149,7 @@ rule run_idpvm:
         workflow/scripts/run_idpvm.sh -i "{input[1]}" \
         -s {input[0]} \
         -j {threads} \
+        -c {params.chain_name} \
         -m {params.max_evts} \
         -o "{output}" > "{log}" 2>&1 \
         """

@@ -44,4 +44,10 @@ History:
 ```bash
 snakemake --cores 6 workarea/tracking/MuonPU0/idpvm.gnn4itkML.triton.gnn4itkTriton.tracking.MuonPU0.root --config max_evts=-1
 snakemake --cores 6 workarea/tracking/MuonPU0/idpvm.ckf.local.gnn4itkTriton.none.MuonPU0.root --config max_evts=-1
+
+snakemake --cores 12 workarea/tracking/ttbar/idpvm.ckf.primary.local.gnn4itkTriton.none.ttbar.root -p
+```
+I can set threads for the rule.
+```bash
+snakemake --cores 12 --set-threads run_idpvm=12 workarea/tracking/ttbar/idpvm.ckf.primary.local.gnn4itkTriton.none.ttbar.root -p
 ```

@@ -8,6 +8,7 @@ SETUP_FILE=""
 NUM_WORKERS=6
 MAX_EVENTS=1
 OUTFILE=""
+CHAIN_NAME="PRIMARY"
 
 
 # Function to display usage
@@ -18,18 +19,20 @@ usage() {
     echo "  -j <num_workers>  : Number of workers (default: $NUM_WORKERS)"
     echo "  -m <max_events>  : Maximum number of events to process (default: $MAX_EVENTS)"
     echo "  -o <output_file>  : Output file"
+    echo "  -c <chain_name>   : Chain name (default: $CHAIN_NAME)"
     echo "  -h                : Display this help message"
     exit 1
 }
 
 # Parse arguments
-while getopts "i:s:j:m:o:" opt; do
+while getopts "i:s:j:m:o:c:" opt; do
     case $opt in
         i) INPUT_FILE="$OPTARG" ;;
         s) SETUP_FILE="$OPTARG" ;;
         j) NUM_WORKERS="$OPTARG" ;;
         m) MAX_EVENTS="$OPTARG" ;;
         o) OUTFILE="$OPTARG" ;;
+        c) CHAIN_NAME="$OPTARG" ;;
         h) usage ;;
         \?) echo "Invalid option: -$OPTARG" >&2; usage exit 1 ;;
     esac
@@ -49,6 +52,7 @@ echo "Run Directory: $RUN_DIR"
 echo "Output File: $OUTFILE"
 echo "Number of Workers: $NUM_WORKERS"
 echo "Max Events: $MAX_EVENTS"
+echo "Chain Name: $CHAIN_NAME"
 
 
 source "workflow/scripts/deactivate_python_env.sh"
@@ -77,16 +81,28 @@ if [ -f "PoolFileCatalog.xml" ]; then
     rm InDetIdDict.xml PoolFileCatalog.xml hostnamelookup.tmp eventLoopHeartBeat.txt
 fi
 
-runIDPVM.py --filesInput ${INFILE} \
-    --outputFile ${OUTFILE} \
-    --truthMinPt 1000 \
-    --HSFlag "HardScatter" \
-    --doTruthToRecoNtuple \
-    --doLoose \
-    --doTightPrimary \
-    --doLargeD0Tracks \
-    --doHitLevelPlots \
-    --OnlyTrackingPreInclude
-    # --ancestorIDList 36 \
+LRT_OPTIONS=""
+if [ ${CHAIN_NAME} == "LRT" ]; then
+    echo "Running LRT workflow"
+    LRT_OPTIONS="--doLargeD0Tracks --ancestorIDList 36"
+else
+    echo "Running standard workflow"
+    LRT_OPTIONS=""
+fi
+
+FULL_IDPVM_OPTIONS="--maxEvents ${MAX_EVENTS} \
+--filesInput ${INFILE} \
+--outputFile ${OUTFILE} \
+--truthMinPt 1000 \
+--HSFlag HardScatter \
+--doTruthToRecoNtuple \
+--doLoose \
+--doTightPrimary \
+--doHitLevelPlots \
+--OnlyTrackingPreInclude ${LRT_OPTIONS}"
+
+echo -e "Full IDPVM Options:\n    runIDPVM.py ${FULL_IDPVM_OPTIONS}"
+runIDPVM.py ${FULL_IDPVM_OPTIONS}
+
 
 echo "DONE $(date +%Y-%m-%dT%H:%M:%S)"
