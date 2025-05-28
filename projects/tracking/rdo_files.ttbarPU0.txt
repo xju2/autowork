@@ -1,0 +1,10 @@
+/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.recon.RDO.e8481_s4149_r14697/RDO.33629009._000001.pool.root.1
+/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.recon.RDO.e8481_s4149_r14697/RDO.33629009._000002.pool.root.1
+/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.recon.RDO.e8481_s4149_r14697/RDO.33629009._000003.pool.root.1
+/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.recon.RDO.e8481_s4149_r14697/RDO.33629009._000004.pool.root.1
+/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.recon.RDO.e8481_s4149_r14697/RDO.33629009._000005.pool.root.1
+/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.recon.RDO.e8481_s4149_r14697/RDO.33629009._000006.pool.root.1
+/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.recon.RDO.e8481_s4149_r14697/RDO.33629009._000007.pool.root.1
+/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.recon.RDO.e8481_s4149_r14697/RDO.33629009._000008.pool.root.1
+/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.recon.RDO.e8481_s4149_r14697/RDO.33629009._000009.pool.root.1
+/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.recon.RDO.e8481_s4149_r14697/RDO.33629009._000010.pool.root.1
