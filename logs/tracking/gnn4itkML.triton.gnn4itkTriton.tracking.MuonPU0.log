@@ -9,15 +9,15 @@ Chain Name: GNN4ITk_ML_TRITON
 Setup File: results/athena/athena.default.gnn4itkTriton.built.json
 Triton Model Name: MetricLearning
 Triton URL: nid001144
-/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000002.pool.root.1,/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000022.pool.root.1,/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000028.pool.root.1,/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000047.pool.root.1,/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000067.pool.root.1,/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000085.pool.root.1
+/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000002.pool.root.1,/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000022.pool.root.1,/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000028.pool.root.1,/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000047.pool.root.1,/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000067.pool.root.1,/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000085.pool.root.1
 virtual environment detected, deactivating...
 [7mlsetup              [0m lsetup <tool1> [ <tool2> ...] (see lsetup -h):
 [7m lsetup asetup      [0m  (or asetup) to setup an Athena release
 [7m lsetup astyle      [0m  ATLAS style macros
 [7m lsetup atlantis    [0m  Atlantis: event display
 [7m lsetup centralpage [0m  Find samples
-[7m lsetup eiclient    [0m  Event Index 
-[7m lsetup emi         [0m  EMI: grid middleware user interface 
+[7m lsetup eiclient    [0m  Event Index
+[7m lsetup emi         [0m  EMI: grid middleware user interface
 [7m lsetup lcgenv      [0m  lcgenv: setup tools from cvmfs SFT repository
 [7m lsetup panda       [0m  Panda: Production ANd Distributed Analysis
 [7m lsetup pyami       [0m  pyAMI: ATLAS Metadata Interface python client
@@ -37,12 +37,12 @@ virtual environment detected, deactivating...
 [7mshowVersions        [0m show versions of installed software
 
 
-[1m[4m30 Nov 2023[0m 
+[1m[4m30 Nov 2023[0m
 
 A serious security issue in ROOT's web-based GUI has been identified:
 
-  You should not use the web-based browser until further notice and instead 
-  set the old-style TBrowser as the default. Please see the Twiki page linked 
+  You should not use the web-based browser until further notice and instead
+  set the old-style TBrowser as the default. Please see the Twiki page linked
   below for instructions on how to do this.
 
   https://twiki.cern.ch/twiki/bin/view/AtlasComputing/AtlasComputingArchive/RootBrowserSecurityIssue
@@ -50,7 +50,7 @@ A serious security issue in ROOT's web-based GUI has been identified:
   More details of this issue:
   https://root.cern/about/security/#2023-11-26-open-port-for-control-of-web-gui-allows-read-and-write-access-to-file-system
 
-  [0;31mReason for this message: $HOME/.rootrc is missing[0m 
+  [0;31mReason for this message: $HOME/.rootrc is missing[0m
 
 Set up environment from /pscratch/sd/x/xju/code/autowork/results/athena/athena.default.gnn4itkTriton.built.json
 Setup Athena from JSON file: /pscratch/sd/x/xju/code/autowork/results/athena/athena.default.gnn4itkTriton.built.json
@@ -68,7 +68,7 @@ Running GNN4ITk_ML_TRITON in /pscratch/sd/x/xju/workflow/workarea/tracking/MuonP
 Cleanup workarea.
 PyJobTransforms.<module> 2025-05-22 12:24:53,045 INFO logging set in /cvmfs/atlas.cern.ch/repo/sw/software/25.0/Athena/25.0.30/InstallArea/x86_64-el9-gcc13-opt/bin/Reco_tf.py
 PyJobTransforms.main 2025-05-22 12:24:53,456 INFO This is /cvmfs/atlas.cern.ch/repo/sw/software/25.0/Athena/25.0.30/InstallArea/x86_64-el9-gcc13-opt/bin/Reco_tf.py
-PyJobTransforms.transform.parseCmdLineArgs 2025-05-22 12:24:53,503 INFO Transform command line was: '/cvmfs/atlas.cern.ch/repo/sw/software/25.0/Athena/25.0.30/InstallArea/x86_64-el9-gcc13-opt/bin/Reco_tf.py' '--CA' 'all:True' '--autoConfiguration' 'everything' '--conditionsTag' 'all:OFLCOND-MC15c-SDR-14-05' '--geometryVersion' 'all:ATLAS-P2-RUN4-03-00-00' '--multithreaded' 'True' '--steering' 'doRAWtoALL' '--digiSteeringConf' 'StandardInTimeOnlyTruth' '--postInclude' 'all:PyJobTransforms.UseFrontier' '--preInclude' 'all:Campaigns.PhaseIIPileUp200' 'InDetConfig.ConfigurationHelpers.OnlyTrackingPreInclude' 'InDetGNNTracking.InDetGNNTrackingFlags.gnnTritonValidation' '--preExec' 'flags.Tracking.GNN.Triton.model = "MetricLearning"; flags.Tracking.GNN.Triton.url = "nid001144"; flags.Tracking.GNN.doRecoTrackCuts = False' '--inputRDOFile' '/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000002.pool.root.1,/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000022.pool.root.1,/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000028.pool.root.1,/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000047.pool.root.1,/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000067.pool.root.1,/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000085.pool.root.1' '--outputAODFile' '/pscratch/sd/x/xju/workflow/workarea/tracking/MuonPU0/aod.gnn4itkML.triton.gnn4itkTriton.tracking.MuonPU0.root' '--jobNumber' '1' '--athenaopts=--loglevel=INFO' '--maxEvents' '-1'
+PyJobTransforms.transform.parseCmdLineArgs 2025-05-22 12:24:53,503 INFO Transform command line was: '/cvmfs/atlas.cern.ch/repo/sw/software/25.0/Athena/25.0.30/InstallArea/x86_64-el9-gcc13-opt/bin/Reco_tf.py' '--CA' 'all:True' '--autoConfiguration' 'everything' '--conditionsTag' 'all:OFLCOND-MC15c-SDR-14-05' '--geometryVersion' 'all:ATLAS-P2-RUN4-03-00-00' '--multithreaded' 'True' '--steering' 'doRAWtoALL' '--digiSteeringConf' 'StandardInTimeOnlyTruth' '--postInclude' 'all:PyJobTransforms.UseFrontier' '--preInclude' 'all:Campaigns.PhaseIIPileUp200' 'InDetConfig.ConfigurationHelpers.OnlyTrackingPreInclude' 'InDetGNNTracking.InDetGNNTrackingFlags.gnnTritonValidation' '--preExec' 'flags.Tracking.GNN.Triton.model = "MetricLearning"; flags.Tracking.GNN.Triton.url = "nid001144"; flags.Tracking.GNN.doRecoTrackCuts = False' '--inputRDOFile' '/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000002.pool.root.1,/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000022.pool.root.1,/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000028.pool.root.1,/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000047.pool.root.1,/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000067.pool.root.1,/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000085.pool.root.1' '--outputAODFile' '/pscratch/sd/x/xju/workflow/workarea/tracking/MuonPU0/aod.gnn4itkML.triton.gnn4itkTriton.tracking.MuonPU0.root' '--jobNumber' '1' '--athenaopts=--loglevel=INFO' '--maxEvents' '-1'
 PyJobTransforms.transform.execute 2025-05-22 12:24:53,530 INFO Resolving execution graph
 PyJobTransforms.trfGraph.__init__ 2025-05-22 12:24:53,531 INFO Transform graph input data: ['RDO']; output data ['AOD']
 PyJobTransforms.transform.execute 2025-05-22 12:24:53,556 INFO Starting to trace execution path
@@ -76,54 +76,54 @@ PyJobTransforms.transform.execute 2025-05-22 12:24:53,557 INFO Execution path fo
 PyJobTransforms.transform.validateInFiles 2025-05-22 12:24:53,558 INFO Validating input files
 PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:24:53,558 INFO Starting legacy (serial) file validation
 PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:24:53,558 INFO Validating data type RDO...
-PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:24:53,558 INFO Validating file /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000002.pool.root.1...
-PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:24:53,558 INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000002.pool.root.1: Testing event count...
-PyJobTransforms.trfArgClasses._readMetadata 2025-05-22 12:24:53,558 INFO Metadata generator called to obtain nentries for ('/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000002.pool.root.1',)
+PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:24:53,558 INFO Validating file /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000002.pool.root.1...
+PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:24:53,558 INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000002.pool.root.1: Testing event count...
+PyJobTransforms.trfArgClasses._readMetadata 2025-05-22 12:24:53,558 INFO Metadata generator called to obtain nentries for ('/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000002.pool.root.1',)
 Py:MetaReader        INFO Current mode used: lite
-Py:MetaReader        INFO Current filenames: ['/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000002.pool.root.1']
+Py:MetaReader        INFO Current filenames: ['/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000002.pool.root.1']
 Py:MetaReader        INFO MetaReader is called with the parameter "unique_tag_info_values" set to True. This is a workaround to remove all duplicate values from "/TagInfo" key
 Py:MetaReader        INFO Current mode used: lite
-Py:MetaReader        INFO Current filenames: ['/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000022.pool.root.1']
+Py:MetaReader        INFO Current filenames: ['/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000022.pool.root.1']
 Py:MetaReader        INFO MetaReader is called with the parameter "unique_tag_info_values" set to True. This is a workaround to remove all duplicate values from "/TagInfo" key
 Py:MetaReader        INFO Current mode used: lite
-Py:MetaReader        INFO Current filenames: ['/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000028.pool.root.1']
+Py:MetaReader        INFO Current filenames: ['/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000028.pool.root.1']
 Py:MetaReader        INFO MetaReader is called with the parameter "unique_tag_info_values" set to True. This is a workaround to remove all duplicate values from "/TagInfo" key
 Py:MetaReader        INFO Current mode used: lite
-Py:MetaReader        INFO Current filenames: ['/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000047.pool.root.1']
+Py:MetaReader        INFO Current filenames: ['/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000047.pool.root.1']
 Py:MetaReader        INFO MetaReader is called with the parameter "unique_tag_info_values" set to True. This is a workaround to remove all duplicate values from "/TagInfo" key
 Py:MetaReader        INFO Current mode used: lite
-Py:MetaReader        INFO Current filenames: ['/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000067.pool.root.1']
+Py:MetaReader        INFO Current filenames: ['/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000067.pool.root.1']
 Py:MetaReader        INFO MetaReader is called with the parameter "unique_tag_info_values" set to True. This is a workaround to remove all duplicate values from "/TagInfo" key
 Py:MetaReader        INFO Current mode used: lite
-Py:MetaReader        INFO Current filenames: ['/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000085.pool.root.1']
+Py:MetaReader        INFO Current filenames: ['/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000085.pool.root.1']
 Py:MetaReader        INFO MetaReader is called with the parameter "unique_tag_info_values" set to True. This is a workaround to remove all duplicate values from "/TagInfo" key
 PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,236 INFO Event counting test passed (1000 events).
-PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,236 INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000002.pool.root.1: Checking if guid exists...
+PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,236 INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000002.pool.root.1: Checking if guid exists...
 PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,236 INFO Guid is 28E9A1C5-C263-1D49-ADD4-2D81BD5D587D
-PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,237 INFO Validating file /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000022.pool.root.1...
-PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,237 INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000022.pool.root.1: Testing event count...
+PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,237 INFO Validating file /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000022.pool.root.1...
+PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,237 INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000022.pool.root.1: Testing event count...
 PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,237 INFO Event counting test passed (1000 events).
-PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,237 INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000022.pool.root.1: Checking if guid exists...
+PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,237 INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000022.pool.root.1: Checking if guid exists...
 PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,237 INFO Guid is 96124F1A-E6DA-6F4B-BCFC-AFDDAF5403F9
-PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,237 INFO Validating file /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000028.pool.root.1...
-PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,237 INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000028.pool.root.1: Testing event count...
+PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,237 INFO Validating file /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000028.pool.root.1...
+PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,237 INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000028.pool.root.1: Testing event count...
 PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,237 INFO Event counting test passed (1000 events).
-PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,237 INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000028.pool.root.1: Checking if guid exists...
+PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,237 INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000028.pool.root.1: Checking if guid exists...
 PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,237 INFO Guid is 0BBC9863-0DC6-594C-838C-9AB2EE79F513
-PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,237 INFO Validating file /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000047.pool.root.1...
-PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,237 INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000047.pool.root.1: Testing event count...
+PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,237 INFO Validating file /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000047.pool.root.1...
+PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,237 INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000047.pool.root.1: Testing event count...
 PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,238 INFO Event counting test passed (1000 events).
-PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,238 INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000047.pool.root.1: Checking if guid exists...
+PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,238 INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000047.pool.root.1: Checking if guid exists...
 PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,238 INFO Guid is 33116237-A603-1E4D-818D-C4271F4A64FE
-PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,238 INFO Validating file /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000067.pool.root.1...
-PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,238 INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000067.pool.root.1: Testing event count...
+PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,238 INFO Validating file /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000067.pool.root.1...
+PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,238 INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000067.pool.root.1: Testing event count...
 PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,238 INFO Event counting test passed (1000 events).
-PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,238 INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000067.pool.root.1: Checking if guid exists...
+PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,238 INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000067.pool.root.1: Checking if guid exists...
 PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,238 INFO Guid is 32D8B5FB-6E44-4549-AC02-C2CB8B8D47D5
-PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,238 INFO Validating file /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000085.pool.root.1...
-PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,238 INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000085.pool.root.1: Testing event count...
+PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,238 INFO Validating file /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000085.pool.root.1...
+PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,238 INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000085.pool.root.1: Testing event count...
 PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,238 INFO Event counting test passed (1000 events).
-PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,239 INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000085.pool.root.1: Checking if guid exists...
+PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,239 INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000085.pool.root.1: Checking if guid exists...
 PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,239 INFO Guid is DBD3753D-8610-B34F-A71E-DCAA9BA2239D
 PyJobTransforms.trfValidation.performStandardFileValidation 2025-05-22 12:25:02,239 INFO Stopping legacy (serial) file validation
 PyJobTransforms.trfExe.preExecute 2025-05-22 12:25:02,239 INFO Asetup report: 	AtlasBaseDir=/cvmfs/atlas.cern.ch/repo/sw/software/25.0
@@ -157,7 +157,7 @@ RAWtoALL 12:25:03    concurrentEvents = 1
 RAWtoALL 12:25:03    conditionsTag = 'OFLCOND-MC15c-SDR-14-05'
 RAWtoALL 12:25:03    digiSteeringConf = 'StandardInTimeOnlyTruth'
 RAWtoALL 12:25:03    geometryVersion = 'ATLAS-P2-RUN4-03-00-00'
-RAWtoALL 12:25:03    inputRDOFile = ['/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000002.pool.root.1', '/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000022.pool.root.1', '/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000028.pool.root.1', '/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000047.pool.root.1', '/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000067.pool.root.1', '/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000085.pool.root.1']
+RAWtoALL 12:25:03    inputRDOFile = ['/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000002.pool.root.1', '/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000022.pool.root.1', '/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000028.pool.root.1', '/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000047.pool.root.1', '/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000067.pool.root.1', '/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000085.pool.root.1']
 RAWtoALL 12:25:03    inputRDOFileNentries = 6000
 RAWtoALL 12:25:03    inputRDOFileType = 'RDO'
 RAWtoALL 12:25:03    jobNumber = 1
@@ -176,13 +176,13 @@ RAWtoALL 12:25:03 Py:RAWtoALL          INFO **** executing ROOT6Setup
 RAWtoALL 12:25:03 Py:Athena            INFO executing ROOT6Setup
 RAWtoALL 12:25:03 Py:RAWtoALL          INFO **** Setting-up configuration flags
 RAWtoALL 12:25:05 Py:RAWtoALL          INFO ---------- Configured AOD output
-RAWtoALL 12:25:10 Py:AutoConfigFlags    INFO Obtaining metadata of auto-configuration by peeking into '/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000002.pool.root.1'
+RAWtoALL 12:25:10 Py:AutoConfigFlags    INFO Obtaining metadata of auto-configuration by peeking into '/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000002.pool.root.1'
 RAWtoALL 12:25:11 Py:MetaReader        INFO Current mode used: lite
-RAWtoALL 12:25:11 Py:MetaReader        INFO Current filenames: ['/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000002.pool.root.1']
+RAWtoALL 12:25:11 Py:MetaReader        INFO Current filenames: ['/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000002.pool.root.1']
 RAWtoALL 12:25:13 Py:MetaReader        INFO MetaReader is called with the parameter "unique_tag_info_values" set to True. This is a workaround to remove all duplicate values from "/TagInfo" key
 RAWtoALL 12:25:13 Py:AutoConfigFlags    INFO Looking into the file in 'peeker' mode as the configuration requires more details: SimulatedDetectors
 RAWtoALL 12:25:13 Py:MetaReader        INFO Current mode used: peeker
-RAWtoALL 12:25:13 Py:MetaReader        INFO Current filenames: ['/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000002.pool.root.1']
+RAWtoALL 12:25:13 Py:MetaReader        INFO Current filenames: ['/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000002.pool.root.1']
 RAWtoALL 12:25:19 Py:MetaReader        INFO MetaReader is called with the parameter "unique_tag_info_values" set to True. This is a workaround to remove all duplicate values from "/TagInfo" key
 RAWtoALL 12:25:19 Py:DetectorConfigFlags    INFO               Initial       Meta.         Final
 RAWtoALL 12:25:19 Py:DetectorConfigFlags    INFO               Geo.   Enbl.  Sim.   Digi.  Geo.   Enbl.
@@ -242,7 +242,7 @@ RAWtoALL 12:25:19 Py:RecoSteering      INFO ---------- Configured POOL reading
 RAWtoALL 12:25:19 Py:RecoSteering      INFO ---------- Configured AODtoxAOD Truth Conversion
 RAWtoALL 12:25:20 Py:RecoSteering      INFO ---------- Configured Truth pileup jet writing
 RAWtoALL 12:25:20 Py:TriggerConfigFlags.EDMVersion    INFO Could not determine EDM version from the input file. Return default EDMVersion=-1
-RAWtoALL 12:25:22 
+RAWtoALL 12:25:22
 RAWtoALL 12:25:22 ************************************************************************
 RAWtoALL 12:25:22 ******************** Tracking reconstruction Config ********************
 RAWtoALL 12:25:22                      Active Config is GNN
@@ -808,7 +808,7 @@ RAWtoALL 12:25:22 Input.ConditionsRunNumber                : -1
 RAWtoALL 12:25:22 Input.DataYear                           : [function]
 RAWtoALL 12:25:22 Input.FailOnUnknownCollections           : False
 RAWtoALL 12:25:22 Input.FileNentries                       : 6000
-RAWtoALL 12:25:22 Input.Files                              : ['/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000002.pool.root.1', '/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000022.pool.root.1', '/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000028.pool.root.1', '/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000047.pool.root.1', '/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000067.pool.root.1', '/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000085.pool.root.1']
+RAWtoALL 12:25:22 Input.Files                              : ['/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000002.pool.root.1', '/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000022.pool.root.1', '/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000028.pool.root.1', '/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000047.pool.root.1', '/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000067.pool.root.1', '/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000085.pool.root.1']
 RAWtoALL 12:25:22 Input.Format                             : <Format.POOL: 'POOL'>
 RAWtoALL 12:25:22 Input.GeneratorsInfo                     : [function]
 RAWtoALL 12:25:22 Input.JobNumber                          : 1
@@ -1468,16 +1468,16 @@ RAWtoALL 12:25:24 MetaDataSvc                                                   
 RAWtoALL 12:25:24 PoolSvc                                                           INFO File is not in Catalog! Attempt to open it anyway.
 RAWtoALL 12:25:24 DbSession                                                         INFO     Open     DbSession
 RAWtoALL 12:25:24 Domain[ROOT_All]                                                  INFO ->  Access   DbDatabase   READ      [ROOT_All] F4E86500-5D82-7091-3FE2-0FF0FF0FF0FF
-RAWtoALL 12:25:24 Domain[ROOT_All]                                                  INFO                           /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000002.pool.root.1
-RAWtoALL 12:25:24 RootDatabase.open                                                 INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000002.pool.root.1 File version:62608
-RAWtoALL 12:25:24 /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless...1                INFO Database being retired...
+RAWtoALL 12:25:24 Domain[ROOT_All]                                                  INFO                           /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000002.pool.root.1
+RAWtoALL 12:25:24 RootDatabase.open                                                 INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000002.pool.root.1 File version:62608
+RAWtoALL 12:25:24 /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles...1                INFO Database being retired...
 RAWtoALL 12:25:24 Domain[ROOT_All]                                                  INFO ->  Deaccess DbDatabase   READ      [ROOT_All] F4E86500-5D82-7091-3FE2-0FF0FF0FF0FF
 RAWtoALL 12:25:24 Domain[ROOT_All]                                                  INFO >   Deaccess DbDomain     READ      [ROOT_All]
 RAWtoALL 12:25:24 DbSession                                                         INFO     Open     DbSession
 RAWtoALL 12:25:24 Domain[ROOT_All]                                                  INFO >   Access   DbDomain     READ      [ROOT_All]
 RAWtoALL 12:25:24 Domain[ROOT_All]                                                  INFO ->  Access   DbDatabase   READ      [ROOT_All] 28E9A1C5-C263-1D49-ADD4-2D81BD5D587D
-RAWtoALL 12:25:24 Domain[ROOT_All]                                                  INFO                           /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000002.pool.root.1
-RAWtoALL 12:25:24 RootDatabase.open                                                 INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000002.pool.root.1 File version:62608
+RAWtoALL 12:25:24 Domain[ROOT_All]                                                  INFO                           /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000002.pool.root.1
+RAWtoALL 12:25:24 RootDatabase.open                                                 INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000002.pool.root.1 File version:62608
 RAWtoALL 12:25:24 EventPersistencySvc                                               INFO Added successfully Conversion service AthenaPoolCnvSvc
 RAWtoALL 12:25:24 MetaDataSvc                                                       INFO   AlgTool: ToolSvc.IOVDbMetaDataTool
 RAWtoALL 12:25:24 MetaDataSvc                                                       INFO   AlgTool: ToolSvc.StreamAOD_CopyEventStreamInfo
@@ -1607,10 +1607,10 @@ RAWtoALL 12:25:35 Database string successfully parsed.
 RAWtoALL 12:25:35 GeoModelXML-INFO: Set up detector geometry from db-string
 RAWtoALL 12:25:35 which adds sub-detector ITk_Pixel
 RAWtoALL 12:25:36 GeoModelSvc.ITk::PixelDetectorTool                                INFO
-RAWtoALL 12:25:36 
+RAWtoALL 12:25:36
 RAWtoALL 12:25:36 Pixel Numerology:
 RAWtoALL 12:25:36 ===============
-RAWtoALL 12:25:36 
+RAWtoALL 12:25:36
 RAWtoALL 12:25:36 Number of parts is 3
 RAWtoALL 12:25:36 GeoModelSvc.ITk::PixelDetectorTool                                INFO     Found barrel with index 0
 RAWtoALL 12:25:36         Number of barrel layers = 5
@@ -1631,13 +1631,13 @@ RAWtoALL 12:25:36         Layer 6 has 8 disks
 RAWtoALL 12:25:36         Layer 7 has 9 disks
 RAWtoALL 12:25:36         Layer 8 has 9 disks
 RAWtoALL 12:25:36     Found endcap with index 2
-RAWtoALL 12:25:36 
+RAWtoALL 12:25:36
 RAWtoALL 12:25:36 GeoModelSvc.ITk::PixelDetectorTool                                INFO Total number of wafers added is 9164
 RAWtoALL 12:25:36 GeoModelSvc.ITk::PixelDetectorTool                                INFO Total number of wafer identifiers is 9164
 RAWtoALL 12:25:36 GeoModelSvc.ITk::PixelDetectorTool                                INFO Max. eta cells is 800
 RAWtoALL 12:25:36 GeoModelSvc.ITk::PixelDetectorTool                                INFO Max. phi cells is 768
 RAWtoALL 12:25:36 GeoModelSvc.ITk::PixelDetectorTool                                INFO End of numerology
-RAWtoALL 12:25:36 
+RAWtoALL 12:25:36
 RAWtoALL 12:25:36 GeoModelSvc                                                       INFO GeoModelSvc.ITk::PixelDetectorTool	 SZ= 47844Kb 	 Time = 0.78S
 RAWtoALL 12:25:36 SCT_ID                                                            INFO
 RAWtoALL 12:25:36 GeoModelSvc.ITk::StripDetectorTool                                INFO Trying new ITkStrip database location.
@@ -1673,12 +1673,12 @@ RAWtoALL 12:25:38 Add Alignable named Wheel with id 4
 RAWtoALL 12:25:38 copy = 5; level = 2
 RAWtoALL 12:25:38 Add Alignable named Wheel with id 5
 RAWtoALL 12:25:38 GeoModelSvc.ITk::StripDetectorTool                                INFO
-RAWtoALL 12:25:38 
+RAWtoALL 12:25:38
 RAWtoALL 12:25:38 SCT Numerology:
 RAWtoALL 12:25:38 ===============
-RAWtoALL 12:25:38 
+RAWtoALL 12:25:38
 RAWtoALL 12:25:38 Number of parts is 3
-RAWtoALL 12:25:38 
+RAWtoALL 12:25:38
 RAWtoALL 12:25:38 GeoModelSvc.ITk::StripDetectorTool                                INFO   Found barrel with index 0
 RAWtoALL 12:25:38     Number of barrel layers = 4
 RAWtoALL 12:25:38     layer = 0 has 112 etaModules each with 28 phi modules
@@ -1802,14 +1802,14 @@ RAWtoALL 12:25:38       Ring 15 has 64 phi modules
 RAWtoALL 12:25:38       Ring 16 has 64 phi modules
 RAWtoALL 12:25:38       Ring 17 has 64 phi modules
 RAWtoALL 12:25:38   Found endcap with index 2
-RAWtoALL 12:25:38 
+RAWtoALL 12:25:38
 RAWtoALL 12:25:38 GeoModelSvc.ITk::StripDetectorTool                                INFO Total number of wafers added is 49536
 RAWtoALL 12:25:38 GeoModelSvc.ITk::StripDetectorTool                                INFO Total number of wafer identifiers is 49536
 RAWtoALL 12:25:38 GeoModelSvc.ITk::StripDetectorTool                                INFO Max. eta cells is 1
 RAWtoALL 12:25:38 GeoModelSvc.ITk::StripDetectorTool                                INFO Max. phi cells is 1536
 RAWtoALL 12:25:38 GeoModelSvc.ITk::StripDetectorTool                                INFO Max. no. strips is 1536
 RAWtoALL 12:25:38 GeoModelSvc.ITk::StripDetectorTool                                INFO End of numerology
-RAWtoALL 12:25:38 
+RAWtoALL 12:25:38
 RAWtoALL 12:25:38 GeoModelSvc                                                       INFO GeoModelSvc.ITk::StripDetectorTool	 SZ= 116736Kb 	 Time = 1.79S
 RAWtoALL 12:25:38 GeoModelSvc.BeamPipeDetectorTool                                  INFO Building Beam Pipe
 RAWtoALL 12:25:39 GeoModelSvc                                                       INFO GeoModelSvc.BeamPipeDetectorTool	 SZ= 0Kb 	 Time = 0.01S
@@ -3142,23 +3142,23 @@ RAWtoALL 12:26:27 GNNTrackMaker                                        491     0
 RAWtoALL 12:26:27 GNNTrackMaker     WARNING INFO message limit (500) reached for GNNTrackMaker. Suppressing further output.
 RAWtoALL 12:26:34 FPEAuditor                                           765     0 WARNING FPE INVALID in [Execute] of [GNNTrackMaker] on event 109775 0 0
 RAWtoALL 12:26:41 EventSelector                                       1000     0    INFO Disconnecting input sourceID: 28E9A1C5-C263-1D49-ADD4-2D81BD5D587D
-RAWtoALL 12:26:41 /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless...1  1000     0    INFO Database being retired...
+RAWtoALL 12:26:41 /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles...1  1000     0    INFO Database being retired...
 RAWtoALL 12:26:41 Domain[ROOT_All]                                    1000     0    INFO ->  Deaccess DbDatabase   READ      [ROOT_All] 28E9A1C5-C263-1D49-ADD4-2D81BD5D587D
 RAWtoALL 12:26:41 Domain[ROOT_All]                                    1000     0    INFO >   Deaccess DbDomain     READ      [ROOT_All]
 RAWtoALL 12:26:41 PoolSvc                                             1000     0    INFO File is not in Catalog! Attempt to open it anyway.
 RAWtoALL 12:26:41 DbSession                                           1000     0    INFO     Open     DbSession
 RAWtoALL 12:26:41 Domain[ROOT_All]                                    1000     0    INFO >   Access   DbDomain     READ      [ROOT_All]
 RAWtoALL 12:26:41 Domain[ROOT_All]                                    1000     0    INFO ->  Access   DbDatabase   READ      [ROOT_All] EB3F88B9-D79C-1467-0A31-0FF0FF0FF0FF
-RAWtoALL 12:26:41 Domain[ROOT_All]                                    1000     0    INFO                           /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000022.pool.root.1
-RAWtoALL 12:26:41 RootDatabase.open                                   1000     0    INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000022.pool.root.1 File version:62608
-RAWtoALL 12:26:41 /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless...1  1000     0    INFO Database being retired...
+RAWtoALL 12:26:41 Domain[ROOT_All]                                    1000     0    INFO                           /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000022.pool.root.1
+RAWtoALL 12:26:41 RootDatabase.open                                   1000     0    INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000022.pool.root.1 File version:62608
+RAWtoALL 12:26:41 /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles...1  1000     0    INFO Database being retired...
 RAWtoALL 12:26:41 Domain[ROOT_All]                                    1000     0    INFO ->  Deaccess DbDatabase   READ      [ROOT_All] EB3F88B9-D79C-1467-0A31-0FF0FF0FF0FF
 RAWtoALL 12:26:41 Domain[ROOT_All]                                    1000     0    INFO >   Deaccess DbDomain     READ      [ROOT_All]
 RAWtoALL 12:26:41 DbSession                                           1000     0    INFO     Open     DbSession
 RAWtoALL 12:26:41 Domain[ROOT_All]                                    1000     0    INFO >   Access   DbDomain     READ      [ROOT_All]
 RAWtoALL 12:26:41 Domain[ROOT_All]                                    1000     0    INFO ->  Access   DbDatabase   READ      [ROOT_All] 96124F1A-E6DA-6F4B-BCFC-AFDDAF5403F9
-RAWtoALL 12:26:41 Domain[ROOT_All]                                    1000     0    INFO                           /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000022.pool.root.1
-RAWtoALL 12:26:41 RootDatabase.open                                   1000     0    INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000022.pool.root.1 File version:62608
+RAWtoALL 12:26:41 Domain[ROOT_All]                                    1000     0    INFO                           /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000022.pool.root.1
+RAWtoALL 12:26:41 RootDatabase.open                                   1000     0    INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000022.pool.root.1 File version:62608
 RAWtoALL 12:26:43 TBranchAuxDynReader                                 1000     0    INFO RootAuxDynIO/src/TBranchAuxDynReader.cxx:326 (TBranchAuxDynReader::BranchInfo& TBranchAuxDynReader::getBranchInfo(const unsigned long&, const SG::AuxStoreInternal&)): attribute 'mcEventNumber' (id=1 typename=unsigned long) has different type than the branch: ULong64_t  Marking for schema evolution.
 RAWtoALL 12:26:49 FPEAuditor                                          1216     0 WARNING FPE INVALID in [Execute] of [GNNTrackMaker] on event 127216 0 0
 RAWtoALL 12:26:49 FPEAuditor                                          1216     0 WARNING FPE DIVBYZERO in [Execute] of [GNNTrackMaker] on event 127216 0 0
@@ -3177,23 +3177,23 @@ RAWtoALL 12:27:10 GNNTrackMaker.ITkTrackFitter                        1970     0
 RAWtoALL 12:27:10 GNNTrackMaker.ITkTrackFitter                        1970     0 WARNING Duplicate hit on track
 RAWtoALL 12:27:10 GNNTrackMaker.ITkTrackFitter                        1970     0 WARNING Duplicate hit on track
 RAWtoALL 12:27:11 EventSelector                                       2000     0    INFO Disconnecting input sourceID: 96124F1A-E6DA-6F4B-BCFC-AFDDAF5403F9
-RAWtoALL 12:27:11 /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless...1  2000     0    INFO Database being retired...
+RAWtoALL 12:27:11 /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles...1  2000     0    INFO Database being retired...
 RAWtoALL 12:27:11 Domain[ROOT_All]                                    2000     0    INFO ->  Deaccess DbDatabase   READ      [ROOT_All] 96124F1A-E6DA-6F4B-BCFC-AFDDAF5403F9
 RAWtoALL 12:27:11 Domain[ROOT_All]                                    2000     0    INFO >   Deaccess DbDomain     READ      [ROOT_All]
 RAWtoALL 12:27:11 PoolSvc                                             2000     0    INFO File is not in Catalog! Attempt to open it anyway.
 RAWtoALL 12:27:11 DbSession                                           2000     0    INFO     Open     DbSession
 RAWtoALL 12:27:11 Domain[ROOT_All]                                    2000     0    INFO >   Access   DbDomain     READ      [ROOT_All]
 RAWtoALL 12:27:11 Domain[ROOT_All]                                    2000     0    INFO ->  Access   DbDatabase   READ      [ROOT_All] 5D04AF29-BBB7-0DEF-DDA1-0FF0FF0FF0FF
-RAWtoALL 12:27:11 Domain[ROOT_All]                                    2000     0    INFO                           /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000028.pool.root.1
-RAWtoALL 12:27:11 RootDatabase.open                                   2000     0    INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000028.pool.root.1 File version:62608
-RAWtoALL 12:27:11 /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless...1  2000     0    INFO Database being retired...
+RAWtoALL 12:27:11 Domain[ROOT_All]                                    2000     0    INFO                           /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000028.pool.root.1
+RAWtoALL 12:27:11 RootDatabase.open                                   2000     0    INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000028.pool.root.1 File version:62608
+RAWtoALL 12:27:11 /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles...1  2000     0    INFO Database being retired...
 RAWtoALL 12:27:11 Domain[ROOT_All]                                    2000     0    INFO ->  Deaccess DbDatabase   READ      [ROOT_All] 5D04AF29-BBB7-0DEF-DDA1-0FF0FF0FF0FF
 RAWtoALL 12:27:11 Domain[ROOT_All]                                    2000     0    INFO >   Deaccess DbDomain     READ      [ROOT_All]
 RAWtoALL 12:27:11 DbSession                                           2000     0    INFO     Open     DbSession
 RAWtoALL 12:27:11 Domain[ROOT_All]                                    2000     0    INFO >   Access   DbDomain     READ      [ROOT_All]
 RAWtoALL 12:27:11 Domain[ROOT_All]                                    2000     0    INFO ->  Access   DbDatabase   READ      [ROOT_All] 0BBC9863-0DC6-594C-838C-9AB2EE79F513
-RAWtoALL 12:27:11 Domain[ROOT_All]                                    2000     0    INFO                           /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000028.pool.root.1
-RAWtoALL 12:27:11 RootDatabase.open                                   2000     0    INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000028.pool.root.1 File version:62608
+RAWtoALL 12:27:11 Domain[ROOT_All]                                    2000     0    INFO                           /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000028.pool.root.1
+RAWtoALL 12:27:11 RootDatabase.open                                   2000     0    INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000028.pool.root.1 File version:62608
 RAWtoALL 12:27:12 TBranchAuxDynReader                                 2000     0    INFO RootAuxDynIO/src/TBranchAuxDynReader.cxx:326 (TBranchAuxDynReader::BranchInfo& TBranchAuxDynReader::getBranchInfo(const unsigned long&, const SG::AuxStoreInternal&)): attribute 'mcEventNumber' (id=1 typename=unsigned long) has different type than the branch: ULong64_t  Marking for schema evolution.
 RAWtoALL 12:27:13 GNNTrackMaker.ITkTrackFitter                        2030     0 WARNING Duplicate hit on track
 RAWtoALL 12:27:13 GNNTrackMaker.ITkTrackFitter                        2030     0 WARNING Duplicate hit on track
@@ -3204,45 +3204,45 @@ RAWtoALL 12:27:25 FPEAuditor                                          2446     0
 RAWtoALL 12:27:32 GNNTrackMaker.ITkTrackFitter                        2699     0 WARNING Duplicate hit on track
 RAWtoALL 12:27:32 GNNTrackMaker.ITkTrackFitter                        2699     0 WARNING Duplicate hit on track
 RAWtoALL 12:27:41 EventSelector                                       3000     0    INFO Disconnecting input sourceID: 0BBC9863-0DC6-594C-838C-9AB2EE79F513
-RAWtoALL 12:27:41 /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless...1  3000     0    INFO Database being retired...
+RAWtoALL 12:27:41 /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles...1  3000     0    INFO Database being retired...
 RAWtoALL 12:27:41 Domain[ROOT_All]                                    3000     0    INFO ->  Deaccess DbDatabase   READ      [ROOT_All] 0BBC9863-0DC6-594C-838C-9AB2EE79F513
 RAWtoALL 12:27:41 Domain[ROOT_All]                                    3000     0    INFO >   Deaccess DbDomain     READ      [ROOT_All]
 RAWtoALL 12:27:41 PoolSvc                                             3000     0    INFO File is not in Catalog! Attempt to open it anyway.
 RAWtoALL 12:27:41 DbSession                                           3000     0    INFO     Open     DbSession
 RAWtoALL 12:27:41 Domain[ROOT_All]                                    3000     0    INFO >   Access   DbDomain     READ      [ROOT_All]
 RAWtoALL 12:27:41 Domain[ROOT_All]                                    3000     0    INFO ->  Access   DbDatabase   READ      [ROOT_All] D0306326-1044-F943-9C95-0FF0FF0FF0FF
-RAWtoALL 12:27:41 Domain[ROOT_All]                                    3000     0    INFO                           /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000047.pool.root.1
-RAWtoALL 12:27:41 RootDatabase.open                                   3000     0    INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000047.pool.root.1 File version:62608
-RAWtoALL 12:27:41 /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless...1  3000     0    INFO Database being retired...
+RAWtoALL 12:27:41 Domain[ROOT_All]                                    3000     0    INFO                           /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000047.pool.root.1
+RAWtoALL 12:27:41 RootDatabase.open                                   3000     0    INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000047.pool.root.1 File version:62608
+RAWtoALL 12:27:41 /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles...1  3000     0    INFO Database being retired...
 RAWtoALL 12:27:41 Domain[ROOT_All]                                    3000     0    INFO ->  Deaccess DbDatabase   READ      [ROOT_All] D0306326-1044-F943-9C95-0FF0FF0FF0FF
 RAWtoALL 12:27:41 Domain[ROOT_All]                                    3000     0    INFO >   Deaccess DbDomain     READ      [ROOT_All]
 RAWtoALL 12:27:41 DbSession                                           3000     0    INFO     Open     DbSession
 RAWtoALL 12:27:41 Domain[ROOT_All]                                    3000     0    INFO >   Access   DbDomain     READ      [ROOT_All]
 RAWtoALL 12:27:41 Domain[ROOT_All]                                    3000     0    INFO ->  Access   DbDatabase   READ      [ROOT_All] 33116237-A603-1E4D-818D-C4271F4A64FE
-RAWtoALL 12:27:41 Domain[ROOT_All]                                    3000     0    INFO                           /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000047.pool.root.1
-RAWtoALL 12:27:41 RootDatabase.open                                   3000     0    INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000047.pool.root.1 File version:62608
+RAWtoALL 12:27:41 Domain[ROOT_All]                                    3000     0    INFO                           /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000047.pool.root.1
+RAWtoALL 12:27:41 RootDatabase.open                                   3000     0    INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000047.pool.root.1 File version:62608
 RAWtoALL 12:27:42 TBranchAuxDynReader                                 3000     0    INFO RootAuxDynIO/src/TBranchAuxDynReader.cxx:326 (TBranchAuxDynReader::BranchInfo& TBranchAuxDynReader::getBranchInfo(const unsigned long&, const SG::AuxStoreInternal&)): attribute 'mcEventNumber' (id=1 typename=unsigned long) has different type than the branch: ULong64_t  Marking for schema evolution.
 RAWtoALL 12:27:49 PerfMonMTSvc                                        3278     0    INFO Event [ 3279] CPU Time: 00h01m09s, Wall Time: 00h02m48s, Vmem: 2.37 GB, Rss: 1.88 GB, Pss: 1.68 GB, Swap: 0.00 KB
 RAWtoALL 12:27:56 FPEAuditor                                          3536     0 WARNING FPE INVALID in [Execute] of [GNNTrackMaker] on event 158535 0 0
 RAWtoALL 12:27:56 FPEAuditor                                          3536     0 WARNING FPE DIVBYZERO in [Execute] of [GNNTrackMaker] on event 158535 0 0
 RAWtoALL 12:28:10 EventSelector                                       4000     0    INFO Disconnecting input sourceID: 33116237-A603-1E4D-818D-C4271F4A64FE
-RAWtoALL 12:28:10 /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless...1  4000     0    INFO Database being retired...
+RAWtoALL 12:28:10 /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles...1  4000     0    INFO Database being retired...
 RAWtoALL 12:28:10 Domain[ROOT_All]                                    4000     0    INFO ->  Deaccess DbDatabase   READ      [ROOT_All] 33116237-A603-1E4D-818D-C4271F4A64FE
 RAWtoALL 12:28:10 Domain[ROOT_All]                                    4000     0    INFO >   Deaccess DbDomain     READ      [ROOT_All]
 RAWtoALL 12:28:10 PoolSvc                                             4000     0    INFO File is not in Catalog! Attempt to open it anyway.
 RAWtoALL 12:28:10 DbSession                                           4000     0    INFO     Open     DbSession
 RAWtoALL 12:28:10 Domain[ROOT_All]                                    4000     0    INFO >   Access   DbDomain     READ      [ROOT_All]
 RAWtoALL 12:28:10 Domain[ROOT_All]                                    4000     0    INFO ->  Access   DbDatabase   READ      [ROOT_All] AC4FB642-D142-CE62-8D1D-0FF0FF0FF0FF
-RAWtoALL 12:28:10 Domain[ROOT_All]                                    4000     0    INFO                           /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000067.pool.root.1
-RAWtoALL 12:28:10 RootDatabase.open                                   4000     0    INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000067.pool.root.1 File version:62608
-RAWtoALL 12:28:10 /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless...1  4000     0    INFO Database being retired...
+RAWtoALL 12:28:10 Domain[ROOT_All]                                    4000     0    INFO                           /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000067.pool.root.1
+RAWtoALL 12:28:10 RootDatabase.open                                   4000     0    INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000067.pool.root.1 File version:62608
+RAWtoALL 12:28:10 /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles...1  4000     0    INFO Database being retired...
 RAWtoALL 12:28:10 Domain[ROOT_All]                                    4000     0    INFO ->  Deaccess DbDatabase   READ      [ROOT_All] AC4FB642-D142-CE62-8D1D-0FF0FF0FF0FF
 RAWtoALL 12:28:10 Domain[ROOT_All]                                    4000     0    INFO >   Deaccess DbDomain     READ      [ROOT_All]
 RAWtoALL 12:28:10 DbSession                                           4000     0    INFO     Open     DbSession
 RAWtoALL 12:28:10 Domain[ROOT_All]                                    4000     0    INFO >   Access   DbDomain     READ      [ROOT_All]
 RAWtoALL 12:28:10 Domain[ROOT_All]                                    4000     0    INFO ->  Access   DbDatabase   READ      [ROOT_All] 32D8B5FB-6E44-4549-AC02-C2CB8B8D47D5
-RAWtoALL 12:28:10 Domain[ROOT_All]                                    4000     0    INFO                           /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000067.pool.root.1
-RAWtoALL 12:28:10 RootDatabase.open                                   4000     0    INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000067.pool.root.1 File version:62608
+RAWtoALL 12:28:10 Domain[ROOT_All]                                    4000     0    INFO                           /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000067.pool.root.1
+RAWtoALL 12:28:10 RootDatabase.open                                   4000     0    INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000067.pool.root.1 File version:62608
 RAWtoALL 12:28:11 TBranchAuxDynReader                                 4000     0    INFO RootAuxDynIO/src/TBranchAuxDynReader.cxx:326 (TBranchAuxDynReader::BranchInfo& TBranchAuxDynReader::getBranchInfo(const unsigned long&, const SG::AuxStoreInternal&)): attribute 'mcEventNumber' (id=1 typename=unsigned long) has different type than the branch: ULong64_t  Marking for schema evolution.
 RAWtoALL 12:28:19 PerfMonMTSvc                                        4293     0    INFO Event [ 4294] CPU Time: 00h01m23s, Wall Time: 00h03m18s, Vmem: 2.37 GB, Rss: 1.89 GB, Pss: 1.69 GB, Swap: 0.00 KB
 RAWtoALL 12:28:20 GNNTrackMaker.ITkTrackFitter                        4295     0 WARNING Duplicate hit on track
@@ -3255,23 +3255,23 @@ RAWtoALL 12:28:21 GNNTrackMaker.ITkTrackFitter                        4330     0
 RAWtoALL 12:28:34 FPEAuditor                                          4811     0 WARNING FPE INVALID in [Execute] of [GNNTrackMaker] on event 185816 0 0
 RAWtoALL 12:28:34 FPEAuditor                                          4811     0 WARNING FPE DIVBYZERO in [Execute] of [GNNTrackMaker] on event 185816 0 0
 RAWtoALL 12:28:39 EventSelector                                       5000     0    INFO Disconnecting input sourceID: 32D8B5FB-6E44-4549-AC02-C2CB8B8D47D5
-RAWtoALL 12:28:39 /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless...1  5000     0    INFO Database being retired...
+RAWtoALL 12:28:39 /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles...1  5000     0    INFO Database being retired...
 RAWtoALL 12:28:39 Domain[ROOT_All]                                    5000     0    INFO ->  Deaccess DbDatabase   READ      [ROOT_All] 32D8B5FB-6E44-4549-AC02-C2CB8B8D47D5
 RAWtoALL 12:28:39 Domain[ROOT_All]                                    5000     0    INFO >   Deaccess DbDomain     READ      [ROOT_All]
 RAWtoALL 12:28:39 PoolSvc                                             5000     0    INFO File is not in Catalog! Attempt to open it anyway.
 RAWtoALL 12:28:39 DbSession                                           5000     0    INFO     Open     DbSession
 RAWtoALL 12:28:39 Domain[ROOT_All]                                    5000     0    INFO >   Access   DbDomain     READ      [ROOT_All]
 RAWtoALL 12:28:39 Domain[ROOT_All]                                    5000     0    INFO ->  Access   DbDatabase   READ      [ROOT_All] 5EC4E0E9-1D8C-E03C-E612-0FF0FF0FF0FF
-RAWtoALL 12:28:39 Domain[ROOT_All]                                    5000     0    INFO                           /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000085.pool.root.1
-RAWtoALL 12:28:39 RootDatabase.open                                   5000     0    INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000085.pool.root.1 File version:62608
-RAWtoALL 12:28:39 /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless...1  5000     0    INFO Database being retired...
+RAWtoALL 12:28:39 Domain[ROOT_All]                                    5000     0    INFO                           /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000085.pool.root.1
+RAWtoALL 12:28:39 RootDatabase.open                                   5000     0    INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000085.pool.root.1 File version:62608
+RAWtoALL 12:28:39 /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles...1  5000     0    INFO Database being retired...
 RAWtoALL 12:28:39 Domain[ROOT_All]                                    5000     0    INFO ->  Deaccess DbDatabase   READ      [ROOT_All] 5EC4E0E9-1D8C-E03C-E612-0FF0FF0FF0FF
 RAWtoALL 12:28:39 Domain[ROOT_All]                                    5000     0    INFO >   Deaccess DbDomain     READ      [ROOT_All]
 RAWtoALL 12:28:39 DbSession                                           5000     0    INFO     Open     DbSession
 RAWtoALL 12:28:39 Domain[ROOT_All]                                    5000     0    INFO >   Access   DbDomain     READ      [ROOT_All]
 RAWtoALL 12:28:39 Domain[ROOT_All]                                    5000     0    INFO ->  Access   DbDatabase   READ      [ROOT_All] DBD3753D-8610-B34F-A71E-DCAA9BA2239D
-RAWtoALL 12:28:39 Domain[ROOT_All]                                    5000     0    INFO                           /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000085.pool.root.1
-RAWtoALL 12:28:39 RootDatabase.open                                   5000     0    INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000085.pool.root.1 File version:62608
+RAWtoALL 12:28:39 Domain[ROOT_All]                                    5000     0    INFO                           /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000085.pool.root.1
+RAWtoALL 12:28:39 RootDatabase.open                                   5000     0    INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/mc21_14TeV.900495.PG_single_muonpm_Pt10_etaFlatnp0_43.recon.RDO.e8481_s4149_r14697/RDO.33675641._000085.pool.root.1 File version:62608
 RAWtoALL 12:28:40 TBranchAuxDynReader                                 5000     0    INFO RootAuxDynIO/src/TBranchAuxDynReader.cxx:326 (TBranchAuxDynReader::BranchInfo& TBranchAuxDynReader::getBranchInfo(const unsigned long&, const SG::AuxStoreInternal&)): attribute 'mcEventNumber' (id=1 typename=unsigned long) has different type than the branch: ULong64_t  Marking for schema evolution.
 RAWtoALL 12:28:45 GNNTrackMaker.ITkTrackFitter                        5201     0 WARNING Duplicate hit on track
 RAWtoALL 12:28:45 GNNTrackMaker.ITkTrackFitter                        5201     0 WARNING Duplicate hit on track
@@ -3292,7 +3292,7 @@ RAWtoALL 12:28:58 FPEAuditor                                          5604     0
 RAWtoALL 12:28:58 GNNTrackMaker.ITkTrackFitter                        5629     0 WARNING Duplicate hit on track
 RAWtoALL 12:28:58 GNNTrackMaker.ITkTrackFitter                        5629     0 WARNING Duplicate hit on track
 RAWtoALL 12:29:10 EventSelector                                       6000     0    INFO Disconnecting input sourceID: DBD3753D-8610-B34F-A71E-DCAA9BA2239D
-RAWtoALL 12:29:10 /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless...1  6000     0    INFO Database being retired...
+RAWtoALL 12:29:10 /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles...1  6000     0    INFO Database being retired...
 RAWtoALL 12:29:10 Domain[ROOT_All]                                    6000     0    INFO ->  Deaccess DbDatabase   READ      [ROOT_All] DBD3753D-8610-B34F-A71E-DCAA9BA2239D
 RAWtoALL 12:29:10 Domain[ROOT_All]                                    6000     0    INFO >   Deaccess DbDomain     READ      [ROOT_All]
 RAWtoALL 12:29:10 StorageSvc                                                        INFO Building shape according to reflection information using shape ID for:

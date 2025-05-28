@@ -9,15 +9,15 @@ Number of Workers: 1
 Max Events: 1
 Chain Name: GNN4ITk_ML_LOCAL
 Setup File: projects/athena/athena.ortCUDA.gnn4itkTool.built.json
-/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/rel24_ttbar_testing/RDO.37737772._000213.pool.root.1
+/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/rel24_ttbar_testing/RDO.37737772._000213.pool.root.1
 virtual environment detected, deactivating...
 [7mlsetup              [0m lsetup <tool1> [ <tool2> ...] (see lsetup -h):
 [7m lsetup asetup      [0m  (or asetup) to setup an Athena release
 [7m lsetup astyle      [0m  ATLAS style macros
 [7m lsetup atlantis    [0m  Atlantis: event display
 [7m lsetup centralpage [0m  Find samples
-[7m lsetup eiclient    [0m  Event Index 
-[7m lsetup emi         [0m  EMI: grid middleware user interface 
+[7m lsetup eiclient    [0m  Event Index
+[7m lsetup emi         [0m  EMI: grid middleware user interface
 [7m lsetup lcgenv      [0m  lcgenv: setup tools from cvmfs SFT repository
 [7m lsetup panda       [0m  Panda: Production ANd Distributed Analysis
 [7m lsetup pyami       [0m  pyAMI: ATLAS Metadata Interface python client
@@ -37,12 +37,12 @@ virtual environment detected, deactivating...
 [7mshowVersions        [0m show versions of installed software
 
 
-[1m[4m30 Nov 2023[0m 
+[1m[4m30 Nov 2023[0m
 
 A serious security issue in ROOT's web-based GUI has been identified:
 
-  You should not use the web-based browser until further notice and instead 
-  set the old-style TBrowser as the default. Please see the Twiki page linked 
+  You should not use the web-based browser until further notice and instead
+  set the old-style TBrowser as the default. Please see the Twiki page linked
   below for instructions on how to do this.
 
   https://twiki.cern.ch/twiki/bin/view/AtlasComputing/AtlasComputingArchive/RootBrowserSecurityIssue
@@ -50,7 +50,7 @@ A serious security issue in ROOT's web-based GUI has been identified:
   More details of this issue:
   https://root.cern/about/security/#2023-11-26-open-port-for-control-of-web-gui-allows-read-and-write-access-to-file-system
 
-  [0;31mReason for this message: $HOME/.rootrc is missing[0m 
+  [0;31mReason for this message: $HOME/.rootrc is missing[0m
 
 Set up environment from /pscratch/sd/x/xju/code/autowork/projects/athena/athena.ortCUDA.gnn4itkTool.built.json
 Setup Athena from JSON file: /pscratch/sd/x/xju/code/autowork/projects/athena/athena.ortCUDA.gnn4itkTool.built.json
@@ -67,7 +67,7 @@ Returned to original directory: /pscratch/sd/x/xju/code/autowork
 Running GNN4ITk_ML_LOCAL in /pscratch/sd/x/xju/workflow/workarea/tracking/ttbar with 1 workers
 PyJobTransforms.<module> 2025-04-28 12:48:07,480 INFO logging set in /pscratch/sd/x/xju/athena_dev/check_ort_cuda/build/install/Athena/25.0.30/InstallArea/x86_64-el9-gcc13-opt/bin/Reco_tf.py
 PyJobTransforms.main 2025-04-28 12:48:07,690 INFO This is /pscratch/sd/x/xju/athena_dev/check_ort_cuda/build/install/Athena/25.0.30/InstallArea/x86_64-el9-gcc13-opt/bin/Reco_tf.py
-PyJobTransforms.transform.parseCmdLineArgs 2025-04-28 12:48:07,720 INFO Transform command line was: '/pscratch/sd/x/xju/athena_dev/check_ort_cuda/build/install/Athena/25.0.30/InstallArea/x86_64-el9-gcc13-opt/bin/Reco_tf.py' '--CA' 'all:True' '--autoConfiguration' 'everything' '--conditionsTag' 'all:OFLCOND-MC15c-SDR-14-05' '--geometryVersion' 'all:ATLAS-P2-RUN4-03-00-00' '--multithreaded' 'True' '--steering' 'doRAWtoALL' '--digiSteeringConf' 'StandardInTimeOnlyTruth' '--postInclude' 'all:PyJobTransforms.UseFrontier' '--preInclude' 'all:Campaigns.PhaseIIPileUp200' 'InDetConfig.ConfigurationHelpers.OnlyTrackingPreInclude' 'InDetGNNTracking.InDetGNNTrackingFlags.gnnFinderValidation' '--inputRDOFile' '/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/rel24_ttbar_testing/RDO.37737772._000213.pool.root.1' '--outputAODFile' '/pscratch/sd/x/xju/workflow/workarea/tracking/ttbar/aod.ortCUDA.gnn4itkTool.ttbar.root' '--jobNumber' '1' '--athenaopts=--loglevel=INFO' '--maxEvents' '1'
+PyJobTransforms.transform.parseCmdLineArgs 2025-04-28 12:48:07,720 INFO Transform command line was: '/pscratch/sd/x/xju/athena_dev/check_ort_cuda/build/install/Athena/25.0.30/InstallArea/x86_64-el9-gcc13-opt/bin/Reco_tf.py' '--CA' 'all:True' '--autoConfiguration' 'everything' '--conditionsTag' 'all:OFLCOND-MC15c-SDR-14-05' '--geometryVersion' 'all:ATLAS-P2-RUN4-03-00-00' '--multithreaded' 'True' '--steering' 'doRAWtoALL' '--digiSteeringConf' 'StandardInTimeOnlyTruth' '--postInclude' 'all:PyJobTransforms.UseFrontier' '--preInclude' 'all:Campaigns.PhaseIIPileUp200' 'InDetConfig.ConfigurationHelpers.OnlyTrackingPreInclude' 'InDetGNNTracking.InDetGNNTrackingFlags.gnnFinderValidation' '--inputRDOFile' '/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/rel24_ttbar_testing/RDO.37737772._000213.pool.root.1' '--outputAODFile' '/pscratch/sd/x/xju/workflow/workarea/tracking/ttbar/aod.ortCUDA.gnn4itkTool.ttbar.root' '--jobNumber' '1' '--athenaopts=--loglevel=INFO' '--maxEvents' '1'
 PyJobTransforms.transform.execute 2025-04-28 12:48:07,724 INFO Resolving execution graph
 PyJobTransforms.trfGraph.__init__ 2025-04-28 12:48:07,724 INFO Transform graph input data: ['RDO']; output data ['AOD']
 PyJobTransforms.transform.execute 2025-04-28 12:48:07,739 INFO Starting to trace execution path
@@ -75,14 +75,14 @@ PyJobTransforms.transform.execute 2025-04-28 12:48:07,740 INFO Execution path fo
 PyJobTransforms.transform.validateInFiles 2025-04-28 12:48:07,740 INFO Validating input files
 PyJobTransforms.trfValidation.performStandardFileValidation 2025-04-28 12:48:07,740 INFO Starting legacy (serial) file validation
 PyJobTransforms.trfValidation.performStandardFileValidation 2025-04-28 12:48:07,740 INFO Validating data type RDO...
-PyJobTransforms.trfValidation.performStandardFileValidation 2025-04-28 12:48:07,740 INFO Validating file /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/rel24_ttbar_testing/RDO.37737772._000213.pool.root.1...
-PyJobTransforms.trfValidation.performStandardFileValidation 2025-04-28 12:48:07,740 INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/rel24_ttbar_testing/RDO.37737772._000213.pool.root.1: Testing event count...
-PyJobTransforms.trfArgClasses._readMetadata 2025-04-28 12:48:07,741 INFO Metadata generator called to obtain nentries for ('/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/rel24_ttbar_testing/RDO.37737772._000213.pool.root.1',)
+PyJobTransforms.trfValidation.performStandardFileValidation 2025-04-28 12:48:07,740 INFO Validating file /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/rel24_ttbar_testing/RDO.37737772._000213.pool.root.1...
+PyJobTransforms.trfValidation.performStandardFileValidation 2025-04-28 12:48:07,740 INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/rel24_ttbar_testing/RDO.37737772._000213.pool.root.1: Testing event count...
+PyJobTransforms.trfArgClasses._readMetadata 2025-04-28 12:48:07,741 INFO Metadata generator called to obtain nentries for ('/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/rel24_ttbar_testing/RDO.37737772._000213.pool.root.1',)
 Py:MetaReader        INFO Current mode used: lite
-Py:MetaReader        INFO Current filenames: ['/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/rel24_ttbar_testing/RDO.37737772._000213.pool.root.1']
+Py:MetaReader        INFO Current filenames: ['/global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/rel24_ttbar_testing/RDO.37737772._000213.pool.root.1']
 Py:MetaReader        INFO MetaReader is called with the parameter "unique_tag_info_values" set to True. This is a workaround to remove all duplicate values from "/TagInfo" key
 PyJobTransforms.trfValidation.performStandardFileValidation 2025-04-28 12:48:15,985 INFO Event counting test passed (50 events).
-PyJobTransforms.trfValidation.performStandardFileValidation 2025-04-28 12:48:15,985 INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiless/rel24_ttbar_testing/RDO.37737772._000213.pool.root.1: Checking if guid exists...
+PyJobTransforms.trfValidation.performStandardFileValidation 2025-04-28 12:48:15,985 INFO /global/cfs/cdirs/m3443/data/GNN4ITK/RDOFiles/rel24_ttbar_testing/RDO.37737772._000213.pool.root.1: Checking if guid exists...
 PyJobTransforms.trfValidation.performStandardFileValidation 2025-04-28 12:48:15,985 INFO Guid is A05E93C4-61E9-AB4E-AD0B-1C0E039DA2B0
 PyJobTransforms.trfValidation.performStandardFileValidation 2025-04-28 12:48:15,985 INFO Stopping legacy (serial) file validation
 PyJobTransforms.trfExe.preExecute 2025-04-28 12:48:15,985 INFO Asetup report: 	AtlasBaseDir=/pscratch/sd/x/xju/athena_dev/check_ort_cuda/build/install
