@@ -46,6 +46,9 @@ snakemake --cores 6 workarea/tracking/MuonPU0/idpvm.gnn4itkML.triton.gnn4itkTrit
 snakemake --cores 6 workarea/tracking/MuonPU0/idpvm.ckf.local.gnn4itkTriton.none.MuonPU0.root --config max_evts=-1
 
 snakemake --cores 12 workarea/tracking/ttbar/idpvm.ckf.primary.local.gnn4itkTriton.none.ttbar.root -p
+
+# in a Perlmutter CPU node, I run 4 samples in parallel to get IDPVM results.
+snakemake --cores 128 --config max_evts=-1 --set-threads run_legacy_ckf=16 run_idpvm=16
 ```
 I can set threads for the rule.
 ```bash
