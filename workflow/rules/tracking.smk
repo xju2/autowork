@@ -153,3 +153,18 @@ rule run_idpvm:
         -m {params.max_evts} \
         -o "{output}" > "{log}" 2>&1 \
         """
+
+rule compare_two_tracking_chain:
+    input:
+        "workarea/tracking/{dataset}/idpvm.ckf.{idpvm_mode}.local.gnn4itkTriton.none.{dataset}.root",
+        "workarea/tracking/{dataset}/idpvm.gnn4itkML.{idpvm_mode}.triton.gnn4itkTriton.tracking.{dataset}.root",
+    output:
+        "results/tracking/idpvm.comparison.{idpvm_mode}.{dataset}.txt",
+    log:
+        "logs/tracking/idpvm.comparison.{idpvm_mode}.{dataset}.log",
+    conda:
+        "../envs/vroot.yaml"
+    shell:
+        """workflow/scripts/compare_ckf_gnn.sh -i "{input}" \
+        -o "{output}" > "{log}" 2>&1 \
+        """

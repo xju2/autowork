@@ -1,0 +1,12 @@
+name: snakemake-vroot
+channels:
+  - conda-forge
+dependencies:
+  - python=3.13
+  - root
+  - pip
+  - pip:
+    - numpy
+    - hydra-core
+    - hydra-colorlog
+    - hydra-optuna-sweeper
