@@ -81,28 +81,31 @@ if [ -f "PoolFileCatalog.xml" ]; then
     rm InDetIdDict.xml PoolFileCatalog.xml hostnamelookup.tmp eventLoopHeartBeat.txt
 fi
 
-LRT_OPTIONS=""
-if [ ${CHAIN_NAME} == "LRT" ]; then
+LRT_OPTIONS=()
+if [[ "${CHAIN_NAME}" == "LRT" ]]; then
     echo "Running LRT workflow"
-    LRT_OPTIONS="--doLargeD0Tracks --ancestorIDList 36"
+    LRT_OPTIONS+=(--doLargeD0Tracks --ancestorIDList 36)
 else
     echo "Running standard workflow"
-    LRT_OPTIONS=""
 fi
 
-FULL_IDPVM_OPTIONS="--maxEvents ${MAX_EVENTS} \
---filesInput ${INFILE} \
---outputFile ${OUTFILE} \
---truthMinPt 1000 \
---HSFlag HardScatter \
---doTruthToRecoNtuple \
---doLoose \
---doTightPrimary \
---doHitLevelPlots \
---OnlyTrackingPreInclude ${LRT_OPTIONS}"
+# Build IDPVM options safely
+FULL_IDPVM_OPTIONS=(
+    --maxEvents "${MAX_EVENTS}"
+    --filesInput "${INFILE}"
+    --outputFile "${OUTFILE}"
+    --truthMinPt 1000
+    --HSFlag HardScatter
+    --doTruthToRecoNtuple
+    --doLoose
+    --doTightPrimary
+    --doHitLevelPlots
+    --OnlyTrackingPreInclude
+    "${LRT_OPTIONS[@]}"
+)
 
-echo -e "Full IDPVM Options:\n    runIDPVM.py ${FULL_IDPVM_OPTIONS}"
-runIDPVM.py ${FULL_IDPVM_OPTIONS}
+echo -e "Full IDPVM Options:\n    runIDPVM.py ${FULL_IDPVM_OPTIONS[*]}"
+runIDPVM.py "${FULL_IDPVM_OPTIONS[@]}"
 
 
 echo "DONE $(date +%Y-%m-%dT%H:%M:%S)"

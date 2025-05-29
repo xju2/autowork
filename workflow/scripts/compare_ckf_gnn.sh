@@ -1,4 +1,5 @@
 #!/bin/bash
+set -eo pipefail  # -e to exit on error, -o pipefail to catch errors in pipelines
 
 # Default values for arguments
 INPUT_FILES=()
@@ -75,19 +76,22 @@ sampleLabels=(
 
 
 
-COMMAND_OPTS="task_name=gnn4itk task=compare_two_files \
-task.reference_file.path=${INPUT_FILES[0]} \
-task.reference.name=main \
-task.comparator_file.path=${INPUT_FILES[1]} \
-task.comparator.name=\"GNN w/ Metric Learning\" \
-\"histograms=glob(rel24_idpvm*)\"
-\"canvas.other_label.text='#sqrt{s} = 14 TeV, ${sampleLabels[${sampleName}]}'\"
-canvas.otypes=png,pdf \
-task.outdir=${OUTDIR}"
+COMMAND_OPTS=(
+    task_name=gnn4itk
+    task=compare_two_files
+    task.reference_file.path="${INPUT_FILES[0]}"
+    task.reference_file.name=main
+    task.comparator_file.path="${INPUT_FILES[1]}"
+    task.comparator_file.name="GNN w/ Metric Learning"
+    "histograms=glob(rel24_idpvm*)"
+    "canvas.other_label.text='#sqrt{s} = 14 TeV, ${sampleLabels[${sampleName}]}, Hard Scatter'"
+    canvas.otypes=png,pdf
+    task.outdir=${OUTDIR}
+)
 
-echo -e "run_vroot -m ${COMMAND_OPTS}"
+echo -e "run_vroot -m \"${COMMAND_OPTS[*]}\""
 
-run_vroot -m ${COMMAND_OPTS}
+run_vroot -m "${COMMAND_OPTS[@]}"
 
 echo "$OUTDIR" > "$OUTFILE"
 echo "DONE $(date +%Y-%m-%dT%H:%M:%S)"
