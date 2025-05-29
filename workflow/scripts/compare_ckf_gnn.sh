@@ -15,7 +15,7 @@ usage() {
 # Parse arguments
 while getopts "i:o:h" opt; do
     case $opt in
-        i) INPUT_FILES="$OPTARG" ;;
+        i) INPUT_FILES=(${OPTARG//,/ }) ;;
         o) OUTFILE="$OPTARG" ;;
         h) usage ;;
         \?) echo "Invalid option: -$OPTARG" >&2; usage exit 1 ;;
@@ -32,35 +32,62 @@ echo "Python path: $(which python)"
 echo "Python version: $(python --version)"
 
 # loop over all files.
-for IN_FILE in ${INPUT_FILES[@]}
+for idx in ${!INPUT_FILES[@]}
 do
-    echo "Input File: $IN_FILE"
+    IN_FILE=$(realpath "${INPUT_FILES[$idx]}")
+    INPUT_FILES[$idx]=$IN_FILE
+    echo "Input File $idx: ${INPUT_FILES[$idx]}"
 done
 
-# check if root_plot_utils is available
+# check if run_vroot is available
 # in the external_packages directory.
-if [ ! -d external_packages/root_plot_utils ]; then
-    echo "root_plot_utils not found, installing..."
-    git clone git@github.com:xju2/root_plot_utils.git external_packages/root_plot_utils
+if [ ! -d "external_packages/root_plot_utils" ] || [ -z "$(which run_vroot)" ]; then
+    echo "run_vroot not found, installing..."
+    if [ ! -d "external_packages/root_plot_utils" ]; then
+        git clone git@github.com:xju2/root_plot_utils.git external_packages/root_plot_utils
+    fi
+
     cd external_packages/root_plot_utils
-    git checkout v1.1.1
-    pip install .
+    git checkout v1.1.2
+    pip install -e .
 fi
 echo "run_vroot path: $(which run_vroot)"
 
-COMMAND_OPTS=""
+sampleName=$(basename "${INPUT_FILES[0]}" | awk -F. '{print $7}')
+IDPVM_MODE=$(basename "${INPUT_FILES[0]}" | awk -F. '{print $3}')
+OUTDIR=$(dirname "${INPUT_FILES[0]}")/comparison
+mkdir -p "$OUTDIR"
 
-# run_vroot -m \
-#   task_name=gnn4itk task=compare_two_files ${COMMAND_OPTS}
+echo "Sample Name: $sampleName"
+echo "IDPVM Mode: $IDPVM_MODE"
 
-#   task.reference_file.path=data/gnn4itk/idpvm.ckf.${IDPVM_MODE}.local.gnn4itkTriton.none.${sampleName}.root \
-#   task.reference_file.name=main \
-#   task.comparator_file.path=data/gnn4itk/idpvm.gnn4itkML.${IDPVM_MODE}.triton.gnn4itkTriton.tracking.${sampleName}.root \
-#   task.comparator_file.name="GNN w/ Metric Learning" \
-#   "histograms=glob(rel24_idpvm*)" \
-#   "canvas.other_label.text='#sqrt{s} = 14 TeV, ${sampleLabel}'" \
-#   canvas.otypes=png,pdf
+# define a dictionary for sample labels.
+declare -A sampleLabels
+sampleLabels=(
+    ["ttbarPU0"]="t#bar{t}, <#mu> = 0, ${IDPVM_MODE}"
+    ["ttbarPU200"]="t#bar{t}, <#mu> = 200, ${IDPVM_MODE}"
+    ["ZmumuPU0"]="Z/#mu#mu, <#mu> = 0, ${IDPVM_MODE}"
+    ["ZmumuPU200"]="Z/#mu#mu, <#mu> = 200, ${IDPVM_MODE}"
+    ["MuonPU0"]="#mu, <#mu> = 0, ${IDPVM_MODE}"
+    ["ElectronPU0"]="e, <#mu> = 0, ${IDPVM_MODE}"
+    ["PionPU0"]="#pi, <#mu> = 0, ${IDPVM_MODE}"
+)
 
-# touch $OUTFILE
 
+
+COMMAND_OPTS="task_name=gnn4itk task=compare_two_files \
+task.reference_file.path=${INPUT_FILES[0]} \
+task.reference.name=main \
+task.comparator_file.path=${INPUT_FILES[1]} \
+task.comparator.name=\"GNN w/ Metric Learning\" \
+\"histograms=glob(rel24_idpvm*)\"
+\"canvas.other_label.text='#sqrt{s} = 14 TeV, ${sampleLabels[${sampleName}]}'\"
+canvas.otypes=png,pdf \
+task.outdir=${OUTDIR}"
+
+echo -e "run_vroot -m ${COMMAND_OPTS}"
+
+run_vroot -m ${COMMAND_OPTS}
+
+echo "$OUTDIR" > "$OUTFILE"
 echo "DONE $(date +%Y-%m-%dT%H:%M:%S)"
