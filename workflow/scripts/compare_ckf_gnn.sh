@@ -65,16 +65,14 @@ echo "IDPVM Mode: $IDPVM_MODE"
 # define a dictionary for sample labels.
 declare -A sampleLabels
 sampleLabels=(
-    ["ttbarPU0"]="t#bar{t}, <#mu> = 0, ${IDPVM_MODE}"
-    ["ttbarPU200"]="t#bar{t}, <#mu> = 200, ${IDPVM_MODE}"
-    ["ZmumuPU0"]="Z/#mu#mu, <#mu> = 0, ${IDPVM_MODE}"
-    ["ZmumuPU200"]="Z/#mu#mu, <#mu> = 200, ${IDPVM_MODE}"
-    ["MuonPU0"]="#mu, <#mu> = 0, ${IDPVM_MODE}"
-    ["ElectronPU0"]="e, <#mu> = 0, ${IDPVM_MODE}"
-    ["PionPU0"]="#pi, <#mu> = 0, ${IDPVM_MODE}"
+    ["ttbarPU0"]="t#bar{t}, <#mu> = 0"
+    ["ttbarPU200"]="t#bar{t}, <#mu> = 200"
+    ["ZmumuPU0"]="Z#rightarrow#mu#mu, <#mu> = 0"
+    ["ZmumuPU200"]="Z#rightarrow#mu#mu, <#mu> = 200"
+    ["MuonPU0"]="#mu, <#mu> = 0"
+    ["ElectronPU0"]="e, <#mu> = 0"
+    ["PionPU0"]="#pi, <#mu> = 0"
 )
-
-
 
 COMMAND_OPTS=(
     task_name=gnn4itk
@@ -84,7 +82,7 @@ COMMAND_OPTS=(
     task.comparator_file.path="${INPUT_FILES[1]}"
     task.comparator_file.name="GNN w/ Metric Learning"
     "histograms=glob(rel24_idpvm*)"
-    "canvas.other_label.text='#sqrt{s} = 14 TeV, ${sampleLabels[${sampleName}]}, Hard Scatter'"
+    "canvas.other_label.text='#sqrt{s} = 14 TeV, ${sampleLabels[${sampleName}]}, HS'"
     canvas.otypes=png,pdf
     task.outdir=${OUTDIR}
 )
