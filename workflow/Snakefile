@@ -17,6 +17,6 @@ include: "rules/test.smk"
 SAMPLES = ["ttbarPU0", "ZmumuPU0", "ElectronPU0", "PionPU0"]
 rule all:
     input:
-        expand("workarea/tracking/{sample}/idpvm.ckf.primary.local.gnn4itkTriton.none.{sample}.root", sample=SAMPLES)
-        # expand("workarea/tracking/{sample}/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.{sample}.root", sample=SAMPLES)
+        # expand("workarea/tracking/{sample}/idpvm.ckf.primary.local.gnn4itkTriton.none.{sample}.root", sample=SAMPLES)
+        expand("workarea/tracking/{sample}/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.{sample}.root", sample=SAMPLES)
 
