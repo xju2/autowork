@@ -70,7 +70,7 @@ if [[ ! -d "$REPO_NAME" ]]; then
 fi
 cd "$REPO_NAME" || { echo "Failed to change directory to $REPO_NAME"; exit 1; }
 
-srun -C gpu -N 1 -G 1 -c 10 -n 1 -t 4:00:00 -A m3443 \
+srun -C "gpu&hbm80g" -N 1 -G 4 -c 32 -n 1 -t 4:00:00 -A m3443 \
   -q interactive /bin/bash -c "./scripts/start-tritonserver.sh -o $OUTPUT " &
 
 # wait for the Triton server to start.

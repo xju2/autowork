@@ -1,6 +1,6 @@
-Running workflow/scripts/start_triton_server_for_validation.sh Wed 28 May 2025 04:54:34 PM PDT @ login29
+Running workflow/scripts/start_triton_server_for_validation.sh Fri 30 May 2025 09:58:37 AM PDT @ login29
 -----------------------------------
-Wed 28 May 2025 04:54:34 PM PDT login29
+Fri 30 May 2025 09:58:37 AM PDT login29
 Input File: /pscratch/sd/x/xju/code/autowork/projects/triton/triton_server.config.tracking.json
 Output File: /pscratch/sd/x/xju/code/autowork/results/triton/triton_server.tracking.ready.txt
 Start Triton Server for validation
@@ -8,7 +8,7 @@ SOURCE_DIR: /pscratch/sd/x/xju/ITk/ForFinalPaper
 OUTPUT: /pscratch/sd/x/xju/code/autowork/results/triton/triton_server.tracking.ready.txt
 REPO_URL: git@github.com:xju2/tracking-as-a-service.git
 SOURCE_DIR: /pscratch/sd/x/xju/ITk/ForFinalPaper
-[slurm] starting nid001164
+[slurm] starting nid008637
 
 =============================
 == Triton Inference Server ==
@@ -25,30 +25,43 @@ This container image and its contents are governed by the NVIDIA Deep Learning C
 By pulling and using the container, you accept the terms and conditions of this license:
 https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
 
-I0528 23:54:44.164178 1 pinned_memory_manager.cc:275] "Pinned memory pool is created at '0x7fe496000000' with size 268435456"
-I0528 23:54:44.166528 1 cuda_memory_manager.cc:107] "CUDA memory pool is created on device 0 with size 67108864"
-E0528 23:54:44.170185 1 server.cc:243] "CudaDriverHelper has not been initialized."
-I0528 23:54:44.197880 1 model_lifecycle.cc:472] "loading: GNN4Pixel:1"
-I0528 23:54:44.198017 1 model_lifecycle.cc:472] "loading: MetricLearning:2"
-I0528 23:54:54.600104 1 python_be.cc:2404] "TRITONBACKEND_ModelInstanceInitialize: GNN4Pixel_0_0 (GPU device 0)"
-I0528 23:54:54.610444 1 python_be.cc:2404] "TRITONBACKEND_ModelInstanceInitialize: MetricLearning_0_0 (GPU device 0)"
+I0530 16:58:56.046371 1 pinned_memory_manager.cc:275] "Pinned memory pool is created at '0x7f87d4000000' with size 268435456"
+I0530 16:58:56.069351 1 cuda_memory_manager.cc:107] "CUDA memory pool is created on device 0 with size 67108864"
+I0530 16:58:56.069362 1 cuda_memory_manager.cc:107] "CUDA memory pool is created on device 1 with size 67108864"
+I0530 16:58:56.069367 1 cuda_memory_manager.cc:107] "CUDA memory pool is created on device 2 with size 67108864"
+I0530 16:58:56.069371 1 cuda_memory_manager.cc:107] "CUDA memory pool is created on device 3 with size 67108864"
+E0530 16:58:56.798750 1 server.cc:243] "CudaDriverHelper has not been initialized."
+I0530 16:58:56.855576 1 model_lifecycle.cc:472] "loading: GNN4Pixel:1"
+I0530 16:58:56.855690 1 model_lifecycle.cc:472] "loading: MetricLearning:2"
+I0530 16:59:07.716416 1 python_be.cc:2404] "TRITONBACKEND_ModelInstanceInitialize: GNN4Pixel_0_0 (GPU device 0)"
+I0530 16:59:07.716638 1 python_be.cc:2404] "TRITONBACKEND_ModelInstanceInitialize: GNN4Pixel_0_0 (GPU device 2)"
+I0530 16:59:07.716651 1 python_be.cc:2404] "TRITONBACKEND_ModelInstanceInitialize: GNN4Pixel_0_0 (GPU device 1)"
+I0530 16:59:07.716679 1 python_be.cc:2404] "TRITONBACKEND_ModelInstanceInitialize: GNN4Pixel_0_0 (GPU device 3)"
+I0530 16:59:07.771146 1 python_be.cc:2404] "TRITONBACKEND_ModelInstanceInitialize: MetricLearning_0_0 (GPU device 0)"
+I0530 16:59:07.771194 1 python_be.cc:2404] "TRITONBACKEND_ModelInstanceInitialize: MetricLearning_0_0 (GPU device 1)"
+I0530 16:59:07.771260 1 python_be.cc:2404] "TRITONBACKEND_ModelInstanceInitialize: MetricLearning_0_0 (GPU device 2)"
+I0530 16:59:07.771313 1 python_be.cc:2404] "TRITONBACKEND_ModelInstanceInitialize: MetricLearning_0_0 (GPU device 3)"
+DONE 2025-05-30T09:59:07
 MetricLearningInferenceConfig(model_path=PosixPath('/models/MetricLearning/2'), device='cuda', auto_cast=False, compling=False, debug=False, save_debug_data=False, r_max=0.12, k_max=1000, filter_cut=0.05, filter_batches=10, cc_cut=0.01, walk_min=0.1, walk_max=0.6, embedding_node_features=['r', 'phi', 'z', 'cluster_x_1', 'cluster_y_1', 'cluster_z_1', 'cluster_x_2', 'cluster_y_2', 'cluster_z_2', 'count_1', 'charge_count_1', 'loc_eta_1', 'loc_phi_1', 'localDir0_1', 'localDir1_1', 'localDir2_1', 'lengthDir0_1', 'lengthDir1_1', 'lengthDir2_1', 'glob_eta_1', 'glob_phi_1', 'eta_angle_1', 'phi_angle_1', 'count_2', 'charge_count_2', 'loc_eta_2', 'loc_phi_2', 'localDir0_2', 'localDir1_2', 'localDir2_2', 'lengthDir0_2', 'lengthDir1_2', 'lengthDir2_2', 'glob_eta_2', 'glob_phi_2', 'eta_angle_2', 'phi_angle_2'], embedding_node_scale=[1000.0, 3.14, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1.0, 1.0, 3.14, 3.14, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 3.14, 3.14, 3.14, 3.14, 1.0, 1.0, 3.14, 3.14, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 3.14, 3.14, 3.14, 3.14], filter_node_features=['r', 'phi', 'z', 'cluster_x_1', 'cluster_y_1', 'cluster_z_1', 'cluster_x_2', 'cluster_y_2', 'cluster_z_2', 'count_1', 'charge_count_1', 'loc_eta_1', 'loc_phi_1', 'localDir0_1', 'localDir1_1', 'localDir2_1', 'lengthDir0_1', 'lengthDir1_1', 'lengthDir2_1', 'glob_eta_1', 'glob_phi_1', 'eta_angle_1', 'phi_angle_1', 'count_2', 'charge_count_2', 'loc_eta_2', 'loc_phi_2', 'localDir0_2', 'localDir1_2', 'localDir2_2', 'lengthDir0_2', 'lengthDir1_2', 'lengthDir2_2', 'glob_eta_2', 'glob_phi_2', 'eta_angle_2', 'phi_angle_2'], filter_node_scale=[1000.0, 3.14, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1.0, 1.0, 3.14, 3.14, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 3.14, 3.14, 3.14, 3.14, 1.0, 1.0, 3.14, 3.14, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 3.14, 3.14, 3.14, 3.14], gnn_node_features=['r', 'phi', 'z', 'eta', 'cluster_r_1', 'cluster_phi_1', 'cluster_z_1', 'cluster_eta_1', 'cluster_r_2', 'cluster_phi_2', 'cluster_z_2', 'cluster_eta_2'], gnn_node_scale=[1000.0, 3.14159265359, 1000.0, 1.0, 1000.0, 3.14159265359, 1000.0, 1.0, 1000.0, 3.14159265359, 1000.0, 1.0])
-I0528 23:54:58.552137 1 model_lifecycle.cc:838] "successfully loaded 'GNN4Pixel'"
-I0528 23:54:58.608818 1 model_lifecycle.cc:838] "successfully loaded 'MetricLearning'"
-I0528 23:54:58.608886 1 server.cc:606] 
+MetricLearningInferenceConfig(model_path=PosixPath('/models/MetricLearning/2'), device='cuda', auto_cast=False, compling=False, debug=False, save_debug_data=False, r_max=0.12, k_max=1000, filter_cut=0.05, filter_batches=10, cc_cut=0.01, walk_min=0.1, walk_max=0.6, embedding_node_features=['r', 'phi', 'z', 'cluster_x_1', 'cluster_y_1', 'cluster_z_1', 'cluster_x_2', 'cluster_y_2', 'cluster_z_2', 'count_1', 'charge_count_1', 'loc_eta_1', 'loc_phi_1', 'localDir0_1', 'localDir1_1', 'localDir2_1', 'lengthDir0_1', 'lengthDir1_1', 'lengthDir2_1', 'glob_eta_1', 'glob_phi_1', 'eta_angle_1', 'phi_angle_1', 'count_2', 'charge_count_2', 'loc_eta_2', 'loc_phi_2', 'localDir0_2', 'localDir1_2', 'localDir2_2', 'lengthDir0_2', 'lengthDir1_2', 'lengthDir2_2', 'glob_eta_2', 'glob_phi_2', 'eta_angle_2', 'phi_angle_2'], embedding_node_scale=[1000.0, 3.14, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1.0, 1.0, 3.14, 3.14, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 3.14, 3.14, 3.14, 3.14, 1.0, 1.0, 3.14, 3.14, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 3.14, 3.14, 3.14, 3.14], filter_node_features=['r', 'phi', 'z', 'cluster_x_1', 'cluster_y_1', 'cluster_z_1', 'cluster_x_2', 'cluster_y_2', 'cluster_z_2', 'count_1', 'charge_count_1', 'loc_eta_1', 'loc_phi_1', 'localDir0_1', 'localDir1_1', 'localDir2_1', 'lengthDir0_1', 'lengthDir1_1', 'lengthDir2_1', 'glob_eta_1', 'glob_phi_1', 'eta_angle_1', 'phi_angle_1', 'count_2', 'charge_count_2', 'loc_eta_2', 'loc_phi_2', 'localDir0_2', 'localDir1_2', 'localDir2_2', 'lengthDir0_2', 'lengthDir1_2', 'lengthDir2_2', 'glob_eta_2', 'glob_phi_2', 'eta_angle_2', 'phi_angle_2'], filter_node_scale=[1000.0, 3.14, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1.0, 1.0, 3.14, 3.14, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 3.14, 3.14, 3.14, 3.14, 1.0, 1.0, 3.14, 3.14, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 3.14, 3.14, 3.14, 3.14], gnn_node_features=['r', 'phi', 'z', 'eta', 'cluster_r_1', 'cluster_phi_1', 'cluster_z_1', 'cluster_eta_1', 'cluster_r_2', 'cluster_phi_2', 'cluster_z_2', 'cluster_eta_2'], gnn_node_scale=[1000.0, 3.14159265359, 1000.0, 1.0, 1000.0, 3.14159265359, 1000.0, 1.0, 1000.0, 3.14159265359, 1000.0, 1.0])
+MetricLearningInferenceConfig(model_path=PosixPath('/models/MetricLearning/2'), device='cuda', auto_cast=False, compling=False, debug=False, save_debug_data=False, r_max=0.12, k_max=1000, filter_cut=0.05, filter_batches=10, cc_cut=0.01, walk_min=0.1, walk_max=0.6, embedding_node_features=['r', 'phi', 'z', 'cluster_x_1', 'cluster_y_1', 'cluster_z_1', 'cluster_x_2', 'cluster_y_2', 'cluster_z_2', 'count_1', 'charge_count_1', 'loc_eta_1', 'loc_phi_1', 'localDir0_1', 'localDir1_1', 'localDir2_1', 'lengthDir0_1', 'lengthDir1_1', 'lengthDir2_1', 'glob_eta_1', 'glob_phi_1', 'eta_angle_1', 'phi_angle_1', 'count_2', 'charge_count_2', 'loc_eta_2', 'loc_phi_2', 'localDir0_2', 'localDir1_2', 'localDir2_2', 'lengthDir0_2', 'lengthDir1_2', 'lengthDir2_2', 'glob_eta_2', 'glob_phi_2', 'eta_angle_2', 'phi_angle_2'], embedding_node_scale=[1000.0, 3.14, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1.0, 1.0, 3.14, 3.14, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 3.14, 3.14, 3.14, 3.14, 1.0, 1.0, 3.14, 3.14, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 3.14, 3.14, 3.14, 3.14], filter_node_features=['r', 'phi', 'z', 'cluster_x_1', 'cluster_y_1', 'cluster_z_1', 'cluster_x_2', 'cluster_y_2', 'cluster_z_2', 'count_1', 'charge_count_1', 'loc_eta_1', 'loc_phi_1', 'localDir0_1', 'localDir1_1', 'localDir2_1', 'lengthDir0_1', 'lengthDir1_1', 'lengthDir2_1', 'glob_eta_1', 'glob_phi_1', 'eta_angle_1', 'phi_angle_1', 'count_2', 'charge_count_2', 'loc_eta_2', 'loc_phi_2', 'localDir0_2', 'localDir1_2', 'localDir2_2', 'lengthDir0_2', 'lengthDir1_2', 'lengthDir2_2', 'glob_eta_2', 'glob_phi_2', 'eta_angle_2', 'phi_angle_2'], filter_node_scale=[1000.0, 3.14, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1.0, 1.0, 3.14, 3.14, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 3.14, 3.14, 3.14, 3.14, 1.0, 1.0, 3.14, 3.14, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 3.14, 3.14, 3.14, 3.14], gnn_node_features=['r', 'phi', 'z', 'eta', 'cluster_r_1', 'cluster_phi_1', 'cluster_z_1', 'cluster_eta_1', 'cluster_r_2', 'cluster_phi_2', 'cluster_z_2', 'cluster_eta_2'], gnn_node_scale=[1000.0, 3.14159265359, 1000.0, 1.0, 1000.0, 3.14159265359, 1000.0, 1.0, 1000.0, 3.14159265359, 1000.0, 1.0])
+MetricLearningInferenceConfig(model_path=PosixPath('/models/MetricLearning/2'), device='cuda', auto_cast=False, compling=False, debug=False, save_debug_data=False, r_max=0.12, k_max=1000, filter_cut=0.05, filter_batches=10, cc_cut=0.01, walk_min=0.1, walk_max=0.6, embedding_node_features=['r', 'phi', 'z', 'cluster_x_1', 'cluster_y_1', 'cluster_z_1', 'cluster_x_2', 'cluster_y_2', 'cluster_z_2', 'count_1', 'charge_count_1', 'loc_eta_1', 'loc_phi_1', 'localDir0_1', 'localDir1_1', 'localDir2_1', 'lengthDir0_1', 'lengthDir1_1', 'lengthDir2_1', 'glob_eta_1', 'glob_phi_1', 'eta_angle_1', 'phi_angle_1', 'count_2', 'charge_count_2', 'loc_eta_2', 'loc_phi_2', 'localDir0_2', 'localDir1_2', 'localDir2_2', 'lengthDir0_2', 'lengthDir1_2', 'lengthDir2_2', 'glob_eta_2', 'glob_phi_2', 'eta_angle_2', 'phi_angle_2'], embedding_node_scale=[1000.0, 3.14, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1.0, 1.0, 3.14, 3.14, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 3.14, 3.14, 3.14, 3.14, 1.0, 1.0, 3.14, 3.14, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 3.14, 3.14, 3.14, 3.14], filter_node_features=['r', 'phi', 'z', 'cluster_x_1', 'cluster_y_1', 'cluster_z_1', 'cluster_x_2', 'cluster_y_2', 'cluster_z_2', 'count_1', 'charge_count_1', 'loc_eta_1', 'loc_phi_1', 'localDir0_1', 'localDir1_1', 'localDir2_1', 'lengthDir0_1', 'lengthDir1_1', 'lengthDir2_1', 'glob_eta_1', 'glob_phi_1', 'eta_angle_1', 'phi_angle_1', 'count_2', 'charge_count_2', 'loc_eta_2', 'loc_phi_2', 'localDir0_2', 'localDir1_2', 'localDir2_2', 'lengthDir0_2', 'lengthDir1_2', 'lengthDir2_2', 'glob_eta_2', 'glob_phi_2', 'eta_angle_2', 'phi_angle_2'], filter_node_scale=[1000.0, 3.14, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1.0, 1.0, 3.14, 3.14, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 3.14, 3.14, 3.14, 3.14, 1.0, 1.0, 3.14, 3.14, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 3.14, 3.14, 3.14, 3.14], gnn_node_features=['r', 'phi', 'z', 'eta', 'cluster_r_1', 'cluster_phi_1', 'cluster_z_1', 'cluster_eta_1', 'cluster_r_2', 'cluster_phi_2', 'cluster_z_2', 'cluster_eta_2'], gnn_node_scale=[1000.0, 3.14159265359, 1000.0, 1.0, 1000.0, 3.14159265359, 1000.0, 1.0, 1000.0, 3.14159265359, 1000.0, 1.0])
+I0530 16:59:14.639019 1 model_lifecycle.cc:838] "successfully loaded 'GNN4Pixel'"
+I0530 16:59:14.758742 1 model_lifecycle.cc:838] "successfully loaded 'MetricLearning'"
+I0530 16:59:14.758838 1 server.cc:606] 
 +------------------+------+
 | Repository Agent | Path |
 +------------------+------+
 +------------------+------+
 
-I0528 23:54:58.608917 1 server.cc:633] 
+I0530 16:59:14.758890 1 server.cc:633] 
 +---------+-------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Backend | Path                                                  | Config                                                                                                                                                        |
 +---------+-------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | python  | /opt/tritonserver/backends/python/libtriton_python.so | {"cmdline":{"auto-complete-config":"true","backend-directory":"/opt/tritonserver/backends","min-compute-capability":"6.000000","default-max-batch-size":"4"}} |
 +---------+-------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-I0528 23:54:58.608958 1 server.cc:676] 
+I0530 16:59:14.758937 1 server.cc:676] 
 +----------------+---------+--------+
 | Model          | Version | Status |
 +----------------+---------+--------+
@@ -56,9 +69,12 @@ I0528 23:54:58.608958 1 server.cc:676]
 | MetricLearning | 2       | READY  |
 +----------------+---------+--------+
 
-I0528 23:54:58.641677 1 metrics.cc:877] "Collecting metrics for GPU 0: NVIDIA A100-SXM4-40GB"
-I0528 23:54:58.644746 1 metrics.cc:770] "Collecting CPU metrics"
-I0528 23:54:58.644829 1 tritonserver.cc:2557] 
+I0530 16:59:15.060118 1 metrics.cc:877] "Collecting metrics for GPU 0: NVIDIA A100-SXM4-80GB"
+I0530 16:59:15.060151 1 metrics.cc:877] "Collecting metrics for GPU 1: NVIDIA A100-SXM4-80GB"
+I0530 16:59:15.060161 1 metrics.cc:877] "Collecting metrics for GPU 2: NVIDIA A100-SXM4-80GB"
+I0530 16:59:15.060170 1 metrics.cc:877] "Collecting metrics for GPU 3: NVIDIA A100-SXM4-80GB"
+I0530 16:59:15.075805 1 metrics.cc:770] "Collecting CPU metrics"
+I0530 16:59:15.076040 1 tritonserver.cc:2557] 
 +----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Option                           | Value                                                                                                                                                                                                           |
 +----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -72,17 +88,17 @@ I0528 23:54:58.644829 1 tritonserver.cc:2557]
 | rate_limit                       | OFF                                                                                                                                                                                                             |
 | pinned_memory_pool_byte_size     | 268435456                                                                                                                                                                                                       |
 | cuda_memory_pool_byte_size{0}    | 67108864                                                                                                                                                                                                        |
+| cuda_memory_pool_byte_size{1}    | 67108864                                                                                                                                                                                                        |
+| cuda_memory_pool_byte_size{2}    | 67108864                                                                                                                                                                                                        |
+| cuda_memory_pool_byte_size{3}    | 67108864                                                                                                                                                                                                        |
 | min_supported_compute_capability | 6.0                                                                                                                                                                                                             |
 | strict_readiness                 | 1                                                                                                                                                                                                               |
 | exit_timeout                     | 30                                                                                                                                                                                                              |
 | cache_enabled                    | 0                                                                                                                                                                                                               |
 +----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-I0528 23:54:58.649525 1 grpc_server.cc:2463] "Started GRPCInferenceService at 0.0.0.0:8001"
-I0528 23:54:58.649700 1 http_server.cc:4692] "Started HTTPService at 0.0.0.0:8000"
-I0528 23:54:58.690736 1 http_server.cc:362] "Started Metrics Service at 0.0.0.0:8002"
-DONE 2025-05-28T16:55:04
-slurmstepd: error: *** STEP 39103243.0 ON nid001164 CANCELLED AT 2025-05-29T03:54:46 DUE TO TIME LIMIT ***
-srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
-srun: error: nid001164: task 0: Terminated
-srun: Terminating StepId=39103243.0
+I0530 16:59:15.080494 1 grpc_server.cc:2463] "Started GRPCInferenceService at 0.0.0.0:8001"
+I0530 16:59:15.080652 1 http_server.cc:4692] "Started HTTPService at 0.0.0.0:8000"
+I0530 16:59:15.121619 1 http_server.cc:362] "Started Metrics Service at 0.0.0.0:8002"
+/usr/local/lib/python3.10/dist-packages/frnn-0.0.0-py3.10-linux-x86_64.egg/frnn/frnn.py:86: UserWarning: Specified kernel cache directory could not be created! This disables kernel caching. Specified directory is /root/.cache/torch/kernels. This warning will appear only once per process. (Triggered internally at /tmp/pytorch/aten/src/ATen/native/cuda/jit_utils.cpp:1442.)
+  grid_params_cuda[i, grid_total_idx] = torch.prod(

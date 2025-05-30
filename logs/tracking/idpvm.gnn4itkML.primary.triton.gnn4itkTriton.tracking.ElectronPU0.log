@@ -1,10 +1,10 @@
-Running workflow/scripts/run_idpvm.sh \n Wed May 28 17:00:52 PDT 2025 @ login36
+Running workflow/scripts/run_idpvm.sh \n Fri May 30 10:07:44 PDT 2025 @ login29
 -----------------------------------
 Input File: workarea/tracking/ElectronPU0/aod.gnn4itkML.triton.gnn4itkTriton.tracking.ElectronPU0.root
 Setup File: results/athena/athena.default.gnn4itkTriton.built.json
 Run Directory: /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ElectronPU0
 Output File: /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ElectronPU0/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ElectronPU0.root
-Number of Workers: 4
+Number of Workers: 16
 Max Events: -1
 Chain Name: PRIMARY
 virtual environment detected, deactivating...
@@ -61,11 +61,11 @@ Unchanged: COOL_ORA_ENABLE_ADAPTIVE_OPT=Y
 Setting up local environment from sparse_build/x86_64-el9-gcc*-opt/setup.sh
 Athena environment set up successfully.
 Returned to original directory: /pscratch/sd/x/xju/code/autowork
-Running with 4 workers
+Running with 16 workers
 Cleanup workarea.
 Running standard workflow
 Full IDPVM Options:
-    runIDPVM.py --maxEvents -1 --filesInput /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ElectronPU0/aod.gnn4itkML.triton.gnn4itkTriton.tracking.ElectronPU0.root --outputFile /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ElectronPU0/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ElectronPU0.root --truthMinPt 1000 --HSFlag HardScatter --doTruthToRecoNtuple --doLoose --doTightPrimary --doHitLevelPlots --OnlyTrackingPreInclude 
+    runIDPVM.py --maxEvents -1 --filesInput /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ElectronPU0/aod.gnn4itkML.triton.gnn4itkTriton.tracking.ElectronPU0.root --outputFile /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ElectronPU0/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ElectronPU0.root --truthMinPt 1000 --HSFlag HardScatter --doTruthToRecoNtuple --doLoose --doTightPrimary --doHitLevelPlots --OnlyTrackingPreInclude
 Py:AutoConfigFlags    INFO Obtaining metadata of auto-configuration by peeking into '/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ElectronPU0/aod.gnn4itkML.triton.gnn4itkTriton.tracking.ElectronPU0.root'
 Py:MetaReader        INFO Current mode used: lite
 Py:MetaReader        INFO Current filenames: ['/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ElectronPU0/aod.gnn4itkML.triton.gnn4itkTriton.tracking.ElectronPU0.root']
@@ -155,10 +155,10 @@ Py:ComponentAccumulator    INFO   EvtSel : EventSelectorAthenaPool/EventSelector
 ApplicationMgr    SUCCESS 
 ====================================================================================================================================
                                                    Welcome to ApplicationMgr (GaudiCoreSvc v39r4)
-                                          running on login36 on Wed May 28 17:01:20 2025
+                                          running on login29 on Fri May 30 10:08:01 2025
 ====================================================================================================================================
 ApplicationMgr       INFO Application Manager Configured successfully
-Py:ComponentAccumulator    INFO Athena job with pid 2203365
+Py:ComponentAccumulator    INFO Athena job with pid 76178
 CoreDumpSvc                                          INFO Handling signals: 11(Segmentation fault) 7(Bus error) 4(Illegal instruction) 14(Alarm clock) 
 ClassIDSvc                                           INFO getRegistryEntries: read 4514 CLIDRegistry entries for module ALL
 IOVDbSvc                                             INFO Only 5 POOL conditions files will be open at once
@@ -175,7 +175,7 @@ PoolSvc                                              INFO Set connectionsvc retr
 PoolSvc                                              INFO Frontier compression level set to 5
 DBReplicaSvc                                         INFO Frontier server at (serverurl=http://atlasfrontier-ai.cern.ch:8000/atlr)(serverurl=http://atlasfrontier2-ai.cern.ch:8000/atlr)(serverurl=http://atlasfrontier1-ai.cern.ch:8000/atlr)(proxyurl=http://frontiercache.nersc.gov:3128)(proxyurl=http://atlasbpfrontier.fnal.gov:3127)(proxyurl=http://atlasbpfrontier.cern.ch:3127) will be considered for COOL data
 DBReplicaSvc                                         INFO Read replica configuration from /cvmfs/atlas.cern.ch/repo/sw/software/25.0/Athena/25.0.30/InstallArea/x86_64-el9-gcc13-opt/share/dbreplica.config
-DBReplicaSvc                                         INFO Total of 1 servers found for host login36.chn.perlmutter.nersc.gov [ATLF ]
+DBReplicaSvc                                         INFO Total of 1 servers found for host login29.chn.perlmutter.nersc.gov [ATLF ]
 PoolSvc                                              INFO Successfully setup replica sorting algorithm
 PoolSvc                                              INFO Setting up APR FileCatalog and Streams
 PoolSvc                                              INFO Resolved path (via ATLAS_POOLCOND_PATH) is /cvmfs/atlas-condb.cern.ch/repo/conditions/poolcond/PoolFileCatalog.xml
@@ -196,7 +196,7 @@ Domain[ROOT_All]                                     INFO ->  Deaccess DbDatabas
 Domain[ROOT_All]                                     INFO >   Deaccess DbDomain     READ      [ROOT_All] 
 DbSession                                            INFO     Open     DbSession    
 Domain[ROOT_All]                                     INFO >   Access   DbDomain     READ      [ROOT_All] 
-Domain[ROOT_All]                                     INFO ->  Access   DbDatabase   READ      [ROOT_All] 20D6F30B-14B8-8847-9337-88150C87BB6A
+Domain[ROOT_All]                                     INFO ->  Access   DbDatabase   READ      [ROOT_All] 08F9BE84-38BC-304C-B5B5-9E900CD3F1CA
 Domain[ROOT_All]                                     INFO                           /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ElectronPU0/aod.gnn4itkML.triton.gnn4itkTriton.tracking.ElectronPU0.root
 RootDatabase.open                                    INFO /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ElectronPU0/aod.gnn4itkML.triton.gnn4itkTriton.tracking.ElectronPU0.root File version:63404
 EventPersistencySvc                                  INFO Added successfully Conversion service AthenaPoolCnvSvc
@@ -260,7 +260,7 @@ DetDescrCnvSvc                                       INFO  filling address for Z
 DetDescrCnvSvc                                       INFO  filling address for JTower_ID with CLID 218674799 and storage type 68 to detector store 
 DetDescrCnvSvc                                       INFO  filling address for GTower_ID with CLID 49678914 and storage type 68 to detector store 
 GeoModelSvc.BeamPipeDetectorTool                     INFO Building Beam Pipe
-GeoModelSvc                                          INFO GeoModelSvc.BeamPipeDetectorTool	 SZ= 704Kb 	 Time = 0.01S
+GeoModelSvc                                          INFO GeoModelSvc.BeamPipeDetectorTool	 SZ= 712Kb 	 Time = 0.01S
 EventPersistencySvc                                  INFO Added successfully Conversion service DetDescrCnvSvc
 IdDictDetDescrCnv                                    INFO in initialize
 IdDictDetDescrCnv                                    INFO in createObj: creating a IdDictManager object in the detector store
@@ -352,7 +352,7 @@ GeoModelSvc.ITk::PixelDetectorTool                   INFO Max. eta cells is 800
 GeoModelSvc.ITk::PixelDetectorTool                   INFO Max. phi cells is 768
 GeoModelSvc.ITk::PixelDetectorTool                   INFO End of numerology
 
-GeoModelSvc                                          INFO GeoModelSvc.ITk::PixelDetectorTool	 SZ= 50852Kb 	 Time = 0.65S
+GeoModelSvc                                          INFO GeoModelSvc.ITk::PixelDetectorTool	 SZ= 50848Kb 	 Time = 0.52S
 SCT_ID                                               INFO 
 GeoModelSvc.ITk::StripDetectorTool                   INFO Trying new ITkStrip database location.
 GeoModelSvc.ITk::StripDetectorTool                   INFO Using StripXDD-03-00 from ATLAS tag ATLAS-P2-RUN4-03-00-00
@@ -524,7 +524,7 @@ GeoModelSvc.ITk::StripDetectorTool                   INFO Max. phi cells is 1536
 GeoModelSvc.ITk::StripDetectorTool                   INFO Max. no. strips is 1536
 GeoModelSvc.ITk::StripDetectorTool                   INFO End of numerology
 
-GeoModelSvc                                          INFO GeoModelSvc.ITk::StripDetectorTool	 SZ= 120920Kb 	 Time = 2.15S
+GeoModelSvc                                          INFO GeoModelSvc.ITk::StripDetectorTool	 SZ= 120920Kb 	 Time = 1.6S
 HGTD_IDDetDescrCnv                                   INFO in createObj: creating a HGTD_ID helper object in the detector store
 HGTD_ID                                              INFO Initialize from dictionary
 indet 1 2,4,5,7,10,11,12,13 7 1fffffffffffffff 61 3 0 min/max 2 13 values  2 4 5 7 10 11 12 13 indexes  0 0 1 2 0 3 0 0 4 5 6 7 indices  8 prev  0 next  0 mode  enumerated  cont mode  none  
@@ -551,7 +551,7 @@ Parsed it
 Database string successfully parsed.
 GeoModelXML-INFO: Set up detector geometry from db-string 
 which adds sub-detector HGTD
-GeoModelSvc                                          INFO GeoModelSvc.HGTD_GMX_DetectorTool	 SZ= 24796Kb 	 Time = 0.51S
+GeoModelSvc                                          INFO GeoModelSvc.HGTD_GMX_DetectorTool	 SZ= 24796Kb 	 Time = 0.42S
 GeoModelSvc.HGTD_GMX_DetectorTool                    INFO Alignment disabled. No callback registered
 GeoModelSvc                                          INFO   AlgTool: GeoModelSvc.BeamPipeDetectorTool
 GeoModelSvc                                          INFO   AlgTool: GeoModelSvc.ITk::PixelDetectorTool
@@ -744,11 +744,16 @@ AthenaEventLoopMgr                                   INFO   ===>>>  done process
 /cvmfs/atlas-condb.cern.ch/...root__DQ2-1250194490   INFO Database being retired...
 Domain[ROOT_All]                                     INFO ->  Deaccess DbDatabase   READ      [ROOT_All] 8E91164C-1E3C-DB11-8CAB-00132046AB63
 /cvmfs/atlas-condb.cern.ch/repo/conditions/...root   INFO Database being retired...
-Domain[ROOT_All]                                     INFO ->  Deaccess DbDatabase   READ      [ROOT_All] C634B46D-ECB2-A045-91CC-00A82369D887
-/cvmfs/atlas-condb.cern.ch/repo/conditions/...root   INFO Database being retired...
 Domain[ROOT_All]                                     INFO ->  Deaccess DbDatabase   READ      [ROOT_All] A5CF2B06-0F7A-AC48-BDE9-1E702A3021C4
+/cvmfs/atlas-condb.cern.ch/repo/conditions/...root   INFO Database being retired...
+Domain[ROOT_All]                                     INFO ->  Deaccess DbDatabase   READ      [ROOT_All] C634B46D-ECB2-A045-91CC-00A82369D887
 Domain[ROOT_All]                                     INFO >   Deaccess DbDomain     READ      [ROOT_All] 
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #8, run #242000 1 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #4, run #242000 1 events processed so far  <<<===
+InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #4, run #242000 2 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #8, run #242000 2 events processed so far  <<<===
 ToolSvc.xAODTrackParticleCompressorTool              INFO Initialising
 ToolSvc.xAODTrackParticleCompressorTool              INFO   OffDiagCovMatrixBits = 23
 ToolSvc.xAODTrackParticleCompressorTool              INFO   DiagCovMatrixBits    = 23
@@ -762,12 +767,7 @@ InDetPlotBase                                     WARNING The HitEff plots dont 
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING The hit res plots dont see any data (note:only 10 warnings issued)
 InDetPlotBase                                     WARNING The HitEff plots dont see any data (note: only 10 warnings issued)
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #8, run #242000 2 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #4, run #242000 2 events processed so far  <<<===
-InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #4, run #242000 3 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #8, run #242000 3 events processed so far  <<<===
 AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #10, run #242000 3 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
@@ -875,18 +875,18 @@ InDetPlotBase                                     WARNING VertexMatchType DECORA
 InDetPlotBase                                     WARNING The hit res plots dont see any data (note:only 10 warnings issued)
 InDetPlotBase                                     WARNING The HitEff plots dont see any data (note: only 10 warnings issued)
 AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #11, run #242000 14 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #2, run #242000 14 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #19, run #242000 14 events processed so far  <<<===
+InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #19, run #242000 15 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #2, run #242000 15 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING The hit res plots dont see any data (note:only 10 warnings issued)
 InDetPlotBase                                     WARNING The HitEff plots dont see any data (note: only 10 warnings issued)
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #2, run #242000 15 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #19, run #242000 15 events processed so far  <<<===
-InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #19, run #242000 16 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #2, run #242000 16 events processed so far  <<<===
 AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #5, run #242000 16 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
@@ -1152,16 +1152,16 @@ InDetPlotBase                                     WARNING VertexMatchType DECORA
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #73, run #242000 69 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #74, run #242000 69 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #70, run #242000 69 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #74, run #242000 70 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #70, run #242000 70 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #70, run #242000 70 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #74, run #242000 70 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #70, run #242000 71 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #74, run #242000 71 events processed so far  <<<===
 AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #76, run #242000 71 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
@@ -1217,16 +1217,16 @@ InDetPlotBase                                     WARNING VertexMatchType DECORA
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #82, run #242000 82 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #69, run #242000 82 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #88, run #242000 82 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #69, run #242000 83 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #88, run #242000 83 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #88, run #242000 83 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #69, run #242000 83 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #88, run #242000 84 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #69, run #242000 84 events processed so far  <<<===
 AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #87, run #242000 84 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
@@ -1447,16 +1447,16 @@ InDetPlotBase                                     WARNING VertexMatchType DECORA
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #130, run #242000 128 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #133, run #242000 128 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #134, run #242000 128 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #133, run #242000 129 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #134, run #242000 129 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #134, run #242000 129 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #133, run #242000 129 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #134, run #242000 130 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #133, run #242000 130 events processed so far  <<<===
 AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #135, run #242000 130 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
@@ -1467,16 +1467,16 @@ InDetPlotBase                                     WARNING VertexMatchType DECORA
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #123, run #242000 132 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #136, run #242000 132 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #127, run #242000 132 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #136, run #242000 133 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #127, run #242000 133 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #127, run #242000 133 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #136, run #242000 133 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #127, run #242000 134 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #136, run #242000 134 events processed so far  <<<===
 AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #138, run #242000 134 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
@@ -1744,119 +1744,179 @@ AthenaEventLoopMgr                                   INFO   ===>>>  done process
 AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #251, run #242000 247 events processed so far  <<<===
 AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #251, run #242000 248 events processed so far  <<<===
 AthenaEventLoopMgrWARNING INFO message limit (500) reached for AthenaEventLoopMgr. Suppressing further output.
-EventSelector                                        INFO Disconnecting input sourceID: 20D6F30B-14B8-8847-9337-88150C87BB6A
+EventSelector                                        INFO Disconnecting input sourceID: 08F9BE84-38BC-304C-B5B5-9E900CD3F1CA
 /global/cfs/cdirs/m3443/usr/xju/workflow/wo...root   INFO Database being retired...
-Domain[ROOT_All]                                     INFO ->  Deaccess DbDatabase   READ      [ROOT_All] 20D6F30B-14B8-8847-9337-88150C87BB6A
+Domain[ROOT_All]                                     INFO ->  Deaccess DbDatabase   READ      [ROOT_All] 08F9BE84-38BC-304C-B5B5-9E900CD3F1CA
 Domain[ROOT_All]                                     INFO >   Deaccess DbDomain     READ      [ROOT_All] 
 PhysValMonManager.InDetPhysValMonitoringTool         INFO Finalising hists PhysValMonManager.InDetPhysValMonitoringTool...
 PhysValMonManager.InDetPhysValMonitoringTool         INFO 
 PhysValMonManager.InDetPhysValMonitoringTool         INFO Cutflow for truth tracks:
 PhysValMonManager.InDetPhysValMonitoringTool         INFO Truth selection report: 
-CutList Report; Total processed: 835
-Total passed: 835
+CutList Report; Total processed: 4223
+Total passed: 4223
 Cuts were applied until one fails
-eta: 835 passed
-min_pt: 835 passed
-decay_before_300.000000: 835 passed
-OnlyPrimary: 835 passed
-charged: 835 passed
-stable: 835 passed
+eta: 4223 passed
+min_pt: 4223 passed
+decay_before_300.000000: 4223 passed
+OnlyPrimary: 4223 passed
+charged: 4223 passed
+stable: 4223 passed
 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_d0: bin36: 7.7%, bin42: 10%, bin44: 7.7%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_d0: bin36: 7.7%, bin42: 10%, bin44: 7.7%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_d0: bin18: 18%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_d0: bin18: 18%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_d0: bin1: 6.8%, bin2: 7.7%, bin3: 12%, bin4: 5.6%, bin5: 11%, bin12: 8.5%, bin14: 8%, bin16: 9.4%, bin19: 8.7%, bin20: 6.8%, bin21: 6.7%, bin22: 14%, bin28: 23%, bin30: 8.8%, bin31: 8.6%, bin33: 26%, bin34: 13%, bin35: 20%, bin36: 11%, bin37: 17%, bin38: 19%, bin39: 18%, bin40: 29%, bin41: 14%, bin42: 14%, bin43: 20%, bin44: 12%, bin45: 16%, bin46: 11%, bin47: 18%, bin48: 26%, bin49: 11%, bin50: 7.7%, bin51: 13%, bin52: 15%, bin53: 26%, bin54: 18%, bin55: 22%, bin56: 10%, bin57: 17%, bin58: 26%, bin59: 29%, bin60: 9.1%, bin61: 11%, bin62: 17%, bin63: 25%, bin64: 13%, bin65: 21%, bin66: 9.7%, bin67: 17%, bin68: 11%, bin69: 17%, bin70: 12%, bin71: 36%, bin73: 17%, bin74: 5.1%, bin76: 14%, bin80: 20%, bin83: 15%, bin84: 11%, bin85: 14%, bin88: 8.2%, bin89: 9.5%, bin92: 5.8%, bin93: 9.8%, bin95: 12%, bin97: 9.3%, bin98: 6.2%, bin99: 16%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_d0: bin1: 6.8%, bin2: 7.7%, bin3: 12%, bin4: 5.6%, bin5: 11%, bin12: 8.5%, bin14: 8%, bin16: 9.4%, bin19: 8.7%, bin20: 6.8%, bin21: 6.7%, bin22: 14%, bin28: 23%, bin30: 8.8%, bin31: 8.6%, bin33: 26%, bin34: 13%, bin35: 20%, bin36: 11%, bin37: 17%, bin38: 19%, bin39: 18%, bin40: 29%, bin41: 14%, bin42: 14%, bin43: 20%, bin44: 12%, bin45: 16%, bin46: 11%, bin47: 18%, bin48: 26%, bin49: 11%, bin50: 7.7%, bin51: 13%, bin52: 15%, bin53: 26%, bin54: 18%, bin55: 22%, bin56: 10%, bin57: 17%, bin58: 26%, bin59: 29%, bin60: 9.1%, bin61: 11%, bin62: 17%, bin63: 25%, bin64: 13%, bin65: 21%, bin66: 9.7%, bin67: 17%, bin68: 11%, bin69: 17%, bin70: 12%, bin71: 36%, bin73: 17%, bin74: 5.1%, bin76: 14%, bin80: 20%, bin83: 15%, bin84: 11%, bin85: 14%, bin88: 8.2%, bin89: 9.5%, bin92: 5.8%, bin93: 9.8%, bin95: 12%, bin97: 9.3%, bin98: 6.2%, bin99: 16%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_d0: bin18: 17%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_d0: bin18: 17%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_d0: bin1: 6.8%, bin46: 7.4%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_d0: bin1: 6.8%, bin46: 7.4%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0: bin12: 6.2%, bin14: 10%, bin17: 6.8%, bin18: 7%, bin19: 8.9%, bin20: 9.3%, bin22: 8.9%, bin31: 8.6%, bin32: 9.1%, bin33: 8.3%, bin34: 6.1%, bin38: 19%, bin39: 9.5%, bin48: 6.2%, bin55: 7.1%, bin57: 6.1%, bin64: 9.4%, bin66: 9.7%, bin69: 6.1%, bin70: 6.7%, bin72: 10%, bin74: 5.1%, bin78: 6.2%, bin80: 8.9%, bin81: 8.8%, bin82: 12%, bin83: 5.4%, bin84: 11%, bin88: 5.9%, bin95: 9.1%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0: bin12: 6.2%, bin14: 10%, bin17: 6.8%, bin18: 7%, bin19: 8.9%, bin20: 9.3%, bin22: 8.9%, bin31: 8.6%, bin32: 9.1%, bin33: 8.3%, bin34: 6.1%, bin38: 19%, bin39: 9.5%, bin48: 6.2%, bin55: 7.1%, bin57: 6.1%, bin64: 9.4%, bin66: 9.7%, bin69: 6.1%, bin70: 6.7%, bin72: 10%, bin74: 5.1%, bin78: 6.2%, bin80: 8.9%, bin81: 8.8%, bin82: 12%, bin83: 5.4%, bin84: 11%, bin88: 5.9%, bin95: 9.1%, 
 ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0: bin18: 15%, 
 ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0: bin18: 15%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_qoverp: bin18: 9.1%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_qoverp: bin18: 9.1%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_qoverp: bin18: 16%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_qoverp: bin18: 16%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_ptqopt: bin44: 7.7%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_ptqopt: bin44: 7.7%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_theta: bin78: 5.9%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_theta: bin78: 5.9%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_phi: bin44: 7.7%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_phi: bin44: 7.7%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_phi: bin18: 6.8%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_phi: bin18: 6.8%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0: bin4: 12%, bin18: 7%, bin20: 6.8%, bin24: 7.5%, bin28: 5.7%, bin38: 5.7%, bin68: 5.4%, bin74: 5.1%, bin97: 7.3%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0: bin4: 12%, bin18: 7%, bin20: 6.8%, bin24: 7.5%, bin28: 5.7%, bin38: 5.7%, bin68: 5.4%, bin74: 5.1%, bin97: 7.3%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_qoverp: bin1: 6.8%, bin3: 9.5%, bin5: 6.7%, bin8: 7%, bin12: 6.2%, bin14: 7.8%, bin16: 5.9%, bin18: 12%, bin20: 6.8%, bin22: 6.5%, bin25: 10%, bin30: 8.8%, bin32: 9.1%, bin33: 15%, bin34: 6.1%, bin35: 7.1%, bin37: 7.9%, bin40: 10%, bin41: 7.9%, bin44: 7.1%, bin46: 7.1%, bin47: 12%, bin48: 6.2%, bin52: 15%, bin55: 22%, bin58: 13%, bin64: 9.4%, bin66: 6.2%, bin69: 6.1%, bin70: 9.1%, bin72: 7.5%, bin74: 5.1%, bin78: 6.2%, bin87: 16%, bin88: 5.9%, bin89: 18%, bin92: 7.8%, bin93: 9.8%, bin95: 20%, bin96: 7.5%, bin97: 9.3%, bin99: 19%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_qoverp: bin1: 6.8%, bin3: 9.5%, bin5: 6.7%, bin8: 7%, bin12: 6.2%, bin14: 7.8%, bin16: 5.9%, bin18: 12%, bin20: 6.8%, bin22: 6.5%, bin25: 10%, bin30: 8.8%, bin32: 9.1%, bin33: 15%, bin34: 6.1%, bin35: 7.1%, bin37: 7.9%, bin40: 10%, bin41: 7.9%, bin44: 7.1%, bin46: 7.1%, bin47: 12%, bin48: 6.2%, bin52: 15%, bin55: 22%, bin58: 13%, bin64: 9.4%, bin66: 6.2%, bin69: 6.1%, bin70: 9.1%, bin72: 7.5%, bin74: 5.1%, bin78: 6.2%, bin87: 16%, bin88: 5.9%, bin89: 18%, bin92: 7.8%, bin93: 9.8%, bin95: 20%, bin96: 7.5%, bin97: 9.3%, bin99: 19%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_qoverp: bin18: 12%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_qoverp: bin18: 12%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_qoverp: bin41: 11%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_qoverp: bin41: 11%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_ptqopt: bin31: 5.9%, bin44: 9.8%, bin45: 5.9%, bin46: 7.1%, bin47: 12%, bin52: 15%, bin54: 11%, bin55: 23%, bin56: 6.5%, bin57: 6.1%, bin58: 14%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_ptqopt: bin31: 5.9%, bin44: 9.8%, bin45: 5.9%, bin46: 7.1%, bin47: 12%, bin52: 15%, bin54: 11%, bin55: 23%, bin56: 6.5%, bin57: 6.1%, bin58: 14%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_ptqopt: bin41: 11%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_ptqopt: bin41: 11%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_theta: bin14: 5.8%, bin38: 5.7%, bin66: 6.2%, bin71: 6.2%, bin81: 5.7%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_theta: bin14: 5.8%, bin38: 5.7%, bin66: 6.2%, bin71: 6.2%, bin81: 5.7%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_theta: bin4: 5.6%, bin8: 7%, bin23: 7%, bin76: 7.7%, bin95: 6.7%, bin97: 7.3%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_theta: bin4: 5.6%, bin8: 7%, bin23: 7%, bin76: 7.7%, bin95: 6.7%, bin97: 7.3%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_phi: bin33: 6.1%, bin34: 6.5%, bin38: 6.5%, bin40: 14%, bin41: 5.6%, bin45: 5.9%, bin46: 7.1%, bin47: 15%, bin48: 26%, bin49: 5.1%, bin51: 6.2%, bin53: 18%, bin54: 5.4%, bin55: 23%, bin57: 6.2%, bin58: 14%, bin61: 5.4%, bin63: 14%, bin67: 8%, bin84: 6.2%, bin89: 7.5%, bin95: 5.1%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_phi: bin33: 6.1%, bin34: 6.5%, bin38: 6.5%, bin40: 14%, bin41: 5.6%, bin45: 5.9%, bin46: 7.1%, bin47: 15%, bin48: 26%, bin49: 5.1%, bin51: 6.2%, bin53: 18%, bin54: 5.4%, bin55: 23%, bin57: 6.2%, bin58: 14%, bin61: 5.4%, bin63: 14%, bin67: 8%, bin84: 6.2%, bin89: 7.5%, bin95: 5.1%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_phi: bin18: 5.4%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_phi: bin18: 5.4%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_phi: bin1: 6.8%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_phi: bin1: 6.8%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0sin: bin1: 6.8%, bin13: 7.5%, bin14: 8%, bin18: 9.5%, bin20: 9.3%, bin24: 10%, bin32: 9.1%, bin33: 11%, bin34: 6.1%, bin38: 12%, bin39: 9.5%, bin48: 6.2%, bin55: 7.1%, bin57: 9.4%, bin61: 5.4%, bin62: 6.1%, bin63: 7.1%, bin64: 9.4%, bin69: 6.1%, bin71: 6.2%, bin72: 7.5%, bin74: 5.1%, bin77: 6.8%, bin80: 8.9%, bin81: 8.8%, bin82: 6.8%, bin83: 5.4%, bin84: 11%, bin88: 5.9%, bin95: 9.1%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0sin: bin1: 6.8%, bin13: 7.5%, bin14: 8%, bin18: 9.5%, bin20: 9.3%, bin24: 10%, bin32: 9.1%, bin33: 11%, bin34: 6.1%, bin38: 12%, bin39: 9.5%, bin48: 6.2%, bin55: 7.1%, bin57: 9.4%, bin61: 5.4%, bin62: 6.1%, bin63: 7.1%, bin64: 9.4%, bin69: 6.1%, bin71: 6.2%, bin72: 7.5%, bin74: 5.1%, bin77: 6.8%, bin80: 8.9%, bin81: 8.8%, bin82: 6.8%, bin83: 5.4%, bin84: 11%, bin88: 5.9%, bin95: 9.1%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0sin: bin18: 6%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0sin: bin18: 6%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0sin: bin4: 12%, bin18: 7%, bin19: 6.4%, bin20: 6.8%, bin22: 6.5%, bin24: 7.5%, bin28: 5.7%, bin38: 5.7%, bin61: 5.4%, bin66: 6.2%, bin74: 5.1%, bin78: 6.2%, bin97: 7.3%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0sin: bin4: 12%, bin18: 7%, bin19: 6.4%, bin20: 6.8%, bin22: 6.5%, bin24: 7.5%, bin28: 5.7%, bin38: 5.7%, bin61: 5.4%, bin66: 6.2%, bin74: 5.1%, bin78: 6.2%, bin97: 7.3%, 
 PhysValMonManager.InDetPhysValMonitoringTool         INFO Successfully finalized hists
 PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO Finalising hists PhysValMonManager.InDetPhysValMonitoringToolLoose...
 PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO 
 PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO Now Cutflow for track cuts:
 PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO 
-PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO number after preCut: 847
-PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO number after Eta: 847
-PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO number after PixelHits: 847
-PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO number after SiHits: 847
+PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO number after preCut: 4235
+PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO number after Eta: 4235
+PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO number after PixelHits: 4235
+PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO number after SiHits: 4235
 PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO 
 PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO Cutflow for truth tracks:
 PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO Truth selection report: 
-CutList Report; Total processed: 803
-Total passed: 803
+CutList Report; Total processed: 4050
+Total passed: 4050
 Cuts were applied until one fails
-eta: 803 passed
-min_pt: 803 passed
-decay_before_300.000000: 803 passed
-OnlyPrimary: 803 passed
-charged: 803 passed
-stable: 803 passed
+eta: 4050 passed
+min_pt: 4050 passed
+decay_before_300.000000: 4050 passed
+OnlyPrimary: 4050 passed
+charged: 4050 passed
+stable: 4050 passed
 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_d0: bin36: 8.3%, bin42: 10%, bin44: 8.3%, bin53: 9.1%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_d0: bin36: 8.3%, bin42: 10%, bin44: 8.3%, bin53: 9.1%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_d0: bin2: 7.7%, bin3: 12%, bin4: 5.6%, bin5: 11%, bin12: 8.5%, bin14: 8%, bin16: 9.4%, bin19: 6.8%, bin21: 6.9%, bin22: 15%, bin24: 5.6%, bin25: 12%, bin28: 24%, bin30: 10%, bin31: 13%, bin33: 24%, bin34: 14%, bin35: 20%, bin36: 11%, bin37: 23%, bin38: 17%, bin39: 16%, bin40: 33%, bin41: 15%, bin42: 14%, bin43: 20%, bin44: 11%, bin45: 11%, bin46: 12%, bin47: 19%, bin48: 26%, bin49: 8.1%, bin50: 7.7%, bin51: 13%, bin52: 7.7%, bin53: 27%, bin54: 19%, bin55: 22%, bin56: 10%, bin57: 18%, bin58: 31%, bin59: 33%, bin60: 10%, bin61: 11%, bin62: 17%, bin63: 21%, bin64: 13%, bin65: 18%, bin66: 11%, bin67: 18%, bin68: 12%, bin69: 17%, bin70: 13%, bin71: 33%, bin73: 17%, bin74: 5.1%, bin76: 11%, bin80: 20%, bin83: 12%, bin85: 14%, bin88: 8.5%, bin89: 9.5%, bin92: 5.8%, bin93: 10%, bin95: 12%, bin97: 7.5%, bin98: 6.2%, bin99: 14%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_d0: bin2: 7.7%, bin3: 12%, bin4: 5.6%, bin5: 11%, bin12: 8.5%, bin14: 8%, bin16: 9.4%, bin19: 6.8%, bin21: 6.9%, bin22: 15%, bin24: 5.6%, bin25: 12%, bin28: 24%, bin30: 10%, bin31: 13%, bin33: 24%, bin34: 14%, bin35: 20%, bin36: 11%, bin37: 23%, bin38: 17%, bin39: 16%, bin40: 33%, bin41: 15%, bin42: 14%, bin43: 20%, bin44: 11%, bin45: 11%, bin46: 12%, bin47: 19%, bin48: 26%, bin49: 8.1%, bin50: 7.7%, bin51: 13%, bin52: 7.7%, bin53: 27%, bin54: 19%, bin55: 22%, bin56: 10%, bin57: 18%, bin58: 31%, bin59: 33%, bin60: 10%, bin61: 11%, bin62: 17%, bin63: 21%, bin64: 13%, bin65: 18%, bin66: 11%, bin67: 18%, bin68: 12%, bin69: 17%, bin70: 13%, bin71: 33%, bin73: 17%, bin74: 5.1%, bin76: 11%, bin80: 20%, bin83: 12%, bin85: 14%, bin88: 8.5%, bin89: 9.5%, bin92: 5.8%, bin93: 10%, bin95: 12%, bin97: 7.5%, bin98: 6.2%, bin99: 14%, 
 ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_d0: bin18: 17%, 
 ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_d0: bin18: 17%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_d0: bin1: 7.1%, bin46: 7.7%, bin49: 5.3%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_d0: bin1: 7.1%, bin46: 7.7%, bin49: 5.3%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0: bin12: 6.2%, bin14: 8%, bin17: 6.8%, bin18: 7.3%, bin19: 6.8%, bin20: 9.5%, bin22: 9.5%, bin24: 5.6%, bin31: 9.4%, bin34: 6.7%, bin38: 17%, bin39: 7.5%, bin40: 5.3%, bin48: 6.2%, bin49: 5.3%, bin55: 7.3%, bin57: 6.5%, bin63: 5.1%, bin64: 9.4%, bin66: 11%, bin69: 6.1%, bin70: 7.3%, bin72: 11%, bin74: 5.1%, bin80: 9.1%, bin81: 8.8%, bin82: 12%, bin84: 5.4%, bin95: 9.3%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0: bin12: 6.2%, bin14: 8%, bin17: 6.8%, bin18: 7.3%, bin19: 6.8%, bin20: 9.5%, bin22: 9.5%, bin24: 5.6%, bin31: 9.4%, bin34: 6.7%, bin38: 17%, bin39: 7.5%, bin40: 5.3%, bin48: 6.2%, bin49: 5.3%, bin55: 7.3%, bin57: 6.5%, bin63: 5.1%, bin64: 9.4%, bin66: 11%, bin69: 6.1%, bin70: 7.3%, bin72: 11%, bin74: 5.1%, bin80: 9.1%, bin81: 8.8%, bin82: 12%, bin84: 5.4%, bin95: 9.3%, 
 ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0: bin18: 15%, 
 ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0: bin18: 15%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_qoverp: bin18: 9.1%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_qoverp: bin18: 9.1%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_qoverp: bin18: 16%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_qoverp: bin18: 16%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_theta: bin78: 6.2%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_theta: bin78: 6.2%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_phi: bin44: 8.3%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_phi: bin44: 8.3%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_phi: bin18: 6.9%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_phi: bin18: 6.9%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0: bin4: 12%, bin18: 7.3%, bin20: 7%, bin24: 8.6%, bin28: 5.9%, bin38: 6.1%, bin68: 5.6%, bin74: 5.1%, bin97: 7.5%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0: bin4: 12%, bin18: 7.3%, bin20: 7%, bin24: 8.6%, bin28: 5.9%, bin38: 6.1%, bin68: 5.6%, bin74: 5.1%, bin97: 7.5%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_qoverp: bin1: 7.1%, bin3: 9.5%, bin5: 6.7%, bin8: 7%, bin12: 6.2%, bin14: 5.9%, bin16: 5.9%, bin18: 13%, bin20: 7%, bin22: 7%, bin24: 5.6%, bin30: 6.5%, bin31: 9.4%, bin32: 10%, bin33: 12%, bin34: 6.7%, bin35: 7.1%, bin37: 5.7%, bin40: 11%, bin41: 8.6%, bin42: 5.1%, bin44: 7.9%, bin47: 13%, bin48: 6.2%, bin52: 17%, bin55: 16%, bin57: 6.5%, bin58: 15%, bin64: 9.4%, bin69: 6.1%, bin70: 10%, bin74: 5.1%, bin78: 6.4%, bin87: 6.5%, bin89: 18%, bin92: 7.8%, bin93: 10%, bin95: 21%, bin96: 7.5%, bin97: 9.6%, bin99: 17%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_qoverp: bin1: 7.1%, bin3: 9.5%, bin5: 6.7%, bin8: 7%, bin12: 6.2%, bin14: 5.9%, bin16: 5.9%, bin18: 13%, bin20: 7%, bin22: 7%, bin24: 5.6%, bin30: 6.5%, bin31: 9.4%, bin32: 10%, bin33: 12%, bin34: 6.7%, bin35: 7.1%, bin37: 5.7%, bin40: 11%, bin41: 8.6%, bin42: 5.1%, bin44: 7.9%, bin47: 13%, bin48: 6.2%, bin52: 17%, bin55: 16%, bin57: 6.5%, bin58: 15%, bin64: 9.4%, bin69: 6.1%, bin70: 10%, bin74: 5.1%, bin78: 6.4%, bin87: 6.5%, bin89: 18%, bin92: 7.8%, bin93: 10%, bin95: 21%, bin96: 7.5%, bin97: 9.6%, bin99: 17%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_qoverp: bin18: 12%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_qoverp: bin18: 12%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_qoverp: bin41: 12%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_qoverp: bin41: 12%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_ptqopt: bin38: 6.2%, bin44: 7.9%, bin46: 7.4%, bin47: 10%, bin52: 17%, bin55: 20%, bin56: 6.5%, bin57: 6.5%, bin58: 6.1%, bin63: 11%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_ptqopt: bin38: 6.2%, bin44: 7.9%, bin46: 7.4%, bin47: 10%, bin52: 17%, bin55: 20%, bin56: 6.5%, bin57: 6.5%, bin58: 6.1%, bin63: 11%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_ptqopt: bin41: 12%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_ptqopt: bin41: 12%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_theta: bin49: 5.3%, bin66: 7.1%, bin71: 6.7%, bin81: 5.7%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_theta: bin49: 5.3%, bin66: 7.1%, bin71: 6.7%, bin81: 5.7%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_theta: bin4: 5.6%, bin8: 7%, bin23: 7.3%, bin33: 9.1%, bin40: 5.3%, bin76: 8.1%, bin97: 7.5%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_theta: bin4: 5.6%, bin8: 7%, bin23: 7.3%, bin33: 9.1%, bin40: 5.3%, bin76: 8.1%, bin97: 7.5%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_phi: bin33: 6.7%, bin40: 16%, bin41: 6.1%, bin44: 5.4%, bin46: 7.4%, bin47: 19%, bin48: 26%, bin49: 5.3%, bin51: 6.2%, bin53: 17%, bin54: 5.7%, bin55: 17%, bin57: 10%, bin58: 17%, bin61: 5.4%, bin63: 11%, bin84: 6.5%, bin89: 7.5%, bin95: 5.3%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_phi: bin33: 6.7%, bin40: 16%, bin41: 6.1%, bin44: 5.4%, bin46: 7.4%, bin47: 19%, bin48: 26%, bin49: 5.3%, bin51: 6.2%, bin53: 17%, bin54: 5.7%, bin55: 17%, bin57: 10%, bin58: 17%, bin61: 5.4%, bin63: 11%, bin84: 6.5%, bin89: 7.5%, bin95: 5.3%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_phi: bin18: 5.2%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_phi: bin18: 5.2%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_phi: bin1: 7.1%, bin53: 5.6%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_phi: bin1: 7.1%, bin53: 5.6%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0sin: bin1: 7.1%, bin6: 7%, bin13: 7.7%, bin14: 8%, bin18: 10%, bin20: 9.5%, bin24: 5.6%, bin25: 16%, bin33: 5.9%, bin34: 6.7%, bin38: 9.4%, bin39: 7.5%, bin46: 7.4%, bin48: 6.2%, bin49: 5.3%, bin55: 7.3%, bin57: 10%, bin61: 5.4%, bin62: 6.2%, bin63: 7.9%, bin64: 9.4%, bin69: 6.1%, bin74: 5.1%, bin80: 9.1%, bin81: 8.8%, bin82: 7.3%, bin84: 5.4%, bin95: 9.3%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0sin: bin1: 7.1%, bin6: 7%, bin13: 7.7%, bin14: 8%, bin18: 10%, bin20: 9.5%, bin24: 5.6%, bin25: 16%, bin33: 5.9%, bin34: 6.7%, bin38: 9.4%, bin39: 7.5%, bin46: 7.4%, bin48: 6.2%, bin49: 5.3%, bin55: 7.3%, bin57: 10%, bin61: 5.4%, bin62: 6.2%, bin63: 7.9%, bin64: 9.4%, bin69: 6.1%, bin74: 5.1%, bin80: 9.1%, bin81: 8.8%, bin82: 7.3%, bin84: 5.4%, bin95: 9.3%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0sin: bin18: 5.7%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0sin: bin18: 5.7%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0sin: bin4: 12%, bin18: 7.3%, bin20: 7%, bin22: 7%, bin24: 8.6%, bin28: 5.9%, bin37: 5.7%, bin38: 6.1%, bin61: 5.4%, bin66: 7.1%, bin74: 5.1%, bin78: 6.4%, bin97: 7.5%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0sin: bin4: 12%, bin18: 7.3%, bin20: 7%, bin22: 7%, bin24: 8.6%, bin28: 5.9%, bin37: 5.7%, bin38: 6.1%, bin61: 5.4%, bin66: 7.1%, bin74: 5.1%, bin78: 6.4%, bin97: 7.5%, 
 PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO Successfully finalized hists
 PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO Finalising hists PhysValMonManager.InDetPhysValMonitoringToolTightPrimary...
 PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO 
 PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO Now Cutflow for track cuts:
 PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO 
-PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO number after preCut: 707
-PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO number after Eta: 707
-PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO number after InnermostLayersHits: 707
-PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO number after PixelHits: 707
-PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO number after SiHits: 707
+PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO number after preCut: 3606
+PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO number after Eta: 3606
+PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO number after InnermostLayersHits: 3606
+PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO number after PixelHits: 3606
+PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO number after SiHits: 3606
 PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO 
 PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO Cutflow for truth tracks:
 PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO Truth selection report: 
-CutList Report; Total processed: 688
-Total passed: 688
+CutList Report; Total processed: 3501
+Total passed: 3501
 Cuts were applied until one fails
-eta: 688 passed
-min_pt: 688 passed
-decay_before_300.000000: 688 passed
-OnlyPrimary: 688 passed
-charged: 688 passed
-stable: 688 passed
+eta: 3501 passed
+min_pt: 3501 passed
+decay_before_300.000000: 3501 passed
+OnlyPrimary: 3501 passed
+charged: 3501 passed
+stable: 3501 passed
 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_d0: bin44: 8.3%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_d0: bin44: 8.3%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_d0: bin18: 16%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_d0: bin18: 16%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0: bin18: 13%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0: bin18: 13%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_qoverp: bin18: 9.1%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_qoverp: bin18: 9.1%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_qoverp: bin18: 14%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_qoverp: bin18: 14%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_ptqopt: bin18: 7.8%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_ptqopt: bin18: 7.8%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_phi: bin44: 8.3%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_phi: bin44: 8.3%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_phi: bin18: 6.8%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_phi: bin18: 6.8%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_d0: bin1: 10%, bin2: 5.7%, bin3: 13%, bin4: 6.5%, bin7: 5.4%, bin16: 6.9%, bin19: 7.5%, bin21: 8.3%, bin22: 11%, bin24: 6.2%, bin25: 8.7%, bin28: 22%, bin29: 14%, bin30: 7.4%, bin31: 10%, bin32: 5.3%, bin33: 22%, bin34: 11%, bin35: 20%, bin36: 7.5%, bin38: 19%, bin39: 11%, bin40: 32%, bin41: 9.7%, bin42: 11%, bin43: 10%, bin44: 5.9%, bin45: 12%, bin46: 12%, bin47: 17%, bin48: 19%, bin50: 18%, bin51: 12%, bin52: 13%, bin53: 19%, bin54: 22%, bin55: 19%, bin56: 7.4%, bin57: 16%, bin58: 21%, bin59: 13%, bin60: 7.4%, bin61: 9.7%, bin62: 7.7%, bin63: 18%, bin64: 10%, bin65: 16%, bin66: 8.7%, bin67: 14%, bin68: 6.5%, bin69: 19%, bin70: 11%, bin71: 33%, bin73: 18%, bin74: 6.2%, bin76: 13%, bin80: 14%, bin83: 11%, bin85: 14%, bin88: 7.9%, bin92: 6.8%, bin93: 6.8%, bin95: 12%, bin97: 8.5%, bin98: 7.7%, bin99: 9.4%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_d0: bin1: 10%, bin2: 5.7%, bin3: 13%, bin4: 6.5%, bin7: 5.4%, bin16: 6.9%, bin19: 7.5%, bin21: 8.3%, bin22: 11%, bin24: 6.2%, bin25: 8.7%, bin28: 22%, bin29: 14%, bin30: 7.4%, bin31: 10%, bin32: 5.3%, bin33: 22%, bin34: 11%, bin35: 20%, bin36: 7.5%, bin38: 19%, bin39: 11%, bin40: 32%, bin41: 9.7%, bin42: 11%, bin43: 10%, bin44: 5.9%, bin45: 12%, bin46: 12%, bin47: 17%, bin48: 19%, bin50: 18%, bin51: 12%, bin52: 13%, bin53: 19%, bin54: 22%, bin55: 19%, bin56: 7.4%, bin57: 16%, bin58: 21%, bin59: 13%, bin60: 7.4%, bin61: 9.7%, bin62: 7.7%, bin63: 18%, bin64: 10%, bin65: 16%, bin66: 8.7%, bin67: 14%, bin68: 6.5%, bin69: 19%, bin70: 11%, bin71: 33%, bin73: 18%, bin74: 6.2%, bin76: 13%, bin80: 14%, bin83: 11%, bin85: 14%, bin88: 7.9%, bin92: 6.8%, bin93: 6.8%, bin95: 12%, bin97: 8.5%, bin98: 7.7%, bin99: 9.4%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_d0: bin18: 15%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_d0: bin18: 15%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_d0: bin46: 8%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_d0: bin46: 8%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0: bin7: 5.4%, bin18: 16%, bin22: 8.1%, bin24: 6.2%, bin25: 8.7%, bin34: 6.9%, bin38: 10%, bin39: 5.4%, bin40: 5.7%, bin62: 7.7%, bin64: 6.5%, bin66: 8.7%, bin67: 9.1%, bin68: 6.5%, bin70: 5.4%, bin72: 9.7%, bin73: 5.3%, bin77: 5.9%, bin80: 7.7%, bin81: 7.1%, bin82: 5.7%, bin95: 9.5%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0: bin7: 5.4%, bin18: 16%, bin22: 8.1%, bin24: 6.2%, bin25: 8.7%, bin34: 6.9%, bin38: 10%, bin39: 5.4%, bin40: 5.7%, bin62: 7.7%, bin64: 6.5%, bin66: 8.7%, bin67: 9.1%, bin68: 6.5%, bin70: 5.4%, bin72: 9.7%, bin73: 5.3%, bin77: 5.9%, bin80: 7.7%, bin81: 7.1%, bin82: 5.7%, bin95: 9.5%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0: bin18: 15%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0: bin18: 15%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0: bin18: 8.8%, bin20: 8.6%, bin22: 5.3%, bin24: 9.7%, bin26: 5.6%, bin28: 7.7%, bin68: 6.5%, bin88: 5.1%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0: bin18: 8.8%, bin20: 8.6%, bin22: 5.3%, bin24: 9.7%, bin26: 5.6%, bin28: 7.7%, bin68: 6.5%, bin88: 5.1%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_qoverp: bin1: 10%, bin2: 5.7%, bin3: 7.5%, bin8: 5.6%, bin18: 16%, bin20: 8.6%, bin22: 5.3%, bin24: 6.2%, bin30: 7.4%, bin31: 10%, bin32: 5.3%, bin33: 14%, bin34: 6.9%, bin35: 14%, bin39: 5.4%, bin40: 12%, bin42: 11%, bin46: 7.7%, bin47: 11%, bin48: 6.7%, bin50: 5.4%, bin52: 13%, bin53: 8.6%, bin54: 6.5%, bin55: 8.6%, bin58: 13%, bin63: 8.1%, bin64: 10%, bin66: 8.7%, bin69: 6.7%, bin70: 11%, bin74: 6.2%, bin78: 7.5%, bin86: 5.3%, bin87: 16%, bin89: 11%, bin92: 6.8%, bin93: 6.8%, bin95: 21%, bin96: 5.7%, bin97: 11%, bin99: 17%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_qoverp: bin1: 10%, bin2: 5.7%, bin3: 7.5%, bin8: 5.6%, bin18: 16%, bin20: 8.6%, bin22: 5.3%, bin24: 6.2%, bin30: 7.4%, bin31: 10%, bin32: 5.3%, bin33: 14%, bin34: 6.9%, bin35: 14%, bin39: 5.4%, bin40: 12%, bin42: 11%, bin46: 7.7%, bin47: 11%, bin48: 6.7%, bin50: 5.4%, bin52: 13%, bin53: 8.6%, bin54: 6.5%, bin55: 8.6%, bin58: 13%, bin63: 8.1%, bin64: 10%, bin66: 8.7%, bin69: 6.7%, bin70: 11%, bin74: 6.2%, bin78: 7.5%, bin86: 5.3%, bin87: 16%, bin89: 11%, bin92: 6.8%, bin93: 6.8%, bin95: 21%, bin96: 5.7%, bin97: 11%, bin99: 17%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_qoverp: bin18: 11%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_qoverp: bin18: 11%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_qoverp: bin41: 6.2%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_qoverp: bin41: 6.2%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_ptqopt: bin37: 7.1%, bin38: 6.9%, bin39: 5.4%, bin41: 14%, bin42: 8.8%, bin43: 6.7%, bin46: 7.7%, bin47: 8.1%, bin52: 13%, bin53: 12%, bin54: 6.5%, bin55: 12%, bin58: 6.9%, bin59: 7.1%, bin63: 8.1%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_ptqopt: bin37: 7.1%, bin38: 6.9%, bin39: 5.4%, bin41: 14%, bin42: 8.8%, bin43: 6.7%, bin46: 7.7%, bin47: 8.1%, bin52: 13%, bin53: 12%, bin54: 6.5%, bin55: 12%, bin58: 6.9%, bin59: 7.1%, bin63: 8.1%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_ptqopt: bin41: 6.2%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_ptqopt: bin41: 6.2%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_theta: bin71: 6.7%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_theta: bin71: 6.7%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_theta: bin4: 6.5%, bin8: 5.6%, bin18: 5.7%, bin20: 8.6%, bin33: 6.5%, bin47: 5.1%, bin76: 9.4%, bin97: 6.2%, bin99: 6.1%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_theta: bin4: 6.5%, bin8: 5.6%, bin18: 5.7%, bin20: 8.6%, bin33: 6.5%, bin47: 5.1%, bin76: 9.4%, bin97: 6.2%, bin99: 6.1%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_phi: bin7: 5.7%, bin12: 5.1%, bin33: 7.4%, bin39: 5.4%, bin40: 13%, bin41: 6.5%, bin44: 5.9%, bin46: 7.7%, bin47: 17%, bin48: 19%, bin51: 8%, bin53: 8.8%, bin54: 19%, bin55: 12%, bin63: 11%, bin89: 8.6%, bin95: 5.4%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_phi: bin7: 5.7%, bin12: 5.1%, bin33: 7.4%, bin39: 5.4%, bin40: 13%, bin41: 6.5%, bin44: 5.9%, bin46: 7.7%, bin47: 17%, bin48: 19%, bin51: 8%, bin53: 8.8%, bin54: 19%, bin55: 12%, bin63: 11%, bin89: 8.6%, bin95: 5.4%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_phi: bin18: 5.1%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_phi: bin18: 5.1%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0sin: bin7: 5.4%, bin13: 8.3%, bin18: 12%, bin24: 6.2%, bin25: 8.7%, bin26: 5.6%, bin34: 6.9%, bin39: 5.4%, bin46: 7.7%, bin57: 7.4%, bin62: 7.7%, bin63: 5.3%, bin64: 6.5%, bin72: 6.2%, bin73: 5.3%, bin77: 5.9%, bin81: 7.1%, bin95: 9.5%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0sin: bin7: 5.4%, bin13: 8.3%, bin18: 12%, bin24: 6.2%, bin25: 8.7%, bin26: 5.6%, bin34: 6.9%, bin39: 5.4%, bin46: 7.7%, bin57: 7.4%, bin62: 7.7%, bin63: 5.3%, bin64: 6.5%, bin72: 6.2%, bin73: 5.3%, bin77: 5.9%, bin81: 7.1%, bin95: 9.5%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0sin: bin18: 8.8%, bin20: 8.6%, bin22: 5.3%, bin24: 9.7%, bin26: 5.6%, bin28: 7.7%, bin88: 5.1%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0sin: bin18: 8.8%, bin20: 8.6%, bin22: 5.3%, bin24: 9.7%, bin26: 5.6%, bin28: 7.7%, bin88: 5.1%, 
 PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO Successfully finalized hists
 ApplicationMgr                                       INFO Application Manager Stopped successfully
 CondInputLoader                                      INFO Finalizing CondInputLoader...
@@ -1896,21 +1956,21 @@ AthDictLoaderSvc                                     INFO in finalize...
 AthenaPoolCnvSvc                                     INFO PerfStats ----------------------------------------
 AthenaPoolCnvSvc                                     INFO PerfStats Timing Measurements for AthenaPoolCnvSvc
 AthenaPoolCnvSvc                                     INFO PerfStats ----------------------------------------
-AthenaPoolCnvSvc                                     INFO PerfStats | cObjR_ALL       |             720 ms |
-AthenaPoolCnvSvc                                     INFO PerfStats | cObj_ALL        |            1018 ms |
+AthenaPoolCnvSvc                                     INFO PerfStats | cObjR_ALL       |            1157 ms |
+AthenaPoolCnvSvc                                     INFO PerfStats | cObj_ALL        |            1639 ms |
 AthenaPoolCnvSvc                                     INFO PerfStats ----------------------------------------
 Domain[ROOT_All]                                     INFO >   Deaccess DbDomain     READ      [ROOT_All] 
-IOVDbFolder                                          INFO Folder /EXT/DCS/MAGNETS/SENSORDATA (AttrListColl) db-read 1/1 objs/chan/bytes 4/4/20 ((     5.36 ))s
-IOVDbFolder                                          INFO Folder /GLOBAL/BField/Maps (AttrListColl) db-read 1/1 objs/chan/bytes 3/3/202 ((     4.66 ))s
-IOVDbFolder                                          INFO Folder /GLOBAL/TrackingGeo/LayerMaterialITK (PoolRef) db-read 1/1 objs/chan/bytes 1/1/227 ((     1.24 ))s
-IOVDbFolder                                          INFO Folder /Indet/Align (PoolRefColl) db-read 1/1 objs/chan/bytes 43/43/6907 ((     1.30 ))s
-IOVDbFolder                                          INFO Folder /Indet/Beampos (AttrList) db-read 1/1 objs/chan/bytes 1/1/76 ((     1.62 ))s
+IOVDbFolder                                          INFO Folder /EXT/DCS/MAGNETS/SENSORDATA (AttrListColl) db-read 1/1 objs/chan/bytes 4/4/20 ((     0.02 ))s
+IOVDbFolder                                          INFO Folder /GLOBAL/BField/Maps (AttrListColl) db-read 1/1 objs/chan/bytes 3/3/202 ((     0.34 ))s
+IOVDbFolder                                          INFO Folder /GLOBAL/TrackingGeo/LayerMaterialITK (PoolRef) db-read 1/1 objs/chan/bytes 1/1/227 ((     0.01 ))s
+IOVDbFolder                                          INFO Folder /Indet/Align (PoolRefColl) db-read 1/1 objs/chan/bytes 43/43/6907 ((     0.02 ))s
+IOVDbFolder                                          INFO Folder /Indet/Beampos (AttrList) db-read 1/1 objs/chan/bytes 1/1/76 ((     0.64 ))s
 IOVDbFolder                                          INFO Folder /TagInfo (AttrListColl) db-read 0/1 objs/chan/bytes 1/0/0 ((     0.00 ))s
-IOVDbSvc                                             INFO  bytes in ((     14.18 ))s
+IOVDbSvc                                             INFO  bytes in ((      1.03 ))s
 IOVDbSvc                                             INFO Connection sqlite://;schema=mycool.db;dbname=OFLP200 : nConnect: 0 nFolders: 0 ReadTime: ((     0.00 ))s
-IOVDbSvc                                             INFO Connection COOLOFL_INDET/OFLP200 : nConnect: 2 nFolders: 2 ReadTime: ((     2.92 ))s
-IOVDbSvc                                             INFO Connection COOLOFL_GLOBAL/OFLP200 : nConnect: 2 nFolders: 2 ReadTime: ((     5.90 ))s
-IOVDbSvc                                             INFO Connection COOLOFL_DCS/OFLP200 : nConnect: 2 nFolders: 1 ReadTime: ((     5.36 ))s
+IOVDbSvc                                             INFO Connection COOLOFL_INDET/OFLP200 : nConnect: 2 nFolders: 2 ReadTime: ((     0.66 ))s
+IOVDbSvc                                             INFO Connection COOLOFL_GLOBAL/OFLP200 : nConnect: 2 nFolders: 2 ReadTime: ((     0.34 ))s
+IOVDbSvc                                             INFO Connection COOLOFL_DCS/OFLP200 : nConnect: 2 nFolders: 1 ReadTime: ((     0.02 ))s
 ToolSvc                                              INFO Removing all tools created by ToolSvc
 AtlasTrackingGeom...ITkTrackingGeometryBuilderCond   INFO finalize() successful
 IdDictDetDescrCnv                                    INFO in finalize
@@ -1924,7 +1984,7 @@ Listing sources of suppressed message:
 =====================================================
  Message Source              |   Level |    Count
 -----------------------------+---------+-------------
- AthenaEventLoopMgr          |    INFO |     2004
- InDetPlotBase               | WARNING |     3054
+ AthenaEventLoopMgr          |    INFO |    10004
+ InDetPlotBase               | WARNING |    15033
 =====================================================
-DONE 2025-05-28T17:02:15
+DONE 2025-05-30T10:08:19

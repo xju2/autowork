@@ -102,7 +102,8 @@ DETECTOR_CONDITIONS="all:OFLCOND-MC15c-SDR-14-05"
 GEOMETRY_VERSION="all:ATLAS-P2-RUN4-03-00-00"
 
 if [[ "$CHAINNAME" == "CKF_LEGACY" ]]; then
-    mkdir ckf_legacy && cd ckf_legacy || { echo "Failed to create or change directory to ckf_legacy"; exit 1; }
+    mkdir ckf_legacy
+    cd ckf_legacy || { echo "Failed to create or change directory to ckf_legacy"; exit 1; }
     Reco_tf.py \
         --CA 'all:True' --autoConfiguration 'everything' \
         --conditionsTag ${DETECTOR_CONDITIONS} \
@@ -118,7 +119,8 @@ if [[ "$CHAINNAME" == "CKF_LEGACY" ]]; then
         --athenaopts='--loglevel=INFO' \
         --maxEvents ${MAX_EVENTS}
 elif [[ "$CHAINNAME" == "GNN4ITk_ML_LOCAL" ]]; then
-    mkdir gnn4itk_ml_local && cd gnn4itk_ml_local || { echo "Failed to create or change directory to gnn4itk_ml_local"; exit 1; }
+    mkdir gnn4itk_ml_local
+    cd gnn4itk_ml_local || { echo "Failed to create or change directory to gnn4itk_ml_local"; exit 1; }
     Reco_tf.py \
         --CA 'all:True' --autoConfiguration 'everything' \
         --conditionsTag ${DETECTOR_CONDITIONS} \
@@ -134,7 +136,8 @@ elif [[ "$CHAINNAME" == "GNN4ITk_ML_LOCAL" ]]; then
         --athenaopts='--loglevel=INFO' \
         --maxEvents ${MAX_EVENTS}
 elif [[ "$CHAINNAME" == "GNN4ITk_ML_TRITON" ]]; then
-    mkdir gnn4itk_ml_triton && cd gnn4itk_ml_triton || { echo "Failed to create or change directory to gnn4itk_ml_triton"; exit 1; }
+    mkdir gnn4itk_ml_triton
+    cd gnn4itk_ml_triton || { echo "Failed to create or change directory to gnn4itk_ml_triton"; exit 1; }
     Reco_tf.py \
         --CA 'all:True' --autoConfiguration 'everything' \
         --conditionsTag ${DETECTOR_CONDITIONS} \
@@ -151,7 +154,8 @@ elif [[ "$CHAINNAME" == "GNN4ITk_ML_TRITON" ]]; then
         --athenaopts='--loglevel=INFO' \
         --maxEvents ${MAX_EVENTS}
 elif [[ "$CHAINNAME" == "CKF_LEGACY_LRT" ]]; then
-    mkdir ckf_legacy_lrt && cd ckf_legacy_lrt || { echo "Failed to create or change directory to ckf_legacy_lrt"; exit 1; }
+    mkdir ckf_legacy_lrt
+    cd ckf_legacy_lrt || { echo "Failed to create or change directory to ckf_legacy_lrt"; exit 1; }
     Reco_tf.py --CA 'all:True' \
         --inputRDOFile "${RDO_FILENAME}" \
         --outputAODFile "${OUTFILE}"  \

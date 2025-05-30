@@ -47,8 +47,10 @@ snakemake --cores 6 workarea/tracking/MuonPU0/idpvm.ckf.local.gnn4itkTriton.none
 
 snakemake --cores 12 workarea/tracking/ttbar/idpvm.ckf.primary.local.gnn4itkTriton.none.ttbar.root -p
 
+# launch the Triton server first.
+snakemake --cores 2 results/triton/triton_server.tracking.ready.txt
 # in a Perlmutter CPU node, I run 4 samples in parallel to get IDPVM results.
-snakemake --cores 128 --config max_evts=-1 --set-threads run_legacy_ckf=16 run_idpvm=16 run_gnn4itk_triton=1
+snakemake --cores 128 --config max_evts=5000 --set-threads run_legacy_ckf=16 run_idpvm=16 run_gnn4itk_triton=2 --rerun-triggers mtime --sdm conda --dry-run
 
 snakemake --cores 16 --config max_evts=1000 -p --set-threads run_idpvm=4 run_gnn4itk_triton=1
 
