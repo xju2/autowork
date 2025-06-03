@@ -107,7 +107,7 @@ rule run_gnn4itk_triton:
     input:
         "results/athena/athena.default.{ath_dev_name}.built.json",
         "projects/tracking/rdo_files.{dataset}.txt",
-        "results/triton/triton_server.{triton_dev_name}.ready.txt"
+        ancient("results/triton/triton_server.{triton_dev_name}.ready.txt")
     output:
         "workarea/tracking/{dataset}/aod.gnn4itkML.triton.{ath_dev_name}.{triton_dev_name}.{dataset}.root"
     log:

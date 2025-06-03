@@ -1,5 +1,5 @@
 #!/bin/bash
-set -eo pipefail  # -e to exit on error, -o pipefail to catch errors in pipelines
+# set -eo pipefail  # -e to exit on error, -o pipefail to catch errors in pipelines
 
 # Default values for arguments
 INPUT_FILES=()
@@ -66,7 +66,7 @@ echo "IDPVM Mode: $IDPVM_MODE"
 declare -A sampleLabels
 sampleLabels=(
     ["ttbarPU0"]="t#bar{t}, <#mu> = 0"
-    ["ttbarPU200"]="t#bar{t}, <#mu> = 200"
+    ["ttbar"]="t#bar{t}, <#mu> = 200"
     ["ZmumuPU0"]="Z#rightarrow#mu#mu, <#mu> = 0"
     ["ZmumuPU200"]="Z#rightarrow#mu#mu, <#mu> = 200"
     ["MuonPU0"]="#mu, <#mu> = 0"

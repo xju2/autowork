@@ -53,11 +53,14 @@ fi
 SOURCE_DIR=$(jq -r '.source_dir' "$INPUT_FILE")
 REPO_URL=$(jq -r '.repo_url' "$INPUT_FILE")
 
+JOB_NAME="triton_job"
+
 echo "Start Triton Server for validation"
 echo "SOURCE_DIR: $SOURCE_DIR"
 echo "OUTPUT: $OUTPUT"
 echo "REPO_URL: $REPO_URL"
 echo "SOURCE_DIR: $SOURCE_DIR"
+echo "JOB Name: ${JOB_NAME}"
 
 
 cd ${SOURCE_DIR} || { echo "Failed to change directory to $SOURCE_DIR"; exit 1; }
@@ -70,9 +73,42 @@ if [[ ! -d "$REPO_NAME" ]]; then
 fi
 cd "$REPO_NAME" || { echo "Failed to change directory to $REPO_NAME"; exit 1; }
 
-srun -C "gpu&hbm80g" -N 1 -G 4 -c 32 -n 1 -t 4:00:00 -A m3443 \
+srun --job-name="$JOB_NAME" -C "gpu&hbm80g" -N 1 -G 1 -c 10 -n 1 -t 4:00:00 -A m3443 \
   -q interactive /bin/bash -c "./scripts/start-tritonserver.sh -o $OUTPUT " &
 
+SRUN_PID=$!
+
+# Wait a moment to ensure srun has submitted the job
+sleep 3
+
+# Look up the job ID by job name and user
+JOB_ID=""
+while [[ -z "$JOB_ID" ]]; do
+  JOB_ID=$(squeue -u "$USER" -o "%i %j" -h | awk -v name="$JOB_NAME" '$2 == name {print $1}' | tail -n 1)
+  if [[ -z "$JOB_ID" ]]; then
+    echo "Waiting for job submission to register..."
+    sleep 1
+  fi
+done
+
+
+# Poll until job is running
+echo "Polling for job $JOB_ID ($JOB_NAME) to start..."
+while true; do
+  STATE=$(squeue -j "$JOB_ID" -h -o "%T")
+  if [[ "$STATE" == "RUNNING" ]]; then
+    echo "Job $JOB_ID is RUNNING."
+    break
+  elif [[ -z "$STATE" ]]; then
+    echo "Job $JOB_ID is no longer in the queue (exited or failed)."
+    break
+  else
+    echo "Current state: $STATE. Waiting..."
+    sleep 2
+  fi
+done
+
 # wait for the Triton server to start.
-sleep 30
+sleep 10
+
 echo "DONE $(date +%Y-%m-%dT%H:%M:%S)"
