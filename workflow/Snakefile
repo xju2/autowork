@@ -13,10 +13,7 @@ include: "rules/tracking.smk"
 include: "rules/triton.smk"
 include: "rules/test.smk"
 
-# SAMPLES = ["MuonPU0", "HaaPU0", "HaaPU200"]
-# SAMPLES = ["ttbarPU0", "ZmumuPU0", "ElectronPU0", "PionPU0"]
-# SAMPLES = ["ttbarPU0", "ZmumuPU0", "MuonPU0", "ElectronPU0", "PionPU0"]
-SAMPLES = ["ZmumuPU200"]
+SAMPLES = config["samples"]
 rule all:
     input:
         # expand("workarea/tracking/{sample}/idpvm.ckf.primary.local.gnn4itkTriton.none.{sample}.root", sample=SAMPLES)
