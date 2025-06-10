@@ -1,5 +1,7 @@
 {
     "source_dir": "/pscratch/sd/x/xju/athena_dev/20250507_gnn4itk_triton",
+    "athena_repository": "ssh://git@gitlab.cern.ch:7999/xju/athena.git",
+    "athena_tag": "gnntriton",
     "release": "Athena,25.0.30,here",
     "packages": [
         "InnerDetector/InDetGNNTracking",

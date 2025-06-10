@@ -75,11 +75,51 @@ parse_json() {
     PACKAGES=$(jq -r '.packages[]' "$json_file")
     EXE_CMDS=$(jq -r '.exe_cmd[]' "$json_file")
 
+    # Athena Repository URL and reference
+    ATHENA_URL=$(jq -r '.athena_repository' "$json_file")
+    ATHENA_REF=$(jq -r '.athena_tag' "$json_file")
+
     # atlasexternal related variables
     EXTERNAL_URL=$(jq -r '.external_url' "$json_file")
     EXTERNAL_REF=$(jq -r '.external_ref' "$json_file")
     EXCMAKEARGS=$(jq -r '.extra_cmake_args' "$json_file")
     EXTERNAL_ASETUP=$(jq -r '.external_asetup' "$json_file")
+}
+
+fetch_athena_repo() {
+    local repo="$1"
+    local tag="$2"
+    local src_dir="$3"
+
+    if ! command -v git &>/dev/null; then
+        echo "Error: git is required but not installed."
+        exit 1
+    fi
+
+    if [[ -z "$repo" || -z "$tag" || -z "$src_dir" ]]; then
+        echo "Error: fetch_athena_repo missing arguments."
+        exit 1
+    fi
+
+    if [[ ! -d "$src_dir/.git" ]]; then
+        echo "Cloning Athena repository..."
+        git clone "$repo" "$src_dir"
+        cd "$src_dir"
+    else
+        echo "Athena repository already exists. Fetching latest..."
+        cd "$src_dir"
+        git fetch --all
+    fi
+
+    echo "Checking out tag/branch: $tag"
+    git checkout "$tag"
+
+    if [[ -f .gitmodules ]]; then
+        echo "Updating submodules..."
+        git submodule update --init --recursive
+    fi
+
+    cd - >/dev/null
 }
 
 # Example usage
@@ -107,6 +147,9 @@ cd ${SOURCE_DIR} || { echo "Failed to change directory to $SOURCE_DIR"; exit 1; 
 SPARSE_BUILD_DIR="sparse_build"
 
 if [[ "$MODE" == "build_athena" ]]; then
+
+    # Fetch Athena repository only at build_athena stage
+    fetch_athena_repo "$ATHENA_URL" "$ATHENA_REF" "$SOURCE_DIR"
 
     # check if SETUP_FILE is provided.
     # If so, setup the source_dir and athena environment from there.

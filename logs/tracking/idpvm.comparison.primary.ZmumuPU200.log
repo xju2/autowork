@@ -1,0 +1,299 @@
+Running workflow/scripts/compare_ckf_gnn.sh \n Tue 03 Jun 2025 07:42:19 PM PDT @ login36
+-----------------------------------
+Output File: /pscratch/sd/x/xju/code/autowork/results/tracking/idpvm.comparison.primary.ZmumuPU200.txt
+Python path: /pscratch/sd/x/xju/code/autowork/.snakemake/conda/0c73a8162033e9e33a07c96ff05e0de0_/bin/python
+Python version: Python 3.13.3
+Input File 0: /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.ckf.primary.local.gnn4itkTriton.none.ZmumuPU200.root
+Input File 1: /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ZmumuPU200.root
+run_vroot path: /pscratch/sd/x/xju/code/autowork/.snakemake/conda/0c73a8162033e9e33a07c96ff05e0de0_/bin/run_vroot
+Sample Name: ZmumuPU200
+IDPVM Mode: primary
+run_vroot -m "task_name=gnn4itk task=compare_two_files task.reference_file.path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.ckf.primary.local.gnn4itkTriton.none.ZmumuPU200.root task.reference_file.name=main task.comparator_file.path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ZmumuPU200.root task.comparator_file.name=GNN w/ Metric Learning histograms=glob(rel24_idpvm*) canvas.other_label.text='#sqrt{s} = 14 TeV, Z#rightarrow#mu#mu, <#mu> = 200, HS' canvas.otypes=png,pdf task.outdir=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/comparison"
+PROJECT_ROOT is /pscratch/sd/x/xju/code/autowork/external_packages/root_plot_utils
+[[36m2025-06-03 19:42:22,202[0m][[35mHYDRA[0m] Launching 12 jobs locally[0m
+[[36m2025-06-03 19:42:22,203[0m][[35mHYDRA[0m] 	#0 : histograms=rel24_idpvm_efficiencies task_name=gnn4itk task=compare_two_files task.reference_file.path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.ckf.primary.local.gnn4itkTriton.none.ZmumuPU200.root task.reference_file.name=main task.comparator_file.path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ZmumuPU200.root task.comparator_file.name=GNN\ w/\ Metric\ Learning canvas.other_label.text='#sqrt{s} = 14 TeV, Z#rightarrow#mu#mu, <#mu> = 200, HS' canvas.otypes=png task.outdir=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/comparison[0m
+[[36m2025-06-03 19:42:37,119[0m][[34mvroot.tools.reader[0m][[32mINFO[0m] - Open main from /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.ckf.primary.local.gnn4itkTriton.none.ZmumuPU200.root[0m
+[[36m2025-06-03 19:42:37,319[0m][[34mvroot.tools.reader[0m][[32mINFO[0m] - Open GNN w/ Metric Learning from /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ZmumuPU200.root[0m
+TH1FileHandle: name=main, path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.ckf.primary.local.gnn4itkTriton.none.ZmumuPU200.root
+TH1FileHandle: name=GNN w/ Metric Learning, path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ZmumuPU200.root
+Total histograms: 5
+	 SquirrelPlots/Tracks/Efficiency/efficiency_vs_eta ylim(0.4, 1.0)
+	 SquirrelPlots/Tracks/Efficiency/efficiency_vs_pt ylim(0.4, 1.0)
+	 SquirrelPlots/Tracks/Efficiency/efficiency_vs_d0 ylim(0.4, 1.0)
+	 SquirrelPlots/Tracks/Efficiency/efficiency_vs_z0 ylim(0.4, 1.0)
+	 SquirrelPlots/Tracks/Efficiency/efficiency_vs_R ylim(0.4, 1.0)
+
+Canvas(size={'width': 800, 'height': 600}, atlas_label={'x': 0.2, 'y': 0.55, 'text': 'Internal', 'text_size': 0.05, 'color': 1}, other_label={'x': 0.205, 'y': 0.475, 'text': '#sqrt{s} = 14 TeV, Z#rightarrow#mu#mu, <#mu> = 200, HS', 'text_size': 0.05, 'color': 1}, legend={'x': 0.175, 'y': 0.25, 'width': 0.3, 'height': 0.15, 'text_size': 0.04})
+[[36m2025-06-03 19:42:38,182[0m][[34mvroot.utils.utils[0m][[32mINFO[0m] - Closing loggers...[0m
+[[36m2025-06-03 19:42:38,183[0m][[34mvroot.utils.utils[0m][[32mINFO[0m] - Output dir: /pscratch/sd/x/xju/code/autowork/external_packages/root_plot_utils/logs/gnn4itk/multiruns/2025-06-03_19-42-20/0[0m
+[[36m2025-06-03 19:42:38,184[0m][[35mHYDRA[0m] 	#1 : histograms=rel24_idpvm_efficiencies task_name=gnn4itk task=compare_two_files task.reference_file.path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.ckf.primary.local.gnn4itkTriton.none.ZmumuPU200.root task.reference_file.name=main task.comparator_file.path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ZmumuPU200.root task.comparator_file.name=GNN\ w/\ Metric\ Learning canvas.other_label.text='#sqrt{s} = 14 TeV, Z#rightarrow#mu#mu, <#mu> = 200, HS' canvas.otypes=pdf task.outdir=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/comparison[0m
+[[36m2025-06-03 19:42:38,352[0m][[34mvroot.tools.reader[0m][[32mINFO[0m] - Open main from /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.ckf.primary.local.gnn4itkTriton.none.ZmumuPU200.root[0m
+[[36m2025-06-03 19:42:38,354[0m][[34mvroot.tools.reader[0m][[32mINFO[0m] - Open GNN w/ Metric Learning from /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ZmumuPU200.root[0m
+TH1FileHandle: name=main, path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.ckf.primary.local.gnn4itkTriton.none.ZmumuPU200.root
+TH1FileHandle: name=GNN w/ Metric Learning, path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ZmumuPU200.root
+Total histograms: 5
+	 SquirrelPlots/Tracks/Efficiency/efficiency_vs_eta ylim(0.4, 1.0)
+	 SquirrelPlots/Tracks/Efficiency/efficiency_vs_pt ylim(0.4, 1.0)
+	 SquirrelPlots/Tracks/Efficiency/efficiency_vs_d0 ylim(0.4, 1.0)
+	 SquirrelPlots/Tracks/Efficiency/efficiency_vs_z0 ylim(0.4, 1.0)
+	 SquirrelPlots/Tracks/Efficiency/efficiency_vs_R ylim(0.4, 1.0)
+
+Canvas(size={'width': 800, 'height': 600}, atlas_label={'x': 0.2, 'y': 0.55, 'text': 'Internal', 'text_size': 0.05, 'color': 1}, other_label={'x': 0.205, 'y': 0.475, 'text': '#sqrt{s} = 14 TeV, Z#rightarrow#mu#mu, <#mu> = 200, HS', 'text_size': 0.05, 'color': 1}, legend={'x': 0.175, 'y': 0.25, 'width': 0.3, 'height': 0.15, 'text_size': 0.04})
+[[36m2025-06-03 19:42:38,443[0m][[34mvroot.utils.utils[0m][[32mINFO[0m] - Closing loggers...[0m
+[[36m2025-06-03 19:42:38,444[0m][[34mvroot.utils.utils[0m][[32mINFO[0m] - Output dir: /pscratch/sd/x/xju/code/autowork/external_packages/root_plot_utils/logs/gnn4itk/multiruns/2025-06-03_19-42-20/1[0m
+[[36m2025-06-03 19:42:38,450[0m][[35mHYDRA[0m] 	#2 : histograms=rel24_idpvm_fakerate task_name=gnn4itk task=compare_two_files task.reference_file.path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.ckf.primary.local.gnn4itkTriton.none.ZmumuPU200.root task.reference_file.name=main task.comparator_file.path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ZmumuPU200.root task.comparator_file.name=GNN\ w/\ Metric\ Learning canvas.other_label.text='#sqrt{s} = 14 TeV, Z#rightarrow#mu#mu, <#mu> = 200, HS' canvas.otypes=png task.outdir=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/comparison[0m
+[[36m2025-06-03 19:42:38,616[0m][[34mvroot.tools.reader[0m][[32mINFO[0m] - Open main from /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.ckf.primary.local.gnn4itkTriton.none.ZmumuPU200.root[0m
+[[36m2025-06-03 19:42:38,617[0m][[34mvroot.tools.reader[0m][[32mINFO[0m] - Open GNN w/ Metric Learning from /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ZmumuPU200.root[0m
+TH1FileHandle: name=main, path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.ckf.primary.local.gnn4itkTriton.none.ZmumuPU200.root
+TH1FileHandle: name=GNN w/ Metric Learning, path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ZmumuPU200.root
+Total histograms: 7
+	 SquirrelPlots/Tracks/FakeRate/fakerate_vs_eta ylim(0.0, 1.01)
+	 SquirrelPlots/Tracks/FakeRate/fakerate_vs_pt ylim(0.0, 1.01)
+	 SquirrelPlots/Tracks/FakeRate/fakerate_vs_lowpt ylim(0.0, 1.01)
+	 SquirrelPlots/Tracks/FakeRate/fakerate_vs_phi ylim(0.0, 1.01)
+	 SquirrelPlots/Tracks/FakeRate/fakerate_vs_d0 ylim(0.0, 1.01)
+	 SquirrelPlots/Tracks/FakeRate/fakerate_vs_z0 ylim(0.0, 1.01)
+	 SquirrelPlots/Tracks/FakeRate/fakerate_vs_mu ylim(0.0, 1.01)
+
+Canvas(size={'width': 800, 'height': 600}, atlas_label={'x': 0.2, 'y': 0.55, 'text': 'Internal', 'text_size': 0.05, 'color': 1}, other_label={'x': 0.205, 'y': 0.475, 'text': '#sqrt{s} = 14 TeV, Z#rightarrow#mu#mu, <#mu> = 200, HS', 'text_size': 0.05, 'color': 1}, legend={'x': 0.175, 'y': 0.25, 'width': 0.3, 'height': 0.15, 'text_size': 0.04})
+[[36m2025-06-03 19:42:38,969[0m][[34mvroot.utils.utils[0m][[32mINFO[0m] - Closing loggers...[0m
+[[36m2025-06-03 19:42:38,970[0m][[34mvroot.utils.utils[0m][[32mINFO[0m] - Output dir: /pscratch/sd/x/xju/code/autowork/external_packages/root_plot_utils/logs/gnn4itk/multiruns/2025-06-03_19-42-20/2[0m
+[[36m2025-06-03 19:42:38,971[0m][[35mHYDRA[0m] 	#3 : histograms=rel24_idpvm_fakerate task_name=gnn4itk task=compare_two_files task.reference_file.path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.ckf.primary.local.gnn4itkTriton.none.ZmumuPU200.root task.reference_file.name=main task.comparator_file.path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ZmumuPU200.root task.comparator_file.name=GNN\ w/\ Metric\ Learning canvas.other_label.text='#sqrt{s} = 14 TeV, Z#rightarrow#mu#mu, <#mu> = 200, HS' canvas.otypes=pdf task.outdir=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/comparison[0m
+[[36m2025-06-03 19:42:39,126[0m][[34mvroot.tools.reader[0m][[32mINFO[0m] - Open main from /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.ckf.primary.local.gnn4itkTriton.none.ZmumuPU200.root[0m
+[[36m2025-06-03 19:42:39,128[0m][[34mvroot.tools.reader[0m][[32mINFO[0m] - Open GNN w/ Metric Learning from /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ZmumuPU200.root[0m
+TH1FileHandle: name=main, path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.ckf.primary.local.gnn4itkTriton.none.ZmumuPU200.root
+TH1FileHandle: name=GNN w/ Metric Learning, path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ZmumuPU200.root
+Total histograms: 7
+	 SquirrelPlots/Tracks/FakeRate/fakerate_vs_eta ylim(0.0, 1.01)
+	 SquirrelPlots/Tracks/FakeRate/fakerate_vs_pt ylim(0.0, 1.01)
+	 SquirrelPlots/Tracks/FakeRate/fakerate_vs_lowpt ylim(0.0, 1.01)
+	 SquirrelPlots/Tracks/FakeRate/fakerate_vs_phi ylim(0.0, 1.01)
+	 SquirrelPlots/Tracks/FakeRate/fakerate_vs_d0 ylim(0.0, 1.01)
+	 SquirrelPlots/Tracks/FakeRate/fakerate_vs_z0 ylim(0.0, 1.01)
+	 SquirrelPlots/Tracks/FakeRate/fakerate_vs_mu ylim(0.0, 1.01)
+
+Canvas(size={'width': 800, 'height': 600}, atlas_label={'x': 0.2, 'y': 0.55, 'text': 'Internal', 'text_size': 0.05, 'color': 1}, other_label={'x': 0.205, 'y': 0.475, 'text': '#sqrt{s} = 14 TeV, Z#rightarrow#mu#mu, <#mu> = 200, HS', 'text_size': 0.05, 'color': 1}, legend={'x': 0.175, 'y': 0.25, 'width': 0.3, 'height': 0.15, 'text_size': 0.04})
+[[36m2025-06-03 19:42:39,234[0m][[34mvroot.utils.utils[0m][[32mINFO[0m] - Closing loggers...[0m
+[[36m2025-06-03 19:42:39,235[0m][[34mvroot.utils.utils[0m][[32mINFO[0m] - Output dir: /pscratch/sd/x/xju/code/autowork/external_packages/root_plot_utils/logs/gnn4itk/multiruns/2025-06-03_19-42-20/3[0m
+[[36m2025-06-03 19:42:39,236[0m][[35mHYDRA[0m] 	#4 : histograms=rel24_idpvm_hits task_name=gnn4itk task=compare_two_files task.reference_file.path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.ckf.primary.local.gnn4itkTriton.none.ZmumuPU200.root task.reference_file.name=main task.comparator_file.path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ZmumuPU200.root task.comparator_file.name=GNN\ w/\ Metric\ Learning canvas.other_label.text='#sqrt{s} = 14 TeV, Z#rightarrow#mu#mu, <#mu> = 200, HS' canvas.otypes=png task.outdir=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/comparison[0m
+[[36m2025-06-03 19:42:39,451[0m][[34mvroot.tools.reader[0m][[32mINFO[0m] - Open main from /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.ckf.primary.local.gnn4itkTriton.none.ZmumuPU200.root[0m
+[[36m2025-06-03 19:42:39,453[0m][[34mvroot.tools.reader[0m][[32mINFO[0m] - Open GNN w/ Metric Learning from /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ZmumuPU200.root[0m
+TH1FileHandle: name=main, path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.ckf.primary.local.gnn4itkTriton.none.ZmumuPU200.root
+TH1FileHandle: name=GNN w/ Metric Learning, path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ZmumuPU200.root
+Total histograms: 15
+	 SquirrelPlots/Tracks/Selected/HitsOnTracks/nPixelHits_vs_eta ylim(-0.001, 30)
+	 SquirrelPlots/Tracks/Selected/HitsOnTracks/nPixelHoles_vs_eta ylim(-0.001, 2)
+	 SquirrelPlots/Tracks/Selected/HitsOnTracks/nPixelOutliers_vs_eta ylim(-0.001, 2)
+	 SquirrelPlots/Tracks/Selected/HitsOnTracks/nSCTHits_vs_eta ylim(-0.001, 25)
+	 SquirrelPlots/Tracks/Selected/HitsOnTracks/nSCTHoles_vs_eta ylim(-0.001, 2)
+	 SquirrelPlots/Tracks/Selected/HitsOnTracks/nSCTOutliers_vs_eta ylim(-0.001, 2)
+	 SquirrelPlots/Tracks/Selected/HitsOnTracks/nSCTDoubleHoles_vs_eta ylim(-0.001, 0.15)
+	 SquirrelPlots/Tracks/Selected/HitsOnTracks/nPixelHits
+	 SquirrelPlots/Tracks/Selected/HitsOnTracks/nPixelHoles
+	 SquirrelPlots/Tracks/Selected/HitsOnTracks/nPixelOutliers
+	 SquirrelPlots/Tracks/Selected/HitsOnTracks/nPixelSharedHits
+	 SquirrelPlots/Tracks/Selected/HitsOnTracks/nSCTHits
+	 SquirrelPlots/Tracks/Selected/HitsOnTracks/nSCTHoles
+	 SquirrelPlots/Tracks/Selected/HitsOnTracks/nSCTOutliers
+	 SquirrelPlots/Tracks/Selected/HitsOnTracks/nSCTSharedHits
+
+Canvas(size={'width': 800, 'height': 600}, atlas_label={'x': 0.2, 'y': 0.55, 'text': 'Internal', 'text_size': 0.05, 'color': 1}, other_label={'x': 0.205, 'y': 0.475, 'text': '#sqrt{s} = 14 TeV, Z#rightarrow#mu#mu, <#mu> = 200, HS', 'text_size': 0.05, 'color': 1}, legend={'x': 0.175, 'y': 0.25, 'width': 0.3, 'height': 0.15, 'text_size': 0.04})
+[[36m2025-06-03 19:42:40,115[0m][[34mvroot.utils.utils[0m][[32mINFO[0m] - Closing loggers...[0m
+[[36m2025-06-03 19:42:40,116[0m][[34mvroot.utils.utils[0m][[32mINFO[0m] - Output dir: /pscratch/sd/x/xju/code/autowork/external_packages/root_plot_utils/logs/gnn4itk/multiruns/2025-06-03_19-42-20/4[0m
+[[36m2025-06-03 19:42:40,116[0m][[35mHYDRA[0m] 	#5 : histograms=rel24_idpvm_hits task_name=gnn4itk task=compare_two_files task.reference_file.path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.ckf.primary.local.gnn4itkTriton.none.ZmumuPU200.root task.reference_file.name=main task.comparator_file.path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ZmumuPU200.root task.comparator_file.name=GNN\ w/\ Metric\ Learning canvas.other_label.text='#sqrt{s} = 14 TeV, Z#rightarrow#mu#mu, <#mu> = 200, HS' canvas.otypes=pdf task.outdir=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/comparison[0m
+[[36m2025-06-03 19:42:40,299[0m][[34mvroot.tools.reader[0m][[32mINFO[0m] - Open main from /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.ckf.primary.local.gnn4itkTriton.none.ZmumuPU200.root[0m
+[[36m2025-06-03 19:42:40,300[0m][[34mvroot.tools.reader[0m][[32mINFO[0m] - Open GNN w/ Metric Learning from /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ZmumuPU200.root[0m
+TH1FileHandle: name=main, path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.ckf.primary.local.gnn4itkTriton.none.ZmumuPU200.root
+TH1FileHandle: name=GNN w/ Metric Learning, path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ZmumuPU200.root
+Total histograms: 15
+	 SquirrelPlots/Tracks/Selected/HitsOnTracks/nPixelHits_vs_eta ylim(-0.001, 30)
+	 SquirrelPlots/Tracks/Selected/HitsOnTracks/nPixelHoles_vs_eta ylim(-0.001, 2)
+	 SquirrelPlots/Tracks/Selected/HitsOnTracks/nPixelOutliers_vs_eta ylim(-0.001, 2)
+	 SquirrelPlots/Tracks/Selected/HitsOnTracks/nSCTHits_vs_eta ylim(-0.001, 25)
+	 SquirrelPlots/Tracks/Selected/HitsOnTracks/nSCTHoles_vs_eta ylim(-0.001, 2)
+	 SquirrelPlots/Tracks/Selected/HitsOnTracks/nSCTOutliers_vs_eta ylim(-0.001, 2)
+	 SquirrelPlots/Tracks/Selected/HitsOnTracks/nSCTDoubleHoles_vs_eta ylim(-0.001, 0.15)
+	 SquirrelPlots/Tracks/Selected/HitsOnTracks/nPixelHits
+	 SquirrelPlots/Tracks/Selected/HitsOnTracks/nPixelHoles
+	 SquirrelPlots/Tracks/Selected/HitsOnTracks/nPixelOutliers
+	 SquirrelPlots/Tracks/Selected/HitsOnTracks/nPixelSharedHits
+	 SquirrelPlots/Tracks/Selected/HitsOnTracks/nSCTHits
+	 SquirrelPlots/Tracks/Selected/HitsOnTracks/nSCTHoles
+	 SquirrelPlots/Tracks/Selected/HitsOnTracks/nSCTOutliers
+	 SquirrelPlots/Tracks/Selected/HitsOnTracks/nSCTSharedHits
+
+Canvas(size={'width': 800, 'height': 600}, atlas_label={'x': 0.2, 'y': 0.55, 'text': 'Internal', 'text_size': 0.05, 'color': 1}, other_label={'x': 0.205, 'y': 0.475, 'text': '#sqrt{s} = 14 TeV, Z#rightarrow#mu#mu, <#mu> = 200, HS', 'text_size': 0.05, 'color': 1}, legend={'x': 0.175, 'y': 0.25, 'width': 0.3, 'height': 0.15, 'text_size': 0.04})
+[[36m2025-06-03 19:42:40,492[0m][[34mvroot.utils.utils[0m][[32mINFO[0m] - Closing loggers...[0m
+[[36m2025-06-03 19:42:40,493[0m][[34mvroot.utils.utils[0m][[32mINFO[0m] - Output dir: /pscratch/sd/x/xju/code/autowork/external_packages/root_plot_utils/logs/gnn4itk/multiruns/2025-06-03_19-42-20/5[0m
+[[36m2025-06-03 19:42:40,494[0m][[35mHYDRA[0m] 	#6 : histograms=rel24_idpvm_parameters task_name=gnn4itk task=compare_two_files task.reference_file.path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.ckf.primary.local.gnn4itkTriton.none.ZmumuPU200.root task.reference_file.name=main task.comparator_file.path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ZmumuPU200.root task.comparator_file.name=GNN\ w/\ Metric\ Learning canvas.other_label.text='#sqrt{s} = 14 TeV, Z#rightarrow#mu#mu, <#mu> = 200, HS' canvas.otypes=png task.outdir=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/comparison[0m
+[[36m2025-06-03 19:42:40,659[0m][[34mvroot.tools.reader[0m][[32mINFO[0m] - Open main from /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.ckf.primary.local.gnn4itkTriton.none.ZmumuPU200.root[0m
+[[36m2025-06-03 19:42:40,660[0m][[34mvroot.tools.reader[0m][[32mINFO[0m] - Open GNN w/ Metric Learning from /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ZmumuPU200.root[0m
+TH1FileHandle: name=main, path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.ckf.primary.local.gnn4itkTriton.none.ZmumuPU200.root
+TH1FileHandle: name=GNN w/ Metric Learning, path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ZmumuPU200.root
+Total histograms: 5
+	 SquirrelPlots/Tracks/Selected/Parameters/reco_d0
+	 SquirrelPlots/Tracks/Selected/Parameters/reco_z0
+	 SquirrelPlots/Tracks/Selected/Parameters/reco_qoverp
+	 SquirrelPlots/Tracks/Selected/Parameters/reco_z0sin
+	 SquirrelPlots/Tracks/Selected/Parameters/reco_pt
+
+Canvas(size={'width': 800, 'height': 600}, atlas_label={'x': 0.2, 'y': 0.55, 'text': 'Internal', 'text_size': 0.05, 'color': 1}, other_label={'x': 0.205, 'y': 0.475, 'text': '#sqrt{s} = 14 TeV, Z#rightarrow#mu#mu, <#mu> = 200, HS', 'text_size': 0.05, 'color': 1}, legend={'x': 0.175, 'y': 0.25, 'width': 0.3, 'height': 0.15, 'text_size': 0.04})
+[[36m2025-06-03 19:42:40,939[0m][[34mvroot.utils.utils[0m][[32mINFO[0m] - Closing loggers...[0m
+[[36m2025-06-03 19:42:40,940[0m][[34mvroot.utils.utils[0m][[32mINFO[0m] - Output dir: /pscratch/sd/x/xju/code/autowork/external_packages/root_plot_utils/logs/gnn4itk/multiruns/2025-06-03_19-42-20/6[0m
+[[36m2025-06-03 19:42:40,940[0m][[35mHYDRA[0m] 	#7 : histograms=rel24_idpvm_parameters task_name=gnn4itk task=compare_two_files task.reference_file.path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.ckf.primary.local.gnn4itkTriton.none.ZmumuPU200.root task.reference_file.name=main task.comparator_file.path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ZmumuPU200.root task.comparator_file.name=GNN\ w/\ Metric\ Learning canvas.other_label.text='#sqrt{s} = 14 TeV, Z#rightarrow#mu#mu, <#mu> = 200, HS' canvas.otypes=pdf task.outdir=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/comparison[0m
+[[36m2025-06-03 19:42:41,102[0m][[34mvroot.tools.reader[0m][[32mINFO[0m] - Open main from /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.ckf.primary.local.gnn4itkTriton.none.ZmumuPU200.root[0m
+[[36m2025-06-03 19:42:41,103[0m][[34mvroot.tools.reader[0m][[32mINFO[0m] - Open GNN w/ Metric Learning from /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ZmumuPU200.root[0m
+TH1FileHandle: name=main, path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.ckf.primary.local.gnn4itkTriton.none.ZmumuPU200.root
+TH1FileHandle: name=GNN w/ Metric Learning, path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ZmumuPU200.root
+Total histograms: 5
+	 SquirrelPlots/Tracks/Selected/Parameters/reco_d0
+	 SquirrelPlots/Tracks/Selected/Parameters/reco_z0
+	 SquirrelPlots/Tracks/Selected/Parameters/reco_qoverp
+	 SquirrelPlots/Tracks/Selected/Parameters/reco_z0sin
+	 SquirrelPlots/Tracks/Selected/Parameters/reco_pt
+
+Canvas(size={'width': 800, 'height': 600}, atlas_label={'x': 0.2, 'y': 0.55, 'text': 'Internal', 'text_size': 0.05, 'color': 1}, other_label={'x': 0.205, 'y': 0.475, 'text': '#sqrt{s} = 14 TeV, Z#rightarrow#mu#mu, <#mu> = 200, HS', 'text_size': 0.05, 'color': 1}, legend={'x': 0.175, 'y': 0.25, 'width': 0.3, 'height': 0.15, 'text_size': 0.04})
+[[36m2025-06-03 19:42:41,186[0m][[34mvroot.utils.utils[0m][[32mINFO[0m] - Closing loggers...[0m
+[[36m2025-06-03 19:42:41,187[0m][[34mvroot.utils.utils[0m][[32mINFO[0m] - Output dir: /pscratch/sd/x/xju/code/autowork/external_packages/root_plot_utils/logs/gnn4itk/multiruns/2025-06-03_19-42-20/7[0m
+[[36m2025-06-03 19:42:41,189[0m][[35mHYDRA[0m] 	#8 : histograms=rel24_idpvm_resolution task_name=gnn4itk task=compare_two_files task.reference_file.path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.ckf.primary.local.gnn4itkTriton.none.ZmumuPU200.root task.reference_file.name=main task.comparator_file.path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ZmumuPU200.root task.comparator_file.name=GNN\ w/\ Metric\ Learning canvas.other_label.text='#sqrt{s} = 14 TeV, Z#rightarrow#mu#mu, <#mu> = 200, HS' canvas.otypes=png task.outdir=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/comparison[0m
+[[36m2025-06-03 19:42:41,371[0m][[34mvroot.tools.reader[0m][[32mINFO[0m] - Open main from /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.ckf.primary.local.gnn4itkTriton.none.ZmumuPU200.root[0m
+[[36m2025-06-03 19:42:41,373[0m][[34mvroot.tools.reader[0m][[32mINFO[0m] - Open GNN w/ Metric Learning from /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ZmumuPU200.root[0m
+TH1FileHandle: name=main, path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.ckf.primary.local.gnn4itkTriton.none.ZmumuPU200.root
+TH1FileHandle: name=GNN w/ Metric Learning, path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ZmumuPU200.root
+Total histograms: 16
+	 SquirrelPlots/Tracks/Matched/Resolutions/Primary/resolution_vs_eta_d0 ylim(2, 300)
+	 SquirrelPlots/Tracks/Matched/Resolutions/Primary/resolution_vs_eta_z0 ylim(10, 100000)
+	 SquirrelPlots/Tracks/Matched/Resolutions/Primary/resolution_vs_eta_z0sin ylim(0, 1000)
+	 SquirrelPlots/Tracks/Matched/Resolutions/Primary/resolution_vs_eta_qoverp ylim(0.0008, 5)
+	 SquirrelPlots/Tracks/Matched/Resolutions/Primary/resolution_vs_pt_d0 ylim(0, 400)
+	 SquirrelPlots/Tracks/Matched/Resolutions/Primary/resolution_vs_pt_z0 ylim(10, 2500)
+	 SquirrelPlots/Tracks/Matched/Resolutions/Primary/resolution_vs_pt_z0sin ylim(0, 500)
+	 SquirrelPlots/Tracks/Matched/Resolutions/Primary/resolution_vs_pt_qoverp ylim(0.008, 0.05)
+	 SquirrelPlots/Tracks/Matched/Resolutions/Primary/pull_d0
+	 SquirrelPlots/Tracks/Matched/Resolutions/Primary/pull_z0
+	 SquirrelPlots/Tracks/Matched/Resolutions/Primary/pull_z0sin
+	 SquirrelPlots/Tracks/Matched/Resolutions/Primary/pull_qoverp
+	 SquirrelPlots/Tracks/Matched/Resolutions/Primary/sigma_d0
+	 SquirrelPlots/Tracks/Matched/Resolutions/Primary/sigma_z0
+	 SquirrelPlots/Tracks/Matched/Resolutions/Primary/sigma_z0sin
+	 SquirrelPlots/Tracks/Matched/Resolutions/Primary/sigma_qoverp
+
+Canvas(size={'width': 800, 'height': 600}, atlas_label={'x': 0.2, 'y': 0.55, 'text': 'Internal', 'text_size': 0.05, 'color': 1}, other_label={'x': 0.205, 'y': 0.475, 'text': '#sqrt{s} = 14 TeV, Z#rightarrow#mu#mu, <#mu> = 200, HS', 'text_size': 0.05, 'color': 1}, legend={'x': 0.175, 'y': 0.25, 'width': 0.3, 'height': 0.15, 'text_size': 0.04})
+[[36m2025-06-03 19:42:42,622[0m][[34mvroot.utils.utils[0m][[32mINFO[0m] - Closing loggers...[0m
+[[36m2025-06-03 19:42:42,623[0m][[34mvroot.utils.utils[0m][[32mINFO[0m] - Output dir: /pscratch/sd/x/xju/code/autowork/external_packages/root_plot_utils/logs/gnn4itk/multiruns/2025-06-03_19-42-20/8[0m
+[[36m2025-06-03 19:42:42,624[0m][[35mHYDRA[0m] 	#9 : histograms=rel24_idpvm_resolution task_name=gnn4itk task=compare_two_files task.reference_file.path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.ckf.primary.local.gnn4itkTriton.none.ZmumuPU200.root task.reference_file.name=main task.comparator_file.path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ZmumuPU200.root task.comparator_file.name=GNN\ w/\ Metric\ Learning canvas.other_label.text='#sqrt{s} = 14 TeV, Z#rightarrow#mu#mu, <#mu> = 200, HS' canvas.otypes=pdf task.outdir=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/comparison[0m
+[[36m2025-06-03 19:42:42,856[0m][[34mvroot.tools.reader[0m][[32mINFO[0m] - Open main from /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.ckf.primary.local.gnn4itkTriton.none.ZmumuPU200.root[0m
+[[36m2025-06-03 19:42:42,878[0m][[34mvroot.tools.reader[0m][[32mINFO[0m] - Open GNN w/ Metric Learning from /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ZmumuPU200.root[0m
+TH1FileHandle: name=main, path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.ckf.primary.local.gnn4itkTriton.none.ZmumuPU200.root
+TH1FileHandle: name=GNN w/ Metric Learning, path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ZmumuPU200.root
+Total histograms: 16
+	 SquirrelPlots/Tracks/Matched/Resolutions/Primary/resolution_vs_eta_d0 ylim(2, 300)
+	 SquirrelPlots/Tracks/Matched/Resolutions/Primary/resolution_vs_eta_z0 ylim(10, 100000)
+	 SquirrelPlots/Tracks/Matched/Resolutions/Primary/resolution_vs_eta_z0sin ylim(0, 1000)
+	 SquirrelPlots/Tracks/Matched/Resolutions/Primary/resolution_vs_eta_qoverp ylim(0.0008, 5)
+	 SquirrelPlots/Tracks/Matched/Resolutions/Primary/resolution_vs_pt_d0 ylim(0, 400)
+	 SquirrelPlots/Tracks/Matched/Resolutions/Primary/resolution_vs_pt_z0 ylim(10, 2500)
+	 SquirrelPlots/Tracks/Matched/Resolutions/Primary/resolution_vs_pt_z0sin ylim(0, 500)
+	 SquirrelPlots/Tracks/Matched/Resolutions/Primary/resolution_vs_pt_qoverp ylim(0.008, 0.05)
+	 SquirrelPlots/Tracks/Matched/Resolutions/Primary/pull_d0
+	 SquirrelPlots/Tracks/Matched/Resolutions/Primary/pull_z0
+	 SquirrelPlots/Tracks/Matched/Resolutions/Primary/pull_z0sin
+	 SquirrelPlots/Tracks/Matched/Resolutions/Primary/pull_qoverp
+	 SquirrelPlots/Tracks/Matched/Resolutions/Primary/sigma_d0
+	 SquirrelPlots/Tracks/Matched/Resolutions/Primary/sigma_z0
+	 SquirrelPlots/Tracks/Matched/Resolutions/Primary/sigma_z0sin
+	 SquirrelPlots/Tracks/Matched/Resolutions/Primary/sigma_qoverp
+
+Canvas(size={'width': 800, 'height': 600}, atlas_label={'x': 0.2, 'y': 0.55, 'text': 'Internal', 'text_size': 0.05, 'color': 1}, other_label={'x': 0.205, 'y': 0.475, 'text': '#sqrt{s} = 14 TeV, Z#rightarrow#mu#mu, <#mu> = 200, HS', 'text_size': 0.05, 'color': 1}, legend={'x': 0.175, 'y': 0.25, 'width': 0.3, 'height': 0.15, 'text_size': 0.04})
+[[36m2025-06-03 19:42:43,215[0m][[34mvroot.utils.utils[0m][[32mINFO[0m] - Closing loggers...[0m
+[[36m2025-06-03 19:42:43,216[0m][[34mvroot.utils.utils[0m][[32mINFO[0m] - Output dir: /pscratch/sd/x/xju/code/autowork/external_packages/root_plot_utils/logs/gnn4itk/multiruns/2025-06-03_19-42-20/9[0m
+[[36m2025-06-03 19:42:43,218[0m][[35mHYDRA[0m] 	#10 : histograms=rel24_idpvm_tracks task_name=gnn4itk task=compare_two_files task.reference_file.path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.ckf.primary.local.gnn4itkTriton.none.ZmumuPU200.root task.reference_file.name=main task.comparator_file.path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ZmumuPU200.root task.comparator_file.name=GNN\ w/\ Metric\ Learning canvas.other_label.text='#sqrt{s} = 14 TeV, Z#rightarrow#mu#mu, <#mu> = 200, HS' canvas.otypes=png task.outdir=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/comparison[0m
+[[36m2025-06-03 19:42:43,425[0m][[34mvroot.tools.reader[0m][[32mINFO[0m] - Open main from /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.ckf.primary.local.gnn4itkTriton.none.ZmumuPU200.root[0m
+[[36m2025-06-03 19:42:43,426[0m][[34mvroot.tools.reader[0m][[32mINFO[0m] - Open GNN w/ Metric Learning from /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ZmumuPU200.root[0m
+TH1FileHandle: name=main, path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.ckf.primary.local.gnn4itkTriton.none.ZmumuPU200.root
+TH1FileHandle: name=GNN w/ Metric Learning, path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ZmumuPU200.root
+Total histograms: 5
+	 SquirrelPlots/Tracks/Tracks/ntrack ylim(0.0, 1.01)
+	 SquirrelPlots/Tracks/Tracks/ntracksel ylim(0.0, 1.01)
+	 SquirrelPlots/Tracks/Tracks/nparticle ylim(0.0, 1.01)
+	 SquirrelPlots/Tracks/Tracks/nparticlesel ylim(0.0, 1.01)
+	 SquirrelPlots/Tracks/Tracks/num_truthmatch_match ylim(0.0, 1.01)
+
+Canvas(size={'width': 800, 'height': 600}, atlas_label={'x': 0.2, 'y': 0.55, 'text': 'Internal', 'text_size': 0.05, 'color': 1}, other_label={'x': 0.205, 'y': 0.475, 'text': '#sqrt{s} = 14 TeV, Z#rightarrow#mu#mu, <#mu> = 200, HS', 'text_size': 0.05, 'color': 1}, legend={'x': 0.175, 'y': 0.25, 'width': 0.3, 'height': 0.15, 'text_size': 0.04})
+[[36m2025-06-03 19:42:43,571[0m][[34mvroot.utils.utils[0m][[31mERROR[0m] - [0m
+Traceback (most recent call last):
+  File "/pscratch/sd/x/xju/code/autowork/external_packages/root_plot_utils/src/vroot/utils/utils.py", line 34, in wrap
+    task_func(cfg=cfg)
+    ~~~~~~~~~^^^^^^^^^
+  File "/pscratch/sd/x/xju/code/autowork/external_packages/root_plot_utils/src/vroot/run_vroot.py", line 30, in main_function
+    task.run()
+    ~~~~~~~~^^
+  File "/pscratch/sd/x/xju/code/autowork/external_packages/root_plot_utils/src/vroot/task/compare_two_files.py", line 39, in run
+    hist_ref, hist_ref_copy = self.ref_file.read(histogram)
+                              ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/pscratch/sd/x/xju/code/autowork/external_packages/root_plot_utils/src/vroot/tools/reader.py", line 65, in read
+    histogram(hist)
+    ~~~~~~~~~^^^^^^
+  File "/pscratch/sd/x/xju/code/autowork/external_packages/root_plot_utils/src/vroot/tools/histograms.py", line 66, in __call__
+    hist.Scale(1.0 / hist.Integral())
+               ~~~~^~~~~~~~~~~~~~~~~
+ZeroDivisionError: float division by zero
+[[36m2025-06-03 19:42:43,590[0m][[34mvroot.utils.utils[0m][[32mINFO[0m] - Closing loggers...[0m
+[[36m2025-06-03 19:42:43,591[0m][[35mHYDRA[0m] 	#11 : histograms=rel24_idpvm_tracks task_name=gnn4itk task=compare_two_files task.reference_file.path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.ckf.primary.local.gnn4itkTriton.none.ZmumuPU200.root task.reference_file.name=main task.comparator_file.path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ZmumuPU200.root task.comparator_file.name=GNN\ w/\ Metric\ Learning canvas.other_label.text='#sqrt{s} = 14 TeV, Z#rightarrow#mu#mu, <#mu> = 200, HS' canvas.otypes=pdf task.outdir=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/comparison[0m
+[[36m2025-06-03 19:42:43,800[0m][[34mvroot.tools.reader[0m][[32mINFO[0m] - Open main from /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.ckf.primary.local.gnn4itkTriton.none.ZmumuPU200.root[0m
+[[36m2025-06-03 19:42:43,802[0m][[34mvroot.tools.reader[0m][[32mINFO[0m] - Open GNN w/ Metric Learning from /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ZmumuPU200.root[0m
+TH1FileHandle: name=main, path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.ckf.primary.local.gnn4itkTriton.none.ZmumuPU200.root
+TH1FileHandle: name=GNN w/ Metric Learning, path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ZmumuPU200.root
+Total histograms: 5
+	 SquirrelPlots/Tracks/Tracks/ntrack ylim(0.0, 1.01)
+	 SquirrelPlots/Tracks/Tracks/ntracksel ylim(0.0, 1.01)
+	 SquirrelPlots/Tracks/Tracks/nparticle ylim(0.0, 1.01)
+	 SquirrelPlots/Tracks/Tracks/nparticlesel ylim(0.0, 1.01)
+	 SquirrelPlots/Tracks/Tracks/num_truthmatch_match ylim(0.0, 1.01)
+
+Canvas(size={'width': 800, 'height': 600}, atlas_label={'x': 0.2, 'y': 0.55, 'text': 'Internal', 'text_size': 0.05, 'color': 1}, other_label={'x': 0.205, 'y': 0.475, 'text': '#sqrt{s} = 14 TeV, Z#rightarrow#mu#mu, <#mu> = 200, HS', 'text_size': 0.05, 'color': 1}, legend={'x': 0.175, 'y': 0.25, 'width': 0.3, 'height': 0.15, 'text_size': 0.04})
+[[36m2025-06-03 19:42:43,851[0m][[34mvroot.utils.utils[0m][[31mERROR[0m] - [0m
+Traceback (most recent call last):
+  File "/pscratch/sd/x/xju/code/autowork/external_packages/root_plot_utils/src/vroot/utils/utils.py", line 34, in wrap
+    task_func(cfg=cfg)
+    ~~~~~~~~~^^^^^^^^^
+  File "/pscratch/sd/x/xju/code/autowork/external_packages/root_plot_utils/src/vroot/run_vroot.py", line 30, in main_function
+    task.run()
+    ~~~~~~~~^^
+  File "/pscratch/sd/x/xju/code/autowork/external_packages/root_plot_utils/src/vroot/task/compare_two_files.py", line 39, in run
+    hist_ref, hist_ref_copy = self.ref_file.read(histogram)
+                              ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/pscratch/sd/x/xju/code/autowork/external_packages/root_plot_utils/src/vroot/tools/reader.py", line 65, in read
+    histogram(hist)
+    ~~~~~~~~~^^^^^^
+  File "/pscratch/sd/x/xju/code/autowork/external_packages/root_plot_utils/src/vroot/tools/histograms.py", line 66, in __call__
+    hist.Scale(1.0 / hist.Integral())
+               ~~~~^~~~~~~~~~~~~~~~~
+ZeroDivisionError: float division by zero
+[[36m2025-06-03 19:42:43,856[0m][[34mvroot.utils.utils[0m][[32mINFO[0m] - Closing loggers...[0m
+Error executing job with overrides: ['histograms=rel24_idpvm_tracks', 'task_name=gnn4itk', 'task=compare_two_files', 'task.reference_file.path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.ckf.primary.local.gnn4itkTriton.none.ZmumuPU200.root', 'task.reference_file.name=main', 'task.comparator_file.path=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.ZmumuPU200.root', 'task.comparator_file.name=GNN\\ w/\\ Metric\\ Learning', "canvas.other_label.text='#sqrt{s} = 14 TeV, Z#rightarrow#mu#mu, <#mu> = 200, HS'", 'canvas.otypes=png', 'task.outdir=/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/ZmumuPU200/comparison']
+Traceback (most recent call last):
+  File "/pscratch/sd/x/xju/code/autowork/external_packages/root_plot_utils/src/vroot/run_vroot.py", line 36, in main_module
+    main_function(cfg)
+    ~~~~~~~~~~~~~^^^^^
+  File "/pscratch/sd/x/xju/code/autowork/external_packages/root_plot_utils/src/vroot/utils/utils.py", line 37, in wrap
+    raise ex
+  File "/pscratch/sd/x/xju/code/autowork/external_packages/root_plot_utils/src/vroot/utils/utils.py", line 34, in wrap
+    task_func(cfg=cfg)
+    ~~~~~~~~~^^^^^^^^^
+  File "/pscratch/sd/x/xju/code/autowork/external_packages/root_plot_utils/src/vroot/run_vroot.py", line 30, in main_function
+    task.run()
+    ~~~~~~~~^^
+  File "/pscratch/sd/x/xju/code/autowork/external_packages/root_plot_utils/src/vroot/task/compare_two_files.py", line 39, in run
+    hist_ref, hist_ref_copy = self.ref_file.read(histogram)
+                              ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/pscratch/sd/x/xju/code/autowork/external_packages/root_plot_utils/src/vroot/tools/reader.py", line 65, in read
+    histogram(hist)
+    ~~~~~~~~~^^^^^^
+  File "/pscratch/sd/x/xju/code/autowork/external_packages/root_plot_utils/src/vroot/tools/histograms.py", line 66, in __call__
+    hist.Scale(1.0 / hist.Integral())
+               ~~~~^~~~~~~~~~~~~~~~~
+ZeroDivisionError: float division by zero
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+DONE 2025-06-03T19:42:44
