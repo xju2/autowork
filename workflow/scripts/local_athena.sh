@@ -149,7 +149,7 @@ SPARSE_BUILD_DIR="sparse_build"
 if [[ "$MODE" == "build_athena" ]]; then
 
     # Fetch Athena repository only at build_athena stage
-    fetch_athena_repo "$ATHENA_URL" "$ATHENA_REF" "$SOURCE_DIR"
+    fetch_athena_repo "$ATHENA_URL" "$ATHENA_REF" "athena"
 
     # check if SETUP_FILE is provided.
     # If so, setup the source_dir and athena environment from there.
