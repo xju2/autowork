@@ -3,6 +3,14 @@ HEP Workflow based on Snakemake
 
 ## Example usage
 
+### GNN4ITk as a Service
+```bash
+snakemake --cores 6 results/triton/triton_server.tracking.ready.txt
+snakemake --cores 2 workarea/tracking/MuonPU0/aod.gnn4itkML.triton.gnn4itkTriton.tracking.MuonPU0.root --dry-run --config max_evts=10
+```
+
+### Other stuff
+
 ```bash
 snakemake setup_athena --cores 1
 ```
@@ -50,7 +58,7 @@ snakemake --cores 12 workarea/tracking/ttbar/idpvm.ckf.primary.local.gnn4itkTrit
 # launch the Triton server first.
 snakemake --cores 2 results/triton/triton_server.tracking.ready.txt
 # in a Perlmutter CPU node, I run 4 samples in parallel to get IDPVM results.
-snakemake --cores 128 --config max_evts=5000 --set-threads run_legacy_ckf=16 run_idpvm=16 run_gnn4itk_triton=2 --rerun-triggers mtime --sdm conda --dry-run
+snakemake --cores 128 --config max_evts=5000 --set-threads run_legacy_ckf=16 run_idpvm=16 run_gnn4itk_triton=1 --rerun-triggers mtime --sdm conda --dry-run
 
 snakemake --cores 16 --config max_evts=1000 -p --set-threads run_idpvm=4 run_gnn4itk_triton=1
 
