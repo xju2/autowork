@@ -102,7 +102,7 @@ fetch_athena_repo() {
     fi
 
     if [[ ! -d "$src_dir/.git" ]]; then
-        echo "Cloning Athena repository..."
+        echo "Cloning Athena repository...${src_dir}"
         git clone "$repo" "$src_dir"
         cd "$src_dir"
     else
@@ -142,6 +142,10 @@ if [[ -f "$SETUP_FILE" ]]; then
 fi
 
 SOURCE_DIR=$(realpath "$SOURCE_DIR")
+if [[ ! -d "$SOURCE_DIR" ]]; then
+    echo "Source directory $SOURCE_DIR does not exist."
+    mkdir -p "$SOURCE_DIR" || { echo "Failed to create directory $SOURCE_DIR"; exit 1; }
+fi
 cd ${SOURCE_DIR} || { echo "Failed to change directory to $SOURCE_DIR"; exit 1; }
 
 SPARSE_BUILD_DIR="sparse_build"
