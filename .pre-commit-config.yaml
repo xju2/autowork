@@ -27,4 +27,3 @@ repos:
     hooks:
       - id: prettier
         types: [yaml]
-        
