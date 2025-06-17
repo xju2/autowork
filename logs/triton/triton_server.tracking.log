@@ -1,6 +1,6 @@
-Running workflow/scripts/start_triton_server_for_validation.sh Tue 10 Jun 2025 01:30:36 PM PDT @ login32
+Running workflow/scripts/start_triton_server_for_validation.sh Mon 16 Jun 2025 10:42:01 PM PDT @ login19
 -----------------------------------
-Tue 10 Jun 2025 01:30:36 PM PDT login32
+Mon 16 Jun 2025 10:42:01 PM PDT login19
 Input File: /pscratch/sd/x/xju/code/autowork/projects/triton/triton_server.config.tracking.json
 Output File: /pscratch/sd/x/xju/code/autowork/results/triton/triton_server.tracking.ready.txt
 Start Triton Server for validation
@@ -9,9 +9,9 @@ OUTPUT: /pscratch/sd/x/xju/code/autowork/results/triton/triton_server.tracking.r
 REPO_URL: git@github.com:xju2/tracking-as-a-service.git
 SOURCE_DIR: /pscratch/sd/x/xju/ITk/ForFinalPaper
 JOB Name: triton_job
-Polling for job 39500035 (triton_job) to start...
-Job 39500035 is RUNNING.
-[slurm] starting nid008308
+Polling for job 39668944 (triton_job) to start...
+Job 39668944 is RUNNING.
+[slurm] starting nid008469
 
 =============================
 == Triton Inference Server ==
@@ -28,41 +28,41 @@ This container image and its contents are governed by the NVIDIA Deep Learning C
 By pulling and using the container, you accept the terms and conditions of this license:
 https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
 
-I0610 20:30:46.332666 1 pinned_memory_manager.cc:275] "Pinned memory pool is created at '0x7fd7fe000000' with size 268435456"
-I0610 20:30:46.336402 1 cuda_memory_manager.cc:107] "CUDA memory pool is created on device 0 with size 67108864"
-E0610 20:30:46.343974 1 server.cc:243] "CudaDriverHelper has not been initialized."
-I0610 20:30:47.085630 1 model_lifecycle.cc:472] "loading: GNN4Pixel:1"
-I0610 20:30:47.085897 1 model_lifecycle.cc:472] "loading: MetricLearning:2"
-DONE 2025-06-10T13:30:49
-I0610 20:30:57.823547 1 python_be.cc:2404] "TRITONBACKEND_ModelInstanceInitialize: GNN4Pixel_0_0 (GPU device 0)"
-I0610 20:30:57.826145 1 python_be.cc:2404] "TRITONBACKEND_ModelInstanceInitialize: MetricLearning_0_0 (GPU device 0)"
+I0617 05:42:15.986533 1 pinned_memory_manager.cc:275] "Pinned memory pool is created at '0x7fd6ae000000' with size 268435456"
+I0617 05:42:15.993390 1 cuda_memory_manager.cc:107] "CUDA memory pool is created on device 0 with size 67108864"
+E0617 05:42:16.002185 1 server.cc:243] "CudaDriverHelper has not been initialized."
+I0617 05:42:16.032073 1 model_lifecycle.cc:472] "loading: GNN4Pixel:2"
+I0617 05:42:16.032189 1 model_lifecycle.cc:472] "loading: MetricLearning:2"
+DONE 2025-06-16T22:42:16
+I0617 05:42:26.360417 1 python_be.cc:2404] "TRITONBACKEND_ModelInstanceInitialize: GNN4Pixel_0_0 (GPU device 0)"
+I0617 05:42:26.646281 1 python_be.cc:2404] "TRITONBACKEND_ModelInstanceInitialize: MetricLearning_0_0 (GPU device 0)"
 MetricLearningInferenceConfig(model_path=PosixPath('/models/MetricLearning/2'), device='cuda', auto_cast=False, compling=False, debug=False, save_debug_data=False, r_max=0.12, k_max=1000, filter_cut=0.05, filter_batches=10, cc_cut=0.01, walk_min=0.1, walk_max=0.6, embedding_node_features=['r', 'phi', 'z', 'cluster_x_1', 'cluster_y_1', 'cluster_z_1', 'cluster_x_2', 'cluster_y_2', 'cluster_z_2', 'count_1', 'charge_count_1', 'loc_eta_1', 'loc_phi_1', 'localDir0_1', 'localDir1_1', 'localDir2_1', 'lengthDir0_1', 'lengthDir1_1', 'lengthDir2_1', 'glob_eta_1', 'glob_phi_1', 'eta_angle_1', 'phi_angle_1', 'count_2', 'charge_count_2', 'loc_eta_2', 'loc_phi_2', 'localDir0_2', 'localDir1_2', 'localDir2_2', 'lengthDir0_2', 'lengthDir1_2', 'lengthDir2_2', 'glob_eta_2', 'glob_phi_2', 'eta_angle_2', 'phi_angle_2'], embedding_node_scale=[1000.0, 3.14, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1.0, 1.0, 3.14, 3.14, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 3.14, 3.14, 3.14, 3.14, 1.0, 1.0, 3.14, 3.14, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 3.14, 3.14, 3.14, 3.14], filter_node_features=['r', 'phi', 'z', 'cluster_x_1', 'cluster_y_1', 'cluster_z_1', 'cluster_x_2', 'cluster_y_2', 'cluster_z_2', 'count_1', 'charge_count_1', 'loc_eta_1', 'loc_phi_1', 'localDir0_1', 'localDir1_1', 'localDir2_1', 'lengthDir0_1', 'lengthDir1_1', 'lengthDir2_1', 'glob_eta_1', 'glob_phi_1', 'eta_angle_1', 'phi_angle_1', 'count_2', 'charge_count_2', 'loc_eta_2', 'loc_phi_2', 'localDir0_2', 'localDir1_2', 'localDir2_2', 'lengthDir0_2', 'lengthDir1_2', 'lengthDir2_2', 'glob_eta_2', 'glob_phi_2', 'eta_angle_2', 'phi_angle_2'], filter_node_scale=[1000.0, 3.14, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1.0, 1.0, 3.14, 3.14, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 3.14, 3.14, 3.14, 3.14, 1.0, 1.0, 3.14, 3.14, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 3.14, 3.14, 3.14, 3.14], gnn_node_features=['r', 'phi', 'z', 'eta', 'cluster_r_1', 'cluster_phi_1', 'cluster_z_1', 'cluster_eta_1', 'cluster_r_2', 'cluster_phi_2', 'cluster_z_2', 'cluster_eta_2'], gnn_node_scale=[1000.0, 3.14159265359, 1000.0, 1.0, 1000.0, 3.14159265359, 1000.0, 1.0, 1000.0, 3.14159265359, 1000.0, 1.0])
-I0610 20:31:01.893269 1 model_lifecycle.cc:838] "successfully loaded 'GNN4Pixel'"
-I0610 20:31:01.975422 1 model_lifecycle.cc:838] "successfully loaded 'MetricLearning'"
-I0610 20:31:01.975491 1 server.cc:606]
+I0617 05:42:30.340961 1 model_lifecycle.cc:838] "successfully loaded 'GNN4Pixel'"
+I0617 05:42:30.415007 1 model_lifecycle.cc:838] "successfully loaded 'MetricLearning'"
+I0617 05:42:30.415065 1 server.cc:606]
 +------------------+------+
 | Repository Agent | Path |
 +------------------+------+
 +------------------+------+
 
-I0610 20:31:01.975522 1 server.cc:633]
+I0617 05:42:30.415099 1 server.cc:633]
 +---------+-------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Backend | Path                                                  | Config                                                                                                                                                        |
 +---------+-------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | python  | /opt/tritonserver/backends/python/libtriton_python.so | {"cmdline":{"auto-complete-config":"true","backend-directory":"/opt/tritonserver/backends","min-compute-capability":"6.000000","default-max-batch-size":"4"}} |
 +---------+-------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-I0610 20:31:01.975557 1 server.cc:676]
+I0617 05:42:30.415139 1 server.cc:676]
 +----------------+---------+--------+
 | Model          | Version | Status |
 +----------------+---------+--------+
-| GNN4Pixel      | 1       | READY  |
+| GNN4Pixel      | 2       | READY  |
 | MetricLearning | 2       | READY  |
 +----------------+---------+--------+
 
-I0610 20:31:02.007994 1 metrics.cc:877] "Collecting metrics for GPU 0: NVIDIA A100-SXM4-80GB"
-I0610 20:31:02.010957 1 metrics.cc:770] "Collecting CPU metrics"
-I0610 20:31:02.011101 1 tritonserver.cc:2557]
+I0617 05:42:30.487756 1 metrics.cc:877] "Collecting metrics for GPU 0: NVIDIA A100-SXM4-80GB"
+I0617 05:42:30.493764 1 metrics.cc:770] "Collecting CPU metrics"
+I0617 05:42:30.493860 1 tritonserver.cc:2557]
 +----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Option                           | Value                                                                                                                                                                                                           |
 +----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -82,6 +82,6 @@ I0610 20:31:02.011101 1 tritonserver.cc:2557]
 | cache_enabled                    | 0                                                                                                                                                                                                               |
 +----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-I0610 20:31:02.015970 1 grpc_server.cc:2463] "Started GRPCInferenceService at 0.0.0.0:8001"
-I0610 20:31:02.016157 1 http_server.cc:4692] "Started HTTPService at 0.0.0.0:8000"
-I0610 20:31:02.057241 1 http_server.cc:362] "Started Metrics Service at 0.0.0.0:8002"
+I0617 05:42:30.498533 1 grpc_server.cc:2463] "Started GRPCInferenceService at 0.0.0.0:8001"
+I0617 05:42:30.498731 1 http_server.cc:4692] "Started HTTPService at 0.0.0.0:8000"
+I0617 05:42:30.539792 1 http_server.cc:362] "Started Metrics Service at 0.0.0.0:8002"

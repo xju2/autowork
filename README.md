@@ -63,6 +63,8 @@ snakemake --cores 128 --config max_evts=5000 --set-threads run_legacy_ckf=16 run
 snakemake --cores 16 --config max_evts=1000 -p --set-threads run_idpvm=4 run_gnn4itk_triton=1
 
 snakemake --cores 6 results/tracking/idpvm.comparison.primary.ttbarPU0.txt -p --rerun-triggers mtime --sdm conda --force
+
+snakemake --cores 6 workarea/tracking/test/aod.gnn4itkML.triton.gnn4pixelTriton.tracking.test.root --config max_evts=-1 --dry-run -p
 ```
 I can set threads for the rule.
 ```bash

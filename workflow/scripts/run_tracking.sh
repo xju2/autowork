@@ -64,8 +64,10 @@ if [[ "$CHAINNAME" != "CKF_LEGACY" \
    && "$CHAINNAME" != "GNN4ITk_ML_LOCAL" \
    && "$CHAINNAME" != "GNN4ITk_ML_TRITON" \
    && "$CHAINNAME" != "CKF_LEGACY_LRT" \
+   && "$CHAINNAME" != "GNN4ITk_ML_TRITON-DefaultCuts" \
+    && "$CHAINNAME" != "GNN4Pixel_ML_TRITON" \
 ]]; then
-    echo "Error: Invalid chain name. Must be one of [CKF_LEGACY, GNN4ITk_ML_LOCAL, GNN4ITk_ML_TRITON]."
+    echo "Error: Invalid chain name. Must be one of [CKF_LEGACY, GNN4ITk_ML_LOCAL, GNN4ITk_ML_TRITON, GNN4ITk_ML_TRITON-DefaultCuts, GNN4Pixel_ML_TRITON]."
     exit 1
 fi
 
@@ -191,6 +193,7 @@ elif [[ "$CHAINNAME" == "CKF_LEGACY_LRT" ]]; then
 elif [[ "$CHAINNAME" == "GNN4Pixel_ML_TRITON" ]]; then
     mkdir gnn4pixel_ml_triton
     cd gnn4pixel_ml_triton || { echo "Failed to create or change directory to gnn4pixel_ml_triton"; exit 1; }
+    FEATURE_NAMES="r,phi,z,cluster_x_1,cluster_y_1,cluster_z_1,charge_count_1,count_1,loc_eta_1,loc_phi_1,glob_eta_1,glob_phi_1,localDir0_1,localDir1_1,localDir2_1"
     Reco_tf.py \
         --CA 'all:True' --autoConfiguration 'everything' \
         --conditionsTag ${DETECTOR_CONDITIONS} \
@@ -201,7 +204,7 @@ elif [[ "$CHAINNAME" == "GNN4Pixel_ML_TRITON" ]]; then
         --postInclude 'all:PyJobTransforms.UseFrontier' \
         --preExec "all:flags.ITk.doEndcapEtaNeighbour=True; flags.Tracking.ITkGNNPass.minClusters = [7,7,7]; flags.Tracking.ITkGNNPass.maxHoles = [4,4,2]; " \
         --preInclude 'all:Campaigns.PhaseIIPileUp200' 'InDetConfig.ConfigurationHelpers.OnlyTrackingPreInclude' 'InDetGNNTracking.InDetGNNTrackingFlags.gnnTritonValidation' \
-        --preExec "flags.Tracking.GNN.usePixelHitsOnly = True; flags.Tracking.GNN.Triton.model = \"$TRITON_MODEL_NAME\"; flags.Tracking.GNN.Triton.url = \"$TRITON_URL\";" \
+        --preExec "flags.Tracking.GNN.usePixelHitsOnly = True; flags.Tracking.GNN.Triton.model = \"$TRITON_MODEL_NAME\"; flags.Tracking.GNN.Triton.url = \"$TRITON_URL\"; flags.Tracking.GNN.Triton.features=\"$FEATURE_NAMES\"; flags.Tracking.GNN.SeedTrackMaker.usePixelWP2=True;" \
         --inputRDOFile "${RDO_FILENAME}" \
         --outputAODFile "${OUTFILE}"  \
         --jobNumber '1' \

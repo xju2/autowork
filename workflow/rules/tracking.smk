@@ -103,19 +103,31 @@ rule run_gnn4itk_local_external:
         -o "{output}" > "{log}" 2>&1 \
         """
 
+gnn4itk_config_map = {
+    "gnn4itkML": {
+        "model_name": "MetricLearning",
+        "chain_name": "GNN4ITk_ML_TRITON",
+    },
+    "gnn4pixel": {
+        "model_name": "GNN4Pixel",
+        "chain_name": "GNN4Pixel_ML_TRITON",
+    }
+}
+
 rule run_gnn4itk_triton:
     input:
         "results/athena/athena.default.{ath_dev_name}.built.json",
         "projects/tracking/rdo_files.{dataset}.txt",
         ancient("results/triton/triton_server.{triton_dev_name}.ready.txt")
     output:
-        "workarea/tracking/{dataset}/aod.gnn4itkML.triton.{ath_dev_name}.{triton_dev_name}.{dataset}.root"
+        "workarea/tracking/{dataset}/aod.{trk_chain_name}.triton.{ath_dev_name}.{triton_dev_name}.{dataset}.root"
     log:
-        "logs/tracking/gnn4itkML.triton.{ath_dev_name}.{triton_dev_name}.{dataset}.log"
+        "logs/tracking/{trk_chain_name}.triton.{ath_dev_name}.{triton_dev_name}.{dataset}.log"
     params:
         max_evts = config.get("max_evts", 1),
         container_name = config["athena_dev_gpu_container"],
-        model_name = "MetricLearning",
+        model_name = lambda wildcards: gnn4itk_config_map[wildcards.trk_chain_name]["model_name"],
+        chain_name = lambda wildcards: gnn4itk_config_map[wildcards.trk_chain_name]["chain_name"],
     threads:
         1
     shell:
@@ -123,7 +135,7 @@ rule run_gnn4itk_triton:
         workflow/scripts/run_tracking.sh -i "{input[1]}" \
         -j {threads} \
         -m {params.max_evts} \
-        -c "GNN4ITk_ML_TRITON" \
+        -c {params.chain_name} \
         -s {input[0]} \
         -u `cat {input[2]}` \
         -p {params.model_name} \
