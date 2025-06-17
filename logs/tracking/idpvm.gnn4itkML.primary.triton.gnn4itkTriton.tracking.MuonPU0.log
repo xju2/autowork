@@ -1,4 +1,4 @@
-Running workflow/scripts/run_idpvm.sh \n Fri May 30 10:07:15 PDT 2025 @ login29
+Running workflow/scripts/run_idpvm.sh \n Tue Jun 10 13:40:43 PDT 2025 @ nid004171
 -----------------------------------
 Input File: workarea/tracking/MuonPU0/aod.gnn4itkML.triton.gnn4itkTriton.tracking.MuonPU0.root
 Setup File: results/athena/athena.default.gnn4itkTriton.built.json
@@ -13,8 +13,8 @@ virtual environment detected, deactivating...
 [7m lsetup astyle      [0m  ATLAS style macros
 [7m lsetup atlantis    [0m  Atlantis: event display
 [7m lsetup centralpage [0m  Find samples
-[7m lsetup eiclient    [0m  Event Index 
-[7m lsetup emi         [0m  EMI: grid middleware user interface 
+[7m lsetup eiclient    [0m  Event Index
+[7m lsetup emi         [0m  EMI: grid middleware user interface
 [7m lsetup lcgenv      [0m  lcgenv: setup tools from cvmfs SFT repository
 [7m lsetup panda       [0m  Panda: Production ANd Distributed Analysis
 [7m lsetup pyami       [0m  pyAMI: ATLAS Metadata Interface python client
@@ -34,12 +34,12 @@ virtual environment detected, deactivating...
 [7mshowVersions        [0m show versions of installed software
 
 
-[1m[4m30 Nov 2023[0m 
+[1m[4m30 Nov 2023[0m
 
 A serious security issue in ROOT's web-based GUI has been identified:
 
-  You should not use the web-based browser until further notice and instead 
-  set the old-style TBrowser as the default. Please see the Twiki page linked 
+  You should not use the web-based browser until further notice and instead
+  set the old-style TBrowser as the default. Please see the Twiki page linked
   below for instructions on how to do this.
 
   https://twiki.cern.ch/twiki/bin/view/AtlasComputing/AtlasComputingArchive/RootBrowserSecurityIssue
@@ -47,7 +47,7 @@ A serious security issue in ROOT's web-based GUI has been identified:
   More details of this issue:
   https://root.cern/about/security/#2023-11-26-open-port-for-control-of-web-gui-allows-read-and-write-access-to-file-system
 
-  [0;31mReason for this message: $HOME/.rootrc is missing[0m 
+  [0;31mReason for this message: $HOME/.rootrc is missing[0m
 
 Set up environment from /pscratch/sd/x/xju/code/autowork/results/athena/athena.default.gnn4itkTriton.built.json
 Setup Athena from JSON file: /pscratch/sd/x/xju/code/autowork/results/athena/athena.default.gnn4itkTriton.built.json
@@ -70,7 +70,7 @@ Py:AutoConfigFlags    INFO Obtaining metadata of auto-configuration by peeking i
 Py:MetaReader        INFO Current mode used: lite
 Py:MetaReader        INFO Current filenames: ['/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/MuonPU0/aod.gnn4itkML.triton.gnn4itkTriton.tracking.MuonPU0.root']
 Py:MetaReader        INFO MetaReader is called with the parameter "unique_tag_info_values" set to True. This is a workaround to remove all duplicate values from "/TagInfo" key
-Py:AutoConfigFlags    INFO Looking into the file in 'peeker' mode as the configuration requires more details: AtlasRelease 
+Py:AutoConfigFlags    INFO Looking into the file in 'peeker' mode as the configuration requires more details: AtlasRelease
 Py:MetaReader        INFO Current mode used: peeker
 Py:MetaReader        INFO Current filenames: ['/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/MuonPU0/aod.gnn4itkML.triton.gnn4itkTriton.tracking.MuonPU0.root']
 Py:MetaReader        INFO MetaReader is called with the parameter "unique_tag_info_values" set to True. This is a workaround to remove all duplicate values from "/TagInfo" key
@@ -83,21 +83,21 @@ Py:ComponentAccumulator    INFO Top sequence 0
 Py:ComponentAccumulator    INFO \__ AthMasterSeq (seq: SEQ AND)
 Py:ComponentAccumulator    INFO    \__ AthAlgEvtSeq (seq: SEQ AND)
 Py:ComponentAccumulator    INFO       \__ AthBeginSeq (seq: SEQ AND)
-Py:ComponentAccumulator    INFO          \__ AthIncFirerAlg/BeginIncFiringAlg (alg) 
-Py:ComponentAccumulator    INFO          \__ IncidentProcAlg/IncidentProcAlg1 (alg) 
+Py:ComponentAccumulator    INFO          \__ AthIncFirerAlg/BeginIncFiringAlg (alg)
+Py:ComponentAccumulator    INFO          \__ IncidentProcAlg/IncidentProcAlg1 (alg)
 Py:ComponentAccumulator    INFO       \__ AthAllAlgSeq (seq: PAR AND)
 Py:ComponentAccumulator    INFO          \__ AthCondSeq (seq: PAR AND)
 Py:ComponentAccumulator    INFO          \__ AthAlgSeq (seq: PAR AND)
-Py:ComponentAccumulator    INFO             \__ ParameterErrDecoratorAlg/ParameterErrDecoratorAlg (alg) 
-Py:ComponentAccumulator    INFO             \__ InDetPhysValTruthDecoratorAlg/InDetPhysValTruthDecoratorAlg (alg) 
+Py:ComponentAccumulator    INFO             \__ ParameterErrDecoratorAlg/ParameterErrDecoratorAlg (alg)
+Py:ComponentAccumulator    INFO             \__ InDetPhysValTruthDecoratorAlg/InDetPhysValTruthDecoratorAlg (alg)
 Py:ComponentAccumulator    INFO             \__ PhysValSequence (seq: SEQ AND)
-Py:ComponentAccumulator    INFO                \__ AthenaMonManager/PhysValMonManager (alg) 
+Py:ComponentAccumulator    INFO                \__ AthenaMonManager/PhysValMonManager (alg)
 Py:ComponentAccumulator    INFO       \__ AthEndSeq (seq: SEQ AND)
-Py:ComponentAccumulator    INFO          \__ AthIncFirerAlg/EndIncFiringAlg (alg) 
-Py:ComponentAccumulator    INFO          \__ IncidentProcAlg/IncidentProcAlg2 (alg) 
+Py:ComponentAccumulator    INFO          \__ AthIncFirerAlg/EndIncFiringAlg (alg)
+Py:ComponentAccumulator    INFO          \__ IncidentProcAlg/IncidentProcAlg2 (alg)
 Py:ComponentAccumulator    INFO    \__ AthOutSeq (seq: PAR AND)
-Py:ComponentAccumulator    INFO    \__ AthIncFirerAlg/EndAlgorithmsFiringAlg (alg) 
-Py:ComponentAccumulator    INFO    \__ IncidentProcAlg/IncidentProcAlg3 (alg) 
+Py:ComponentAccumulator    INFO    \__ AthIncFirerAlg/EndAlgorithmsFiringAlg (alg)
+Py:ComponentAccumulator    INFO    \__ IncidentProcAlg/IncidentProcAlg3 (alg)
 Py:ComponentAccumulator    INFO Condition Algorithms
 Py:ComponentAccumulator    INFO  \__ CondInputLoader (cond alg)
 Py:ComponentAccumulator    INFO  \__ BeamSpotCondAlg (cond alg)
@@ -144,22 +144,22 @@ Py:ComponentAccumulator    INFO   EventLoop : AthenaEventLoopMgr
 Py:ComponentAccumulator    INFO   ExtSvcCreates : False
 Py:ComponentAccumulator    INFO   JobOptionsSvcType : JobOptionsSvc
 Py:ComponentAccumulator    INFO   JobOptionsType : NONE
-Py:ComponentAccumulator    INFO   JobOptionsPostAction : 
-Py:ComponentAccumulator    INFO   JobOptionsPreAction : 
+Py:ComponentAccumulator    INFO   JobOptionsPostAction :
+Py:ComponentAccumulator    INFO   JobOptionsPreAction :
 Py:ComponentAccumulator    INFO   PrintAlgsSequence : False
 Py:ComponentAccumulator    INFO   AuditAlgorithms : True
 Py:ComponentAccumulator    INFO   InitializationLoopCheck : False
 Py:ComponentAccumulator    INFO   EvtMax : -1
 Py:ComponentAccumulator    INFO   OutputLevel : 3
 Py:ComponentAccumulator    INFO   EvtSel : EventSelectorAthenaPool/EventSelector
-ApplicationMgr    SUCCESS 
+ApplicationMgr    SUCCESS
 ====================================================================================================================================
                                                    Welcome to ApplicationMgr (GaudiCoreSvc v39r4)
-                                          running on login29 on Fri May 30 10:07:38 2025
+                                          running on nid004171 on Tue Jun 10 13:41:04 2025
 ====================================================================================================================================
 ApplicationMgr       INFO Application Manager Configured successfully
-Py:ComponentAccumulator    INFO Athena job with pid 65560
-CoreDumpSvc                                          INFO Handling signals: 11(Segmentation fault) 7(Bus error) 4(Illegal instruction) 14(Alarm clock) 
+Py:ComponentAccumulator    INFO Athena job with pid 336079
+CoreDumpSvc                                          INFO Handling signals: 11(Segmentation fault) 7(Bus error) 4(Illegal instruction) 14(Alarm clock)
 ClassIDSvc                                           INFO getRegistryEntries: read 4514 CLIDRegistry entries for module ALL
 IOVDbSvc                                             INFO Only 5 POOL conditions files will be open at once
 IOVDbSvc                                             INFO Cache alignment will be done in 3 slices
@@ -175,28 +175,28 @@ PoolSvc                                              INFO Set connectionsvc retr
 PoolSvc                                              INFO Frontier compression level set to 5
 DBReplicaSvc                                         INFO Frontier server at (serverurl=http://atlasfrontier-ai.cern.ch:8000/atlr)(serverurl=http://atlasfrontier2-ai.cern.ch:8000/atlr)(serverurl=http://atlasfrontier1-ai.cern.ch:8000/atlr)(proxyurl=http://frontiercache.nersc.gov:3128)(proxyurl=http://atlasbpfrontier.fnal.gov:3127)(proxyurl=http://atlasbpfrontier.cern.ch:3127) will be considered for COOL data
 DBReplicaSvc                                         INFO Read replica configuration from /cvmfs/atlas.cern.ch/repo/sw/software/25.0/Athena/25.0.30/InstallArea/x86_64-el9-gcc13-opt/share/dbreplica.config
-DBReplicaSvc                                         INFO Total of 1 servers found for host login29.chn.perlmutter.nersc.gov [ATLF ]
+DBReplicaSvc                                         INFO Total of 1 servers found for host x1004c3s0b1n1h0.chn.perlmutter.nersc.gov [ATLF ]
 PoolSvc                                              INFO Successfully setup replica sorting algorithm
 PoolSvc                                              INFO Setting up APR FileCatalog and Streams
 PoolSvc                                              INFO Resolved path (via ATLAS_POOLCOND_PATH) is /cvmfs/atlas-condb.cern.ch/repo/conditions/poolcond/PoolFileCatalog.xml
 PoolSvc                                              INFO Unable find catalog apcfile:poolcond/PoolCat_oflcond.xml in $ATLAS_POOLCOND_PATH and $DATAPATH
 PoolSvc                                              INFO POOL WriteCatalog is xmlcatalog_file:PoolFileCatalog.xml
-DbSession                                            INFO     Open     DbSession    
-Domain[ROOT_All]                                     INFO >   Access   DbDomain     READ      [ROOT_All] 
-DbSession                                            INFO     Open     DbSession    
-Domain[ROOT_All]                                     INFO >   Access   DbDomain     READ      [ROOT_All] 
+DbSession                                            INFO     Open     DbSession
+Domain[ROOT_All]                                     INFO >   Access   DbDomain     READ      [ROOT_All]
+DbSession                                            INFO     Open     DbSession
+Domain[ROOT_All]                                     INFO >   Access   DbDomain     READ      [ROOT_All]
 MetaDataSvc                                          INFO Found MetaDataTools = PublicToolHandleArray(['IOVDbMetaDataTool/IOVDbMetaDataTool'])
 PoolSvc                                              INFO File is not in Catalog! Attempt to open it anyway.
-DbSession                                            INFO     Open     DbSession    
+DbSession                                            INFO     Open     DbSession
 Domain[ROOT_All]                                     INFO ->  Access   DbDatabase   READ      [ROOT_All] 7CF05AF5-4270-7C82-39C5-0FF0FF0FF0FF
 Domain[ROOT_All]                                     INFO                           /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/MuonPU0/aod.gnn4itkML.triton.gnn4itkTriton.tracking.MuonPU0.root
 RootDatabase.open                                    INFO /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/MuonPU0/aod.gnn4itkML.triton.gnn4itkTriton.tracking.MuonPU0.root File version:63404
 /global/cfs/cdirs/m3443/usr/xju/workflow/wo...root   INFO Database being retired...
 Domain[ROOT_All]                                     INFO ->  Deaccess DbDatabase   READ      [ROOT_All] 7CF05AF5-4270-7C82-39C5-0FF0FF0FF0FF
-Domain[ROOT_All]                                     INFO >   Deaccess DbDomain     READ      [ROOT_All] 
-DbSession                                            INFO     Open     DbSession    
-Domain[ROOT_All]                                     INFO >   Access   DbDomain     READ      [ROOT_All] 
-Domain[ROOT_All]                                     INFO ->  Access   DbDatabase   READ      [ROOT_All] 8F2CE55D-7AD1-A14D-B905-B9662C809BB7
+Domain[ROOT_All]                                     INFO >   Deaccess DbDomain     READ      [ROOT_All]
+DbSession                                            INFO     Open     DbSession
+Domain[ROOT_All]                                     INFO >   Access   DbDomain     READ      [ROOT_All]
+Domain[ROOT_All]                                     INFO ->  Access   DbDatabase   READ      [ROOT_All] EC74A97C-DB80-874E-AB70-40C17CA25E4B
 Domain[ROOT_All]                                     INFO                           /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/MuonPU0/aod.gnn4itkML.triton.gnn4itkTriton.tracking.MuonPU0.root
 RootDatabase.open                                    INFO /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/MuonPU0/aod.gnn4itkML.triton.gnn4itkTriton.tracking.MuonPU0.root File version:63404
 EventPersistencySvc                                  INFO Added successfully Conversion service AthenaPoolCnvSvc
@@ -221,44 +221,44 @@ IOVDbSvc                                             INFO Added taginfo remove f
 ClassIDSvc                                           INFO getRegistryEntries: read 2020 CLIDRegistry entries for module ALL
 ClassIDSvc                                           INFO getRegistryEntries: read 35 CLIDRegistry entries for module ALL
 GeoModelSvc                                          INFO Explicitly initializing DetDescrCnvSvc
-DetDescrCnvSvc                                       INFO  initializing 
+DetDescrCnvSvc                                       INFO  initializing
 DetDescrCnvSvc                                       INFO Found DetectorStore service
-DetDescrCnvSvc                                       INFO  filling proxies for detector managers 
-DetDescrCnvSvc                                       INFO  filling address for CaloTTMgr with CLID 117659265 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for CaloMgr with CLID 4548337 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for CaloSuperCellMgr with CLID 241807251 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for CaloIdManager with CLID 125856940 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for IdDict with CLID 2411 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for AtlasID with CLID 164875623 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for PixelID with CLID 2516 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for SCT_ID with CLID 2517 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for TRT_ID with CLID 2518 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for PLR_ID with CLID 131939624 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for HGTD_ID with CLID 79264207 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for SiliconID with CLID 129452393 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for LArEM_ID with CLID 163583365 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for LArEM_SuperCell_ID with CLID 99488227 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for LArHEC_ID with CLID 3870484 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for LArHEC_SuperCell_ID with CLID 254277678 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for LArFCAL_ID with CLID 45738051 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for LArFCAL_SuperCell_ID with CLID 12829437 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for LArMiniFCAL_ID with CLID 79264204 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for LArOnlineID with CLID 158698068 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for TTOnlineID with CLID 38321944 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for LArOnline_SuperCellID with CLID 115600394 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for LArHVLineID with CLID 27863673 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for LArElectrodeID with CLID 80757351 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for TileID with CLID 2901 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for Tile_SuperCell_ID with CLID 49557789 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for TileHWID with CLID 2902 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for TileTBID with CLID 2903 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for CaloLVL1_ID with CLID 108133391 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for CaloCell_ID with CLID 123500438 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for CaloCell_SuperCell_ID with CLID 128365736 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for CaloDM_ID with CLID 167756483 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for ZdcID with CLID 190591643 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for JTower_ID with CLID 218674799 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for GTower_ID with CLID 49678914 and storage type 68 to detector store 
+DetDescrCnvSvc                                       INFO  filling proxies for detector managers
+DetDescrCnvSvc                                       INFO  filling address for CaloTTMgr with CLID 117659265 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for CaloMgr with CLID 4548337 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for CaloSuperCellMgr with CLID 241807251 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for CaloIdManager with CLID 125856940 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for IdDict with CLID 2411 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for AtlasID with CLID 164875623 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for PixelID with CLID 2516 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for SCT_ID with CLID 2517 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for TRT_ID with CLID 2518 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for PLR_ID with CLID 131939624 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for HGTD_ID with CLID 79264207 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for SiliconID with CLID 129452393 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for LArEM_ID with CLID 163583365 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for LArEM_SuperCell_ID with CLID 99488227 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for LArHEC_ID with CLID 3870484 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for LArHEC_SuperCell_ID with CLID 254277678 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for LArFCAL_ID with CLID 45738051 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for LArFCAL_SuperCell_ID with CLID 12829437 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for LArMiniFCAL_ID with CLID 79264204 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for LArOnlineID with CLID 158698068 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for TTOnlineID with CLID 38321944 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for LArOnline_SuperCellID with CLID 115600394 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for LArHVLineID with CLID 27863673 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for LArElectrodeID with CLID 80757351 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for TileID with CLID 2901 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for Tile_SuperCell_ID with CLID 49557789 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for TileHWID with CLID 2902 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for TileTBID with CLID 2903 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for CaloLVL1_ID with CLID 108133391 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for CaloCell_ID with CLID 123500438 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for CaloCell_SuperCell_ID with CLID 128365736 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for CaloDM_ID with CLID 167756483 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for ZdcID with CLID 190591643 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for JTower_ID with CLID 218674799 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for GTower_ID with CLID 49678914 and storage type 68 to detector store
 GeoModelSvc.BeamPipeDetectorTool                     INFO Building Beam Pipe
 GeoModelSvc                                          INFO GeoModelSvc.BeamPipeDetectorTool	 SZ= 708Kb 	 Time = 0.01S
 EventPersistencySvc                                  INFO Added successfully Conversion service DetDescrCnvSvc
@@ -280,30 +280,30 @@ Bad field index for phi_index index 6 in dictionary InnerDetector region #123 gr
 Bad field index for eta_index index 7 in dictionary InnerDetector region #123 group plr tag  size 8
 IdDictDetDescrCnv                                    INFO Found id dicts:
 IdDictDetDescrCnv                                    INFO Using dictionary tag: <no tag>
-IdDictDetDescrCnv                                    INFO Dictionary ATLAS                version default              DetDescr tag (using default) file 
+IdDictDetDescrCnv                                    INFO Dictionary ATLAS                version default              DetDescr tag (using default) file
 IdDictDetDescrCnv                                    INFO Dictionary Calorimeter          version default              DetDescr tag CaloIdentifier-LVL1-02 file IdDictParser/IdDictCalorimeter_L1Onl.xml
 IdDictDetDescrCnv                                    INFO Dictionary ForwardDetectors     version default              DetDescr tag ForDetIdentifier-00       file IdDictParser/IdDictForwardDetectors.xml
 IdDictDetDescrCnv                                    INFO Dictionary InnerDetector        version P2-RUN4              DetDescr tag (using default) file InDetIdDict.xml
 IdDictDetDescrCnv                                    INFO Dictionary LArCalorimeter       version fullAtlas            DetDescr tag LArIdentifier-DC3-05-Comm file IdDictParser/IdDictLArCalorimeter_DC3-05-Comm-01.xml
-IdDictDetDescrCnv                                    INFO Dictionary LArElectrode         version fullAtlas            DetDescr tag (using default) file 
-IdDictDetDescrCnv                                    INFO Dictionary LArHighVoltage       version fullAtlas            DetDescr tag (using default) file 
+IdDictDetDescrCnv                                    INFO Dictionary LArElectrode         version fullAtlas            DetDescr tag (using default) file
+IdDictDetDescrCnv                                    INFO Dictionary LArHighVoltage       version fullAtlas            DetDescr tag (using default) file
 IdDictDetDescrCnv                                    INFO Dictionary MuonSpectrometer     version R.09.03              DetDescr tag MuonIdentifier-16         file IdDictParser/IdDictMuonSpectrometer_R.09.03.xml
 IdDictDetDescrCnv                                    INFO Dictionary TileCalorimeter      version fullAtlasAndTestBeam DetDescr tag TileIdentifier-00         file IdDictParser/IdDictTileCalorimeter.xml
 PixelID                                              INFO Initialize from dictionary
-indet 1 2,4,5,7,10,11,12,13 7 1fffffffffffffff 61 3 0 min/max 2 13 values  2 4 5 7 10 11 12 13 indexes  0 0 1 2 0 3 0 0 4 5 6 7 indices  8 prev  0 next  0 mode  enumerated  cont mode  none  
-pixel 1 1:4 3 e7ffffffffffffff 59 2 3 min/max 1 4 values  indexes  indices  4 prev  0 next  0 mode  both_bounded  cont mode  none  
-bec 1 -2,0,2 3 f9ffffffffffffff 57 2 5 min/max -2 2 values  -2 0 2 indexes  0 0 1 0 2 indices  3 prev  0 next  0 mode  enumerated  cont mode  none  
-bec_shift 0 0 0 0 0 0 0 min/max 0 0 values  indexes  indices  0 prev  0 next  0 mode  both_bounded  cont mode  none  
-lay_disk 0 0:8 f fe1fffffffffffff 53 4 7 min/max 0 8 values  indexes  indices  9 prev  0 next  0 mode  both_bounded  cont mode  none  
-lay_disk_shift 0 0 0 0 0 0 0 min/max 0 0 values  indexes  indices  0 prev  0 next  0 mode  both_bounded  cont mode  none  
-phi_mod 0 0:55 3f ffe07fffffffffff 47 6 11 min/max 0 55 values  indexes  indices  56 prev  0 next  0 mode  both_bounded  cont mode  none  
-phi_mod_shift 0 0 0 0 0 0 0 min/max 0 0 values  indexes  indices  0 prev  0 next  0 mode  both_bounded  cont mode  none  
-eta_mod 1 -12:22 3f ffff81ffffffffff 41 6 17 min/max -12 22 values  indexes  indices  35 prev  0 next  0 mode  both_bounded  cont mode  none  
-eta_mod_shift 0 0 0 0 0 0 0 min/max 0 0 values  indexes  indices  0 prev  0 next  0 mode  both_bounded  cont mode  none  
-phi_index 0 0:772 3ff fffffe007fffffff 31 10 23 min/max 0 772 values  indexes  indices  773 prev  0 next  0 mode  both_bounded  cont mode  none  
-eta_index 0 0:804 3ff ffffffff801fffff 21 10 33 min/max 0 804 values  indexes  indices  805 prev  0 next  0 mode  both_bounded  cont mode  none  
-bec_eta_mod 0 0 0 0 0 0 0 min/max 0 0 values  indexes  indices  0 prev  0 next  0 mode  both_bounded  cont mode  none  
-PixelID::initLevelsFromDict - found levels 
+indet 1 2,4,5,7,10,11,12,13 7 1fffffffffffffff 61 3 0 min/max 2 13 values  2 4 5 7 10 11 12 13 indexes  0 0 1 2 0 3 0 0 4 5 6 7 indices  8 prev  0 next  0 mode  enumerated  cont mode  none
+pixel 1 1:4 3 e7ffffffffffffff 59 2 3 min/max 1 4 values  indexes  indices  4 prev  0 next  0 mode  both_bounded  cont mode  none
+bec 1 -2,0,2 3 f9ffffffffffffff 57 2 5 min/max -2 2 values  -2 0 2 indexes  0 0 1 0 2 indices  3 prev  0 next  0 mode  enumerated  cont mode  none
+bec_shift 0 0 0 0 0 0 0 min/max 0 0 values  indexes  indices  0 prev  0 next  0 mode  both_bounded  cont mode  none
+lay_disk 0 0:8 f fe1fffffffffffff 53 4 7 min/max 0 8 values  indexes  indices  9 prev  0 next  0 mode  both_bounded  cont mode  none
+lay_disk_shift 0 0 0 0 0 0 0 min/max 0 0 values  indexes  indices  0 prev  0 next  0 mode  both_bounded  cont mode  none
+phi_mod 0 0:55 3f ffe07fffffffffff 47 6 11 min/max 0 55 values  indexes  indices  56 prev  0 next  0 mode  both_bounded  cont mode  none
+phi_mod_shift 0 0 0 0 0 0 0 min/max 0 0 values  indexes  indices  0 prev  0 next  0 mode  both_bounded  cont mode  none
+eta_mod 1 -12:22 3f ffff81ffffffffff 41 6 17 min/max -12 22 values  indexes  indices  35 prev  0 next  0 mode  both_bounded  cont mode  none
+eta_mod_shift 0 0 0 0 0 0 0 min/max 0 0 values  indexes  indices  0 prev  0 next  0 mode  both_bounded  cont mode  none
+phi_index 0 0:772 3ff fffffe007fffffff 31 10 23 min/max 0 772 values  indexes  indices  773 prev  0 next  0 mode  both_bounded  cont mode  none
+eta_index 0 0:804 3ff ffffffff801fffff 21 10 33 min/max 0 804 values  indexes  indices  805 prev  0 next  0 mode  both_bounded  cont mode  none
+bec_eta_mod 0 0 0 0 0 0 0 min/max 0 0 values  indexes  indices  0 prev  0 next  0 mode  both_bounded  cont mode  none
+PixelID::initLevelsFromDict - found levels
 subdet        0
 part          1
 barrel_endcap 2
@@ -318,9 +318,9 @@ GeoModelSvc.ITk::PixelDetectorTool                   INFO Getting ITkPixel GeoMo
 Transcoded it
 Parsed it
 Database string successfully parsed.
-GeoModelXML-INFO: Set up detector geometry from db-string 
+GeoModelXML-INFO: Set up detector geometry from db-string
 which adds sub-detector ITk_Pixel
-GeoModelSvc.ITk::PixelDetectorTool                   INFO 
+GeoModelSvc.ITk::PixelDetectorTool                   INFO
 
 Pixel Numerology:
 ===============
@@ -352,15 +352,15 @@ GeoModelSvc.ITk::PixelDetectorTool                   INFO Max. eta cells is 800
 GeoModelSvc.ITk::PixelDetectorTool                   INFO Max. phi cells is 768
 GeoModelSvc.ITk::PixelDetectorTool                   INFO End of numerology
 
-GeoModelSvc                                          INFO GeoModelSvc.ITk::PixelDetectorTool	 SZ= 50848Kb 	 Time = 0.5S
-SCT_ID                                               INFO 
+GeoModelSvc                                          INFO GeoModelSvc.ITk::PixelDetectorTool	 SZ= 50852Kb 	 Time = 0.45S
+SCT_ID                                               INFO
 GeoModelSvc.ITk::StripDetectorTool                   INFO Trying new ITkStrip database location.
 GeoModelSvc.ITk::StripDetectorTool                   INFO Using StripXDD-03-00 from ATLAS tag ATLAS-P2-RUN4-03-00-00
 GeoModelSvc.ITk::StripDetectorTool                   INFO Getting ITkStrip GeoModelXml description from the geometry database
 Transcoded it
 Parsed it
 Database string successfully parsed.
-GeoModelXML-INFO: Set up detector geometry from db-string 
+GeoModelXML-INFO: Set up detector geometry from db-string
 which adds sub-detector LTF Strip layout
 copy = 0; level = 2
 Add Alignable named WheelOther with id 0
@@ -386,7 +386,7 @@ copy = 4; level = 2
 Add Alignable named Wheel with id 4
 copy = 5; level = 2
 Add Alignable named Wheel with id 5
-GeoModelSvc.ITk::StripDetectorTool                   INFO 
+GeoModelSvc.ITk::StripDetectorTool                   INFO
 
 SCT Numerology:
 ===============
@@ -524,18 +524,18 @@ GeoModelSvc.ITk::StripDetectorTool                   INFO Max. phi cells is 1536
 GeoModelSvc.ITk::StripDetectorTool                   INFO Max. no. strips is 1536
 GeoModelSvc.ITk::StripDetectorTool                   INFO End of numerology
 
-GeoModelSvc                                          INFO GeoModelSvc.ITk::StripDetectorTool	 SZ= 120924Kb 	 Time = 1.6S
+GeoModelSvc                                          INFO GeoModelSvc.ITk::StripDetectorTool	 SZ= 120916Kb 	 Time = 1.46S
 HGTD_IDDetDescrCnv                                   INFO in createObj: creating a HGTD_ID helper object in the detector store
 HGTD_ID                                              INFO Initialize from dictionary
-indet 1 2,4,5,7,10,11,12,13 7 1fffffffffffffff 61 3 0 min/max 2 13 values  2 4 5 7 10 11 12 13 indexes  0 0 1 2 0 3 0 0 4 5 6 7 indices  8 prev  0 next  0 mode  enumerated  cont mode  none  
-hgtd 1 1:4 3 e7ffffffffffffff 59 2 3 min/max 1 4 values  indexes  indices  4 prev  0 next  0 mode  both_bounded  cont mode  none  
-ec 1 -2,2 1 fbffffffffffffff 58 1 5 min/max -2 2 values  -2 2 indexes  0 0 0 0 1 indices  2 prev  0 next  0 mode  enumerated  cont mode  none  
-layer 0 0:3 3 fcffffffffffffff 56 2 6 min/max 0 3 values  indexes  indices  4 prev  0 next  0 mode  both_bounded  cont mode  none  
-phi_mod 1 1:1004 3ff ff003fffffffffff 46 10 8 min/max 1 1004 values  indexes  indices  1004 prev  0 next  0 mode  both_bounded  cont mode  none  
-eta_mod 0 0 1 ffffdfffffffffff 45 1 18 min/max 0 0 values  indexes  indices  1 prev  0 next  0 mode  both_bounded  cont mode  none  
-phi_index 0 0:14 f ffffe1ffffffffff 41 4 19 min/max 0 14 values  indexes  indices  15 prev  0 next  0 mode  both_bounded  cont mode  none  
-eta_index 0 0:29 1f fffffe0fffffffff 36 5 23 min/max 0 29 values  indexes  indices  30 prev  0 next  0 mode  both_bounded  cont mode  none  
-HGTD_ID::initLevelsFromDict - found levels 
+indet 1 2,4,5,7,10,11,12,13 7 1fffffffffffffff 61 3 0 min/max 2 13 values  2 4 5 7 10 11 12 13 indexes  0 0 1 2 0 3 0 0 4 5 6 7 indices  8 prev  0 next  0 mode  enumerated  cont mode  none
+hgtd 1 1:4 3 e7ffffffffffffff 59 2 3 min/max 1 4 values  indexes  indices  4 prev  0 next  0 mode  both_bounded  cont mode  none
+ec 1 -2,2 1 fbffffffffffffff 58 1 5 min/max -2 2 values  -2 2 indexes  0 0 0 0 1 indices  2 prev  0 next  0 mode  enumerated  cont mode  none
+layer 0 0:3 3 fcffffffffffffff 56 2 6 min/max 0 3 values  indexes  indices  4 prev  0 next  0 mode  both_bounded  cont mode  none
+phi_mod 1 1:1004 3ff ff003fffffffffff 46 10 8 min/max 1 1004 values  indexes  indices  1004 prev  0 next  0 mode  both_bounded  cont mode  none
+eta_mod 0 0 1 ffffdfffffffffff 45 1 18 min/max 0 0 values  indexes  indices  1 prev  0 next  0 mode  both_bounded  cont mode  none
+phi_index 0 0:14 f ffffe1ffffffffff 41 4 19 min/max 0 14 values  indexes  indices  15 prev  0 next  0 mode  both_bounded  cont mode  none
+eta_index 0 0:29 1f fffffe0fffffffff 36 5 23 min/max 0 29 values  indexes  indices  30 prev  0 next  0 mode  both_bounded  cont mode  none
+HGTD_ID::initLevelsFromDict - found levels
 subdet        0
 part          1
 endcap        2
@@ -549,9 +549,9 @@ GeoModelSvc.HGTD_GMX_DetectorTool                    INFO Getting HGTD GeoModelX
 Transcoded it
 Parsed it
 Database string successfully parsed.
-GeoModelXML-INFO: Set up detector geometry from db-string 
+GeoModelXML-INFO: Set up detector geometry from db-string
 which adds sub-detector HGTD
-GeoModelSvc                                          INFO GeoModelSvc.HGTD_GMX_DetectorTool	 SZ= 24796Kb 	 Time = 0.39S
+GeoModelSvc                                          INFO GeoModelSvc.HGTD_GMX_DetectorTool	 SZ= 24800Kb 	 Time = 0.36S
 GeoModelSvc.HGTD_GMX_DetectorTool                    INFO Alignment disabled. No callback registered
 GeoModelSvc                                          INFO   AlgTool: GeoModelSvc.BeamPipeDetectorTool
 GeoModelSvc                                          INFO   AlgTool: GeoModelSvc.ITk::PixelDetectorTool
@@ -570,11 +570,11 @@ CondInputLoader                                      INFO Adding base classes:
   +  ( 'CondAttrListCollection' , 'ConditionStore+/GLOBAL/BField/Maps' )   ->
   +  ( 'Trk::LayerMaterialMap' , 'ConditionStore+/GLOBAL/TrackingGeo/LayerMaterialITK' )   -> no bases
 CondInputLoader                                      INFO Will create WriteCondHandle dependencies for the following DataObjects:
-    +  ( 'AlignableTransformContainer' , 'ConditionStore+/Indet/Align' ) 
-    +  ( 'AthenaAttributeList' , 'ConditionStore+/Indet/Beampos' ) 
-    +  ( 'CondAttrListCollection' , 'ConditionStore+/EXT/DCS/MAGNETS/SENSORDATA' ) 
-    +  ( 'CondAttrListCollection' , 'ConditionStore+/GLOBAL/BField/Maps' ) 
-    +  ( 'Trk::LayerMaterialMap' , 'ConditionStore+/GLOBAL/TrackingGeo/LayerMaterialITK' ) 
+    +  ( 'AlignableTransformContainer' , 'ConditionStore+/Indet/Align' )
+    +  ( 'AthenaAttributeList' , 'ConditionStore+/Indet/Beampos' )
+    +  ( 'CondAttrListCollection' , 'ConditionStore+/EXT/DCS/MAGNETS/SENSORDATA' )
+    +  ( 'CondAttrListCollection' , 'ConditionStore+/GLOBAL/BField/Maps' )
+    +  ( 'Trk::LayerMaterialMap' , 'ConditionStore+/GLOBAL/TrackingGeo/LayerMaterialITK' )
 AtlasFieldMapCondAlg                                 INFO Initialize: Will update the field map from conditions
 AtlasFieldCacheCondAlg                               INFO Initialize: Will update current from conditions
 AtlasFieldCacheCondAlg                               INFO Initialize: useDCS, useSoleCurrent, useToroCurrent. 1,  'UseSoleCurrent':7730.0000,  'UseToroCurrent':20400.000 LockMapCurrents 0
@@ -647,8 +647,8 @@ IOVDbSvc                                             INFO Opening COOL connectio
 IOVDbFolder                                          INFO HVS tag OFLCOND-MC15c-SDR-14-05 resolved to InDetAlign_MC15c for folder /Indet/Align
 IOVDbFolder                                          INFO HVS tag OFLCOND-MC15c-SDR-14-05 resolved to IndetBeampos-RunDep-MC15-BestKnowledge-002-03 for folder /Indet/Beampos
 IOVDbSvc                                             INFO Disconnecting from COOLOFL_INDET/OFLP200
-DbSession                                            INFO     Open     DbSession    
-Domain[ROOT_All]                                     INFO >   Access   DbDomain     READ      [ROOT_All] 
+DbSession                                            INFO     Open     DbSession
+Domain[ROOT_All]                                     INFO >   Access   DbDomain     READ      [ROOT_All]
 Domain[ROOT_All]                                     INFO ->  Access   DbDatabase   READ      [ROOT_All] 8E91164C-1E3C-DB11-8CAB-00132046AB63
 Domain[ROOT_All]                                     INFO                           /cvmfs/atlas-condb.cern.ch/repo/conditions/cmccond/cmccond.000001.conditions.simul.pool.v0000/oflcond.000002.conditions.simul.pool.v0000._0028.pool.root__DQ2-1250194490
 TClass::Init                                      WARNING no dictionary for class DataHeader_p1 is available
@@ -683,7 +683,7 @@ AtlasFieldMapCondAlg                                 INFO checkCurrentFromCondit
 AtlasFieldMapCondAlg                                 INFO checkCurrentFromConditions: Trying to read from DCS: [channel name, index, value] Toroids_SCurrent , 4 , 20400
 AtlasFieldMapCondAlg                                 INFO checkCurrentFromConditions: Currents read from DCS - solenoid 7730 toroid 20400
 AtlasFieldMapCondAlg                                 INFO updateFieldMap: currents are OK, will use nominal maps
-AtlasFieldMapCondAlg                                 INFO updateFieldMap: found TagInfoMgr 
+AtlasFieldMapCondAlg                                 INFO updateFieldMap: found TagInfoMgr
 AtlasFieldMapCondAlg                                 INFO updateFieldMap: DID NOT reset currents from TagInfo
 AtlasFieldMapCondAlg                                 INFO updateFieldMap: Set map currents from FieldSvc: solenoid/toroid 7730,20400
 AtlasFieldMapCondAlg                                 INFO updateFieldMap: Use map file MagneticFieldMaps/bfieldmap_7730_20400_14m.root
@@ -751,14 +751,14 @@ InDetPlotBase                                     WARNING VertexMatchType DECORA
 InDetPlotBase                                     WARNING The hit res plots dont see any data (note:only 10 warnings issued)
 InDetPlotBase                                     WARNING The HitEff plots dont see any data (note: only 10 warnings issued)
 AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109001, run #242000 1 events processed so far  <<<===
+/cvmfs/atlas-condb.cern.ch/repo/conditions/...root   INFO Database being retired...
+Domain[ROOT_All]                                     INFO ->  Deaccess DbDatabase   READ      [ROOT_All] A5CF2B06-0F7A-AC48-BDE9-1E702A3021C4
 /cvmfs/atlas-condb.cern.ch/...root__DQ2-1250194490   INFO Database being retired...
 Domain[ROOT_All]                                     INFO ->  Deaccess DbDatabase   READ      [ROOT_All] 8E91164C-1E3C-DB11-8CAB-00132046AB63
 /cvmfs/atlas-condb.cern.ch/repo/conditions/...root   INFO Database being retired...
-Domain[ROOT_All]                                     INFO ->  Deaccess DbDatabase   READ      [ROOT_All] A5CF2B06-0F7A-AC48-BDE9-1E702A3021C4
-/cvmfs/atlas-condb.cern.ch/repo/conditions/...root   INFO Database being retired...
 Domain[ROOT_All]                                     INFO ->  Deaccess DbDatabase   READ      [ROOT_All] C634B46D-ECB2-A045-91CC-00A82369D887
-Domain[ROOT_All]                                     INFO >   Deaccess DbDomain     READ      [ROOT_All] 
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109017, run #242000 1 events processed so far  <<<===
+Domain[ROOT_All]                                     INFO >   Deaccess DbDomain     READ      [ROOT_All]
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109021, run #242000 1 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING The hit res plots dont see any data (note:only 10 warnings issued)
 InDetPlotBase                                     WARNING The HitEff plots dont see any data (note: only 10 warnings issued)
@@ -768,15 +768,8 @@ InDetPlotBase                                     WARNING The HitEff plots dont 
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING The hit res plots dont see any data (note:only 10 warnings issued)
 InDetPlotBase                                     WARNING The HitEff plots dont see any data (note: only 10 warnings issued)
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109017, run #242000 2 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109018, run #242000 2 events processed so far  <<<===
-InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-InDetPlotBase                                     WARNING The hit res plots dont see any data (note:only 10 warnings issued)
-InDetPlotBase                                     WARNING The HitEff plots dont see any data (note: only 10 warnings issued)
-InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109018, run #242000 3 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109019, run #242000 3 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109021, run #242000 2 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109017, run #242000 2 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING The hit res plots dont see any data (note:only 10 warnings issued)
 InDetPlotBase                                     WARNING The HitEff plots dont see any data (note: only 10 warnings issued)
@@ -786,22 +779,15 @@ InDetPlotBase                                     WARNING The HitEff plots dont 
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING The hit res plots dont see any data (note:only 10 warnings issued)
 InDetPlotBase                                     WARNING The HitEff plots dont see any data (note: only 10 warnings issued)
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109019, run #242000 4 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109027, run #242000 4 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109017, run #242000 3 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109018, run #242000 3 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING The hit res plots dont see any data (note:only 10 warnings issued)
 InDetPlotBase                                     WARNING The HitEff plots dont see any data (note: only 10 warnings issued)
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-InDetPlotBase                                     WARNING The hit res plots dont see any data (note:only 10 warnings issued)
-InDetPlotBase                                     WARNING The HitEff plots dont see any data (note: only 10 warnings issued)
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109027, run #242000 5 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109022, run #242000 5 events processed so far  <<<===
-InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109022, run #242000 6 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109021, run #242000 6 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109018, run #242000 4 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109019, run #242000 4 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING The hit res plots dont see any data (note:only 10 warnings issued)
 InDetPlotBase                                     WARNING The HitEff plots dont see any data (note: only 10 warnings issued)
@@ -811,8 +797,22 @@ InDetPlotBase                                     WARNING The HitEff plots dont 
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING The hit res plots dont see any data (note:only 10 warnings issued)
 InDetPlotBase                                     WARNING The HitEff plots dont see any data (note: only 10 warnings issued)
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109021, run #242000 7 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109023, run #242000 7 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109019, run #242000 5 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109027, run #242000 5 events processed so far  <<<===
+InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+InDetPlotBase                                     WARNING The hit res plots dont see any data (note:only 10 warnings issued)
+InDetPlotBase                                     WARNING The HitEff plots dont see any data (note: only 10 warnings issued)
+InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+InDetPlotBase                                     WARNING The hit res plots dont see any data (note:only 10 warnings issued)
+InDetPlotBase                                     WARNING The HitEff plots dont see any data (note: only 10 warnings issued)
+InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109027, run #242000 6 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109022, run #242000 6 events processed so far  <<<===
+InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109022, run #242000 7 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109020, run #242000 7 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING The hit res plots dont see any data (note:only 10 warnings issued)
 InDetPlotBase                                     WARNING The HitEff plots dont see any data (note: only 10 warnings issued)
@@ -822,8 +822,8 @@ InDetPlotBase                                     WARNING The HitEff plots dont 
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING The hit res plots dont see any data (note:only 10 warnings issued)
 InDetPlotBase                                     WARNING The HitEff plots dont see any data (note: only 10 warnings issued)
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109023, run #242000 8 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109024, run #242000 8 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109020, run #242000 8 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109023, run #242000 8 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING The hit res plots dont see any data (note:only 10 warnings issued)
 InDetPlotBase                                     WARNING The HitEff plots dont see any data (note: only 10 warnings issued)
@@ -833,8 +833,8 @@ InDetPlotBase                                     WARNING The HitEff plots dont 
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING The hit res plots dont see any data (note:only 10 warnings issued)
 InDetPlotBase                                     WARNING The HitEff plots dont see any data (note: only 10 warnings issued)
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109024, run #242000 9 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109020, run #242000 9 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109023, run #242000 9 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109024, run #242000 9 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING The hit res plots dont see any data (note:only 10 warnings issued)
 InDetPlotBase                                     WARNING The HitEff plots dont see any data (note: only 10 warnings issued)
@@ -844,8 +844,13 @@ InDetPlotBase                                     WARNING The HitEff plots dont 
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING The hit res plots dont see any data (note:only 10 warnings issued)
 InDetPlotBase                                     WARNING The HitEff plots dont see any data (note: only 10 warnings issued)
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109020, run #242000 10 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109026, run #242000 10 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109024, run #242000 10 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109025, run #242000 10 events processed so far  <<<===
+InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109025, run #242000 11 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109026, run #242000 11 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING The hit res plots dont see any data (note:only 10 warnings issued)
 InDetPlotBase                                     WARNING The HitEff plots dont see any data (note: only 10 warnings issued)
@@ -855,203 +860,198 @@ InDetPlotBase                                     WARNING The HitEff plots dont 
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING The hit res plots dont see any data (note:only 10 warnings issued)
 InDetPlotBase                                     WARNING The HitEff plots dont see any data (note: only 10 warnings issued)
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109026, run #242000 11 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109028, run #242000 11 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109026, run #242000 12 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109028, run #242000 12 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109028, run #242000 12 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109030, run #242000 12 events processed so far  <<<===
-InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-InDetPlotBase                                     WARNING The hit res plots dont see any data (note:only 10 warnings issued)
-InDetPlotBase                                     WARNING The HitEff plots dont see any data (note: only 10 warnings issued)
-InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-InDetPlotBase                                     WARNING The hit res plots dont see any data (note:only 10 warnings issued)
-InDetPlotBase                                     WARNING The HitEff plots dont see any data (note: only 10 warnings issued)
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109030, run #242000 13 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109029, run #242000 13 events processed so far  <<<===
-InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109028, run #242000 13 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109030, run #242000 13 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING The hit res plots dont see any data (note:only 10 warnings issued)
 InDetPlotBase                                     WARNING The HitEff plots dont see any data (note: only 10 warnings issued)
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109029, run #242000 14 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109031, run #242000 14 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+InDetPlotBase                                     WARNING The hit res plots dont see any data (note:only 10 warnings issued)
+InDetPlotBase                                     WARNING The HitEff plots dont see any data (note: only 10 warnings issued)
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109030, run #242000 14 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109029, run #242000 14 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109031, run #242000 15 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109032, run #242000 15 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+InDetPlotBase                                     WARNING The hit res plots dont see any data (note:only 10 warnings issued)
+InDetPlotBase                                     WARNING The HitEff plots dont see any data (note: only 10 warnings issued)
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109029, run #242000 15 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109031, run #242000 15 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109032, run #242000 16 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109033, run #242000 16 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109031, run #242000 16 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109032, run #242000 16 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109033, run #242000 17 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109034, run #242000 17 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109032, run #242000 17 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109033, run #242000 17 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109034, run #242000 18 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109004, run #242000 18 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109033, run #242000 18 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109034, run #242000 18 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109004, run #242000 19 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109035, run #242000 19 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109034, run #242000 19 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109004, run #242000 19 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109035, run #242000 20 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109037, run #242000 20 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109004, run #242000 20 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109035, run #242000 20 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109037, run #242000 21 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109038, run #242000 21 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109035, run #242000 21 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109037, run #242000 21 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109038, run #242000 22 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109036, run #242000 22 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109037, run #242000 22 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109038, run #242000 22 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109036, run #242000 23 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109040, run #242000 23 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109038, run #242000 23 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109036, run #242000 23 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109040, run #242000 24 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109039, run #242000 24 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109036, run #242000 24 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109040, run #242000 24 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109039, run #242000 25 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109042, run #242000 25 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109040, run #242000 25 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109039, run #242000 25 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109042, run #242000 26 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109041, run #242000 26 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109039, run #242000 26 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109042, run #242000 26 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109041, run #242000 27 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109043, run #242000 27 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109042, run #242000 27 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109041, run #242000 27 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109043, run #242000 28 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109044, run #242000 28 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109041, run #242000 28 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109043, run #242000 28 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109044, run #242000 29 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109002, run #242000 29 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109043, run #242000 29 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109044, run #242000 29 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109002, run #242000 30 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109045, run #242000 30 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109044, run #242000 30 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109002, run #242000 30 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109045, run #242000 31 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109046, run #242000 31 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109002, run #242000 31 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109045, run #242000 31 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109046, run #242000 32 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109047, run #242000 32 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109045, run #242000 32 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109046, run #242000 32 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109047, run #242000 33 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109048, run #242000 33 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109046, run #242000 33 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109047, run #242000 33 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109048, run #242000 34 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109050, run #242000 34 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109047, run #242000 34 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109048, run #242000 34 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109050, run #242000 35 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109051, run #242000 35 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109048, run #242000 35 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109050, run #242000 35 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109051, run #242000 36 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109052, run #242000 36 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109050, run #242000 36 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109051, run #242000 36 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109052, run #242000 37 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109049, run #242000 37 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109051, run #242000 37 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109052, run #242000 37 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109049, run #242000 38 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109053, run #242000 38 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109052, run #242000 38 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109049, run #242000 38 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109053, run #242000 39 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109054, run #242000 39 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109049, run #242000 39 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109053, run #242000 39 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109054, run #242000 40 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109056, run #242000 40 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109053, run #242000 40 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109054, run #242000 40 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109056, run #242000 41 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109055, run #242000 41 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109054, run #242000 41 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109056, run #242000 41 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109055, run #242000 42 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109058, run #242000 42 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109056, run #242000 42 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109055, run #242000 42 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109058, run #242000 43 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109059, run #242000 43 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109055, run #242000 43 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109058, run #242000 43 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109059, run #242000 44 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109005, run #242000 44 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109058, run #242000 44 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109059, run #242000 44 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109005, run #242000 45 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109060, run #242000 45 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109059, run #242000 45 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109005, run #242000 45 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109060, run #242000 46 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109057, run #242000 46 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109005, run #242000 46 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109060, run #242000 46 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109057, run #242000 47 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109061, run #242000 47 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109060, run #242000 47 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109057, run #242000 47 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109061, run #242000 48 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109025, run #242000 48 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109057, run #242000 48 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109061, run #242000 48 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109025, run #242000 49 events processed so far  <<<===
+InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109061, run #242000 49 events processed so far  <<<===
 AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109064, run #242000 49 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
@@ -1082,16 +1082,16 @@ InDetPlotBase                                     WARNING VertexMatchType DECORA
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109069, run #242000 55 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109071, run #242000 55 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109068, run #242000 55 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109071, run #242000 56 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109068, run #242000 56 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109068, run #242000 56 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109071, run #242000 56 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109068, run #242000 57 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109071, run #242000 57 events processed so far  <<<===
 AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109070, run #242000 57 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
@@ -1147,16 +1147,16 @@ InDetPlotBase                                     WARNING VertexMatchType DECORA
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109081, run #242000 68 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109080, run #242000 68 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109083, run #242000 68 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109080, run #242000 69 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109083, run #242000 69 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109083, run #242000 69 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109080, run #242000 69 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109083, run #242000 70 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109080, run #242000 70 events processed so far  <<<===
 AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109084, run #242000 70 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
@@ -1202,16 +1202,16 @@ InDetPlotBase                                     WARNING VertexMatchType DECORA
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109090, run #242000 79 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109093, run #242000 79 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109092, run #242000 79 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109093, run #242000 80 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109092, run #242000 80 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109092, run #242000 80 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109093, run #242000 80 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109092, run #242000 81 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109093, run #242000 81 events processed so far  <<<===
 AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109094, run #242000 81 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
@@ -1512,21 +1512,21 @@ InDetPlotBase                                     WARNING VertexMatchType DECORA
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109131, run #242000 141 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109140, run #242000 141 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109007, run #242000 141 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109140, run #242000 142 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109150, run #242000 142 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109007, run #242000 142 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109140, run #242000 142 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109150, run #242000 143 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109007, run #242000 143 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109140, run #242000 143 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109150, run #242000 143 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109007, run #242000 144 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109150, run #242000 144 events processed so far  <<<===
 AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109158, run #242000 144 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
@@ -1591,10 +1591,10 @@ AthenaEventLoopMgr                                   INFO   ===>>>  start proces
 AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109179, run #242000 171 events processed so far  <<<===
 AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109181, run #242000 171 events processed so far  <<<===
 AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109181, run #242000 172 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109012, run #242000 172 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109012, run #242000 173 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109163, run #242000 173 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109163, run #242000 174 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109163, run #242000 172 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109163, run #242000 173 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109012, run #242000 173 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109012, run #242000 174 events processed so far  <<<===
 AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109184, run #242000 174 events processed so far  <<<===
 AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109184, run #242000 175 events processed so far  <<<===
 AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109183, run #242000 175 events processed so far  <<<===
@@ -1665,10 +1665,10 @@ AthenaEventLoopMgr                                   INFO   ===>>>  start proces
 AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109219, run #242000 208 events processed so far  <<<===
 AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109215, run #242000 208 events processed so far  <<<===
 AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109215, run #242000 209 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109213, run #242000 209 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109213, run #242000 210 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109218, run #242000 210 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109218, run #242000 211 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109218, run #242000 209 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109218, run #242000 210 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109213, run #242000 210 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109213, run #242000 211 events processed so far  <<<===
 AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109217, run #242000 211 events processed so far  <<<===
 AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109217, run #242000 212 events processed so far  <<<===
 AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109223, run #242000 212 events processed so far  <<<===
@@ -1744,167 +1744,167 @@ AthenaEventLoopMgr                                   INFO   ===>>>  done process
 AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #109243, run #242000 247 events processed so far  <<<===
 AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #109243, run #242000 248 events processed so far  <<<===
 AthenaEventLoopMgrWARNING INFO message limit (500) reached for AthenaEventLoopMgr. Suppressing further output.
-EventSelector                                        INFO Disconnecting input sourceID: 8F2CE55D-7AD1-A14D-B905-B9662C809BB7
+EventSelector                                        INFO Disconnecting input sourceID: EC74A97C-DB80-874E-AB70-40C17CA25E4B
 /global/cfs/cdirs/m3443/usr/xju/workflow/wo...root   INFO Database being retired...
-Domain[ROOT_All]                                     INFO ->  Deaccess DbDatabase   READ      [ROOT_All] 8F2CE55D-7AD1-A14D-B905-B9662C809BB7
-Domain[ROOT_All]                                     INFO >   Deaccess DbDomain     READ      [ROOT_All] 
+Domain[ROOT_All]                                     INFO ->  Deaccess DbDatabase   READ      [ROOT_All] EC74A97C-DB80-874E-AB70-40C17CA25E4B
+Domain[ROOT_All]                                     INFO >   Deaccess DbDomain     READ      [ROOT_All]
 PhysValMonManager.InDetPhysValMonitoringTool         INFO Finalising hists PhysValMonManager.InDetPhysValMonitoringTool...
-PhysValMonManager.InDetPhysValMonitoringTool         INFO 
+PhysValMonManager.InDetPhysValMonitoringTool         INFO
 PhysValMonManager.InDetPhysValMonitoringTool         INFO Cutflow for truth tracks:
-PhysValMonManager.InDetPhysValMonitoringTool         INFO Truth selection report: 
-CutList Report; Total processed: 4609
-Total passed: 4608
+PhysValMonManager.InDetPhysValMonitoringTool         INFO Truth selection report:
+CutList Report; Total processed: 4608
+Total passed: 4607
 Cuts were applied until one fails
-eta: 4608 passed
-min_pt: 4608 passed
-decay_before_300.000000: 4608 passed
-OnlyPrimary: 4608 passed
-charged: 4608 passed
-stable: 4608 passed
+eta: 4607 passed
+min_pt: 4607 passed
+decay_before_300.000000: 4607 passed
+OnlyPrimary: 4607 passed
+charged: 4607 passed
+stable: 4607 passed
 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_d0: bin15: 5.7%, bin28: 6.2%, bin30: 9.7%, bin32: 6.7%, bin35: 11%, bin36: 12%, bin37: 7.5%, bin38: 5.7%, bin42: 5.8%, bin50: 5.4%, bin51: 5.8%, bin52: 6.4%, bin56: 5.2%, bin62: 7.1%, bin63: 9.8%, bin66: 12%, bin70: 6.4%, bin72: 8.1%, bin75: 7%, bin78: 6.1%, bin80: 12%, bin81: 7.3%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_d0: bin15: 5.7%, bin28: 6.2%, bin30: 9.7%, bin32: 6.7%, bin35: 11%, bin36: 12%, bin37: 7.5%, bin38: 5.7%, bin42: 5.8%, bin50: 5.4%, bin51: 5.8%, bin52: 6.4%, bin56: 5.2%, bin62: 7.1%, bin63: 9.8%, bin66: 12%, bin70: 6.4%, bin72: 8.1%, bin75: 7%, bin78: 6.1%, bin80: 12%, bin81: 7.3%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_d0: bin18: 5.4%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_d0: bin18: 5.4%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_d0: bin8: 6%, bin15: 5.7%, bin36: 8%, bin50: 5.4%, bin62: 7.1%, bin80: 7%, bin81: 5.4%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_d0: bin8: 6%, bin15: 5.7%, bin36: 8%, bin50: 5.4%, bin62: 7.1%, bin80: 7%, bin81: 5.4%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0: bin5: 6.2%, bin12: 5.6%, bin23: 5.8%, bin27: 7.3%, bin28: 6.2%, bin29: 12%, bin30: 6.2%, bin32: 6.7%, bin33: 6.4%, bin35: 8.3%, bin36: 5.9%, bin37: 7.5%, bin38: 5.7%, bin42: 5.8%, bin56: 5.2%, bin61: 5.9%, bin63: 7.1%, bin71: 5.9%, bin72: 5.3%, bin73: 8.8%, bin74: 11%, bin85: 5.3%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0: bin5: 6.2%, bin12: 5.6%, bin23: 5.8%, bin27: 7.3%, bin28: 6.2%, bin29: 12%, bin30: 6.2%, bin32: 6.7%, bin33: 6.4%, bin35: 8.3%, bin36: 5.9%, bin37: 7.5%, bin38: 5.7%, bin42: 5.8%, bin56: 5.2%, bin61: 5.9%, bin63: 7.1%, bin71: 5.9%, bin72: 5.3%, bin73: 8.8%, bin74: 11%, bin85: 5.3%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0: bin18: 18%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0: bin18: 18%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0: bin1: 6.5%, bin9: 5.8%, bin12: 5.6%, bin22: 5.9%, bin27: 7.3%, bin29: 6.7%, bin73: 8.8%, bin85: 5.3%, bin95: 8.3%, bin98: 9.3%, bin99: 6.1%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0: bin1: 6.5%, bin9: 5.8%, bin12: 5.6%, bin22: 5.9%, bin27: 7.3%, bin29: 6.7%, bin73: 8.8%, bin85: 5.3%, bin95: 8.3%, bin98: 9.3%, bin99: 6.1%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_qoverp: bin21: 5.3%, bin58: 6.7%, bin83: 10%, bin96: 10%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_qoverp: bin21: 5.3%, bin58: 6.7%, bin83: 10%, bin96: 10%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_ptqopt: bin21: 5.3%, bin46: 6.1%, bin56: 7%, bin85: 5.3%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_ptqopt: bin21: 5.3%, bin46: 6.1%, bin56: 7%, bin85: 5.3%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_ptqopt: bin18: 18%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_ptqopt: bin18: 18%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_ptqopt: bin21: 5.3%, bin58: 6.7%, bin83: 10%, bin96: 10%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_ptqopt: bin21: 5.3%, bin58: 6.7%, bin83: 10%, bin96: 10%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_theta: bin1: 6.5%, bin14: 7.3%, bin22: 5.9%, bin48: 5.8%, bin68: 5.4%, bin75: 7%, bin98: 12%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_theta: bin1: 6.5%, bin14: 7.3%, bin22: 5.9%, bin48: 5.8%, bin68: 5.4%, bin75: 7%, bin98: 12%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_phi: bin30: 6.2%, bin42: 5.8%, bin50: 8.3%, bin52: 6.4%, bin72: 5.3%, bin75: 7%, bin78: 6.1%, bin81: 5.4%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_phi: bin30: 6.2%, bin42: 5.8%, bin50: 8.3%, bin52: 6.4%, bin72: 5.3%, bin75: 7%, bin78: 6.1%, bin81: 5.4%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_phi: bin18: 6%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_phi: bin18: 6%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_phi: bin30: 6.2%, bin67: 6.1%, bin72: 5.3%, bin75: 7%, bin90: 6.8%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_phi: bin30: 6.2%, bin67: 6.1%, bin72: 5.3%, bin75: 7%, bin90: 6.8%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0sin: bin5: 6.2%, bin15: 5.7%, bin23: 5.8%, bin26: 7.1%, bin27: 7.3%, bin28: 6.2%, bin29: 12%, bin32: 6.7%, bin35: 8.3%, bin36: 8%, bin38: 5.7%, bin42: 5.8%, bin54: 8%, bin56: 5.2%, bin57: 6.8%, bin61: 5.9%, bin63: 7.1%, bin71: 5.9%, bin72: 14%, bin73: 5.7%, bin74: 8.5%, bin75: 7%, bin76: 6.5%, bin85: 5.3%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0sin: bin5: 6.2%, bin15: 5.7%, bin23: 5.8%, bin26: 7.1%, bin27: 7.3%, bin28: 6.2%, bin29: 12%, bin32: 6.7%, bin35: 8.3%, bin36: 8%, bin38: 5.7%, bin42: 5.8%, bin54: 8%, bin56: 5.2%, bin57: 6.8%, bin61: 5.9%, bin63: 7.1%, bin71: 5.9%, bin72: 14%, bin73: 5.7%, bin74: 8.5%, bin75: 7%, bin76: 6.5%, bin85: 5.3%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0sin: bin1: 6.5%, bin9: 5.8%, bin12: 5.6%, bin20: 6.1%, bin22: 5.9%, bin23: 5.8%, bin29: 6.7%, bin35: 5.4%, bin61: 5.9%, bin75: 7%, bin81: 7.3%, bin85: 5.3%, bin95: 6.1%, bin98: 9.3%, bin99: 6.1%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0sin: bin1: 6.5%, bin9: 5.8%, bin12: 5.6%, bin20: 6.1%, bin22: 5.9%, bin23: 5.8%, bin29: 6.7%, bin35: 5.4%, bin61: 5.9%, bin75: 7%, bin81: 7.3%, bin85: 5.3%, bin95: 6.1%, bin98: 9.3%, bin99: 6.1%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_d0: bin15: 5.7%, bin28: 6.2%, bin30: 6.5%, bin32: 6.7%, bin35: 11%, bin36: 12%, bin37: 7.5%, bin38: 5.7%, bin42: 5.8%, bin50: 5.4%, bin51: 5.8%, bin52: 6.4%, bin56: 5.2%, bin62: 7.1%, bin63: 9.8%, bin66: 12%, bin70: 6.4%, bin72: 8.1%, bin75: 7%, bin78: 6.1%, bin80: 12%, bin81: 7.3%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_d0: bin15: 5.7%, bin28: 6.2%, bin30: 6.5%, bin32: 6.7%, bin35: 11%, bin36: 12%, bin37: 7.5%, bin38: 5.7%, bin42: 5.8%, bin50: 5.4%, bin51: 5.8%, bin52: 6.4%, bin56: 5.2%, bin62: 7.1%, bin63: 9.8%, bin66: 12%, bin70: 6.4%, bin72: 8.1%, bin75: 7%, bin78: 6.1%, bin80: 12%, bin81: 7.3%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_d0: bin18: 5.4%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_d0: bin18: 5.4%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_d0: bin8: 6%, bin15: 5.7%, bin36: 8%, bin50: 5.4%, bin62: 7.1%, bin80: 7%, bin81: 5.4%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_d0: bin8: 6%, bin15: 5.7%, bin36: 8%, bin50: 5.4%, bin62: 7.1%, bin80: 7%, bin81: 5.4%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0: bin5: 6.2%, bin12: 5.6%, bin23: 5.8%, bin27: 7.3%, bin28: 6.2%, bin29: 12%, bin32: 6.7%, bin33: 6.4%, bin35: 8.3%, bin36: 5.9%, bin37: 7.5%, bin38: 5.7%, bin42: 5.8%, bin56: 5.2%, bin61: 5.9%, bin63: 7.1%, bin71: 5.9%, bin72: 5.3%, bin73: 8.8%, bin74: 11%, bin85: 5.3%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0: bin5: 6.2%, bin12: 5.6%, bin23: 5.8%, bin27: 7.3%, bin28: 6.2%, bin29: 12%, bin32: 6.7%, bin33: 6.4%, bin35: 8.3%, bin36: 5.9%, bin37: 7.5%, bin38: 5.7%, bin42: 5.8%, bin56: 5.2%, bin61: 5.9%, bin63: 7.1%, bin71: 5.9%, bin72: 5.3%, bin73: 8.8%, bin74: 11%, bin85: 5.3%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0: bin18: 18%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0: bin18: 18%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0: bin1: 6.5%, bin9: 5.8%, bin12: 5.6%, bin22: 5.9%, bin27: 7.3%, bin29: 6.7%, bin73: 8.8%, bin85: 5.3%, bin95: 8.3%, bin98: 9.3%, bin99: 6.1%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0: bin1: 6.5%, bin9: 5.8%, bin12: 5.6%, bin22: 5.9%, bin27: 7.3%, bin29: 6.7%, bin73: 8.8%, bin85: 5.3%, bin95: 8.3%, bin98: 9.3%, bin99: 6.1%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_qoverp: bin21: 5.3%, bin58: 6.7%, bin83: 10%, bin96: 10%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_qoverp: bin21: 5.3%, bin58: 6.7%, bin83: 10%, bin96: 10%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_ptqopt: bin21: 5.3%, bin46: 6.1%, bin56: 7%, bin85: 5.3%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_ptqopt: bin21: 5.3%, bin46: 6.1%, bin56: 7%, bin85: 5.3%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_ptqopt: bin18: 22%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_ptqopt: bin18: 22%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_ptqopt: bin21: 5.3%, bin58: 6.7%, bin83: 10%, bin96: 10%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_ptqopt: bin21: 5.3%, bin58: 6.7%, bin83: 10%, bin96: 10%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_theta: bin1: 6.5%, bin14: 7.3%, bin22: 5.9%, bin48: 5.8%, bin68: 5.4%, bin75: 7%, bin98: 12%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_theta: bin1: 6.5%, bin14: 7.3%, bin22: 5.9%, bin48: 5.8%, bin68: 5.4%, bin75: 7%, bin98: 12%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_phi: bin30: 6.5%, bin42: 5.8%, bin50: 8.3%, bin52: 6.4%, bin72: 5.3%, bin75: 7%, bin78: 6.1%, bin81: 5.4%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_phi: bin30: 6.5%, bin42: 5.8%, bin50: 8.3%, bin52: 6.4%, bin72: 5.3%, bin75: 7%, bin78: 6.1%, bin81: 5.4%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_phi: bin18: 6.1%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_phi: bin18: 6.1%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_phi: bin30: 6.5%, bin67: 6.1%, bin72: 5.3%, bin75: 7%, bin90: 6.8%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_phi: bin30: 6.5%, bin67: 6.1%, bin72: 5.3%, bin75: 7%, bin90: 6.8%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0sin: bin5: 6.2%, bin15: 5.7%, bin23: 5.8%, bin26: 7.1%, bin27: 7.3%, bin28: 6.2%, bin29: 12%, bin32: 6.7%, bin35: 8.3%, bin36: 8%, bin38: 5.7%, bin42: 5.8%, bin54: 8%, bin56: 5.2%, bin57: 6.8%, bin61: 5.9%, bin63: 7.1%, bin71: 5.9%, bin72: 14%, bin73: 5.7%, bin74: 8.5%, bin75: 7%, bin76: 6.5%, bin85: 5.3%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0sin: bin5: 6.2%, bin15: 5.7%, bin23: 5.8%, bin26: 7.1%, bin27: 7.3%, bin28: 6.2%, bin29: 12%, bin32: 6.7%, bin35: 8.3%, bin36: 8%, bin38: 5.7%, bin42: 5.8%, bin54: 8%, bin56: 5.2%, bin57: 6.8%, bin61: 5.9%, bin63: 7.1%, bin71: 5.9%, bin72: 14%, bin73: 5.7%, bin74: 8.5%, bin75: 7%, bin76: 6.5%, bin85: 5.3%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0sin: bin1: 6.5%, bin9: 5.8%, bin12: 5.6%, bin20: 6.1%, bin22: 5.9%, bin23: 5.8%, bin29: 6.7%, bin35: 5.4%, bin61: 5.9%, bin75: 7%, bin81: 7.3%, bin85: 5.3%, bin95: 6.1%, bin98: 9.3%, bin99: 6.1%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0sin: bin1: 6.5%, bin9: 5.8%, bin12: 5.6%, bin20: 6.1%, bin22: 5.9%, bin23: 5.8%, bin29: 6.7%, bin35: 5.4%, bin61: 5.9%, bin75: 7%, bin81: 7.3%, bin85: 5.3%, bin95: 6.1%, bin98: 9.3%, bin99: 6.1%,
 PhysValMonManager.InDetPhysValMonitoringTool         INFO Successfully finalized hists
 PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO Finalising hists PhysValMonManager.InDetPhysValMonitoringToolLoose...
-PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO 
+PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO
 PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO Now Cutflow for track cuts:
-PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO 
-PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO number after preCut: 4509
-PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO number after Eta: 4509
-PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO number after PixelHits: 4509
-PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO number after SiHits: 4509
-PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO 
+PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO
+PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO number after preCut: 4514
+PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO number after Eta: 4514
+PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO number after PixelHits: 4514
+PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO number after SiHits: 4514
+PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO
 PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO Cutflow for truth tracks:
-PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO Truth selection report: 
-CutList Report; Total processed: 4508
-Total passed: 4508
+PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO Truth selection report:
+CutList Report; Total processed: 4513
+Total passed: 4513
 Cuts were applied until one fails
-eta: 4508 passed
-min_pt: 4508 passed
-decay_before_300.000000: 4508 passed
-OnlyPrimary: 4508 passed
-charged: 4508 passed
-stable: 4508 passed
+eta: 4513 passed
+min_pt: 4513 passed
+decay_before_300.000000: 4513 passed
+OnlyPrimary: 4513 passed
+charged: 4513 passed
+stable: 4513 passed
 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_d0: bin15: 5.7%, bin28: 6.4%, bin30: 10%, bin32: 6.7%, bin35: 11%, bin36: 12%, bin37: 5.1%, bin39: 5.1%, bin42: 6.1%, bin45: 5.4%, bin50: 5.6%, bin51: 6.1%, bin52: 6.7%, bin57: 5.1%, bin62: 7.3%, bin63: 9.8%, bin66: 9.6%, bin70: 6.4%, bin72: 8.3%, bin75: 7.5%, bin80: 10%, bin81: 7.3%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_d0: bin15: 5.7%, bin28: 6.4%, bin30: 10%, bin32: 6.7%, bin35: 11%, bin36: 12%, bin37: 5.1%, bin39: 5.1%, bin42: 6.1%, bin45: 5.4%, bin50: 5.6%, bin51: 6.1%, bin52: 6.7%, bin57: 5.1%, bin62: 7.3%, bin63: 9.8%, bin66: 9.6%, bin70: 6.4%, bin72: 8.3%, bin75: 7.5%, bin80: 10%, bin81: 7.3%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_d0: bin8: 6%, bin15: 5.7%, bin36: 8%, bin39: 5.1%, bin50: 5.6%, bin62: 7.3%, bin80: 7.3%, bin81: 5.4%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_d0: bin8: 6%, bin15: 5.7%, bin36: 8%, bin39: 5.1%, bin50: 5.6%, bin62: 7.3%, bin80: 7.3%, bin81: 5.4%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0: bin5: 6.2%, bin12: 5.6%, bin23: 5.8%, bin27: 8.1%, bin28: 6.4%, bin29: 12%, bin30: 6.5%, bin32: 6.7%, bin33: 6.5%, bin35: 8.3%, bin36: 5.9%, bin37: 5.1%, bin42: 6.1%, bin45: 5.4%, bin56: 5.5%, bin61: 6.2%, bin63: 7.1%, bin71: 6.1%, bin72: 5.4%, bin73: 6.2%, bin74: 9.3%, bin85: 5.3%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0: bin5: 6.2%, bin12: 5.6%, bin23: 5.8%, bin27: 8.1%, bin28: 6.4%, bin29: 12%, bin30: 6.5%, bin32: 6.7%, bin33: 6.5%, bin35: 8.3%, bin36: 5.9%, bin37: 5.1%, bin42: 6.1%, bin45: 5.4%, bin56: 5.5%, bin61: 6.2%, bin63: 7.1%, bin71: 6.1%, bin72: 5.4%, bin73: 6.2%, bin74: 9.3%, bin85: 5.3%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0: bin18: 17%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0: bin18: 17%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0: bin1: 7.3%, bin9: 5.8%, bin12: 5.6%, bin22: 5.9%, bin27: 5.3%, bin29: 7%, bin73: 6.2%, bin85: 5.3%, bin95: 8.3%, bin98: 9.3%, bin99: 6.1%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0: bin1: 7.3%, bin9: 5.8%, bin12: 5.6%, bin22: 5.9%, bin27: 5.3%, bin29: 7%, bin73: 6.2%, bin85: 5.3%, bin95: 8.3%, bin98: 9.3%, bin99: 6.1%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_qoverp: bin21: 5.6%, bin58: 6.9%, bin83: 10%, bin96: 10%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_qoverp: bin21: 5.6%, bin58: 6.9%, bin83: 10%, bin96: 10%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_ptqopt: bin21: 5.6%, bin41: 6.2%, bin56: 5.5%, bin85: 5.3%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_ptqopt: bin21: 5.6%, bin41: 6.2%, bin56: 5.5%, bin85: 5.3%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_ptqopt: bin18: 18%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_ptqopt: bin18: 18%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_ptqopt: bin21: 5.6%, bin58: 6.9%, bin83: 10%, bin96: 10%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_ptqopt: bin21: 5.6%, bin58: 6.9%, bin83: 10%, bin96: 10%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_theta: bin1: 7.3%, bin14: 7.3%, bin22: 5.9%, bin48: 5.9%, bin68: 5.4%, bin98: 12%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_theta: bin1: 7.3%, bin14: 7.3%, bin22: 5.9%, bin48: 5.9%, bin68: 5.4%, bin98: 12%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_phi: bin30: 6.5%, bin42: 6.1%, bin50: 5.6%, bin52: 6.7%, bin72: 5.4%, bin75: 7.5%, bin81: 5.4%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_phi: bin30: 6.5%, bin42: 6.1%, bin50: 5.6%, bin52: 6.7%, bin72: 5.4%, bin75: 7.5%, bin81: 5.4%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_phi: bin18: 5.9%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_phi: bin18: 5.9%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_phi: bin30: 6.5%, bin67: 6.1%, bin72: 5.4%, bin75: 7.5%, bin90: 6.8%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_phi: bin30: 6.5%, bin67: 6.1%, bin72: 5.4%, bin75: 7.5%, bin90: 6.8%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0sin: bin5: 6.2%, bin15: 5.7%, bin23: 5.8%, bin24: 7.5%, bin26: 7.7%, bin27: 5.3%, bin28: 6.4%, bin29: 12%, bin30: 6.5%, bin32: 6.7%, bin35: 8.3%, bin36: 8%, bin42: 6.1%, bin45: 5.4%, bin54: 8.3%, bin56: 5.5%, bin57: 6.9%, bin61: 6.2%, bin63: 7.1%, bin71: 6.1%, bin72: 15%, bin73: 6.2%, bin74: 6.8%, bin76: 6.7%, bin85: 5.3%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0sin: bin5: 6.2%, bin15: 5.7%, bin23: 5.8%, bin24: 7.5%, bin26: 7.7%, bin27: 5.3%, bin28: 6.4%, bin29: 12%, bin30: 6.5%, bin32: 6.7%, bin35: 8.3%, bin36: 8%, bin42: 6.1%, bin45: 5.4%, bin54: 8.3%, bin56: 5.5%, bin57: 6.9%, bin61: 6.2%, bin63: 7.1%, bin71: 6.1%, bin72: 15%, bin73: 6.2%, bin74: 6.8%, bin76: 6.7%, bin85: 5.3%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0sin: bin1: 7.3%, bin9: 5.8%, bin12: 5.6%, bin20: 6.1%, bin22: 5.9%, bin23: 5.8%, bin29: 7%, bin35: 5.4%, bin73: 6.2%, bin75: 7.5%, bin81: 7.3%, bin85: 5.3%, bin95: 6.1%, bin98: 9.3%, bin99: 6.1%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0sin: bin1: 7.3%, bin9: 5.8%, bin12: 5.6%, bin20: 6.1%, bin22: 5.9%, bin23: 5.8%, bin29: 7%, bin35: 5.4%, bin73: 6.2%, bin75: 7.5%, bin81: 7.3%, bin85: 5.3%, bin95: 6.1%, bin98: 9.3%, bin99: 6.1%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_d0: bin15: 5.7%, bin28: 6.4%, bin30: 6.7%, bin32: 6.7%, bin35: 11%, bin36: 12%, bin37: 5.1%, bin39: 5.1%, bin42: 6.1%, bin45: 5.4%, bin50: 5.6%, bin51: 6.1%, bin52: 6.7%, bin57: 5.1%, bin62: 7.3%, bin63: 9.8%, bin66: 9.6%, bin70: 6.4%, bin72: 8.3%, bin75: 7.3%, bin80: 10%, bin81: 7.3%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_d0: bin15: 5.7%, bin28: 6.4%, bin30: 6.7%, bin32: 6.7%, bin35: 11%, bin36: 12%, bin37: 5.1%, bin39: 5.1%, bin42: 6.1%, bin45: 5.4%, bin50: 5.6%, bin51: 6.1%, bin52: 6.7%, bin57: 5.1%, bin62: 7.3%, bin63: 9.8%, bin66: 9.6%, bin70: 6.4%, bin72: 8.3%, bin75: 7.3%, bin80: 10%, bin81: 7.3%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_d0: bin8: 6%, bin15: 5.7%, bin36: 8%, bin39: 5.1%, bin50: 5.6%, bin62: 7.3%, bin80: 7.3%, bin81: 5.4%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_d0: bin8: 6%, bin15: 5.7%, bin36: 8%, bin39: 5.1%, bin50: 5.6%, bin62: 7.3%, bin80: 7.3%, bin81: 5.4%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0: bin5: 6.2%, bin12: 5.6%, bin23: 5.8%, bin27: 8.1%, bin28: 6.4%, bin29: 12%, bin32: 6.7%, bin33: 6.5%, bin35: 8.3%, bin36: 5.9%, bin37: 5.1%, bin42: 6.1%, bin45: 5.4%, bin56: 5.5%, bin61: 6.2%, bin63: 7.1%, bin71: 6.1%, bin72: 5.4%, bin73: 6.2%, bin74: 8.9%, bin85: 5.3%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0: bin5: 6.2%, bin12: 5.6%, bin23: 5.8%, bin27: 8.1%, bin28: 6.4%, bin29: 12%, bin32: 6.7%, bin33: 6.5%, bin35: 8.3%, bin36: 5.9%, bin37: 5.1%, bin42: 6.1%, bin45: 5.4%, bin56: 5.5%, bin61: 6.2%, bin63: 7.1%, bin71: 6.1%, bin72: 5.4%, bin73: 6.2%, bin74: 8.9%, bin85: 5.3%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0: bin18: 17%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0: bin18: 17%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0: bin1: 7.3%, bin9: 5.8%, bin12: 5.6%, bin22: 5.9%, bin27: 5.3%, bin29: 7%, bin73: 6.2%, bin85: 5.3%, bin95: 8.3%, bin98: 9.3%, bin99: 6.1%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0: bin1: 7.3%, bin9: 5.8%, bin12: 5.6%, bin22: 5.9%, bin27: 5.3%, bin29: 7%, bin73: 6.2%, bin85: 5.3%, bin95: 8.3%, bin98: 9.3%, bin99: 6.1%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_qoverp: bin21: 5.6%, bin58: 6.9%, bin83: 10%, bin96: 10%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_qoverp: bin21: 5.6%, bin58: 6.9%, bin83: 10%, bin96: 10%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_ptqopt: bin21: 5.6%, bin41: 6.2%, bin56: 5.5%, bin85: 5.3%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_ptqopt: bin21: 5.6%, bin41: 6.2%, bin56: 5.5%, bin85: 5.3%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_ptqopt: bin18: 19%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_ptqopt: bin18: 19%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_ptqopt: bin21: 5.6%, bin58: 6.9%, bin83: 10%, bin96: 10%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_ptqopt: bin21: 5.6%, bin58: 6.9%, bin83: 10%, bin96: 10%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_theta: bin1: 7.3%, bin14: 7.3%, bin22: 5.9%, bin48: 5.9%, bin68: 5.4%, bin75: 7.3%, bin98: 12%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_theta: bin1: 7.3%, bin14: 7.3%, bin22: 5.9%, bin48: 5.9%, bin68: 5.4%, bin75: 7.3%, bin98: 12%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_phi: bin30: 6.7%, bin42: 6.1%, bin50: 5.6%, bin52: 6.7%, bin72: 5.4%, bin75: 7.3%, bin81: 5.4%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_phi: bin30: 6.7%, bin42: 6.1%, bin50: 5.6%, bin52: 6.7%, bin72: 5.4%, bin75: 7.3%, bin81: 5.4%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_phi: bin18: 5.9%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_phi: bin18: 5.9%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_phi: bin30: 6.7%, bin67: 6.1%, bin72: 5.4%, bin75: 7.3%, bin90: 6.8%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_phi: bin30: 6.7%, bin67: 6.1%, bin72: 5.4%, bin75: 7.3%, bin90: 6.8%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0sin: bin5: 6.2%, bin15: 5.7%, bin23: 5.8%, bin24: 7.5%, bin26: 7.3%, bin27: 5.3%, bin28: 6.4%, bin29: 12%, bin32: 6.7%, bin35: 8.3%, bin36: 8%, bin42: 6.1%, bin45: 5.4%, bin54: 8.3%, bin56: 5.5%, bin57: 6.9%, bin61: 6.2%, bin63: 7.1%, bin71: 6.1%, bin72: 15%, bin73: 6.2%, bin74: 6.5%, bin75: 7.3%, bin76: 6.7%, bin85: 5.3%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0sin: bin5: 6.2%, bin15: 5.7%, bin23: 5.8%, bin24: 7.5%, bin26: 7.3%, bin27: 5.3%, bin28: 6.4%, bin29: 12%, bin32: 6.7%, bin35: 8.3%, bin36: 8%, bin42: 6.1%, bin45: 5.4%, bin54: 8.3%, bin56: 5.5%, bin57: 6.9%, bin61: 6.2%, bin63: 7.1%, bin71: 6.1%, bin72: 15%, bin73: 6.2%, bin74: 6.5%, bin75: 7.3%, bin76: 6.7%, bin85: 5.3%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0sin: bin1: 7.3%, bin9: 5.8%, bin12: 5.6%, bin20: 6.1%, bin22: 5.9%, bin23: 5.8%, bin29: 7%, bin35: 5.4%, bin73: 6.2%, bin75: 7.3%, bin81: 7.3%, bin85: 5.3%, bin95: 6.1%, bin98: 9.3%, bin99: 6.1%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0sin: bin1: 7.3%, bin9: 5.8%, bin12: 5.6%, bin20: 6.1%, bin22: 5.9%, bin23: 5.8%, bin29: 7%, bin35: 5.4%, bin73: 6.2%, bin75: 7.3%, bin81: 7.3%, bin85: 5.3%, bin95: 6.1%, bin98: 9.3%, bin99: 6.1%,
 PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO Successfully finalized hists
 PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO Finalising hists PhysValMonManager.InDetPhysValMonitoringToolTightPrimary...
-PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO 
+PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO
 PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO Now Cutflow for track cuts:
-PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO 
-PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO number after preCut: 4194
-PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO number after Eta: 4194
-PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO number after InnermostLayersHits: 4194
-PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO number after PixelHits: 4194
-PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO number after SiHits: 4194
-PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO 
+PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO
+PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO number after preCut: 4200
+PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO number after Eta: 4200
+PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO number after InnermostLayersHits: 4200
+PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO number after PixelHits: 4200
+PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO number after SiHits: 4200
+PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO
 PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO Cutflow for truth tracks:
-PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO Truth selection report: 
-CutList Report; Total processed: 4194
-Total passed: 4194
+PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO Truth selection report:
+CutList Report; Total processed: 4200
+Total passed: 4200
 Cuts were applied until one fails
-eta: 4194 passed
-min_pt: 4194 passed
-decay_before_300.000000: 4194 passed
-OnlyPrimary: 4194 passed
-charged: 4194 passed
-stable: 4194 passed
+eta: 4200 passed
+min_pt: 4200 passed
+decay_before_300.000000: 4200 passed
+OnlyPrimary: 4200 passed
+charged: 4200 passed
+stable: 4200 passed
 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_d0: bin28: 6.5%, bin30: 10%, bin35: 12%, bin36: 6.5%, bin39: 5.1%, bin50: 6.1%, bin57: 5.2%, bin62: 7.3%, bin66: 9.8%, bin70: 6.5%, bin72: 6.2%, bin75: 7.9%, bin80: 11%, bin81: 5.8%, bin97: 5.9%, bin98: 5.1%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_d0: bin28: 6.5%, bin30: 10%, bin35: 12%, bin36: 6.5%, bin39: 5.1%, bin50: 6.1%, bin57: 5.2%, bin62: 7.3%, bin66: 9.8%, bin70: 6.5%, bin72: 6.2%, bin75: 7.9%, bin80: 11%, bin81: 5.8%, bin97: 5.9%, bin98: 5.1%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_d0: bin8: 6.8%, bin36: 6.5%, bin39: 5.1%, bin50: 6.1%, bin60: 5.1%, bin62: 7.3%, bin75: 5.3%, bin80: 7.7%, bin81: 5.8%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_d0: bin8: 6.8%, bin36: 6.5%, bin39: 5.1%, bin50: 6.1%, bin60: 5.1%, bin62: 7.3%, bin75: 5.3%, bin80: 7.7%, bin81: 5.8%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0: bin5: 7%, bin12: 5.7%, bin23: 6%, bin27: 8.1%, bin28: 6.5%, bin29: 9.8%, bin30: 6.7%, bin32: 7.1%, bin35: 8.6%, bin71: 6.5%, bin73: 6.5%, bin74: 7.7%, bin85: 5.4%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0: bin5: 7%, bin12: 5.7%, bin23: 6%, bin27: 8.1%, bin28: 6.5%, bin29: 9.8%, bin30: 6.7%, bin32: 7.1%, bin35: 8.6%, bin71: 6.5%, bin73: 6.5%, bin74: 7.7%, bin85: 5.4%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0: bin18: 18%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0: bin18: 18%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0: bin1: 8.7%, bin12: 5.7%, bin14: 5.3%, bin27: 5.3%, bin29: 9.8%, bin61: 6.9%, bin73: 6.5%, bin85: 5.4%, bin97: 5.9%, bin98: 7.9%, bin99: 7.3%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0: bin1: 8.7%, bin12: 5.7%, bin14: 5.3%, bin27: 5.3%, bin29: 9.8%, bin61: 6.9%, bin73: 6.5%, bin85: 5.4%, bin97: 5.9%, bin98: 7.9%, bin99: 7.3%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_qoverp: bin6: 5.3%, bin58: 7.4%, bin83: 7.7%, bin96: 11%, bin97: 5.9%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_qoverp: bin6: 5.3%, bin58: 7.4%, bin83: 7.7%, bin96: 11%, bin97: 5.9%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_ptqopt: bin21: 6.1%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_ptqopt: bin21: 6.1%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_ptqopt: bin18: 22%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_ptqopt: bin18: 22%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_ptqopt: bin6: 5.3%, bin58: 7.4%, bin83: 7.7%, bin96: 11%, bin97: 5.9%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_ptqopt: bin6: 5.3%, bin58: 7.4%, bin83: 7.7%, bin96: 11%, bin97: 5.9%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_theta: bin1: 8.7%, bin14: 8.1%, bin22: 6.9%, bin48: 5.9%, bin68: 5.6%, bin75: 5.1%, bin86: 5.7%, bin93: 5.6%, bin97: 5.9%, bin98: 7.9%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_theta: bin1: 8.7%, bin14: 8.1%, bin22: 6.9%, bin48: 5.9%, bin68: 5.6%, bin75: 5.1%, bin86: 5.7%, bin93: 5.6%, bin97: 5.9%, bin98: 7.9%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_phi: bin30: 6.7%, bin75: 7.9%, bin81: 5.8%, bin97: 5.9%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_phi: bin30: 6.7%, bin75: 7.9%, bin81: 5.8%, bin97: 5.9%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_phi: bin18: 5.4%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_phi: bin18: 5.4%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_phi: bin30: 6.7%, bin67: 6.2%, bin75: 7.9%, bin90: 7.5%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_phi: bin30: 6.7%, bin67: 6.2%, bin75: 7.9%, bin90: 7.5%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0sin: bin5: 7%, bin15: 6%, bin23: 6%, bin24: 11%, bin26: 7.7%, bin27: 5.3%, bin28: 6.5%, bin29: 9.8%, bin30: 6.7%, bin32: 7.1%, bin35: 8.6%, bin57: 7%, bin71: 6.5%, bin73: 6.5%, bin74: 7.7%, bin75: 5.1%, bin85: 5.4%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0sin: bin5: 7%, bin15: 6%, bin23: 6%, bin24: 11%, bin26: 7.7%, bin27: 5.3%, bin28: 6.5%, bin29: 9.8%, bin30: 6.7%, bin32: 7.1%, bin35: 8.6%, bin57: 7%, bin71: 6.5%, bin73: 6.5%, bin74: 7.7%, bin75: 5.1%, bin85: 5.4%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0sin: bin1: 8.7%, bin12: 5.7%, bin14: 5.3%, bin23: 6%, bin29: 7.1%, bin35: 5.6%, bin73: 6.5%, bin75: 11%, bin85: 5.4%, bin97: 5.9%, bin98: 7.9%, bin99: 7.3%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0sin: bin1: 8.7%, bin12: 5.7%, bin14: 5.3%, bin23: 6%, bin29: 7.1%, bin35: 5.6%, bin73: 6.5%, bin75: 11%, bin85: 5.4%, bin97: 5.9%, bin98: 7.9%, bin99: 7.3%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_d0: bin28: 6.5%, bin30: 6.7%, bin35: 12%, bin36: 6.5%, bin39: 5.1%, bin50: 6.1%, bin57: 5.2%, bin62: 7.3%, bin66: 9.8%, bin70: 6.5%, bin72: 6.2%, bin75: 7.7%, bin80: 11%, bin81: 5.8%, bin97: 5.9%, bin98: 5.1%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_d0: bin28: 6.5%, bin30: 6.7%, bin35: 12%, bin36: 6.5%, bin39: 5.1%, bin50: 6.1%, bin57: 5.2%, bin62: 7.3%, bin66: 9.8%, bin70: 6.5%, bin72: 6.2%, bin75: 7.7%, bin80: 11%, bin81: 5.8%, bin97: 5.9%, bin98: 5.1%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_d0: bin8: 6.8%, bin36: 6.5%, bin39: 5.1%, bin50: 6.1%, bin60: 5.1%, bin62: 7.3%, bin75: 5.1%, bin80: 7.7%, bin81: 5.8%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_d0: bin8: 6.8%, bin36: 6.5%, bin39: 5.1%, bin50: 6.1%, bin60: 5.1%, bin62: 7.3%, bin75: 5.1%, bin80: 7.7%, bin81: 5.8%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0: bin5: 7%, bin12: 5.7%, bin23: 6%, bin27: 8.1%, bin28: 6.5%, bin29: 9.8%, bin32: 7.1%, bin35: 8.6%, bin71: 6.5%, bin73: 6.5%, bin74: 7.3%, bin85: 5.4%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0: bin5: 7%, bin12: 5.7%, bin23: 6%, bin27: 8.1%, bin28: 6.5%, bin29: 9.8%, bin32: 7.1%, bin35: 8.6%, bin71: 6.5%, bin73: 6.5%, bin74: 7.3%, bin85: 5.4%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0: bin18: 18%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0: bin18: 18%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0: bin1: 8.7%, bin12: 5.7%, bin14: 5.3%, bin27: 5.3%, bin29: 9.8%, bin61: 6.9%, bin73: 6.5%, bin85: 5.4%, bin97: 5.9%, bin98: 7.9%, bin99: 7.3%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0: bin1: 8.7%, bin12: 5.7%, bin14: 5.3%, bin27: 5.3%, bin29: 9.8%, bin61: 6.9%, bin73: 6.5%, bin85: 5.4%, bin97: 5.9%, bin98: 7.9%, bin99: 7.3%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_qoverp: bin6: 5.3%, bin58: 7.4%, bin83: 7.7%, bin96: 11%, bin97: 5.9%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_qoverp: bin6: 5.3%, bin58: 7.4%, bin83: 7.7%, bin96: 11%, bin97: 5.9%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_ptqopt: bin21: 6.1%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_ptqopt: bin21: 6.1%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_ptqopt: bin18: 22%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_ptqopt: bin18: 22%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_ptqopt: bin6: 5.3%, bin58: 7.4%, bin83: 7.7%, bin96: 11%, bin97: 5.9%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_ptqopt: bin6: 5.3%, bin58: 7.4%, bin83: 7.7%, bin96: 11%, bin97: 5.9%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_theta: bin1: 8.7%, bin14: 8.1%, bin22: 6.9%, bin48: 5.9%, bin68: 5.6%, bin86: 5.7%, bin93: 5.6%, bin97: 5.9%, bin98: 7.9%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_theta: bin1: 8.7%, bin14: 8.1%, bin22: 6.9%, bin48: 5.9%, bin68: 5.6%, bin86: 5.7%, bin93: 5.6%, bin97: 5.9%, bin98: 7.9%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_phi: bin30: 6.7%, bin75: 7.7%, bin81: 5.8%, bin97: 5.9%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_phi: bin30: 6.7%, bin75: 7.7%, bin81: 5.8%, bin97: 5.9%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_phi: bin18: 5.4%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_phi: bin18: 5.4%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_phi: bin30: 6.7%, bin67: 6.2%, bin75: 7.7%, bin90: 7.5%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_phi: bin30: 6.7%, bin67: 6.2%, bin75: 7.7%, bin90: 7.5%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0sin: bin5: 7%, bin15: 6%, bin23: 6%, bin24: 11%, bin26: 7.3%, bin27: 5.3%, bin28: 6.5%, bin29: 9.8%, bin32: 7.1%, bin35: 8.6%, bin57: 7%, bin71: 6.5%, bin73: 6.5%, bin74: 7.3%, bin75: 7.7%, bin85: 5.4%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0sin: bin5: 7%, bin15: 6%, bin23: 6%, bin24: 11%, bin26: 7.3%, bin27: 5.3%, bin28: 6.5%, bin29: 9.8%, bin32: 7.1%, bin35: 8.6%, bin57: 7%, bin71: 6.5%, bin73: 6.5%, bin74: 7.3%, bin75: 7.7%, bin85: 5.4%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0sin: bin1: 8.7%, bin12: 5.7%, bin14: 5.3%, bin23: 6%, bin29: 7.1%, bin35: 5.6%, bin73: 6.5%, bin75: 7.7%, bin85: 5.4%, bin97: 5.9%, bin98: 7.9%, bin99: 7.3%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0sin: bin1: 8.7%, bin12: 5.7%, bin14: 5.3%, bin23: 6%, bin29: 7.1%, bin35: 5.6%, bin73: 6.5%, bin75: 7.7%, bin85: 5.4%, bin97: 5.9%, bin98: 7.9%, bin99: 7.3%,
 PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO Successfully finalized hists
 ApplicationMgr                                       INFO Application Manager Stopped successfully
 CondInputLoader                                      INFO Finalizing CondInputLoader...
 HistogramDefinitionSvc                               INFO Reader initialised from /cvmfs/atlas.cern.ch/repo/sw/software/25.0/Athena/25.0.30/InstallArea/x86_64-el9-gcc13-opt/share/InDetPVMPlotDefITK.xml in text/xml format.
 Athena::DelayedConditionsCleanerSvc                  INFO Conditions container statistics
-Athena::DelayedConditionsCleanerSvc                  INFO   Work q: Max size: 18  (1 queries) 
+Athena::DelayedConditionsCleanerSvc                  INFO   Work q: Max size: 18  (1 queries)
 Athena::DelayedConditionsCleanerSvc                  INFO           Avg size: 18.00 / Avg removed: 18.00
 Athena::DelayedConditionsCleanerSvc                  INFO   ConditionStore+/EXT/DCS/MAGNETS/SENSORDATA nInserts      1 maxSize   1
 Athena::DelayedConditionsCleanerSvc                  INFO     nClean 1 avgRemoved 0.00 0/1/2+ 1/0/0
@@ -1938,21 +1938,21 @@ AthDictLoaderSvc                                     INFO in finalize...
 AthenaPoolCnvSvc                                     INFO PerfStats ----------------------------------------
 AthenaPoolCnvSvc                                     INFO PerfStats Timing Measurements for AthenaPoolCnvSvc
 AthenaPoolCnvSvc                                     INFO PerfStats ----------------------------------------
-AthenaPoolCnvSvc                                     INFO PerfStats | cObjR_ALL       |            1204 ms |
-AthenaPoolCnvSvc                                     INFO PerfStats | cObj_ALL        |            1727 ms |
+AthenaPoolCnvSvc                                     INFO PerfStats | cObjR_ALL       |            1230 ms |
+AthenaPoolCnvSvc                                     INFO PerfStats | cObj_ALL        |            1695 ms |
 AthenaPoolCnvSvc                                     INFO PerfStats ----------------------------------------
-Domain[ROOT_All]                                     INFO >   Deaccess DbDomain     READ      [ROOT_All] 
-IOVDbFolder                                          INFO Folder /EXT/DCS/MAGNETS/SENSORDATA (AttrListColl) db-read 1/1 objs/chan/bytes 4/4/20 ((     1.63 ))s
-IOVDbFolder                                          INFO Folder /GLOBAL/BField/Maps (AttrListColl) db-read 1/1 objs/chan/bytes 3/3/202 ((     2.30 ))s
-IOVDbFolder                                          INFO Folder /GLOBAL/TrackingGeo/LayerMaterialITK (PoolRef) db-read 1/1 objs/chan/bytes 1/1/227 ((     1.46 ))s
-IOVDbFolder                                          INFO Folder /Indet/Align (PoolRefColl) db-read 1/1 objs/chan/bytes 43/43/6907 ((     0.36 ))s
+Domain[ROOT_All]                                     INFO >   Deaccess DbDomain     READ      [ROOT_All]
+IOVDbFolder                                          INFO Folder /EXT/DCS/MAGNETS/SENSORDATA (AttrListColl) db-read 1/1 objs/chan/bytes 4/4/20 ((     1.25 ))s
+IOVDbFolder                                          INFO Folder /GLOBAL/BField/Maps (AttrListColl) db-read 1/1 objs/chan/bytes 3/3/202 ((     3.46 ))s
+IOVDbFolder                                          INFO Folder /GLOBAL/TrackingGeo/LayerMaterialITK (PoolRef) db-read 1/1 objs/chan/bytes 1/1/227 ((     1.31 ))s
+IOVDbFolder                                          INFO Folder /Indet/Align (PoolRefColl) db-read 1/1 objs/chan/bytes 43/43/6907 ((     0.02 ))s
 IOVDbFolder                                          INFO Folder /Indet/Beampos (AttrList) db-read 1/1 objs/chan/bytes 1/1/76 ((     0.01 ))s
 IOVDbFolder                                          INFO Folder /TagInfo (AttrListColl) db-read 0/1 objs/chan/bytes 1/0/0 ((     0.00 ))s
-IOVDbSvc                                             INFO  bytes in ((      5.76 ))s
+IOVDbSvc                                             INFO  bytes in ((      6.05 ))s
 IOVDbSvc                                             INFO Connection sqlite://;schema=mycool.db;dbname=OFLP200 : nConnect: 0 nFolders: 0 ReadTime: ((     0.00 ))s
-IOVDbSvc                                             INFO Connection COOLOFL_INDET/OFLP200 : nConnect: 2 nFolders: 2 ReadTime: ((     0.37 ))s
-IOVDbSvc                                             INFO Connection COOLOFL_GLOBAL/OFLP200 : nConnect: 2 nFolders: 2 ReadTime: ((     3.76 ))s
-IOVDbSvc                                             INFO Connection COOLOFL_DCS/OFLP200 : nConnect: 2 nFolders: 1 ReadTime: ((     1.63 ))s
+IOVDbSvc                                             INFO Connection COOLOFL_INDET/OFLP200 : nConnect: 2 nFolders: 2 ReadTime: ((     0.03 ))s
+IOVDbSvc                                             INFO Connection COOLOFL_GLOBAL/OFLP200 : nConnect: 2 nFolders: 2 ReadTime: ((     4.77 ))s
+IOVDbSvc                                             INFO Connection COOLOFL_DCS/OFLP200 : nConnect: 2 nFolders: 1 ReadTime: ((     1.25 ))s
 ToolSvc                                              INFO Removing all tools created by ToolSvc
 AtlasTrackingGeom...ITkTrackingGeometryBuilderCond   INFO finalize() successful
 IdDictDetDescrCnv                                    INFO in finalize
@@ -1962,11 +1962,11 @@ FPEAuditor                                           INFO  FPE INVALIDs   : 0
 FPEAuditor                                           INFO  FPE DIVBYZEROs : 0
 ApplicationMgr                                       INFO Application Manager Finalized successfully
 ApplicationMgr                                       INFO Application Manager Terminated successfully
-Listing sources of suppressed message: 
+Listing sources of suppressed message:
 =====================================================
  Message Source              |   Level |    Count
 -----------------------------+---------+-------------
  AthenaEventLoopMgr          |    INFO |    10004
  InDetPlotBase               | WARNING |    15060
 =====================================================
-DONE 2025-05-30T10:08:09
+DONE 2025-06-10T13:41:46

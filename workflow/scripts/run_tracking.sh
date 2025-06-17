@@ -188,6 +188,25 @@ elif [[ "$CHAINNAME" == "CKF_LEGACY_LRT" ]]; then
         --preInclude 'all:Campaigns.PhaseIIPileUp200' 'InDetConfig.ConfigurationHelpers.OnlyTrackingPreInclude' \
         --preExec "flags.Tracking.doLargeD0=True;" \
         --maxEvents ${MAX_EVENTS}
+elif [[ "$CHAINNAME" == "GNN4Pixel_ML_TRITON" ]]; then
+    mkdir gnn4pixel_ml_triton
+    cd gnn4pixel_ml_triton || { echo "Failed to create or change directory to gnn4pixel_ml_triton"; exit 1; }
+    Reco_tf.py \
+        --CA 'all:True' --autoConfiguration 'everything' \
+        --conditionsTag ${DETECTOR_CONDITIONS} \
+        --geometryVersion ${GEOMETRY_VERSION} \
+        --multithreaded 'True' \
+        --steering 'doRAWtoALL' \
+        --digiSteeringConf 'StandardInTimeOnlyTruth' \
+        --postInclude 'all:PyJobTransforms.UseFrontier' \
+        --preExec "all:flags.ITk.doEndcapEtaNeighbour=True; flags.Tracking.ITkGNNPass.minClusters = [7,7,7]; flags.Tracking.ITkGNNPass.maxHoles = [4,4,2]; " \
+        --preInclude 'all:Campaigns.PhaseIIPileUp200' 'InDetConfig.ConfigurationHelpers.OnlyTrackingPreInclude' 'InDetGNNTracking.InDetGNNTrackingFlags.gnnTritonValidation' \
+        --preExec "flags.Tracking.GNN.usePixelHitsOnly = True; flags.Tracking.GNN.Triton.model = \"$TRITON_MODEL_NAME\"; flags.Tracking.GNN.Triton.url = \"$TRITON_URL\";" \
+        --inputRDOFile "${RDO_FILENAME}" \
+        --outputAODFile "${OUTFILE}"  \
+        --jobNumber '1' \
+        --athenaopts='--loglevel=INFO' \
+        --maxEvents ${MAX_EVENTS}
 else
     echo "not implemented yet."
     exit 1

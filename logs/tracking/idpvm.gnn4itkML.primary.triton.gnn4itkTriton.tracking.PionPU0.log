@@ -1,4 +1,4 @@
-Running workflow/scripts/run_idpvm.sh \n Fri May 30 10:07:50 PDT 2025 @ login29
+Running workflow/scripts/run_idpvm.sh \n Tue Jun 10 13:40:45 PDT 2025 @ nid004171
 -----------------------------------
 Input File: workarea/tracking/PionPU0/aod.gnn4itkML.triton.gnn4itkTriton.tracking.PionPU0.root
 Setup File: results/athena/athena.default.gnn4itkTriton.built.json
@@ -13,8 +13,8 @@ virtual environment detected, deactivating...
 [7m lsetup astyle      [0m  ATLAS style macros
 [7m lsetup atlantis    [0m  Atlantis: event display
 [7m lsetup centralpage [0m  Find samples
-[7m lsetup eiclient    [0m  Event Index 
-[7m lsetup emi         [0m  EMI: grid middleware user interface 
+[7m lsetup eiclient    [0m  Event Index
+[7m lsetup emi         [0m  EMI: grid middleware user interface
 [7m lsetup lcgenv      [0m  lcgenv: setup tools from cvmfs SFT repository
 [7m lsetup panda       [0m  Panda: Production ANd Distributed Analysis
 [7m lsetup pyami       [0m  pyAMI: ATLAS Metadata Interface python client
@@ -34,12 +34,12 @@ virtual environment detected, deactivating...
 [7mshowVersions        [0m show versions of installed software
 
 
-[1m[4m30 Nov 2023[0m 
+[1m[4m30 Nov 2023[0m
 
 A serious security issue in ROOT's web-based GUI has been identified:
 
-  You should not use the web-based browser until further notice and instead 
-  set the old-style TBrowser as the default. Please see the Twiki page linked 
+  You should not use the web-based browser until further notice and instead
+  set the old-style TBrowser as the default. Please see the Twiki page linked
   below for instructions on how to do this.
 
   https://twiki.cern.ch/twiki/bin/view/AtlasComputing/AtlasComputingArchive/RootBrowserSecurityIssue
@@ -47,7 +47,7 @@ A serious security issue in ROOT's web-based GUI has been identified:
   More details of this issue:
   https://root.cern/about/security/#2023-11-26-open-port-for-control-of-web-gui-allows-read-and-write-access-to-file-system
 
-  [0;31mReason for this message: $HOME/.rootrc is missing[0m 
+  [0;31mReason for this message: $HOME/.rootrc is missing[0m
 
 Set up environment from /pscratch/sd/x/xju/code/autowork/results/athena/athena.default.gnn4itkTriton.built.json
 Setup Athena from JSON file: /pscratch/sd/x/xju/code/autowork/results/athena/athena.default.gnn4itkTriton.built.json
@@ -70,7 +70,7 @@ Py:AutoConfigFlags    INFO Obtaining metadata of auto-configuration by peeking i
 Py:MetaReader        INFO Current mode used: lite
 Py:MetaReader        INFO Current filenames: ['/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/PionPU0/aod.gnn4itkML.triton.gnn4itkTriton.tracking.PionPU0.root']
 Py:MetaReader        INFO MetaReader is called with the parameter "unique_tag_info_values" set to True. This is a workaround to remove all duplicate values from "/TagInfo" key
-Py:AutoConfigFlags    INFO Looking into the file in 'peeker' mode as the configuration requires more details: AtlasRelease 
+Py:AutoConfigFlags    INFO Looking into the file in 'peeker' mode as the configuration requires more details: AtlasRelease
 Py:MetaReader        INFO Current mode used: peeker
 Py:MetaReader        INFO Current filenames: ['/global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/PionPU0/aod.gnn4itkML.triton.gnn4itkTriton.tracking.PionPU0.root']
 Py:MetaReader        INFO MetaReader is called with the parameter "unique_tag_info_values" set to True. This is a workaround to remove all duplicate values from "/TagInfo" key
@@ -83,21 +83,21 @@ Py:ComponentAccumulator    INFO Top sequence 0
 Py:ComponentAccumulator    INFO \__ AthMasterSeq (seq: SEQ AND)
 Py:ComponentAccumulator    INFO    \__ AthAlgEvtSeq (seq: SEQ AND)
 Py:ComponentAccumulator    INFO       \__ AthBeginSeq (seq: SEQ AND)
-Py:ComponentAccumulator    INFO          \__ AthIncFirerAlg/BeginIncFiringAlg (alg) 
-Py:ComponentAccumulator    INFO          \__ IncidentProcAlg/IncidentProcAlg1 (alg) 
+Py:ComponentAccumulator    INFO          \__ AthIncFirerAlg/BeginIncFiringAlg (alg)
+Py:ComponentAccumulator    INFO          \__ IncidentProcAlg/IncidentProcAlg1 (alg)
 Py:ComponentAccumulator    INFO       \__ AthAllAlgSeq (seq: PAR AND)
 Py:ComponentAccumulator    INFO          \__ AthCondSeq (seq: PAR AND)
 Py:ComponentAccumulator    INFO          \__ AthAlgSeq (seq: PAR AND)
-Py:ComponentAccumulator    INFO             \__ ParameterErrDecoratorAlg/ParameterErrDecoratorAlg (alg) 
-Py:ComponentAccumulator    INFO             \__ InDetPhysValTruthDecoratorAlg/InDetPhysValTruthDecoratorAlg (alg) 
+Py:ComponentAccumulator    INFO             \__ ParameterErrDecoratorAlg/ParameterErrDecoratorAlg (alg)
+Py:ComponentAccumulator    INFO             \__ InDetPhysValTruthDecoratorAlg/InDetPhysValTruthDecoratorAlg (alg)
 Py:ComponentAccumulator    INFO             \__ PhysValSequence (seq: SEQ AND)
-Py:ComponentAccumulator    INFO                \__ AthenaMonManager/PhysValMonManager (alg) 
+Py:ComponentAccumulator    INFO                \__ AthenaMonManager/PhysValMonManager (alg)
 Py:ComponentAccumulator    INFO       \__ AthEndSeq (seq: SEQ AND)
-Py:ComponentAccumulator    INFO          \__ AthIncFirerAlg/EndIncFiringAlg (alg) 
-Py:ComponentAccumulator    INFO          \__ IncidentProcAlg/IncidentProcAlg2 (alg) 
+Py:ComponentAccumulator    INFO          \__ AthIncFirerAlg/EndIncFiringAlg (alg)
+Py:ComponentAccumulator    INFO          \__ IncidentProcAlg/IncidentProcAlg2 (alg)
 Py:ComponentAccumulator    INFO    \__ AthOutSeq (seq: PAR AND)
-Py:ComponentAccumulator    INFO    \__ AthIncFirerAlg/EndAlgorithmsFiringAlg (alg) 
-Py:ComponentAccumulator    INFO    \__ IncidentProcAlg/IncidentProcAlg3 (alg) 
+Py:ComponentAccumulator    INFO    \__ AthIncFirerAlg/EndAlgorithmsFiringAlg (alg)
+Py:ComponentAccumulator    INFO    \__ IncidentProcAlg/IncidentProcAlg3 (alg)
 Py:ComponentAccumulator    INFO Condition Algorithms
 Py:ComponentAccumulator    INFO  \__ CondInputLoader (cond alg)
 Py:ComponentAccumulator    INFO  \__ BeamSpotCondAlg (cond alg)
@@ -144,22 +144,22 @@ Py:ComponentAccumulator    INFO   EventLoop : AthenaEventLoopMgr
 Py:ComponentAccumulator    INFO   ExtSvcCreates : False
 Py:ComponentAccumulator    INFO   JobOptionsSvcType : JobOptionsSvc
 Py:ComponentAccumulator    INFO   JobOptionsType : NONE
-Py:ComponentAccumulator    INFO   JobOptionsPostAction : 
-Py:ComponentAccumulator    INFO   JobOptionsPreAction : 
+Py:ComponentAccumulator    INFO   JobOptionsPostAction :
+Py:ComponentAccumulator    INFO   JobOptionsPreAction :
 Py:ComponentAccumulator    INFO   PrintAlgsSequence : False
 Py:ComponentAccumulator    INFO   AuditAlgorithms : True
 Py:ComponentAccumulator    INFO   InitializationLoopCheck : False
 Py:ComponentAccumulator    INFO   EvtMax : -1
 Py:ComponentAccumulator    INFO   OutputLevel : 3
 Py:ComponentAccumulator    INFO   EvtSel : EventSelectorAthenaPool/EventSelector
-ApplicationMgr    SUCCESS 
+ApplicationMgr    SUCCESS
 ====================================================================================================================================
                                                    Welcome to ApplicationMgr (GaudiCoreSvc v39r4)
-                                          running on login29 on Fri May 30 10:08:12 2025
+                                          running on nid004171 on Tue Jun 10 13:41:06 2025
 ====================================================================================================================================
 ApplicationMgr       INFO Application Manager Configured successfully
-Py:ComponentAccumulator    INFO Athena job with pid 81344
-CoreDumpSvc                                          INFO Handling signals: 11(Segmentation fault) 7(Bus error) 4(Illegal instruction) 14(Alarm clock) 
+Py:ComponentAccumulator    INFO Athena job with pid 336848
+CoreDumpSvc                                          INFO Handling signals: 11(Segmentation fault) 7(Bus error) 4(Illegal instruction) 14(Alarm clock)
 ClassIDSvc                                           INFO getRegistryEntries: read 4514 CLIDRegistry entries for module ALL
 IOVDbSvc                                             INFO Only 5 POOL conditions files will be open at once
 IOVDbSvc                                             INFO Cache alignment will be done in 3 slices
@@ -175,28 +175,28 @@ PoolSvc                                              INFO Set connectionsvc retr
 PoolSvc                                              INFO Frontier compression level set to 5
 DBReplicaSvc                                         INFO Frontier server at (serverurl=http://atlasfrontier-ai.cern.ch:8000/atlr)(serverurl=http://atlasfrontier2-ai.cern.ch:8000/atlr)(serverurl=http://atlasfrontier1-ai.cern.ch:8000/atlr)(proxyurl=http://frontiercache.nersc.gov:3128)(proxyurl=http://atlasbpfrontier.fnal.gov:3127)(proxyurl=http://atlasbpfrontier.cern.ch:3127) will be considered for COOL data
 DBReplicaSvc                                         INFO Read replica configuration from /cvmfs/atlas.cern.ch/repo/sw/software/25.0/Athena/25.0.30/InstallArea/x86_64-el9-gcc13-opt/share/dbreplica.config
-DBReplicaSvc                                         INFO Total of 1 servers found for host login29.chn.perlmutter.nersc.gov [ATLF ]
+DBReplicaSvc                                         INFO Total of 1 servers found for host x1004c3s0b1n1h0.chn.perlmutter.nersc.gov [ATLF ]
 PoolSvc                                              INFO Successfully setup replica sorting algorithm
 PoolSvc                                              INFO Setting up APR FileCatalog and Streams
 PoolSvc                                              INFO Resolved path (via ATLAS_POOLCOND_PATH) is /cvmfs/atlas-condb.cern.ch/repo/conditions/poolcond/PoolFileCatalog.xml
 PoolSvc                                              INFO Unable find catalog apcfile:poolcond/PoolCat_oflcond.xml in $ATLAS_POOLCOND_PATH and $DATAPATH
 PoolSvc                                              INFO POOL WriteCatalog is xmlcatalog_file:PoolFileCatalog.xml
-DbSession                                            INFO     Open     DbSession    
-Domain[ROOT_All]                                     INFO >   Access   DbDomain     READ      [ROOT_All] 
-DbSession                                            INFO     Open     DbSession    
-Domain[ROOT_All]                                     INFO >   Access   DbDomain     READ      [ROOT_All] 
+DbSession                                            INFO     Open     DbSession
+Domain[ROOT_All]                                     INFO >   Access   DbDomain     READ      [ROOT_All]
+DbSession                                            INFO     Open     DbSession
+Domain[ROOT_All]                                     INFO >   Access   DbDomain     READ      [ROOT_All]
 MetaDataSvc                                          INFO Found MetaDataTools = PublicToolHandleArray(['IOVDbMetaDataTool/IOVDbMetaDataTool'])
 PoolSvc                                              INFO File is not in Catalog! Attempt to open it anyway.
-DbSession                                            INFO     Open     DbSession    
+DbSession                                            INFO     Open     DbSession
 Domain[ROOT_All]                                     INFO ->  Access   DbDatabase   READ      [ROOT_All] BC7A74F1-66FE-D47C-1ACE-0FF0FF0FF0FF
 Domain[ROOT_All]                                     INFO                           /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/PionPU0/aod.gnn4itkML.triton.gnn4itkTriton.tracking.PionPU0.root
 RootDatabase.open                                    INFO /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/PionPU0/aod.gnn4itkML.triton.gnn4itkTriton.tracking.PionPU0.root File version:63404
 /global/cfs/cdirs/m3443/usr/xju/workflow/wo...root   INFO Database being retired...
 Domain[ROOT_All]                                     INFO ->  Deaccess DbDatabase   READ      [ROOT_All] BC7A74F1-66FE-D47C-1ACE-0FF0FF0FF0FF
-Domain[ROOT_All]                                     INFO >   Deaccess DbDomain     READ      [ROOT_All] 
-DbSession                                            INFO     Open     DbSession    
-Domain[ROOT_All]                                     INFO >   Access   DbDomain     READ      [ROOT_All] 
-Domain[ROOT_All]                                     INFO ->  Access   DbDatabase   READ      [ROOT_All] E0535626-1D8E-F84A-860D-232DD332B334
+Domain[ROOT_All]                                     INFO >   Deaccess DbDomain     READ      [ROOT_All]
+DbSession                                            INFO     Open     DbSession
+Domain[ROOT_All]                                     INFO >   Access   DbDomain     READ      [ROOT_All]
+Domain[ROOT_All]                                     INFO ->  Access   DbDatabase   READ      [ROOT_All] 61DD18F4-A2BD-B542-8406-5D17574D24EE
 Domain[ROOT_All]                                     INFO                           /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/PionPU0/aod.gnn4itkML.triton.gnn4itkTriton.tracking.PionPU0.root
 RootDatabase.open                                    INFO /global/cfs/cdirs/m3443/usr/xju/workflow/workarea/tracking/PionPU0/aod.gnn4itkML.triton.gnn4itkTriton.tracking.PionPU0.root File version:63404
 EventPersistencySvc                                  INFO Added successfully Conversion service AthenaPoolCnvSvc
@@ -221,46 +221,46 @@ IOVDbSvc                                             INFO Added taginfo remove f
 ClassIDSvc                                           INFO getRegistryEntries: read 2020 CLIDRegistry entries for module ALL
 ClassIDSvc                                           INFO getRegistryEntries: read 35 CLIDRegistry entries for module ALL
 GeoModelSvc                                          INFO Explicitly initializing DetDescrCnvSvc
-DetDescrCnvSvc                                       INFO  initializing 
+DetDescrCnvSvc                                       INFO  initializing
 DetDescrCnvSvc                                       INFO Found DetectorStore service
-DetDescrCnvSvc                                       INFO  filling proxies for detector managers 
-DetDescrCnvSvc                                       INFO  filling address for CaloTTMgr with CLID 117659265 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for CaloMgr with CLID 4548337 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for CaloSuperCellMgr with CLID 241807251 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for CaloIdManager with CLID 125856940 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for IdDict with CLID 2411 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for AtlasID with CLID 164875623 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for PixelID with CLID 2516 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for SCT_ID with CLID 2517 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for TRT_ID with CLID 2518 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for PLR_ID with CLID 131939624 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for HGTD_ID with CLID 79264207 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for SiliconID with CLID 129452393 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for LArEM_ID with CLID 163583365 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for LArEM_SuperCell_ID with CLID 99488227 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for LArHEC_ID with CLID 3870484 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for LArHEC_SuperCell_ID with CLID 254277678 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for LArFCAL_ID with CLID 45738051 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for LArFCAL_SuperCell_ID with CLID 12829437 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for LArMiniFCAL_ID with CLID 79264204 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for LArOnlineID with CLID 158698068 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for TTOnlineID with CLID 38321944 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for LArOnline_SuperCellID with CLID 115600394 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for LArHVLineID with CLID 27863673 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for LArElectrodeID with CLID 80757351 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for TileID with CLID 2901 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for Tile_SuperCell_ID with CLID 49557789 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for TileHWID with CLID 2902 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for TileTBID with CLID 2903 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for CaloLVL1_ID with CLID 108133391 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for CaloCell_ID with CLID 123500438 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for CaloCell_SuperCell_ID with CLID 128365736 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for CaloDM_ID with CLID 167756483 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for ZdcID with CLID 190591643 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for JTower_ID with CLID 218674799 and storage type 68 to detector store 
-DetDescrCnvSvc                                       INFO  filling address for GTower_ID with CLID 49678914 and storage type 68 to detector store 
+DetDescrCnvSvc                                       INFO  filling proxies for detector managers
+DetDescrCnvSvc                                       INFO  filling address for CaloTTMgr with CLID 117659265 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for CaloMgr with CLID 4548337 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for CaloSuperCellMgr with CLID 241807251 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for CaloIdManager with CLID 125856940 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for IdDict with CLID 2411 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for AtlasID with CLID 164875623 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for PixelID with CLID 2516 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for SCT_ID with CLID 2517 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for TRT_ID with CLID 2518 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for PLR_ID with CLID 131939624 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for HGTD_ID with CLID 79264207 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for SiliconID with CLID 129452393 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for LArEM_ID with CLID 163583365 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for LArEM_SuperCell_ID with CLID 99488227 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for LArHEC_ID with CLID 3870484 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for LArHEC_SuperCell_ID with CLID 254277678 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for LArFCAL_ID with CLID 45738051 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for LArFCAL_SuperCell_ID with CLID 12829437 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for LArMiniFCAL_ID with CLID 79264204 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for LArOnlineID with CLID 158698068 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for TTOnlineID with CLID 38321944 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for LArOnline_SuperCellID with CLID 115600394 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for LArHVLineID with CLID 27863673 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for LArElectrodeID with CLID 80757351 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for TileID with CLID 2901 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for Tile_SuperCell_ID with CLID 49557789 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for TileHWID with CLID 2902 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for TileTBID with CLID 2903 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for CaloLVL1_ID with CLID 108133391 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for CaloCell_ID with CLID 123500438 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for CaloCell_SuperCell_ID with CLID 128365736 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for CaloDM_ID with CLID 167756483 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for ZdcID with CLID 190591643 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for JTower_ID with CLID 218674799 and storage type 68 to detector store
+DetDescrCnvSvc                                       INFO  filling address for GTower_ID with CLID 49678914 and storage type 68 to detector store
 GeoModelSvc.BeamPipeDetectorTool                     INFO Building Beam Pipe
-GeoModelSvc                                          INFO GeoModelSvc.BeamPipeDetectorTool	 SZ= 708Kb 	 Time = 0.01S
+GeoModelSvc                                          INFO GeoModelSvc.BeamPipeDetectorTool	 SZ= 708Kb 	 Time = 0S
 EventPersistencySvc                                  INFO Added successfully Conversion service DetDescrCnvSvc
 IdDictDetDescrCnv                                    INFO in initialize
 IdDictDetDescrCnv                                    INFO in createObj: creating a IdDictManager object in the detector store
@@ -280,30 +280,30 @@ Bad field index for phi_index index 6 in dictionary InnerDetector region #123 gr
 Bad field index for eta_index index 7 in dictionary InnerDetector region #123 group plr tag  size 8
 IdDictDetDescrCnv                                    INFO Found id dicts:
 IdDictDetDescrCnv                                    INFO Using dictionary tag: <no tag>
-IdDictDetDescrCnv                                    INFO Dictionary ATLAS                version default              DetDescr tag (using default) file 
+IdDictDetDescrCnv                                    INFO Dictionary ATLAS                version default              DetDescr tag (using default) file
 IdDictDetDescrCnv                                    INFO Dictionary Calorimeter          version default              DetDescr tag CaloIdentifier-LVL1-02 file IdDictParser/IdDictCalorimeter_L1Onl.xml
 IdDictDetDescrCnv                                    INFO Dictionary ForwardDetectors     version default              DetDescr tag ForDetIdentifier-00       file IdDictParser/IdDictForwardDetectors.xml
 IdDictDetDescrCnv                                    INFO Dictionary InnerDetector        version P2-RUN4              DetDescr tag (using default) file InDetIdDict.xml
 IdDictDetDescrCnv                                    INFO Dictionary LArCalorimeter       version fullAtlas            DetDescr tag LArIdentifier-DC3-05-Comm file IdDictParser/IdDictLArCalorimeter_DC3-05-Comm-01.xml
-IdDictDetDescrCnv                                    INFO Dictionary LArElectrode         version fullAtlas            DetDescr tag (using default) file 
-IdDictDetDescrCnv                                    INFO Dictionary LArHighVoltage       version fullAtlas            DetDescr tag (using default) file 
+IdDictDetDescrCnv                                    INFO Dictionary LArElectrode         version fullAtlas            DetDescr tag (using default) file
+IdDictDetDescrCnv                                    INFO Dictionary LArHighVoltage       version fullAtlas            DetDescr tag (using default) file
 IdDictDetDescrCnv                                    INFO Dictionary MuonSpectrometer     version R.09.03              DetDescr tag MuonIdentifier-16         file IdDictParser/IdDictMuonSpectrometer_R.09.03.xml
 IdDictDetDescrCnv                                    INFO Dictionary TileCalorimeter      version fullAtlasAndTestBeam DetDescr tag TileIdentifier-00         file IdDictParser/IdDictTileCalorimeter.xml
 PixelID                                              INFO Initialize from dictionary
-indet 1 2,4,5,7,10,11,12,13 7 1fffffffffffffff 61 3 0 min/max 2 13 values  2 4 5 7 10 11 12 13 indexes  0 0 1 2 0 3 0 0 4 5 6 7 indices  8 prev  0 next  0 mode  enumerated  cont mode  none  
-pixel 1 1:4 3 e7ffffffffffffff 59 2 3 min/max 1 4 values  indexes  indices  4 prev  0 next  0 mode  both_bounded  cont mode  none  
-bec 1 -2,0,2 3 f9ffffffffffffff 57 2 5 min/max -2 2 values  -2 0 2 indexes  0 0 1 0 2 indices  3 prev  0 next  0 mode  enumerated  cont mode  none  
-bec_shift 0 0 0 0 0 0 0 min/max 0 0 values  indexes  indices  0 prev  0 next  0 mode  both_bounded  cont mode  none  
-lay_disk 0 0:8 f fe1fffffffffffff 53 4 7 min/max 0 8 values  indexes  indices  9 prev  0 next  0 mode  both_bounded  cont mode  none  
-lay_disk_shift 0 0 0 0 0 0 0 min/max 0 0 values  indexes  indices  0 prev  0 next  0 mode  both_bounded  cont mode  none  
-phi_mod 0 0:55 3f ffe07fffffffffff 47 6 11 min/max 0 55 values  indexes  indices  56 prev  0 next  0 mode  both_bounded  cont mode  none  
-phi_mod_shift 0 0 0 0 0 0 0 min/max 0 0 values  indexes  indices  0 prev  0 next  0 mode  both_bounded  cont mode  none  
-eta_mod 1 -12:22 3f ffff81ffffffffff 41 6 17 min/max -12 22 values  indexes  indices  35 prev  0 next  0 mode  both_bounded  cont mode  none  
-eta_mod_shift 0 0 0 0 0 0 0 min/max 0 0 values  indexes  indices  0 prev  0 next  0 mode  both_bounded  cont mode  none  
-phi_index 0 0:772 3ff fffffe007fffffff 31 10 23 min/max 0 772 values  indexes  indices  773 prev  0 next  0 mode  both_bounded  cont mode  none  
-eta_index 0 0:804 3ff ffffffff801fffff 21 10 33 min/max 0 804 values  indexes  indices  805 prev  0 next  0 mode  both_bounded  cont mode  none  
-bec_eta_mod 0 0 0 0 0 0 0 min/max 0 0 values  indexes  indices  0 prev  0 next  0 mode  both_bounded  cont mode  none  
-PixelID::initLevelsFromDict - found levels 
+indet 1 2,4,5,7,10,11,12,13 7 1fffffffffffffff 61 3 0 min/max 2 13 values  2 4 5 7 10 11 12 13 indexes  0 0 1 2 0 3 0 0 4 5 6 7 indices  8 prev  0 next  0 mode  enumerated  cont mode  none
+pixel 1 1:4 3 e7ffffffffffffff 59 2 3 min/max 1 4 values  indexes  indices  4 prev  0 next  0 mode  both_bounded  cont mode  none
+bec 1 -2,0,2 3 f9ffffffffffffff 57 2 5 min/max -2 2 values  -2 0 2 indexes  0 0 1 0 2 indices  3 prev  0 next  0 mode  enumerated  cont mode  none
+bec_shift 0 0 0 0 0 0 0 min/max 0 0 values  indexes  indices  0 prev  0 next  0 mode  both_bounded  cont mode  none
+lay_disk 0 0:8 f fe1fffffffffffff 53 4 7 min/max 0 8 values  indexes  indices  9 prev  0 next  0 mode  both_bounded  cont mode  none
+lay_disk_shift 0 0 0 0 0 0 0 min/max 0 0 values  indexes  indices  0 prev  0 next  0 mode  both_bounded  cont mode  none
+phi_mod 0 0:55 3f ffe07fffffffffff 47 6 11 min/max 0 55 values  indexes  indices  56 prev  0 next  0 mode  both_bounded  cont mode  none
+phi_mod_shift 0 0 0 0 0 0 0 min/max 0 0 values  indexes  indices  0 prev  0 next  0 mode  both_bounded  cont mode  none
+eta_mod 1 -12:22 3f ffff81ffffffffff 41 6 17 min/max -12 22 values  indexes  indices  35 prev  0 next  0 mode  both_bounded  cont mode  none
+eta_mod_shift 0 0 0 0 0 0 0 min/max 0 0 values  indexes  indices  0 prev  0 next  0 mode  both_bounded  cont mode  none
+phi_index 0 0:772 3ff fffffe007fffffff 31 10 23 min/max 0 772 values  indexes  indices  773 prev  0 next  0 mode  both_bounded  cont mode  none
+eta_index 0 0:804 3ff ffffffff801fffff 21 10 33 min/max 0 804 values  indexes  indices  805 prev  0 next  0 mode  both_bounded  cont mode  none
+bec_eta_mod 0 0 0 0 0 0 0 min/max 0 0 values  indexes  indices  0 prev  0 next  0 mode  both_bounded  cont mode  none
+PixelID::initLevelsFromDict - found levels
 subdet        0
 part          1
 barrel_endcap 2
@@ -318,9 +318,9 @@ GeoModelSvc.ITk::PixelDetectorTool                   INFO Getting ITkPixel GeoMo
 Transcoded it
 Parsed it
 Database string successfully parsed.
-GeoModelXML-INFO: Set up detector geometry from db-string 
+GeoModelXML-INFO: Set up detector geometry from db-string
 which adds sub-detector ITk_Pixel
-GeoModelSvc.ITk::PixelDetectorTool                   INFO 
+GeoModelSvc.ITk::PixelDetectorTool                   INFO
 
 Pixel Numerology:
 ===============
@@ -352,15 +352,15 @@ GeoModelSvc.ITk::PixelDetectorTool                   INFO Max. eta cells is 800
 GeoModelSvc.ITk::PixelDetectorTool                   INFO Max. phi cells is 768
 GeoModelSvc.ITk::PixelDetectorTool                   INFO End of numerology
 
-GeoModelSvc                                          INFO GeoModelSvc.ITk::PixelDetectorTool	 SZ= 50852Kb 	 Time = 0.5S
-SCT_ID                                               INFO 
+GeoModelSvc                                          INFO GeoModelSvc.ITk::PixelDetectorTool	 SZ= 50848Kb 	 Time = 0.42S
+SCT_ID                                               INFO
 GeoModelSvc.ITk::StripDetectorTool                   INFO Trying new ITkStrip database location.
 GeoModelSvc.ITk::StripDetectorTool                   INFO Using StripXDD-03-00 from ATLAS tag ATLAS-P2-RUN4-03-00-00
 GeoModelSvc.ITk::StripDetectorTool                   INFO Getting ITkStrip GeoModelXml description from the geometry database
 Transcoded it
 Parsed it
 Database string successfully parsed.
-GeoModelXML-INFO: Set up detector geometry from db-string 
+GeoModelXML-INFO: Set up detector geometry from db-string
 which adds sub-detector LTF Strip layout
 copy = 0; level = 2
 Add Alignable named WheelOther with id 0
@@ -386,7 +386,7 @@ copy = 4; level = 2
 Add Alignable named Wheel with id 4
 copy = 5; level = 2
 Add Alignable named Wheel with id 5
-GeoModelSvc.ITk::StripDetectorTool                   INFO 
+GeoModelSvc.ITk::StripDetectorTool                   INFO
 
 SCT Numerology:
 ===============
@@ -524,18 +524,18 @@ GeoModelSvc.ITk::StripDetectorTool                   INFO Max. phi cells is 1536
 GeoModelSvc.ITk::StripDetectorTool                   INFO Max. no. strips is 1536
 GeoModelSvc.ITk::StripDetectorTool                   INFO End of numerology
 
-GeoModelSvc                                          INFO GeoModelSvc.ITk::StripDetectorTool	 SZ= 120924Kb 	 Time = 1.63S
+GeoModelSvc                                          INFO GeoModelSvc.ITk::StripDetectorTool	 SZ= 120920Kb 	 Time = 1.36S
 HGTD_IDDetDescrCnv                                   INFO in createObj: creating a HGTD_ID helper object in the detector store
 HGTD_ID                                              INFO Initialize from dictionary
-indet 1 2,4,5,7,10,11,12,13 7 1fffffffffffffff 61 3 0 min/max 2 13 values  2 4 5 7 10 11 12 13 indexes  0 0 1 2 0 3 0 0 4 5 6 7 indices  8 prev  0 next  0 mode  enumerated  cont mode  none  
-hgtd 1 1:4 3 e7ffffffffffffff 59 2 3 min/max 1 4 values  indexes  indices  4 prev  0 next  0 mode  both_bounded  cont mode  none  
-ec 1 -2,2 1 fbffffffffffffff 58 1 5 min/max -2 2 values  -2 2 indexes  0 0 0 0 1 indices  2 prev  0 next  0 mode  enumerated  cont mode  none  
-layer 0 0:3 3 fcffffffffffffff 56 2 6 min/max 0 3 values  indexes  indices  4 prev  0 next  0 mode  both_bounded  cont mode  none  
-phi_mod 1 1:1004 3ff ff003fffffffffff 46 10 8 min/max 1 1004 values  indexes  indices  1004 prev  0 next  0 mode  both_bounded  cont mode  none  
-eta_mod 0 0 1 ffffdfffffffffff 45 1 18 min/max 0 0 values  indexes  indices  1 prev  0 next  0 mode  both_bounded  cont mode  none  
-phi_index 0 0:14 f ffffe1ffffffffff 41 4 19 min/max 0 14 values  indexes  indices  15 prev  0 next  0 mode  both_bounded  cont mode  none  
-eta_index 0 0:29 1f fffffe0fffffffff 36 5 23 min/max 0 29 values  indexes  indices  30 prev  0 next  0 mode  both_bounded  cont mode  none  
-HGTD_ID::initLevelsFromDict - found levels 
+indet 1 2,4,5,7,10,11,12,13 7 1fffffffffffffff 61 3 0 min/max 2 13 values  2 4 5 7 10 11 12 13 indexes  0 0 1 2 0 3 0 0 4 5 6 7 indices  8 prev  0 next  0 mode  enumerated  cont mode  none
+hgtd 1 1:4 3 e7ffffffffffffff 59 2 3 min/max 1 4 values  indexes  indices  4 prev  0 next  0 mode  both_bounded  cont mode  none
+ec 1 -2,2 1 fbffffffffffffff 58 1 5 min/max -2 2 values  -2 2 indexes  0 0 0 0 1 indices  2 prev  0 next  0 mode  enumerated  cont mode  none
+layer 0 0:3 3 fcffffffffffffff 56 2 6 min/max 0 3 values  indexes  indices  4 prev  0 next  0 mode  both_bounded  cont mode  none
+phi_mod 1 1:1004 3ff ff003fffffffffff 46 10 8 min/max 1 1004 values  indexes  indices  1004 prev  0 next  0 mode  both_bounded  cont mode  none
+eta_mod 0 0 1 ffffdfffffffffff 45 1 18 min/max 0 0 values  indexes  indices  1 prev  0 next  0 mode  both_bounded  cont mode  none
+phi_index 0 0:14 f ffffe1ffffffffff 41 4 19 min/max 0 14 values  indexes  indices  15 prev  0 next  0 mode  both_bounded  cont mode  none
+eta_index 0 0:29 1f fffffe0fffffffff 36 5 23 min/max 0 29 values  indexes  indices  30 prev  0 next  0 mode  both_bounded  cont mode  none
+HGTD_ID::initLevelsFromDict - found levels
 subdet        0
 part          1
 endcap        2
@@ -549,9 +549,9 @@ GeoModelSvc.HGTD_GMX_DetectorTool                    INFO Getting HGTD GeoModelX
 Transcoded it
 Parsed it
 Database string successfully parsed.
-GeoModelXML-INFO: Set up detector geometry from db-string 
+GeoModelXML-INFO: Set up detector geometry from db-string
 which adds sub-detector HGTD
-GeoModelSvc                                          INFO GeoModelSvc.HGTD_GMX_DetectorTool	 SZ= 24796Kb 	 Time = 0.39S
+GeoModelSvc                                          INFO GeoModelSvc.HGTD_GMX_DetectorTool	 SZ= 24800Kb 	 Time = 0.32S
 GeoModelSvc.HGTD_GMX_DetectorTool                    INFO Alignment disabled. No callback registered
 GeoModelSvc                                          INFO   AlgTool: GeoModelSvc.BeamPipeDetectorTool
 GeoModelSvc                                          INFO   AlgTool: GeoModelSvc.ITk::PixelDetectorTool
@@ -570,11 +570,11 @@ CondInputLoader                                      INFO Adding base classes:
   +  ( 'CondAttrListCollection' , 'ConditionStore+/GLOBAL/BField/Maps' )   ->
   +  ( 'Trk::LayerMaterialMap' , 'ConditionStore+/GLOBAL/TrackingGeo/LayerMaterialITK' )   -> no bases
 CondInputLoader                                      INFO Will create WriteCondHandle dependencies for the following DataObjects:
-    +  ( 'AlignableTransformContainer' , 'ConditionStore+/Indet/Align' ) 
-    +  ( 'AthenaAttributeList' , 'ConditionStore+/Indet/Beampos' ) 
-    +  ( 'CondAttrListCollection' , 'ConditionStore+/EXT/DCS/MAGNETS/SENSORDATA' ) 
-    +  ( 'CondAttrListCollection' , 'ConditionStore+/GLOBAL/BField/Maps' ) 
-    +  ( 'Trk::LayerMaterialMap' , 'ConditionStore+/GLOBAL/TrackingGeo/LayerMaterialITK' ) 
+    +  ( 'AlignableTransformContainer' , 'ConditionStore+/Indet/Align' )
+    +  ( 'AthenaAttributeList' , 'ConditionStore+/Indet/Beampos' )
+    +  ( 'CondAttrListCollection' , 'ConditionStore+/EXT/DCS/MAGNETS/SENSORDATA' )
+    +  ( 'CondAttrListCollection' , 'ConditionStore+/GLOBAL/BField/Maps' )
+    +  ( 'Trk::LayerMaterialMap' , 'ConditionStore+/GLOBAL/TrackingGeo/LayerMaterialITK' )
 AtlasFieldMapCondAlg                                 INFO Initialize: Will update the field map from conditions
 AtlasFieldCacheCondAlg                               INFO Initialize: Will update current from conditions
 AtlasFieldCacheCondAlg                               INFO Initialize: useDCS, useSoleCurrent, useToroCurrent. 1,  'UseSoleCurrent':7730.0000,  'UseToroCurrent':20400.000 LockMapCurrents 0
@@ -647,8 +647,8 @@ IOVDbSvc                                             INFO Opening COOL connectio
 IOVDbFolder                                          INFO HVS tag OFLCOND-MC15c-SDR-14-05 resolved to InDetAlign_MC15c for folder /Indet/Align
 IOVDbFolder                                          INFO HVS tag OFLCOND-MC15c-SDR-14-05 resolved to IndetBeampos-RunDep-MC15-BestKnowledge-002-03 for folder /Indet/Beampos
 IOVDbSvc                                             INFO Disconnecting from COOLOFL_INDET/OFLP200
-DbSession                                            INFO     Open     DbSession    
-Domain[ROOT_All]                                     INFO >   Access   DbDomain     READ      [ROOT_All] 
+DbSession                                            INFO     Open     DbSession
+Domain[ROOT_All]                                     INFO >   Access   DbDomain     READ      [ROOT_All]
 Domain[ROOT_All]                                     INFO ->  Access   DbDatabase   READ      [ROOT_All] 8E91164C-1E3C-DB11-8CAB-00132046AB63
 Domain[ROOT_All]                                     INFO                           /cvmfs/atlas-condb.cern.ch/repo/conditions/cmccond/cmccond.000001.conditions.simul.pool.v0000/oflcond.000002.conditions.simul.pool.v0000._0028.pool.root__DQ2-1250194490
 TClass::Init                                      WARNING no dictionary for class DataHeader_p1 is available
@@ -683,7 +683,7 @@ AtlasFieldMapCondAlg                                 INFO checkCurrentFromCondit
 AtlasFieldMapCondAlg                                 INFO checkCurrentFromConditions: Trying to read from DCS: [channel name, index, value] Toroids_SCurrent , 4 , 20400
 AtlasFieldMapCondAlg                                 INFO checkCurrentFromConditions: Currents read from DCS - solenoid 7730 toroid 20400
 AtlasFieldMapCondAlg                                 INFO updateFieldMap: currents are OK, will use nominal maps
-AtlasFieldMapCondAlg                                 INFO updateFieldMap: found TagInfoMgr 
+AtlasFieldMapCondAlg                                 INFO updateFieldMap: found TagInfoMgr
 AtlasFieldMapCondAlg                                 INFO updateFieldMap: DID NOT reset currents from TagInfo
 AtlasFieldMapCondAlg                                 INFO updateFieldMap: Set map currents from FieldSvc: solenoid/toroid 7730,20400
 AtlasFieldMapCondAlg                                 INFO updateFieldMap: Use map file MagneticFieldMaps/bfieldmap_7730_20400_14m.root
@@ -747,13 +747,8 @@ Domain[ROOT_All]                                     INFO ->  Deaccess DbDatabas
 Domain[ROOT_All]                                     INFO ->  Deaccess DbDatabase   READ      [ROOT_All] C634B46D-ECB2-A045-91CC-00A82369D887
 /cvmfs/atlas-condb.cern.ch/repo/conditions/...root   INFO Database being retired...
 Domain[ROOT_All]                                     INFO ->  Deaccess DbDatabase   READ      [ROOT_All] A5CF2B06-0F7A-AC48-BDE9-1E702A3021C4
-Domain[ROOT_All]                                     INFO >   Deaccess DbDomain     READ      [ROOT_All] 
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #10, run #242000 1 events processed so far  <<<===
-InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #10, run #242000 2 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #8, run #242000 2 events processed so far  <<<===
+Domain[ROOT_All]                                     INFO >   Deaccess DbDomain     READ      [ROOT_All]
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #8, run #242000 1 events processed so far  <<<===
 ToolSvc.xAODTrackParticleCompressorTool              INFO Initialising
 ToolSvc.xAODTrackParticleCompressorTool              INFO   OffDiagCovMatrixBits = 23
 ToolSvc.xAODTrackParticleCompressorTool              INFO   DiagCovMatrixBits    = 23
@@ -767,7 +762,12 @@ InDetPlotBase                                     WARNING The HitEff plots dont 
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING The hit res plots dont see any data (note:only 10 warnings issued)
 InDetPlotBase                                     WARNING The HitEff plots dont see any data (note: only 10 warnings issued)
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #8, run #242000 3 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #8, run #242000 2 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #10, run #242000 2 events processed so far  <<<===
+InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #10, run #242000 3 events processed so far  <<<===
 AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #7, run #242000 3 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING The hit res plots dont see any data (note:only 10 warnings issued)
@@ -856,12 +856,7 @@ InDetPlotBase                                     WARNING VertexMatchType DECORA
 InDetPlotBase                                     WARNING The hit res plots dont see any data (note:only 10 warnings issued)
 InDetPlotBase                                     WARNING The HitEff plots dont see any data (note: only 10 warnings issued)
 AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #17, run #242000 11 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #15, run #242000 11 events processed so far  <<<===
-InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #15, run #242000 12 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #9, run #242000 12 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #9, run #242000 11 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING The hit res plots dont see any data (note:only 10 warnings issued)
 InDetPlotBase                                     WARNING The HitEff plots dont see any data (note: only 10 warnings issued)
@@ -871,7 +866,12 @@ InDetPlotBase                                     WARNING The HitEff plots dont 
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING The hit res plots dont see any data (note:only 10 warnings issued)
 InDetPlotBase                                     WARNING The HitEff plots dont see any data (note: only 10 warnings issued)
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #9, run #242000 13 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #9, run #242000 12 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #15, run #242000 12 events processed so far  <<<===
+InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #15, run #242000 13 events processed so far  <<<===
 AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #2, run #242000 13 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
@@ -1173,16 +1173,16 @@ InDetPlotBase                                     WARNING VertexMatchType DECORA
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #74, run #242000 70 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #70, run #242000 70 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #72, run #242000 70 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #70, run #242000 71 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #72, run #242000 71 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #72, run #242000 71 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #70, run #242000 71 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #72, run #242000 72 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #70, run #242000 72 events processed so far  <<<===
 AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #66, run #242000 72 events processed so far  <<<===
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
 InDetPlotBase                                     WARNING VertexMatchType DECORATOR is NOT available  ===========
@@ -1723,7 +1723,9 @@ AthenaEventLoopMgr                                   INFO   ===>>>  start proces
 AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #201, run #242000 197 events processed so far  <<<===
 AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #202, run #242000 197 events processed so far  <<<===
 AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #202, run #242000 198 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #196, run #242000 198 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #205, run #242000 198 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #205, run #242000 199 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #196, run #242000 199 events processed so far  <<<===
 FPEAuditor                                        WARNING FPE INVALID in [Execute] of [PhysValMonManager] on event 196 0 0
 FPEAuditor                                        WARNING FPE DIVBYZERO in [Execute] of [PhysValMonManager] on event 196 0 0
 FPEAuditor                                        WARNING FPE INVALID in [Execute] of [PhysValSequence] on event 196 0 0
@@ -1732,17 +1734,15 @@ FPEAuditor                                        WARNING FPE INVALID in [Execut
 FPEAuditor                                        WARNING FPE DIVBYZERO in [Execute] of [AthAlgSeq] on event 196 0 0
 FPEAuditor                                        WARNING FPE INVALID in [Execute] of [AthAllAlgSeq] on event 196 0 0
 FPEAuditor                                        WARNING FPE DIVBYZERO in [Execute] of [AthAllAlgSeq] on event 196 0 0
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #196, run #242000 199 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #205, run #242000 199 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #205, run #242000 200 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #196, run #242000 200 events processed so far  <<<===
 AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #206, run #242000 200 events processed so far  <<<===
 AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #206, run #242000 201 events processed so far  <<<===
 AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #187, run #242000 201 events processed so far  <<<===
 AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #187, run #242000 202 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #204, run #242000 202 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #204, run #242000 203 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #197, run #242000 203 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #197, run #242000 204 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #197, run #242000 202 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #197, run #242000 203 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #204, run #242000 203 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #204, run #242000 204 events processed so far  <<<===
 AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #209, run #242000 204 events processed so far  <<<===
 AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #209, run #242000 205 events processed so far  <<<===
 AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #203, run #242000 205 events processed so far  <<<===
@@ -1815,10 +1815,10 @@ AthenaEventLoopMgr                                   INFO   ===>>>  start proces
 AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #239, run #242000 235 events processed so far  <<<===
 AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #241, run #242000 235 events processed so far  <<<===
 AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #241, run #242000 236 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #240, run #242000 236 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #240, run #242000 237 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #238, run #242000 237 events processed so far  <<<===
-AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #238, run #242000 238 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #238, run #242000 236 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #238, run #242000 237 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #240, run #242000 237 events processed so far  <<<===
+AthenaEventLoopMgr                                   INFO   ===>>>  done processing event #240, run #242000 238 events processed so far  <<<===
 AthenaEventLoopMgr                                   INFO   ===>>>  start processing event #227, run #242000 238 events processed so far  <<<===
 FPEAuditor                                        WARNING FPE INVALID in [Execute] of [PhysValMonManager] on event 227 0 0
 FPEAuditor                                        WARNING FPE DIVBYZERO in [Execute] of [PhysValMonManager] on event 227 0 0
@@ -2244,185 +2244,187 @@ FPEAuditor                                        WARNING FPE INVALID in [Execut
 FPEAuditor                                        WARNING FPE DIVBYZERO in [Execute] of [PhysValMonManager] on event 1694 0 0
 FPEAuditor                                        WARNING FPE INVALID in [Execute] of [PhysValSequence] on event 1694 0 0
 FPEAuditor        WARNING WARNING message limit (500) reached for FPEAuditor. Suppressing further output.
-EventSelector                                        INFO Disconnecting input sourceID: E0535626-1D8E-F84A-860D-232DD332B334
+EventSelector                                        INFO Disconnecting input sourceID: 61DD18F4-A2BD-B542-8406-5D17574D24EE
 /global/cfs/cdirs/m3443/usr/xju/workflow/wo...root   INFO Database being retired...
-Domain[ROOT_All]                                     INFO ->  Deaccess DbDatabase   READ      [ROOT_All] E0535626-1D8E-F84A-860D-232DD332B334
-Domain[ROOT_All]                                     INFO >   Deaccess DbDomain     READ      [ROOT_All] 
+Domain[ROOT_All]                                     INFO ->  Deaccess DbDatabase   READ      [ROOT_All] 61DD18F4-A2BD-B542-8406-5D17574D24EE
+Domain[ROOT_All]                                     INFO >   Deaccess DbDomain     READ      [ROOT_All]
 PhysValMonManager.InDetPhysValMonitoringTool         INFO Finalising hists PhysValMonManager.InDetPhysValMonitoringTool...
-PhysValMonManager.InDetPhysValMonitoringTool         INFO 
+PhysValMonManager.InDetPhysValMonitoringTool         INFO
 PhysValMonManager.InDetPhysValMonitoringTool         INFO Cutflow for truth tracks:
-PhysValMonManager.InDetPhysValMonitoringTool         INFO Truth selection report: 
-CutList Report; Total processed: 4217
-Total passed: 4212
+PhysValMonManager.InDetPhysValMonitoringTool         INFO Truth selection report:
+CutList Report; Total processed: 4215
+Total passed: 4210
 Cuts were applied until one fails
-eta: 4216 passed
-min_pt: 4215 passed
-decay_before_300.000000: 4215 passed
-OnlyPrimary: 4212 passed
-charged: 4212 passed
-stable: 4212 passed
+eta: 4214 passed
+min_pt: 4213 passed
+decay_before_300.000000: 4213 passed
+OnlyPrimary: 4210 passed
+charged: 4210 passed
+stable: 4210 passed
 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_d0: bin2: 8.1%, bin3: 7.5%, bin4: 5.6%, bin5: 10%, bin7: 7.1%, bin10: 5.6%, bin11: 7.7%, bin12: 7.4%, bin13: 5.3%, bin15: 5.6%, bin17: 8.7%, bin18: 7.3%, bin20: 5.3%, bin21: 6.2%, bin22: 14%, bin23: 11%, bin24: 11%, bin25: 9.5%, bin27: 6.5%, bin30: 5.7%, bin33: 6.7%, bin34: 9.4%, bin36: 8.5%, bin38: 8.8%, bin39: 9.5%, bin43: 16%, bin44: 11%, bin47: 9.4%, bin48: 5.4%, bin51: 5.7%, bin54: 5.3%, bin55: 12%, bin59: 7.3%, bin60: 7.1%, bin62: 5.7%, bin66: 6.1%, bin67: 6.1%, bin68: 5.9%, bin71: 5.3%, bin74: 7.3%, bin76: 7.7%, bin83: 11%, bin85: 15%, bin90: 11%, bin92: 6.7%, bin93: 6%, bin96: 20%, bin100: 5.6%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_d0: bin2: 8.1%, bin3: 7.5%, bin4: 5.6%, bin5: 10%, bin7: 7.1%, bin10: 5.6%, bin11: 7.7%, bin12: 7.4%, bin13: 5.3%, bin15: 5.6%, bin17: 8.7%, bin18: 7.3%, bin20: 5.3%, bin21: 6.2%, bin22: 14%, bin23: 11%, bin24: 11%, bin25: 9.5%, bin27: 6.5%, bin30: 5.7%, bin33: 6.7%, bin34: 9.4%, bin36: 8.5%, bin38: 8.8%, bin39: 9.5%, bin43: 16%, bin44: 11%, bin47: 9.4%, bin48: 5.4%, bin51: 5.7%, bin54: 5.3%, bin55: 12%, bin59: 7.3%, bin60: 7.1%, bin62: 5.7%, bin66: 6.1%, bin67: 6.1%, bin68: 5.9%, bin71: 5.3%, bin74: 7.3%, bin76: 7.7%, bin83: 11%, bin85: 15%, bin90: 11%, bin92: 6.7%, bin93: 6%, bin96: 20%, bin100: 5.6%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_d0: bin18: 6.3%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_d0: bin18: 6.3%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_d0: bin2: 5.3%, bin4: 5.6%, bin10: 5.7%, bin12: 5.7%, bin15: 8.6%, bin19: 5.6%, bin22: 7.8%, bin23: 5.4%, bin24: 5.4%, bin34: 9.4%, bin42: 6.5%, bin43: 5.9%, bin47: 6.2%, bin53: 5.9%, bin55: 6.8%, bin57: 8.3%, bin80: 6.2%, bin88: 8.2%, bin93: 8.5%, bin96: 7.7%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_d0: bin2: 5.3%, bin4: 5.6%, bin10: 5.7%, bin12: 5.7%, bin15: 8.6%, bin19: 5.6%, bin22: 7.8%, bin23: 5.4%, bin24: 5.4%, bin34: 9.4%, bin42: 6.5%, bin43: 5.9%, bin47: 6.2%, bin53: 5.9%, bin55: 6.8%, bin57: 8.3%, bin80: 6.2%, bin88: 8.2%, bin93: 8.5%, bin96: 7.7%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0: bin4: 8.6%, bin10: 5.6%, bin12: 5.5%, bin13: 5.3%, bin15: 8.6%, bin17: 11%, bin18: 7.3%, bin19: 5.6%, bin22: 12%, bin24: 5.3%, bin28: 5.9%, bin29: 6.5%, bin31: 10%, bin33: 9.1%, bin34: 6.1%, bin35: 14%, bin36: 14%, bin43: 5.7%, bin44: 5.1%, bin47: 6.1%, bin48: 5.4%, bin51: 5.7%, bin62: 8.8%, bin67: 9.4%, bin68: 5.9%, bin69: 6.9%, bin75: 6.2%, bin77: 8.9%, bin78: 5.9%, bin80: 11%, bin84: 5.7%, bin87: 8.2%, bin90: 5.1%, bin98: 5.3%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0: bin4: 8.6%, bin10: 5.6%, bin12: 5.5%, bin13: 5.3%, bin15: 8.6%, bin17: 11%, bin18: 7.3%, bin19: 5.6%, bin22: 12%, bin24: 5.3%, bin28: 5.9%, bin29: 6.5%, bin31: 10%, bin33: 9.1%, bin34: 6.1%, bin35: 14%, bin36: 14%, bin43: 5.7%, bin44: 5.1%, bin47: 6.1%, bin48: 5.4%, bin51: 5.7%, bin62: 8.8%, bin67: 9.4%, bin68: 5.9%, bin69: 6.9%, bin75: 6.2%, bin77: 8.9%, bin78: 5.9%, bin80: 11%, bin84: 5.7%, bin87: 8.2%, bin90: 5.1%, bin98: 5.3%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0: bin18: 18%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0: bin18: 18%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0: bin13: 5.3%, bin22: 7.8%, bin24: 5.4%, bin28: 5.9%, bin29: 6.7%, bin36: 6.9%, bin39: 7.1%, bin75: 6.2%, bin80: 8.5%, bin96: 7.9%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0: bin13: 5.3%, bin22: 7.8%, bin24: 5.4%, bin28: 5.9%, bin29: 6.7%, bin36: 6.9%, bin39: 7.1%, bin75: 6.2%, bin80: 8.5%, bin96: 7.9%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_qoverp: bin85: 5.4%, bin96: 7.7%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_qoverp: bin85: 5.4%, bin96: 7.7%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_qoverp: bin7: 7.1%, bin9: 8%, bin13: 8.1%, bin22: 5.6%, bin33: 6.7%, bin54: 5.3%, bin65: 5.7%, bin85: 5.4%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_qoverp: bin7: 7.1%, bin9: 8%, bin13: 8.1%, bin22: 5.6%, bin33: 6.7%, bin54: 5.3%, bin65: 5.7%, bin85: 5.4%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_ptqopt: bin9: 8%, bin20: 5.3%, bin22: 9.6%, bin24: 5.3%, bin25: 7%, bin30: 5.7%, bin37: 5.7%, bin38: 5.7%, bin42: 11%, bin54: 5.3%, bin55: 6.7%, bin56: 7.4%, bin58: 7.5%, bin61: 7.3%, bin65: 5.7%, bin76: 7.7%, bin77: 8.9%, bin97: 6.2%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_ptqopt: bin9: 8%, bin20: 5.3%, bin22: 9.6%, bin24: 5.3%, bin25: 7%, bin30: 5.7%, bin37: 5.7%, bin38: 5.7%, bin42: 11%, bin54: 5.3%, bin55: 6.7%, bin56: 7.4%, bin58: 7.5%, bin61: 7.3%, bin65: 5.7%, bin76: 7.7%, bin77: 8.9%, bin97: 6.2%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_ptqopt: bin18: 18%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_ptqopt: bin18: 18%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_ptqopt: bin7: 7.1%, bin9: 8%, bin13: 8.1%, bin22: 5.6%, bin54: 5.3%, bin65: 5.7%, bin85: 5.4%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_ptqopt: bin7: 7.1%, bin9: 8%, bin13: 8.1%, bin22: 5.6%, bin54: 5.3%, bin65: 5.7%, bin85: 5.4%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_theta: bin12: 5.5%, bin17: 8.7%, bin22: 7.5%, bin29: 6.5%, bin35: 10%, bin36: 6.7%, bin39: 7%, bin62: 5.7%, bin98: 5.1%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_theta: bin12: 5.5%, bin17: 8.7%, bin22: 7.5%, bin29: 6.5%, bin35: 10%, bin36: 6.7%, bin39: 7%, bin62: 5.7%, bin98: 5.1%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_theta: bin13: 5.3%, bin24: 5.3%, bin36: 7%, bin37: 5.7%, bin96: 7.9%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_theta: bin13: 5.3%, bin24: 5.3%, bin36: 7%, bin37: 5.7%, bin96: 7.9%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_phi: bin3: 10%, bin11: 7.7%, bin12: 5.6%, bin13: 5.4%, bin15: 5.6%, bin17: 8.7%, bin20: 5.3%, bin22: 7.8%, bin23: 5.4%, bin24: 5.4%, bin30: 5.7%, bin34: 9.4%, bin39: 9.5%, bin43: 8.8%, bin62: 5.7%, bin65: 5.7%, bin83: 5.3%, bin85: 8.3%, bin96: 8.3%, bin100: 5.6%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_phi: bin3: 10%, bin11: 7.7%, bin12: 5.6%, bin13: 5.4%, bin15: 5.6%, bin17: 8.7%, bin20: 5.3%, bin22: 7.8%, bin23: 5.4%, bin24: 5.4%, bin30: 5.7%, bin34: 9.4%, bin39: 9.5%, bin43: 8.8%, bin62: 5.7%, bin65: 5.7%, bin83: 5.3%, bin85: 8.3%, bin96: 8.3%, bin100: 5.6%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_phi: bin18: 6.3%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_phi: bin18: 6.3%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_phi: bin2: 5.3%, bin4: 8.6%, bin9: 8%, bin12: 5.7%, bin13: 5.3%, bin15: 5.6%, bin17: 6.5%, bin19: 5.6%, bin22: 5.8%, bin34: 9.4%, bin43: 5.7%, bin78: 5.9%, bin88: 6%, bin93: 8.5%, bin96: 7.7%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_phi: bin2: 5.3%, bin4: 8.6%, bin9: 8%, bin12: 5.7%, bin13: 5.3%, bin15: 5.6%, bin17: 6.5%, bin19: 5.6%, bin22: 5.8%, bin34: 9.4%, bin43: 5.7%, bin78: 5.9%, bin88: 6%, bin93: 8.5%, bin96: 7.7%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0sin: bin2: 5.3%, bin3: 7.5%, bin4: 5.6%, bin10: 5.6%, bin12: 7.4%, bin15: 5.6%, bin17: 11%, bin18: 7.3%, bin22: 12%, bin23: 5.4%, bin24: 5.3%, bin28: 5.9%, bin29: 6.5%, bin31: 7.3%, bin33: 6.8%, bin35: 14%, bin36: 8.8%, bin39: 7%, bin44: 5.1%, bin47: 6.1%, bin48: 8.3%, bin51: 5.7%, bin57: 5.4%, bin59: 7.3%, bin61: 7.3%, bin62: 5.7%, bin66: 9.4%, bin67: 9.4%, bin68: 5.9%, bin70: 6.1%, bin75: 6.2%, bin77: 6.5%, bin78: 8%, bin80: 11%, bin84: 5.7%, bin87: 8.2%, bin90: 5.1%, bin98: 7.9%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0sin: bin2: 5.3%, bin3: 7.5%, bin4: 5.6%, bin10: 5.6%, bin12: 7.4%, bin15: 5.6%, bin17: 11%, bin18: 7.3%, bin22: 12%, bin23: 5.4%, bin24: 5.3%, bin28: 5.9%, bin29: 6.5%, bin31: 7.3%, bin33: 6.8%, bin35: 14%, bin36: 8.8%, bin39: 7%, bin44: 5.1%, bin47: 6.1%, bin48: 8.3%, bin51: 5.7%, bin57: 5.4%, bin59: 7.3%, bin61: 7.3%, bin62: 5.7%, bin66: 9.4%, bin67: 9.4%, bin68: 5.9%, bin70: 6.1%, bin75: 6.2%, bin77: 6.5%, bin78: 8%, bin80: 11%, bin84: 5.7%, bin87: 8.2%, bin90: 5.1%, bin98: 7.9%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0sin: bin18: 5.2%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0sin: bin18: 5.2%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0sin: bin13: 5.3%, bin22: 8%, bin28: 5.9%, bin29: 6.7%, bin36: 6.9%, bin39: 9.8%, bin68: 5.9%, bin72: 6.8%, bin77: 6.7%, bin80: 6.2%, bin81: 5.3%, bin96: 7.9%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0sin: bin13: 5.3%, bin22: 8%, bin28: 5.9%, bin29: 6.7%, bin36: 6.9%, bin39: 9.8%, bin68: 5.9%, bin72: 6.8%, bin77: 6.7%, bin80: 6.2%, bin81: 5.3%, bin96: 7.9%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_d0: bin2: 8.1%, bin3: 7.5%, bin4: 5.6%, bin5: 10%, bin7: 7.1%, bin10: 5.6%, bin11: 7.7%, bin12: 7.4%, bin13: 5.3%, bin15: 5.6%, bin17: 8.7%, bin18: 7.3%, bin20: 5.3%, bin21: 6.2%, bin22: 14%, bin23: 11%, bin24: 11%, bin25: 9.5%, bin27: 6.9%, bin30: 5.7%, bin33: 6.7%, bin34: 9.4%, bin36: 8.5%, bin38: 8.8%, bin39: 9.5%, bin43: 16%, bin44: 11%, bin47: 9.4%, bin48: 5.4%, bin51: 5.7%, bin54: 5.3%, bin55: 12%, bin59: 7.3%, bin60: 7.1%, bin62: 5.7%, bin66: 6.1%, bin67: 6.1%, bin68: 5.9%, bin71: 5.3%, bin74: 7.3%, bin76: 7.7%, bin83: 11%, bin85: 15%, bin90: 11%, bin92: 6.7%, bin93: 6%, bin96: 20%, bin100: 5.6%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_d0: bin2: 8.1%, bin3: 7.5%, bin4: 5.6%, bin5: 10%, bin7: 7.1%, bin10: 5.6%, bin11: 7.7%, bin12: 7.4%, bin13: 5.3%, bin15: 5.6%, bin17: 8.7%, bin18: 7.3%, bin20: 5.3%, bin21: 6.2%, bin22: 14%, bin23: 11%, bin24: 11%, bin25: 9.5%, bin27: 6.9%, bin30: 5.7%, bin33: 6.7%, bin34: 9.4%, bin36: 8.5%, bin38: 8.8%, bin39: 9.5%, bin43: 16%, bin44: 11%, bin47: 9.4%, bin48: 5.4%, bin51: 5.7%, bin54: 5.3%, bin55: 12%, bin59: 7.3%, bin60: 7.1%, bin62: 5.7%, bin66: 6.1%, bin67: 6.1%, bin68: 5.9%, bin71: 5.3%, bin74: 7.3%, bin76: 7.7%, bin83: 11%, bin85: 15%, bin90: 11%, bin92: 6.7%, bin93: 6%, bin96: 20%, bin100: 5.6%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_d0: bin18: 6.3%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_d0: bin18: 6.3%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_d0: bin2: 5.3%, bin4: 5.6%, bin10: 5.7%, bin12: 5.7%, bin15: 8.6%, bin19: 5.6%, bin22: 7.8%, bin23: 5.4%, bin24: 5.4%, bin34: 9.4%, bin42: 6.5%, bin43: 5.9%, bin47: 6.2%, bin53: 5.9%, bin55: 6.8%, bin57: 8.3%, bin80: 6.2%, bin88: 8.2%, bin93: 8.5%, bin96: 7.7%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_d0: bin2: 5.3%, bin4: 5.6%, bin10: 5.7%, bin12: 5.7%, bin15: 8.6%, bin19: 5.6%, bin22: 7.8%, bin23: 5.4%, bin24: 5.4%, bin34: 9.4%, bin42: 6.5%, bin43: 5.9%, bin47: 6.2%, bin53: 5.9%, bin55: 6.8%, bin57: 8.3%, bin80: 6.2%, bin88: 8.2%, bin93: 8.5%, bin96: 7.7%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0: bin4: 8.6%, bin10: 5.6%, bin12: 5.5%, bin13: 5.3%, bin15: 8.6%, bin17: 11%, bin18: 7.3%, bin19: 5.6%, bin22: 12%, bin24: 5.3%, bin28: 5.9%, bin29: 6.5%, bin31: 10%, bin33: 9.1%, bin34: 6.1%, bin35: 14%, bin36: 14%, bin43: 5.7%, bin44: 5.1%, bin47: 6.1%, bin48: 5.4%, bin51: 5.7%, bin62: 8.8%, bin67: 9.4%, bin68: 5.9%, bin69: 6.9%, bin74: 10%, bin75: 6.2%, bin77: 8.9%, bin78: 5.9%, bin80: 11%, bin84: 5.7%, bin87: 8.2%, bin90: 5.1%, bin98: 5.3%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0: bin4: 8.6%, bin10: 5.6%, bin12: 5.5%, bin13: 5.3%, bin15: 8.6%, bin17: 11%, bin18: 7.3%, bin19: 5.6%, bin22: 12%, bin24: 5.3%, bin28: 5.9%, bin29: 6.5%, bin31: 10%, bin33: 9.1%, bin34: 6.1%, bin35: 14%, bin36: 14%, bin43: 5.7%, bin44: 5.1%, bin47: 6.1%, bin48: 5.4%, bin51: 5.7%, bin62: 8.8%, bin67: 9.4%, bin68: 5.9%, bin69: 6.9%, bin74: 10%, bin75: 6.2%, bin77: 8.9%, bin78: 5.9%, bin80: 11%, bin84: 5.7%, bin87: 8.2%, bin90: 5.1%, bin98: 5.3%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0: bin18: 18%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0: bin18: 18%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0: bin13: 5.3%, bin22: 7.8%, bin24: 5.4%, bin28: 5.9%, bin29: 6.7%, bin36: 6.9%, bin39: 7.1%, bin75: 6.2%, bin80: 8.5%, bin96: 7.9%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0: bin13: 5.3%, bin22: 7.8%, bin24: 5.4%, bin28: 5.9%, bin29: 6.7%, bin36: 6.9%, bin39: 7.1%, bin75: 6.2%, bin80: 8.5%, bin96: 7.9%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_qoverp: bin85: 5.4%, bin96: 7.7%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_qoverp: bin85: 5.4%, bin96: 7.7%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_qoverp: bin7: 7.1%, bin9: 8%, bin13: 8.1%, bin22: 5.6%, bin54: 5.3%, bin65: 5.7%, bin85: 5.4%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_qoverp: bin7: 7.1%, bin9: 8%, bin13: 8.1%, bin22: 5.6%, bin54: 5.3%, bin65: 5.7%, bin85: 5.4%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_ptqopt: bin9: 8%, bin20: 5.3%, bin22: 9.6%, bin24: 5.3%, bin25: 7%, bin30: 5.7%, bin37: 5.7%, bin38: 5.7%, bin42: 11%, bin54: 5.3%, bin55: 6.7%, bin56: 7.4%, bin58: 7.5%, bin61: 7.3%, bin65: 5.7%, bin76: 7.7%, bin77: 8.9%, bin97: 6.2%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_ptqopt: bin9: 8%, bin20: 5.3%, bin22: 9.6%, bin24: 5.3%, bin25: 7%, bin30: 5.7%, bin37: 5.7%, bin38: 5.7%, bin42: 11%, bin54: 5.3%, bin55: 6.7%, bin56: 7.4%, bin58: 7.5%, bin61: 7.3%, bin65: 5.7%, bin76: 7.7%, bin77: 8.9%, bin97: 6.2%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_ptqopt: bin18: 18%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_ptqopt: bin18: 18%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_ptqopt: bin7: 7.1%, bin9: 8%, bin13: 8.1%, bin22: 5.6%, bin54: 5.3%, bin65: 5.7%, bin85: 5.4%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_ptqopt: bin7: 7.1%, bin9: 8%, bin13: 8.1%, bin22: 5.6%, bin54: 5.3%, bin65: 5.7%, bin85: 5.4%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_theta: bin12: 5.5%, bin17: 8.7%, bin22: 7.5%, bin29: 6.5%, bin35: 10%, bin36: 6.7%, bin39: 7%, bin62: 5.7%, bin98: 5.1%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_theta: bin12: 5.5%, bin17: 8.7%, bin22: 7.5%, bin29: 6.5%, bin35: 10%, bin36: 6.7%, bin39: 7%, bin62: 5.7%, bin98: 5.1%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_theta: bin13: 5.3%, bin24: 5.3%, bin36: 7%, bin37: 5.7%, bin96: 7.9%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_theta: bin13: 5.3%, bin24: 5.3%, bin36: 7%, bin37: 5.7%, bin96: 7.9%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_phi: bin3: 10%, bin11: 7.7%, bin12: 5.6%, bin13: 5.4%, bin15: 5.6%, bin17: 8.7%, bin20: 5.3%, bin22: 7.8%, bin23: 5.4%, bin24: 5.4%, bin30: 5.7%, bin34: 9.4%, bin39: 9.5%, bin43: 8.8%, bin62: 5.7%, bin65: 5.7%, bin83: 5.3%, bin85: 8.3%, bin96: 8.3%, bin100: 5.6%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_phi: bin3: 10%, bin11: 7.7%, bin12: 5.6%, bin13: 5.4%, bin15: 5.6%, bin17: 8.7%, bin20: 5.3%, bin22: 7.8%, bin23: 5.4%, bin24: 5.4%, bin30: 5.7%, bin34: 9.4%, bin39: 9.5%, bin43: 8.8%, bin62: 5.7%, bin65: 5.7%, bin83: 5.3%, bin85: 8.3%, bin96: 8.3%, bin100: 5.6%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_phi: bin18: 6.3%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_phi: bin18: 6.3%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_phi: bin2: 5.3%, bin4: 8.6%, bin9: 8%, bin12: 5.7%, bin13: 5.3%, bin15: 5.6%, bin17: 6.5%, bin19: 5.6%, bin22: 5.8%, bin34: 9.4%, bin43: 5.7%, bin78: 5.9%, bin88: 6%, bin93: 8.5%, bin96: 7.7%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_phi: bin2: 5.3%, bin4: 8.6%, bin9: 8%, bin12: 5.7%, bin13: 5.3%, bin15: 5.6%, bin17: 6.5%, bin19: 5.6%, bin22: 5.8%, bin34: 9.4%, bin43: 5.7%, bin78: 5.9%, bin88: 6%, bin93: 8.5%, bin96: 7.7%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0sin: bin2: 5.3%, bin3: 7.5%, bin4: 5.6%, bin10: 5.6%, bin12: 7.4%, bin15: 5.6%, bin17: 11%, bin18: 7.3%, bin22: 12%, bin23: 5.4%, bin24: 5.3%, bin28: 5.9%, bin29: 6.5%, bin31: 7.3%, bin33: 6.8%, bin35: 14%, bin36: 8.8%, bin39: 7%, bin44: 5.1%, bin47: 6.1%, bin48: 8.3%, bin51: 5.7%, bin57: 5.4%, bin59: 7.3%, bin61: 7.3%, bin62: 5.7%, bin66: 9.4%, bin67: 9.4%, bin68: 5.9%, bin70: 6.1%, bin74: 7.3%, bin75: 6.2%, bin77: 6.5%, bin78: 8%, bin80: 11%, bin84: 5.7%, bin87: 8.2%, bin90: 5.1%, bin98: 7.9%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0sin: bin2: 5.3%, bin3: 7.5%, bin4: 5.6%, bin10: 5.6%, bin12: 7.4%, bin15: 5.6%, bin17: 11%, bin18: 7.3%, bin22: 12%, bin23: 5.4%, bin24: 5.3%, bin28: 5.9%, bin29: 6.5%, bin31: 7.3%, bin33: 6.8%, bin35: 14%, bin36: 8.8%, bin39: 7%, bin44: 5.1%, bin47: 6.1%, bin48: 8.3%, bin51: 5.7%, bin57: 5.4%, bin59: 7.3%, bin61: 7.3%, bin62: 5.7%, bin66: 9.4%, bin67: 9.4%, bin68: 5.9%, bin70: 6.1%, bin74: 7.3%, bin75: 6.2%, bin77: 6.5%, bin78: 8%, bin80: 11%, bin84: 5.7%, bin87: 8.2%, bin90: 5.1%, bin98: 7.9%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0sin: bin18: 5.2%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0sin: bin18: 5.2%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0sin: bin13: 5.3%, bin22: 8%, bin28: 5.9%, bin29: 6.7%, bin36: 6.9%, bin39: 9.8%, bin68: 5.9%, bin72: 6.8%, bin77: 6.7%, bin80: 6.2%, bin81: 5.3%, bin96: 7.9%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0sin: bin13: 5.3%, bin22: 8%, bin28: 5.9%, bin29: 6.7%, bin36: 6.9%, bin39: 9.8%, bin68: 5.9%, bin72: 6.8%, bin77: 6.7%, bin80: 6.2%, bin81: 5.3%, bin96: 7.9%,
 PhysValMonManager.InDetPhysValMonitoringTool         INFO Successfully finalized hists
 PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO Finalising hists PhysValMonManager.InDetPhysValMonitoringToolLoose...
-PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO 
+PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO
 PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO Now Cutflow for track cuts:
-PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO 
-PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO number after preCut: 4255
-PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO number after Eta: 4255
-PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO number after PixelHits: 4255
-PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO number after SiHits: 4255
-PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO 
+PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO
+PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO number after preCut: 4259
+PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO number after Eta: 4259
+PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO number after PixelHits: 4259
+PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO number after SiHits: 4259
+PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO
 PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO Cutflow for truth tracks:
-PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO Truth selection report: 
-CutList Report; Total processed: 4078
-Total passed: 4074
+PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO Truth selection report:
+CutList Report; Total processed: 4082
+Total passed: 4078
 Cuts were applied until one fails
-eta: 4077 passed
-min_pt: 4076 passed
-decay_before_300.000000: 4076 passed
-OnlyPrimary: 4074 passed
-charged: 4074 passed
-stable: 4074 passed
+eta: 4081 passed
+min_pt: 4080 passed
+decay_before_300.000000: 4080 passed
+OnlyPrimary: 4078 passed
+charged: 4078 passed
+stable: 4078 passed
 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_d0: bin2: 8.1%, bin3: 7.5%, bin5: 10%, bin7: 7.1%, bin10: 5.6%, bin11: 7.7%, bin12: 7.4%, bin13: 5.4%, bin15: 5.6%, bin17: 8.7%, bin18: 7.3%, bin20: 5.3%, bin21: 6.7%, bin22: 10%, bin23: 8.6%, bin24: 8.6%, bin25: 10%, bin27: 7.1%, bin30: 5.9%, bin33: 7%, bin34: 10%, bin36: 8.9%, bin38: 9.4%, bin39: 9.8%, bin40: 5.3%, bin43: 13%, bin44: 11%, bin47: 9.7%, bin48: 5.6%, bin51: 6.1%, bin54: 5.3%, bin55: 12%, bin58: 5.4%, bin60: 5.3%, bin62: 5.7%, bin66: 6.1%, bin67: 6.5%, bin68: 6.2%, bin71: 5.6%, bin74: 11%, bin76: 8.1%, bin83: 11%, bin85: 15%, bin90: 11%, bin92: 6.8%, bin93: 6%, bin96: 20%, bin100: 5.9%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_d0: bin2: 8.1%, bin3: 7.5%, bin5: 10%, bin7: 7.1%, bin10: 5.6%, bin11: 7.7%, bin12: 7.4%, bin13: 5.4%, bin15: 5.6%, bin17: 8.7%, bin18: 7.3%, bin20: 5.3%, bin21: 6.7%, bin22: 10%, bin23: 8.6%, bin24: 8.6%, bin25: 10%, bin27: 7.1%, bin30: 5.9%, bin33: 7%, bin34: 10%, bin36: 8.9%, bin38: 9.4%, bin39: 9.8%, bin40: 5.3%, bin43: 13%, bin44: 11%, bin47: 9.7%, bin48: 5.6%, bin51: 6.1%, bin54: 5.3%, bin55: 12%, bin58: 5.4%, bin60: 5.3%, bin62: 5.7%, bin66: 6.1%, bin67: 6.5%, bin68: 6.2%, bin71: 5.6%, bin74: 11%, bin76: 8.1%, bin83: 11%, bin85: 15%, bin90: 11%, bin92: 6.8%, bin93: 6%, bin96: 20%, bin100: 5.9%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_d0: bin18: 6.2%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_d0: bin18: 6.2%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_d0: bin2: 5.3%, bin4: 5.7%, bin10: 5.7%, bin12: 5.7%, bin15: 8.6%, bin19: 5.7%, bin22: 6.1%, bin23: 5.6%, bin24: 5.7%, bin43: 6.2%, bin53: 5.9%, bin57: 8.3%, bin80: 6.2%, bin88: 8.2%, bin93: 8.5%, bin96: 7.7%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_d0: bin2: 5.3%, bin4: 5.7%, bin10: 5.7%, bin12: 5.7%, bin15: 8.6%, bin19: 5.7%, bin22: 6.1%, bin23: 5.6%, bin24: 5.7%, bin43: 6.2%, bin53: 5.9%, bin57: 8.3%, bin80: 6.2%, bin88: 8.2%, bin93: 8.5%, bin96: 7.7%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0: bin4: 5.7%, bin10: 5.6%, bin12: 5.5%, bin13: 5.4%, bin15: 8.6%, bin17: 11%, bin18: 7.3%, bin19: 5.7%, bin22: 8.2%, bin24: 5.6%, bin25: 7.5%, bin31: 7.7%, bin33: 9.5%, bin34: 6.7%, bin35: 15%, bin36: 13%, bin43: 6.1%, bin44: 5.4%, bin47: 6.2%, bin48: 5.6%, bin51: 6.1%, bin62: 8.8%, bin67: 6.5%, bin69: 6.9%, bin74: 8.1%, bin75: 7.4%, bin76: 5.3%, bin77: 9.8%, bin80: 11%, bin84: 5.7%, bin87: 6.1%, bin90: 5.1%, bin98: 5.3%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0: bin4: 5.7%, bin10: 5.6%, bin12: 5.5%, bin13: 5.4%, bin15: 8.6%, bin17: 11%, bin18: 7.3%, bin19: 5.7%, bin22: 8.2%, bin24: 5.6%, bin25: 7.5%, bin31: 7.7%, bin33: 9.5%, bin34: 6.7%, bin35: 15%, bin36: 13%, bin43: 6.1%, bin44: 5.4%, bin47: 6.2%, bin48: 5.6%, bin51: 6.1%, bin62: 8.8%, bin67: 6.5%, bin69: 6.9%, bin74: 8.1%, bin75: 7.4%, bin76: 5.3%, bin77: 9.8%, bin80: 11%, bin84: 5.7%, bin87: 6.1%, bin90: 5.1%, bin98: 5.3%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0: bin18: 17%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0: bin18: 17%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0: bin13: 5.4%, bin22: 6.1%, bin26: 5.3%, bin36: 7.3%, bin39: 7.3%, bin74: 8.1%, bin75: 7.4%, bin80: 8.5%, bin96: 7.9%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0: bin13: 5.4%, bin22: 6.1%, bin26: 5.3%, bin36: 7.3%, bin39: 7.3%, bin74: 8.1%, bin75: 7.4%, bin80: 8.5%, bin96: 7.9%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_qoverp: bin85: 5.6%, bin96: 7.7%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_qoverp: bin85: 5.6%, bin96: 7.7%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_qoverp: bin7: 7.1%, bin13: 8.3%, bin22: 6%, bin54: 5.3%, bin58: 5.4%, bin85: 5.6%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_qoverp: bin7: 7.1%, bin13: 8.3%, bin22: 6%, bin54: 5.3%, bin58: 5.4%, bin85: 5.6%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_ptqopt: bin20: 5.3%, bin22: 8.2%, bin25: 7.5%, bin30: 5.9%, bin42: 9.8%, bin54: 5.3%, bin56: 7.7%, bin58: 5.4%, bin60: 5.3%, bin77: 7.1%, bin78: 11%, bin97: 6.2%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_ptqopt: bin20: 5.3%, bin22: 8.2%, bin25: 7.5%, bin30: 5.9%, bin42: 9.8%, bin54: 5.3%, bin56: 7.7%, bin58: 5.4%, bin60: 5.3%, bin77: 7.1%, bin78: 11%, bin97: 6.2%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_ptqopt: bin18: 18%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_ptqopt: bin18: 18%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_ptqopt: bin7: 7.1%, bin13: 8.3%, bin22: 6%, bin54: 5.3%, bin58: 5.4%, bin85: 5.6%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_ptqopt: bin7: 7.1%, bin13: 8.3%, bin22: 6%, bin54: 5.3%, bin58: 5.4%, bin85: 5.6%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_theta: bin12: 5.5%, bin17: 8.7%, bin35: 11%, bin36: 7%, bin39: 7.1%, bin62: 5.7%, bin98: 5.1%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_theta: bin12: 5.5%, bin17: 8.7%, bin35: 11%, bin36: 7%, bin39: 7.1%, bin62: 5.7%, bin98: 5.1%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_theta: bin13: 5.4%, bin24: 5.6%, bin36: 7.4%, bin37: 6.1%, bin60: 5.3%, bin96: 7.9%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_theta: bin13: 5.4%, bin24: 5.6%, bin36: 7.4%, bin37: 6.1%, bin60: 5.3%, bin96: 7.9%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_phi: bin3: 10%, bin11: 7.7%, bin12: 5.6%, bin13: 5.6%, bin15: 5.6%, bin17: 8.7%, bin20: 5.3%, bin22: 6.1%, bin30: 5.9%, bin34: 10%, bin39: 9.8%, bin40: 5.3%, bin43: 6.1%, bin62: 5.7%, bin83: 15%, bin85: 8.6%, bin96: 8.3%, bin100: 5.9%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_phi: bin3: 10%, bin11: 7.7%, bin12: 5.6%, bin13: 5.6%, bin15: 5.6%, bin17: 8.7%, bin20: 5.3%, bin22: 6.1%, bin30: 5.9%, bin34: 10%, bin39: 9.8%, bin40: 5.3%, bin43: 6.1%, bin62: 5.7%, bin83: 15%, bin85: 8.6%, bin96: 8.3%, bin100: 5.9%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_phi: bin18: 6.3%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_phi: bin18: 6.3%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_phi: bin2: 5.3%, bin4: 8.8%, bin12: 5.7%, bin13: 5.4%, bin15: 5.6%, bin17: 6.5%, bin19: 5.7%, bin34: 10%, bin43: 6.1%, bin78: 6.1%, bin88: 6%, bin93: 8.5%, bin96: 7.7%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_phi: bin2: 5.3%, bin4: 8.8%, bin12: 5.7%, bin13: 5.4%, bin15: 5.6%, bin17: 6.5%, bin19: 5.7%, bin34: 10%, bin43: 6.1%, bin78: 6.1%, bin88: 6%, bin93: 8.5%, bin96: 7.7%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0sin: bin1: 7.9%, bin2: 5.3%, bin3: 7.5%, bin4: 8.8%, bin10: 5.6%, bin12: 7.4%, bin15: 5.6%, bin17: 11%, bin18: 7.3%, bin22: 10%, bin23: 5.6%, bin24: 8.6%, bin31: 7.7%, bin33: 7.1%, bin35: 15%, bin36: 9.3%, bin39: 7.1%, bin40: 5.3%, bin44: 5.4%, bin47: 6.2%, bin48: 8.6%, bin51: 6.1%, bin57: 5.4%, bin58: 5.4%, bin59: 7.5%, bin61: 7.5%, bin62: 5.7%, bin66: 9.4%, bin67: 6.5%, bin70: 6.1%, bin74: 5.3%, bin75: 7.4%, bin77: 7.1%, bin78: 6.1%, bin80: 11%, bin84: 5.7%, bin87: 6.1%, bin90: 5.1%, bin98: 7.9%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0sin: bin1: 7.9%, bin2: 5.3%, bin3: 7.5%, bin4: 8.8%, bin10: 5.6%, bin12: 7.4%, bin15: 5.6%, bin17: 11%, bin18: 7.3%, bin22: 10%, bin23: 5.6%, bin24: 8.6%, bin31: 7.7%, bin33: 7.1%, bin35: 15%, bin36: 9.3%, bin39: 7.1%, bin40: 5.3%, bin44: 5.4%, bin47: 6.2%, bin48: 8.6%, bin51: 6.1%, bin57: 5.4%, bin58: 5.4%, bin59: 7.5%, bin61: 7.5%, bin62: 5.7%, bin66: 9.4%, bin67: 6.5%, bin70: 6.1%, bin74: 5.3%, bin75: 7.4%, bin77: 7.1%, bin78: 6.1%, bin80: 11%, bin84: 5.7%, bin87: 6.1%, bin90: 5.1%, bin98: 7.9%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0sin: bin13: 5.4%, bin22: 8.5%, bin26: 5.3%, bin36: 7.3%, bin39: 10%, bin72: 7.1%, bin74: 8.1%, bin77: 7.3%, bin80: 6.2%, bin81: 5.3%, bin96: 7.9%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0sin: bin13: 5.4%, bin22: 8.5%, bin26: 5.3%, bin36: 7.3%, bin39: 10%, bin72: 7.1%, bin74: 8.1%, bin77: 7.3%, bin80: 6.2%, bin81: 5.3%, bin96: 7.9%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_d0: bin2: 8.1%, bin3: 7.5%, bin5: 10%, bin7: 7.1%, bin10: 5.6%, bin11: 7.7%, bin12: 7.4%, bin13: 5.4%, bin15: 5.6%, bin17: 8.7%, bin18: 7.3%, bin20: 5.3%, bin21: 6.7%, bin22: 10%, bin23: 8.6%, bin24: 8.3%, bin25: 10%, bin27: 7.1%, bin30: 5.9%, bin33: 7%, bin34: 10%, bin36: 8.9%, bin38: 9.4%, bin39: 9.8%, bin40: 5.3%, bin43: 13%, bin44: 11%, bin47: 9.7%, bin48: 5.6%, bin51: 6.1%, bin54: 5.3%, bin55: 12%, bin58: 5.4%, bin60: 5.3%, bin62: 5.7%, bin66: 6.1%, bin67: 6.5%, bin68: 6.2%, bin71: 5.4%, bin74: 11%, bin76: 8.1%, bin83: 11%, bin85: 15%, bin90: 11%, bin92: 6.8%, bin93: 6%, bin96: 20%, bin100: 5.9%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_d0: bin2: 8.1%, bin3: 7.5%, bin5: 10%, bin7: 7.1%, bin10: 5.6%, bin11: 7.7%, bin12: 7.4%, bin13: 5.4%, bin15: 5.6%, bin17: 8.7%, bin18: 7.3%, bin20: 5.3%, bin21: 6.7%, bin22: 10%, bin23: 8.6%, bin24: 8.3%, bin25: 10%, bin27: 7.1%, bin30: 5.9%, bin33: 7%, bin34: 10%, bin36: 8.9%, bin38: 9.4%, bin39: 9.8%, bin40: 5.3%, bin43: 13%, bin44: 11%, bin47: 9.7%, bin48: 5.6%, bin51: 6.1%, bin54: 5.3%, bin55: 12%, bin58: 5.4%, bin60: 5.3%, bin62: 5.7%, bin66: 6.1%, bin67: 6.5%, bin68: 6.2%, bin71: 5.4%, bin74: 11%, bin76: 8.1%, bin83: 11%, bin85: 15%, bin90: 11%, bin92: 6.8%, bin93: 6%, bin96: 20%, bin100: 5.9%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_d0: bin18: 6.2%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_d0: bin18: 6.2%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_d0: bin2: 5.3%, bin4: 5.7%, bin10: 5.7%, bin12: 5.7%, bin15: 8.6%, bin19: 5.7%, bin22: 6.1%, bin23: 5.6%, bin24: 5.6%, bin43: 6.2%, bin53: 5.9%, bin57: 8.3%, bin74: 11%, bin80: 6.2%, bin88: 8.2%, bin93: 8.5%, bin96: 7.7%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_d0: bin2: 5.3%, bin4: 5.7%, bin10: 5.7%, bin12: 5.7%, bin15: 8.6%, bin19: 5.7%, bin22: 6.1%, bin23: 5.6%, bin24: 5.6%, bin43: 6.2%, bin53: 5.9%, bin57: 8.3%, bin74: 11%, bin80: 6.2%, bin88: 8.2%, bin93: 8.5%, bin96: 7.7%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0: bin4: 5.7%, bin10: 5.6%, bin12: 5.5%, bin13: 5.4%, bin15: 8.6%, bin17: 11%, bin18: 7.3%, bin19: 5.7%, bin22: 8.2%, bin24: 5.4%, bin25: 7.5%, bin31: 7.7%, bin33: 9.5%, bin34: 6.7%, bin35: 15%, bin36: 13%, bin43: 6.1%, bin44: 5.4%, bin47: 6.2%, bin48: 5.6%, bin51: 6.1%, bin62: 8.8%, bin67: 6.5%, bin69: 6.9%, bin74: 11%, bin75: 7.1%, bin76: 5.3%, bin77: 9.8%, bin80: 11%, bin84: 5.7%, bin87: 6.1%, bin90: 5.1%, bin98: 5.3%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0: bin4: 5.7%, bin10: 5.6%, bin12: 5.5%, bin13: 5.4%, bin15: 8.6%, bin17: 11%, bin18: 7.3%, bin19: 5.7%, bin22: 8.2%, bin24: 5.4%, bin25: 7.5%, bin31: 7.7%, bin33: 9.5%, bin34: 6.7%, bin35: 15%, bin36: 13%, bin43: 6.1%, bin44: 5.4%, bin47: 6.2%, bin48: 5.6%, bin51: 6.1%, bin62: 8.8%, bin67: 6.5%, bin69: 6.9%, bin74: 11%, bin75: 7.1%, bin76: 5.3%, bin77: 9.8%, bin80: 11%, bin84: 5.7%, bin87: 6.1%, bin90: 5.1%, bin98: 5.3%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0: bin18: 17%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0: bin18: 17%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0: bin13: 5.4%, bin22: 6.1%, bin26: 5.3%, bin36: 7.3%, bin39: 7.3%, bin74: 8.1%, bin75: 7.1%, bin80: 8.5%, bin96: 7.9%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0: bin13: 5.4%, bin22: 6.1%, bin26: 5.3%, bin36: 7.3%, bin39: 7.3%, bin74: 8.1%, bin75: 7.1%, bin80: 8.5%, bin96: 7.9%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_qoverp: bin85: 5.6%, bin96: 7.7%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_qoverp: bin85: 5.6%, bin96: 7.7%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_qoverp: bin7: 7.1%, bin13: 8.3%, bin22: 6%, bin54: 5.3%, bin58: 5.4%, bin85: 5.6%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_qoverp: bin7: 7.1%, bin13: 8.3%, bin22: 6%, bin54: 5.3%, bin58: 5.4%, bin85: 5.6%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_ptqopt: bin20: 5.3%, bin22: 8.2%, bin25: 7.5%, bin29: 6.7%, bin30: 5.9%, bin42: 9.8%, bin54: 5.3%, bin56: 7.7%, bin58: 5.4%, bin60: 5.3%, bin77: 7.1%, bin78: 11%, bin97: 6.2%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_ptqopt: bin20: 5.3%, bin22: 8.2%, bin25: 7.5%, bin29: 6.7%, bin30: 5.9%, bin42: 9.8%, bin54: 5.3%, bin56: 7.7%, bin58: 5.4%, bin60: 5.3%, bin77: 7.1%, bin78: 11%, bin97: 6.2%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_ptqopt: bin18: 18%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_ptqopt: bin18: 18%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_ptqopt: bin7: 7.1%, bin13: 8.3%, bin22: 6%, bin54: 5.3%, bin58: 5.4%, bin85: 5.6%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_ptqopt: bin7: 7.1%, bin13: 8.3%, bin22: 6%, bin54: 5.3%, bin58: 5.4%, bin85: 5.6%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_theta: bin12: 5.5%, bin17: 8.7%, bin35: 11%, bin36: 7%, bin39: 7.1%, bin62: 5.7%, bin98: 5.1%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_theta: bin12: 5.5%, bin17: 8.7%, bin35: 11%, bin36: 7%, bin39: 7.1%, bin62: 5.7%, bin98: 5.1%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_theta: bin13: 5.4%, bin24: 5.4%, bin36: 7.4%, bin37: 6.1%, bin60: 5.3%, bin96: 7.9%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_theta: bin13: 5.4%, bin24: 5.4%, bin36: 7.4%, bin37: 6.1%, bin60: 5.3%, bin96: 7.9%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_phi: bin3: 10%, bin11: 7.7%, bin12: 5.6%, bin13: 5.6%, bin15: 5.6%, bin17: 8.7%, bin20: 5.3%, bin22: 6.1%, bin30: 5.9%, bin34: 10%, bin39: 9.8%, bin40: 5.3%, bin43: 6.1%, bin62: 5.7%, bin83: 15%, bin85: 8.6%, bin96: 8.3%, bin100: 5.9%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_phi: bin3: 10%, bin11: 7.7%, bin12: 5.6%, bin13: 5.6%, bin15: 5.6%, bin17: 8.7%, bin20: 5.3%, bin22: 6.1%, bin30: 5.9%, bin34: 10%, bin39: 9.8%, bin40: 5.3%, bin43: 6.1%, bin62: 5.7%, bin83: 15%, bin85: 8.6%, bin96: 8.3%, bin100: 5.9%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_phi: bin18: 6.3%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_phi: bin18: 6.3%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_phi: bin2: 5.3%, bin4: 8.8%, bin12: 5.7%, bin13: 5.4%, bin15: 5.6%, bin17: 6.5%, bin19: 5.7%, bin34: 10%, bin43: 6.1%, bin78: 6.1%, bin88: 6%, bin93: 8.5%, bin96: 7.7%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_phi: bin2: 5.3%, bin4: 8.8%, bin12: 5.7%, bin13: 5.4%, bin15: 5.6%, bin17: 6.5%, bin19: 5.7%, bin34: 10%, bin43: 6.1%, bin78: 6.1%, bin88: 6%, bin93: 8.5%, bin96: 7.7%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0sin: bin1: 7.9%, bin2: 5.3%, bin3: 7.5%, bin4: 8.8%, bin10: 5.6%, bin12: 7.4%, bin15: 5.6%, bin17: 11%, bin18: 7.3%, bin22: 10%, bin23: 5.6%, bin24: 8.3%, bin31: 7.7%, bin33: 7.1%, bin35: 15%, bin36: 9.3%, bin39: 7.1%, bin40: 5.3%, bin44: 5.4%, bin47: 6.2%, bin48: 8.6%, bin51: 6.1%, bin57: 5.4%, bin58: 5.4%, bin59: 7.5%, bin61: 7.5%, bin62: 5.7%, bin66: 9.4%, bin67: 6.5%, bin70: 6.1%, bin74: 8.1%, bin75: 7.1%, bin77: 7.1%, bin78: 6.1%, bin80: 11%, bin84: 5.7%, bin87: 6.1%, bin90: 5.1%, bin98: 7.9%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0sin: bin1: 7.9%, bin2: 5.3%, bin3: 7.5%, bin4: 8.8%, bin10: 5.6%, bin12: 7.4%, bin15: 5.6%, bin17: 11%, bin18: 7.3%, bin22: 10%, bin23: 5.6%, bin24: 8.3%, bin31: 7.7%, bin33: 7.1%, bin35: 15%, bin36: 9.3%, bin39: 7.1%, bin40: 5.3%, bin44: 5.4%, bin47: 6.2%, bin48: 8.6%, bin51: 6.1%, bin57: 5.4%, bin58: 5.4%, bin59: 7.5%, bin61: 7.5%, bin62: 5.7%, bin66: 9.4%, bin67: 6.5%, bin70: 6.1%, bin74: 8.1%, bin75: 7.1%, bin77: 7.1%, bin78: 6.1%, bin80: 11%, bin84: 5.7%, bin87: 6.1%, bin90: 5.1%, bin98: 7.9%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0sin: bin18: 5%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0sin: bin18: 5%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0sin: bin13: 5.4%, bin22: 8.5%, bin26: 5.3%, bin36: 7.3%, bin39: 10%, bin72: 7.1%, bin74: 8.1%, bin77: 7.3%, bin80: 6.2%, bin81: 5.3%, bin96: 7.9%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0sin: bin13: 5.4%, bin22: 8.5%, bin26: 5.3%, bin36: 7.3%, bin39: 10%, bin72: 7.1%, bin74: 8.1%, bin77: 7.3%, bin80: 6.2%, bin81: 5.3%, bin96: 7.9%,
 PhysValMonManager.InDetPhysValMonitoringToolLoose    INFO Successfully finalized hists
 PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO Finalising hists PhysValMonManager.InDetPhysValMonitoringToolTightPrimary...
-PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO 
+PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO
 PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO Now Cutflow for track cuts:
-PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO 
-PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO number after preCut: 3766
-PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO number after Eta: 3766
-PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO number after InnermostLayersHits: 3766
-PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO number after PixelHits: 3766
-PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO number after SiHits: 3766
-PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO 
+PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO
+PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO number after preCut: 3772
+PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO number after Eta: 3772
+PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO number after InnermostLayersHits: 3772
+PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO number after PixelHits: 3772
+PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO number after SiHits: 3772
+PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO
 PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO Cutflow for truth tracks:
-PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO Truth selection report: 
-CutList Report; Total processed: 3659
-Total passed: 3657
+PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO Truth selection report:
+CutList Report; Total processed: 3664
+Total passed: 3662
 Cuts were applied until one fails
-eta: 3659 passed
-min_pt: 3658 passed
-decay_before_300.000000: 3658 passed
-OnlyPrimary: 3657 passed
-charged: 3657 passed
-stable: 3657 passed
+eta: 3664 passed
+min_pt: 3663 passed
+decay_before_300.000000: 3663 passed
+OnlyPrimary: 3662 passed
+charged: 3662 passed
+stable: 3662 passed
 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_d0: bin2: 9.7%, bin3: 6.2%, bin5: 7.4%, bin7: 7.7%, bin12: 8.7%, bin13: 6.1%, bin15: 6.5%, bin17: 7%, bin18: 5.4%, bin20: 5.6%, bin22: 9.3%, bin23: 8.8%, bin24: 9.7%, bin25: 8.3%, bin27: 8%, bin30: 6.2%, bin34: 7.4%, bin36: 8%, bin38: 6.7%, bin39: 7.7%, bin43: 13%, bin44: 8.8%, bin46: 5.3%, bin47: 10%, bin51: 6.2%, bin54: 5.7%, bin55: 7.7%, bin62: 5.7%, bin66: 6.2%, bin67: 6.9%, bin68: 6.5%, bin71: 6.2%, bin72: 5.7%, bin74: 5.7%, bin76: 6.1%, bin82: 5.4%, bin83: 5.7%, bin85: 11%, bin89: 5.6%, bin90: 12%, bin92: 5.3%, bin93: 7.7%, bin96: 17%, bin99: 5.4%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_d0: bin2: 9.7%, bin3: 6.2%, bin5: 7.4%, bin7: 7.7%, bin12: 8.7%, bin13: 6.1%, bin15: 6.5%, bin17: 7%, bin18: 5.4%, bin20: 5.6%, bin22: 9.3%, bin23: 8.8%, bin24: 9.7%, bin25: 8.3%, bin27: 8%, bin30: 6.2%, bin34: 7.4%, bin36: 8%, bin38: 6.7%, bin39: 7.7%, bin43: 13%, bin44: 8.8%, bin46: 5.3%, bin47: 10%, bin51: 6.2%, bin54: 5.7%, bin55: 7.7%, bin62: 5.7%, bin66: 6.2%, bin67: 6.9%, bin68: 6.5%, bin71: 6.2%, bin72: 5.7%, bin74: 5.7%, bin76: 6.1%, bin82: 5.4%, bin83: 5.7%, bin85: 11%, bin89: 5.6%, bin90: 12%, bin92: 5.3%, bin93: 7.7%, bin96: 17%, bin99: 5.4%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_d0: bin18: 5.7%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_d0: bin18: 5.7%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_d0: bin2: 6.2%, bin10: 7.4%, bin12: 6.7%, bin22: 7%, bin23: 5.7%, bin24: 6.5%, bin25: 5.4%, bin34: 7.4%, bin42: 5.3%, bin43: 6.2%, bin53: 6.1%, bin57: 9.4%, bin80: 6.5%, bin88: 8.9%, bin93: 8.1%, bin96: 9.4%, bin100: 5.9%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_d0: bin2: 6.2%, bin10: 7.4%, bin12: 6.7%, bin22: 7%, bin23: 5.7%, bin24: 6.5%, bin25: 5.4%, bin34: 7.4%, bin42: 5.3%, bin43: 6.2%, bin53: 6.1%, bin57: 9.4%, bin80: 6.5%, bin88: 8.9%, bin93: 8.1%, bin96: 9.4%, bin100: 5.9%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0: bin4: 6.2%, bin12: 6.4%, bin13: 6.1%, bin15: 10%, bin17: 9.5%, bin18: 8.3%, bin22: 9.3%, bin24: 6.2%, bin25: 8.3%, bin33: 7.3%, bin36: 15%, bin43: 6.1%, bin47: 6.5%, bin59: 5.1%, bin61: 5.1%, bin62: 8.8%, bin67: 6.9%, bin69: 6.9%, bin74: 8.8%, bin75: 8.7%, bin76: 6.1%, bin77: 11%, bin80: 11%, bin84: 5.9%, bin90: 6.1%, bin98: 5.7%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0: bin4: 6.2%, bin12: 6.4%, bin13: 6.1%, bin15: 10%, bin17: 9.5%, bin18: 8.3%, bin22: 9.3%, bin24: 6.2%, bin25: 8.3%, bin33: 7.3%, bin36: 15%, bin43: 6.1%, bin47: 6.5%, bin59: 5.1%, bin61: 5.1%, bin62: 8.8%, bin67: 6.9%, bin69: 6.9%, bin74: 8.8%, bin75: 8.7%, bin76: 6.1%, bin77: 11%, bin80: 11%, bin84: 5.9%, bin90: 6.1%, bin98: 5.7%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0: bin18: 19%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0: bin18: 19%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0: bin4: 6.7%, bin13: 6.1%, bin18: 5.4%, bin22: 7%, bin26: 5.9%, bin36: 6.1%, bin74: 8.8%, bin77: 5.4%, bin80: 8.9%, bin86: 5.7%, bin96: 9.7%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0: bin4: 6.7%, bin13: 6.1%, bin18: 5.4%, bin22: 7%, bin26: 5.9%, bin36: 6.1%, bin74: 8.8%, bin77: 5.4%, bin80: 8.9%, bin86: 5.7%, bin96: 9.7%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_qoverp: bin85: 7.1%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_qoverp: bin85: 7.1%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_qoverp: bin7: 7.7%, bin8: 5.7%, bin13: 9.4%, bin18: 5.4%, bin22: 6.8%, bin58: 6.1%, bin80: 6.5%, bin85: 7.1%, bin93: 5.1%, bin94: 5.4%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_qoverp: bin7: 7.7%, bin8: 5.7%, bin13: 9.4%, bin18: 5.4%, bin22: 6.8%, bin58: 6.1%, bin80: 6.5%, bin85: 7.1%, bin93: 5.1%, bin94: 5.4%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_ptqopt: bin20: 8.6%, bin25: 5.4%, bin30: 6.2%, bin42: 8.1%, bin46: 5.3%, bin56: 7.7%, bin58: 6.1%, bin77: 5.3%, bin78: 9.1%, bin85: 12%, bin89: 5.6%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_ptqopt: bin20: 8.6%, bin25: 5.4%, bin30: 6.2%, bin42: 8.1%, bin46: 5.3%, bin56: 7.7%, bin58: 6.1%, bin77: 5.3%, bin78: 9.1%, bin85: 12%, bin89: 5.6%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_ptqopt: bin18: 20%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_ptqopt: bin18: 20%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_ptqopt: bin7: 7.7%, bin8: 5.7%, bin13: 9.4%, bin18: 5.4%, bin22: 6.8%, bin58: 6.1%, bin80: 6.5%, bin85: 7.1%, bin93: 5.1%, bin94: 5.4%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_ptqopt: bin7: 7.7%, bin8: 5.7%, bin13: 9.4%, bin18: 5.4%, bin22: 6.8%, bin58: 6.1%, bin80: 6.5%, bin85: 7.1%, bin93: 5.1%, bin94: 5.4%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_theta: bin12: 6.4%, bin17: 7%, bin36: 8%, bin62: 5.7%, bin77: 5.3%, bin90: 5.9%, bin98: 5.6%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_theta: bin12: 6.4%, bin17: 7%, bin36: 8%, bin62: 5.7%, bin77: 5.3%, bin90: 5.9%, bin98: 5.6%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_theta: bin13: 6.1%, bin36: 8.5%, bin59: 5.1%, bin61: 5.1%, bin98: 5.9%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_theta: bin13: 6.1%, bin36: 8.5%, bin59: 5.1%, bin61: 5.1%, bin98: 5.9%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_phi: bin3: 6.2%, bin13: 6.2%, bin15: 6.5%, bin17: 7%, bin20: 5.6%, bin30: 6.2%, bin34: 7.4%, bin39: 7.7%, bin43: 6.1%, bin62: 5.7%, bin77: 5.3%, bin82: 5.4%, bin83: 8.8%, bin85: 11%, bin89: 5.6%, bin96: 6.5%, bin99: 5.4%, bin100: 12%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_phi: bin3: 6.2%, bin13: 6.2%, bin15: 6.5%, bin17: 7%, bin20: 5.6%, bin30: 6.2%, bin34: 7.4%, bin39: 7.7%, bin43: 6.1%, bin62: 5.7%, bin77: 5.3%, bin82: 5.4%, bin83: 8.8%, bin85: 11%, bin89: 5.6%, bin96: 6.5%, bin99: 5.4%, bin100: 12%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_phi: bin18: 6.3%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_phi: bin18: 6.3%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_phi: bin2: 6.2%, bin12: 6.7%, bin19: 6.5%, bin34: 7.4%, bin39: 5.1%, bin43: 6.1%, bin77: 5.3%, bin88: 6.5%, bin93: 8.1%, bin96: 9.4%, bin100: 5.9%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_phi: bin2: 6.2%, bin12: 6.7%, bin19: 6.5%, bin34: 7.4%, bin39: 5.1%, bin43: 6.1%, bin77: 5.3%, bin88: 6.5%, bin93: 8.1%, bin96: 9.4%, bin100: 5.9%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0sin: bin2: 6.2%, bin4: 6.2%, bin12: 6.4%, bin15: 6.5%, bin17: 9.5%, bin18: 8.3%, bin22: 12%, bin23: 5.7%, bin24: 6.2%, bin25: 5.4%, bin33: 7.3%, bin36: 6.1%, bin39: 7.7%, bin47: 6.5%, bin48: 5.7%, bin59: 5.1%, bin61: 7.9%, bin62: 5.7%, bin63: 5.3%, bin66: 9.7%, bin67: 6.9%, bin70: 6.2%, bin74: 5.7%, bin77: 8.1%, bin80: 11%, bin84: 5.9%, bin90: 6.1%, bin98: 8.6%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0sin: bin2: 6.2%, bin4: 6.2%, bin12: 6.4%, bin15: 6.5%, bin17: 9.5%, bin18: 8.3%, bin22: 12%, bin23: 5.7%, bin24: 6.2%, bin25: 5.4%, bin33: 7.3%, bin36: 6.1%, bin39: 7.7%, bin47: 6.5%, bin48: 5.7%, bin59: 5.1%, bin61: 7.9%, bin62: 5.7%, bin63: 5.3%, bin66: 9.7%, bin67: 6.9%, bin70: 6.2%, bin74: 5.7%, bin77: 8.1%, bin80: 11%, bin84: 5.9%, bin90: 6.1%, bin98: 8.6%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0sin: bin4: 6.7%, bin13: 6.1%, bin18: 5.4%, bin22: 7.1%, bin26: 5.9%, bin36: 6.1%, bin39: 7.9%, bin74: 8.8%, bin77: 8.3%, bin80: 6.5%, bin81: 5.6%, bin86: 5.7%, bin96: 9.7%, 
-ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0sin: bin4: 6.7%, bin13: 6.1%, bin18: 5.4%, bin22: 7.1%, bin26: 5.9%, bin36: 6.1%, bin39: 7.9%, bin74: 8.8%, bin77: 8.3%, bin80: 6.5%, bin81: 5.6%, bin86: 5.7%, bin96: 9.7%, 
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_d0: bin2: 9.7%, bin3: 6.2%, bin5: 7.4%, bin7: 7.7%, bin12: 8.7%, bin13: 6.1%, bin15: 6.5%, bin17: 7%, bin18: 5.4%, bin20: 5.6%, bin22: 9.3%, bin23: 8.8%, bin24: 9.4%, bin25: 8.3%, bin27: 8%, bin30: 6.2%, bin34: 7.4%, bin36: 8%, bin38: 6.7%, bin39: 7.7%, bin43: 13%, bin44: 8.8%, bin46: 5.3%, bin47: 10%, bin51: 6.2%, bin54: 5.7%, bin55: 7.7%, bin62: 5.7%, bin66: 6.2%, bin67: 6.9%, bin68: 6.5%, bin71: 5.9%, bin72: 5.7%, bin74: 5.7%, bin76: 6.1%, bin82: 5.4%, bin83: 5.7%, bin85: 11%, bin89: 5.6%, bin90: 12%, bin92: 5.3%, bin93: 7.7%, bin96: 17%, bin99: 5.4%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_d0: bin2: 9.7%, bin3: 6.2%, bin5: 7.4%, bin7: 7.7%, bin12: 8.7%, bin13: 6.1%, bin15: 6.5%, bin17: 7%, bin18: 5.4%, bin20: 5.6%, bin22: 9.3%, bin23: 8.8%, bin24: 9.4%, bin25: 8.3%, bin27: 8%, bin30: 6.2%, bin34: 7.4%, bin36: 8%, bin38: 6.7%, bin39: 7.7%, bin43: 13%, bin44: 8.8%, bin46: 5.3%, bin47: 10%, bin51: 6.2%, bin54: 5.7%, bin55: 7.7%, bin62: 5.7%, bin66: 6.2%, bin67: 6.9%, bin68: 6.5%, bin71: 5.9%, bin72: 5.7%, bin74: 5.7%, bin76: 6.1%, bin82: 5.4%, bin83: 5.7%, bin85: 11%, bin89: 5.6%, bin90: 12%, bin92: 5.3%, bin93: 7.7%, bin96: 17%, bin99: 5.4%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_d0: bin18: 5.7%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_d0: bin18: 5.7%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_d0: bin2: 6.2%, bin10: 7.4%, bin12: 6.7%, bin22: 7%, bin23: 5.7%, bin24: 6.2%, bin25: 5.4%, bin34: 7.4%, bin42: 5.3%, bin43: 6.2%, bin53: 6.1%, bin57: 9.4%, bin80: 6.5%, bin88: 8.9%, bin93: 8.1%, bin96: 9.4%, bin100: 5.9%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_d0: bin2: 6.2%, bin10: 7.4%, bin12: 6.7%, bin22: 7%, bin23: 5.7%, bin24: 6.2%, bin25: 5.4%, bin34: 7.4%, bin42: 5.3%, bin43: 6.2%, bin53: 6.1%, bin57: 9.4%, bin80: 6.5%, bin88: 8.9%, bin93: 8.1%, bin96: 9.4%, bin100: 5.9%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0: bin4: 6.2%, bin12: 6.4%, bin13: 6.1%, bin15: 10%, bin17: 9.5%, bin18: 8.3%, bin22: 9.3%, bin24: 6.1%, bin25: 8.3%, bin33: 7.3%, bin36: 15%, bin43: 6.1%, bin47: 6.5%, bin59: 5.1%, bin61: 5.1%, bin62: 8.8%, bin67: 6.9%, bin69: 6.9%, bin74: 12%, bin75: 8.3%, bin76: 6.1%, bin77: 11%, bin80: 11%, bin84: 5.9%, bin90: 6.1%, bin98: 5.7%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0: bin4: 6.2%, bin12: 6.4%, bin13: 6.1%, bin15: 10%, bin17: 9.5%, bin18: 8.3%, bin22: 9.3%, bin24: 6.1%, bin25: 8.3%, bin33: 7.3%, bin36: 15%, bin43: 6.1%, bin47: 6.5%, bin59: 5.1%, bin61: 5.1%, bin62: 8.8%, bin67: 6.9%, bin69: 6.9%, bin74: 12%, bin75: 8.3%, bin76: 6.1%, bin77: 11%, bin80: 11%, bin84: 5.9%, bin90: 6.1%, bin98: 5.7%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0: bin18: 19%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_z0: bin18: 19%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0: bin4: 6.7%, bin13: 6.1%, bin18: 5.4%, bin22: 7%, bin26: 5.9%, bin36: 6.1%, bin74: 8.8%, bin77: 5.4%, bin80: 8.9%, bin86: 5.7%, bin96: 9.7%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0: bin4: 6.7%, bin13: 6.1%, bin18: 5.4%, bin22: 7%, bin26: 5.9%, bin36: 6.1%, bin74: 8.8%, bin77: 5.4%, bin80: 8.9%, bin86: 5.7%, bin96: 9.7%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_qoverp: bin85: 7.1%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_qoverp: bin85: 7.1%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_qoverp: bin7: 7.7%, bin8: 5.7%, bin13: 9.4%, bin18: 5.4%, bin22: 6.8%, bin58: 6.1%, bin80: 6.5%, bin85: 7.1%, bin93: 5.1%, bin94: 5.4%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_qoverp: bin7: 7.7%, bin8: 5.7%, bin13: 9.4%, bin18: 5.4%, bin22: 6.8%, bin58: 6.1%, bin80: 6.5%, bin85: 7.1%, bin93: 5.1%, bin94: 5.4%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_ptqopt: bin20: 8.6%, bin25: 5.4%, bin29: 6.9%, bin30: 6.2%, bin42: 8.1%, bin46: 5.3%, bin56: 7.7%, bin58: 6.1%, bin77: 5.3%, bin78: 9.1%, bin85: 12%, bin89: 5.6%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_ptqopt: bin20: 8.6%, bin25: 5.4%, bin29: 6.9%, bin30: 6.2%, bin42: 8.1%, bin46: 5.3%, bin56: 7.7%, bin58: 6.1%, bin77: 5.3%, bin78: 9.1%, bin85: 12%, bin89: 5.6%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_ptqopt: bin18: 19%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_ptqopt: bin18: 19%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_ptqopt: bin7: 7.7%, bin8: 5.7%, bin13: 9.4%, bin18: 5.4%, bin22: 6.8%, bin58: 6.1%, bin80: 6.5%, bin85: 7.1%, bin93: 5.1%, bin94: 5.4%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_ptqopt: bin7: 7.7%, bin8: 5.7%, bin13: 9.4%, bin18: 5.4%, bin22: 6.8%, bin58: 6.1%, bin80: 6.5%, bin85: 7.1%, bin93: 5.1%, bin94: 5.4%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_theta: bin12: 6.4%, bin17: 7%, bin36: 8%, bin62: 5.7%, bin77: 5.3%, bin90: 5.9%, bin98: 5.6%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_theta: bin12: 6.4%, bin17: 7%, bin36: 8%, bin62: 5.7%, bin77: 5.3%, bin90: 5.9%, bin98: 5.6%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_theta: bin13: 6.1%, bin24: 6.1%, bin36: 8.5%, bin59: 5.1%, bin61: 5.1%, bin98: 5.9%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_theta: bin13: 6.1%, bin24: 6.1%, bin36: 8.5%, bin59: 5.1%, bin61: 5.1%, bin98: 5.9%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_phi: bin3: 6.2%, bin13: 6.2%, bin15: 6.5%, bin17: 7%, bin20: 5.6%, bin30: 6.2%, bin34: 7.4%, bin39: 7.7%, bin43: 6.1%, bin62: 5.7%, bin77: 5.3%, bin82: 5.4%, bin83: 8.8%, bin85: 11%, bin89: 5.6%, bin96: 6.5%, bin99: 5.4%, bin100: 12%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_phi: bin3: 6.2%, bin13: 6.2%, bin15: 6.5%, bin17: 7%, bin20: 5.6%, bin30: 6.2%, bin34: 7.4%, bin39: 7.7%, bin43: 6.1%, bin62: 5.7%, bin77: 5.3%, bin82: 5.4%, bin83: 8.8%, bin85: 11%, bin89: 5.6%, bin96: 6.5%, bin99: 5.4%, bin100: 12%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_phi: bin18: 6.3%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_pt_phi: bin18: 6.3%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_phi: bin2: 6.2%, bin12: 6.7%, bin19: 6.5%, bin34: 7.4%, bin39: 5.1%, bin43: 6.1%, bin77: 5.3%, bin88: 6.5%, bin93: 8.1%, bin96: 9.4%, bin100: 5.9%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_phi: bin2: 6.2%, bin12: 6.7%, bin19: 6.5%, bin34: 7.4%, bin39: 5.1%, bin43: 6.1%, bin77: 5.3%, bin88: 6.5%, bin93: 8.1%, bin96: 9.4%, bin100: 5.9%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0sin: bin2: 6.2%, bin4: 6.2%, bin12: 6.4%, bin15: 6.5%, bin17: 9.5%, bin18: 8.3%, bin22: 12%, bin23: 5.7%, bin24: 6.1%, bin25: 5.4%, bin33: 7.3%, bin36: 6.1%, bin39: 7.7%, bin47: 6.5%, bin48: 5.7%, bin59: 5.1%, bin61: 7.9%, bin62: 5.7%, bin63: 5.3%, bin66: 9.7%, bin67: 6.9%, bin70: 6.2%, bin74: 8.8%, bin77: 8.1%, bin80: 11%, bin84: 5.9%, bin90: 6.1%, bin98: 8.6%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: resolution_vs_eta_z0sin: bin2: 6.2%, bin4: 6.2%, bin12: 6.4%, bin15: 6.5%, bin17: 9.5%, bin18: 8.3%, bin22: 12%, bin23: 5.7%, bin24: 6.1%, bin25: 5.4%, bin33: 7.3%, bin36: 6.1%, bin39: 7.7%, bin47: 6.5%, bin48: 5.7%, bin59: 5.1%, bin61: 7.9%, bin62: 5.7%, bin63: 5.3%, bin66: 9.7%, bin67: 6.9%, bin70: 6.2%, bin74: 8.8%, bin77: 8.1%, bin80: 11%, bin84: 5.9%, bin90: 6.1%, bin98: 8.6%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0sin: bin4: 6.7%, bin13: 6.1%, bin18: 5.4%, bin22: 7.1%, bin26: 5.9%, bin36: 6.1%, bin39: 7.9%, bin74: 8.8%, bin77: 8.3%, bin80: 6.5%, bin81: 5.6%, bin86: 5.7%, bin96: 9.7%,
+ResolutionHelper                                  WARNING Errors scaled up for resol. hist. with large % of events in over- and under-flow: pullwidth_vs_eta_z0sin: bin4: 6.7%, bin13: 6.1%, bin18: 5.4%, bin22: 7.1%, bin26: 5.9%, bin36: 6.1%, bin39: 7.9%, bin74: 8.8%, bin77: 8.3%, bin80: 6.5%, bin81: 5.6%, bin86: 5.7%, bin96: 9.7%,
 PhysValMo...InDetPhysValMonitoringToolTightPrimary   INFO Successfully finalized hists
 ApplicationMgr                                       INFO Application Manager Stopped successfully
 CondInputLoader                                      INFO Finalizing CondInputLoader...
 HistogramDefinitionSvc                               INFO Reader initialised from /cvmfs/atlas.cern.ch/repo/sw/software/25.0/Athena/25.0.30/InstallArea/x86_64-el9-gcc13-opt/share/InDetPVMPlotDefITK.xml in text/xml format.
 Athena::DelayedConditionsCleanerSvc                  INFO Conditions container statistics
-Athena::DelayedConditionsCleanerSvc                  INFO   Work q: Max size: 18  (1 queries) 
+Athena::DelayedConditionsCleanerSvc                  INFO   Work q: Max size: 18  (1 queries)
 Athena::DelayedConditionsCleanerSvc                  INFO           Avg size: 18.00 / Avg removed: 18.00
 Athena::DelayedConditionsCleanerSvc                  INFO   ConditionStore+/EXT/DCS/MAGNETS/SENSORDATA nInserts      1 maxSize   1
 Athena::DelayedConditionsCleanerSvc                  INFO     nClean 1 avgRemoved 0.00 0/1/2+ 1/0/0
@@ -2456,21 +2458,21 @@ AthDictLoaderSvc                                     INFO in finalize...
 AthenaPoolCnvSvc                                     INFO PerfStats ----------------------------------------
 AthenaPoolCnvSvc                                     INFO PerfStats Timing Measurements for AthenaPoolCnvSvc
 AthenaPoolCnvSvc                                     INFO PerfStats ----------------------------------------
-AthenaPoolCnvSvc                                     INFO PerfStats | cObjR_ALL       |            1169 ms |
-AthenaPoolCnvSvc                                     INFO PerfStats | cObj_ALL        |            1677 ms |
+AthenaPoolCnvSvc                                     INFO PerfStats | cObjR_ALL       |            1367 ms |
+AthenaPoolCnvSvc                                     INFO PerfStats | cObj_ALL        |            1839 ms |
 AthenaPoolCnvSvc                                     INFO PerfStats ----------------------------------------
-Domain[ROOT_All]                                     INFO >   Deaccess DbDomain     READ      [ROOT_All] 
-IOVDbFolder                                          INFO Folder /EXT/DCS/MAGNETS/SENSORDATA (AttrListColl) db-read 1/1 objs/chan/bytes 4/4/20 ((     0.33 ))s
-IOVDbFolder                                          INFO Folder /GLOBAL/BField/Maps (AttrListColl) db-read 1/1 objs/chan/bytes 3/3/202 ((     0.36 ))s
-IOVDbFolder                                          INFO Folder /GLOBAL/TrackingGeo/LayerMaterialITK (PoolRef) db-read 1/1 objs/chan/bytes 1/1/227 ((     0.01 ))s
-IOVDbFolder                                          INFO Folder /Indet/Align (PoolRefColl) db-read 1/1 objs/chan/bytes 43/43/6907 ((     0.02 ))s
-IOVDbFolder                                          INFO Folder /Indet/Beampos (AttrList) db-read 1/1 objs/chan/bytes 1/1/76 ((     0.01 ))s
+Domain[ROOT_All]                                     INFO >   Deaccess DbDomain     READ      [ROOT_All]
+IOVDbFolder                                          INFO Folder /EXT/DCS/MAGNETS/SENSORDATA (AttrListColl) db-read 1/1 objs/chan/bytes 4/4/20 ((     0.95 ))s
+IOVDbFolder                                          INFO Folder /GLOBAL/BField/Maps (AttrListColl) db-read 1/1 objs/chan/bytes 3/3/202 ((     3.46 ))s
+IOVDbFolder                                          INFO Folder /GLOBAL/TrackingGeo/LayerMaterialITK (PoolRef) db-read 1/1 objs/chan/bytes 1/1/227 ((     1.26 ))s
+IOVDbFolder                                          INFO Folder /Indet/Align (PoolRefColl) db-read 1/1 objs/chan/bytes 43/43/6907 ((     1.26 ))s
+IOVDbFolder                                          INFO Folder /Indet/Beampos (AttrList) db-read 1/1 objs/chan/bytes 1/1/76 ((     2.15 ))s
 IOVDbFolder                                          INFO Folder /TagInfo (AttrListColl) db-read 0/1 objs/chan/bytes 1/0/0 ((     0.00 ))s
-IOVDbSvc                                             INFO  bytes in ((      0.74 ))s
+IOVDbSvc                                             INFO  bytes in ((      9.09 ))s
 IOVDbSvc                                             INFO Connection sqlite://;schema=mycool.db;dbname=OFLP200 : nConnect: 0 nFolders: 0 ReadTime: ((     0.00 ))s
-IOVDbSvc                                             INFO Connection COOLOFL_INDET/OFLP200 : nConnect: 2 nFolders: 2 ReadTime: ((     0.03 ))s
-IOVDbSvc                                             INFO Connection COOLOFL_GLOBAL/OFLP200 : nConnect: 2 nFolders: 2 ReadTime: ((     0.37 ))s
-IOVDbSvc                                             INFO Connection COOLOFL_DCS/OFLP200 : nConnect: 2 nFolders: 1 ReadTime: ((     0.33 ))s
+IOVDbSvc                                             INFO Connection COOLOFL_INDET/OFLP200 : nConnect: 2 nFolders: 2 ReadTime: ((     3.41 ))s
+IOVDbSvc                                             INFO Connection COOLOFL_GLOBAL/OFLP200 : nConnect: 2 nFolders: 2 ReadTime: ((     4.73 ))s
+IOVDbSvc                                             INFO Connection COOLOFL_DCS/OFLP200 : nConnect: 2 nFolders: 1 ReadTime: ((     0.95 ))s
 ToolSvc                                              INFO Removing all tools created by ToolSvc
 AtlasTrackingGeom...ITkTrackingGeometryBuilderCond   INFO finalize() successful
 IdDictDetDescrCnv                                    INFO in finalize
@@ -2480,7 +2482,7 @@ FPEAuditor                                           INFO  FPE INVALIDs   : 896
 FPEAuditor                                           INFO  FPE DIVBYZEROs : 896
 ApplicationMgr                                       INFO Application Manager Finalized successfully
 ApplicationMgr                                       INFO Application Manager Terminated successfully
-Listing sources of suppressed message: 
+Listing sources of suppressed message:
 =====================================================
  Message Source              |   Level |    Count
 -----------------------------+---------+-------------
@@ -2488,4 +2490,4 @@ Listing sources of suppressed message:
  FPEAuditor                  | WARNING |     1792
  InDetPlotBase               | WARNING |    15060
 =====================================================
-DONE 2025-05-30T10:08:46
+DONE 2025-06-10T13:41:45

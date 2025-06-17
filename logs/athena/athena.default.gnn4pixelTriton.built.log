@@ -1,11 +1,11 @@
-Running workflow/scripts/local_athena.sh \n Tue Jun 10 13:32:36 PDT 2025 @ nid004171
+Running workflow/scripts/local_athena.sh \n Mon Jun 16 21:32:41 PDT 2025 @ login19
 Running custom Athena build with the following parameters:
-Input File: projects/athena/athena.config.gnn4itkTriton.json
-Output File: /pscratch/sd/x/xju/code/autowork/results/athena/athena.default.gnn4itkTriton.built.json
+Input File: projects/athena/athena.config.gnn4pixelTriton.json
+Output File: /pscratch/sd/x/xju/code/autowork/results/athena/athena.default.gnn4pixelTriton.built.json
 Mode: build_athena
-Number of Threads: 16
+Number of Threads: 6
 Setup File:
-jq: error (at projects/athena/athena.config.gnn4itkTriton.json:11): Cannot iterate over null (null)
+jq: error (at projects/athena/athena.config.gnn4pixelTriton.json:11): Cannot iterate over null (null)
 virtual environment detected, deactivating...
 [7mlsetup              [0m lsetup <tool1> [ <tool2> ...] (see lsetup -h):
 [7m lsetup asetup      [0m  (or asetup) to setup an Athena release
@@ -32,6 +32,8 @@ virtual environment detected, deactivating...
 [7mqueryC              [0m find / whatis container query
 [7mshowVersions        [0m show versions of installed software
 
+Warning: unpacked repo has not been updated recently
+2025Jun13 21:17 | lxcvmfs119.cern.ch | 1749842278
 
 [1m[4m30 Nov 2023[0m
 
@@ -48,23 +50,5 @@ A serious security issue in ROOT's web-based GUI has been identified:
 
   [0;31mReason for this message: $HOME/.rootrc is missing[0m
 
-Cloning Athena repository...
-fatal: destination path '/pscratch/sd/x/xju/athena_dev/20250507_gnn4itk_triton' already exists and is not an empty directory.
-Checking out tag/branch: gnntriton
-fatal: not a git repository (or any parent up to mount point /)
-Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
-Using Athena/25.0.30 [cmake] with platform x86_64-el9-gcc13-opt
-	at /cvmfs/atlas.cern.ch/repo/sw/software/25.0
-Test area: /pscratch/sd/x/xju/athena_dev/20250507_gnn4itk_triton
-Unchanged: COOL_ORA_ENABLE_ADAPTIVE_OPT=Y
-Building customized Athena in /pscratch/sd/x/xju/athena_dev/20250507_gnn4itk_triton
-Original athena: /cvmfs/atlas.cern.ch/repo/sw/software/25.0/Athena/25.0.30/InstallArea/x86_64-el9-gcc13-opt/bin/athena
-Package filter file already exists. Overwriting...
-Creating package filter file at: /pscratch/sd/x/xju/athena_dev/20250507_gnn4itk_triton/package_filters.txt
--- Setting up LCG release "LCG_107a_ATLAS_5" for platform: x86_64-el9-gcc13-opt
--- found Acts version 41.0.0 commit GITDIR-NO-dirty
--- loading components:
---   Core
---   PluginGeoModel
---   PluginJson
---   Fatras
+workflow/scripts/local_athena.sh: line 145: cd: /pscratch/sd/x/xju/athena_dev/20250616_gnn4pixel_triton: No such file or directory
+Failed to change directory to /pscratch/sd/x/xju/athena_dev/20250616_gnn4pixel_triton
