@@ -3,9 +3,9 @@ rule run_legacy_ckf:
         "results/athena/athena.default.{ath_dev_name}.built.json",
         "projects/tracking/rdo_files.{dataset}.txt",
     output:
-        "workarea/tracking/{dataset}/aod.ckf.local.{ath_dev_name}.none.{dataset}.root",
+        "workarea/{trk_study_tag}/{dataset}/aod.ckf.local.{ath_dev_name}.none.{dataset}.root",
     log:
-        "logs/tracking/legacy_ckf.{ath_dev_name}.{dataset}.log",
+        "logs/tracking/{trk_study_tag}/legacy_ckf.{ath_dev_name}.{dataset}.log",
     params:
         max_evts = config.get("max_evts", 1),
         container_name = config["athena_dev_container"],
@@ -26,9 +26,9 @@ rule run_legacy_ckf_lrt:
         "results/athena/athena.default.{ath_dev_name}.built.json",
         "projects/tracking/rdo_files.{dataset}.txt",
     output:
-        "workarea/tracking/{dataset}/aod.ckfLRT.local.{ath_dev_name}.none.{dataset}.root",
+        "workarea/{trk_study_tag}/{dataset}/aod.ckfLRT.local.{ath_dev_name}.none.{dataset}.root",
     log:
-        "logs/tracking/LRT-legacy_ckf.{ath_dev_name}.{dataset}.log",
+        "logs/tracking/{trk_study_tag}/LRT-legacy_ckf.{ath_dev_name}.{dataset}.log",
     params:
         max_evts = config.get("max_evts", 1),
         container_name = config["athena_dev_container"],
@@ -50,9 +50,9 @@ rule run_gnn4itk_local:
         "results/athena/athena.default.gnn4itkTool.built.json",
         "projects/tracking/rdo_files.{dataset}.txt",
     output:
-        "workarea/tracking/{dataset}/aod.gnn4itkMLLocal.{dataset}.root",
+        "workarea/{trk_study_tag}/{dataset}/aod.gnn4itkMLLocal.{dataset}.root",
     log:
-        "logs/tracking/gnn4itk_local.{dataset}.log",
+        "logs/tracking/{trk_study_tag}/gnn4itk_local.{dataset}.log",
     params:
         max_evts = config.get("max_evts", 1),
         container_name = config["athena_dev_gpu_container"],
@@ -74,9 +74,9 @@ rule run_gnn4itk_local_external:
         "results/athena/athena.{ex_dev_name}.{ath_dev_name}.built.json",
         "projects/tracking/rdo_files.{dataset}.txt",
     output:
-        "workarea/tracking/{dataset}/aod.gnn4itkML.local.{ex_dev_name}.{ath_dev_name}.{dataset}.root",
+        "workarea/{trk_study_tag}/{dataset}/aod.gnn4itkML.local.{ex_dev_name}.{ath_dev_name}.{dataset}.root",
     log:
-        "logs/tracking/gnn4itk_local_external.{ex_dev_name}.{ath_dev_name}.{dataset}.log",
+        "logs/tracking/{trk_study_tag}/gnn4itk_local_external.{ex_dev_name}.{ath_dev_name}.{dataset}.log",
     params:
         max_evts = config.get("max_evts", 1),
         container_name = config["athena_dev_gpu_container"],
@@ -111,7 +111,15 @@ gnn4itk_config_map = {
     "gnn4pixel": {
         "model_name": "GNN4Pixel",
         "chain_name": "GNN4Pixel_ML_TRITON",
-    }
+    },
+    "gnn4itkMLDefaultCuts": {
+        "model_name": "MetricLearning",
+        "chain_name": "GNN4ITk_ML_TRITON-DefaultCuts",
+    },
+    "gnn4itkMLNoEndcapOLSP": {
+        "model_name": "MetricLearning",
+        "chain_name": "GNN4ITk_ML_TRITON-NoEndcapOLSP",
+    },
 }
 
 rule run_gnn4itk_triton:
@@ -120,9 +128,9 @@ rule run_gnn4itk_triton:
         "projects/tracking/rdo_files.{dataset}.txt",
         ancient("results/triton/triton_server.{triton_dev_name}.ready.txt")
     output:
-        "workarea/tracking/{dataset}/aod.{trk_chain_name}.triton.{ath_dev_name}.{triton_dev_name}.{dataset}.root"
+        "workarea/{trk_study_tag}/{dataset}/aod.{trk_chain_name}.triton.{ath_dev_name}.{triton_dev_name}.{dataset}.root"
     log:
-        "logs/tracking/{trk_chain_name}.triton.{ath_dev_name}.{triton_dev_name}.{dataset}.log"
+        "logs/tracking/{trk_study_tag}/{trk_chain_name}.triton.{ath_dev_name}.{triton_dev_name}.{dataset}.log"
     params:
         max_evts = config.get("max_evts", 1),
         container_name = config["athena_dev_gpu_container"],
@@ -145,11 +153,11 @@ rule run_gnn4itk_triton:
 rule run_idpvm:
     input:
         "results/athena/athena.default.{ath_dev_name}.built.json",
-        "workarea/tracking/{dataset}/aod.{trk_chain_name}.{ath_mode}.{ath_dev_name}.{triton_dev_name}.{dataset}.root"
+        "workarea/{trk_study_tag}/{dataset}/aod.{trk_chain_name}.{ath_mode}.{ath_dev_name}.{triton_dev_name}.{dataset}.root"
     output:
-        "workarea/tracking/{dataset}/idpvm.{trk_chain_name}.{idpvm_mode}.{ath_mode}.{ath_dev_name}.{triton_dev_name}.{dataset}.root",
+        "workarea/{trk_study_tag}/{dataset}/idpvm.{trk_chain_name}.{idpvm_mode}.{ath_mode}.{ath_dev_name}.{triton_dev_name}.{dataset}.root",
     log:
-        "logs/tracking/idpvm.{trk_chain_name}.{idpvm_mode}.{ath_mode}.{ath_dev_name}.{triton_dev_name}.{dataset}.log",
+        "logs/tracking/{trk_study_tag}/idpvm.{trk_chain_name}.{idpvm_mode}.{ath_mode}.{ath_dev_name}.{triton_dev_name}.{dataset}.log",
     params:
         max_evts = -1,
         container_name = config["athena_dev_gpu_container"],
@@ -168,12 +176,12 @@ rule run_idpvm:
 
 rule compare_two_tracking_chain:
     input:
-        "workarea/tracking/{dataset}/idpvm.ckf.{idpvm_mode}.local.gnn4itkTriton.none.{dataset}.root",
-        "workarea/tracking/{dataset}/idpvm.gnn4itkML.{idpvm_mode}.triton.gnn4itkTriton.tracking.{dataset}.root",
+        "workarea/{trk_study_tag}/{dataset}/idpvm.ckf.{idpvm_mode}.local.gnn4itkTriton.none.{dataset}.root",
+        "workarea/{trk_study_tag}/{dataset}/idpvm.gnn4itkML.{idpvm_mode}.triton.gnn4itkTriton.tracking.{dataset}.root",
     output:
-        "results/tracking/idpvm.comparison.{idpvm_mode}.{dataset}.txt",
+        "results/{trk_study_tag}/idpvm.comparison.{idpvm_mode}.{dataset}.txt",
     log:
-        "logs/tracking/idpvm.comparison.{idpvm_mode}.{dataset}.log",
+        "logs/tracking/${trk_study_tag}/idpvm.comparison.{idpvm_mode}.{dataset}.log",
     conda:
         "../envs/vroot.yaml"
     shell:
