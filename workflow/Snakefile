@@ -18,4 +18,5 @@ rule all:
     input:
         # expand("workarea/tracking/{sample}/idpvm.ckf.primary.local.gnn4itkTriton.none.{sample}.root", sample=SAMPLES)
         # expand("workarea/tracking/{sample}/idpvm.gnn4itkML.primary.triton.gnn4itkTriton.tracking.{sample}.root", sample=SAMPLES)
-        expand("results/tracking/idpvm.comparison.primary.{sample}.txt", sample=SAMPLES)
+        # expand("results/tracking/idpvm.comparison.primary.{sample}.txt", sample=SAMPLES)
+        expand("workarea/tracking/{sample}/idpvm.gnn4itkMLNoEndcapOLSP.primary.triton.gnn4itkTriton.tracking.{sample}.root", sample=SAMPLES),

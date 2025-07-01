@@ -58,19 +58,6 @@ echo "Setup File: $SETUP_FILE"
 echo "Triton Model Name: $TRITON_MODEL_NAME"
 echo "Triton URL: $TRITON_URL"
 
-# check if chain name is in
-# ["CKF_LEGACY", "GNN4ITk_ML_LOCAL", "GNN4ITK_ML_TRITON"]
-if [[ "$CHAINNAME" != "CKF_LEGACY" \
-   && "$CHAINNAME" != "GNN4ITk_ML_LOCAL" \
-   && "$CHAINNAME" != "GNN4ITk_ML_TRITON" \
-   && "$CHAINNAME" != "CKF_LEGACY_LRT" \
-   && "$CHAINNAME" != "GNN4ITk_ML_TRITON-DefaultCuts" \
-    && "$CHAINNAME" != "GNN4Pixel_ML_TRITON" \
-]]; then
-    echo "Error: Invalid chain name. Must be one of [CKF_LEGACY, GNN4ITk_ML_LOCAL, GNN4ITk_ML_TRITON, GNN4ITk_ML_TRITON-DefaultCuts, GNN4Pixel_ML_TRITON]."
-    exit 1
-fi
-
 RDO_FILENAME=$(cat ${INPUT_FILE} | paste -sd ',')
 echo $RDO_FILENAME
 
