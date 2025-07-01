@@ -1,4 +1,5 @@
 {
     "source_dir": "/pscratch/sd/x/xju/ITk/ForFinalPaper",
-    "repo_url": "git@github.com:xju2/tracking-as-a-service.git"
+    "repo_url": "git@github.com:xju2/tracking-as-a-service.git",
+    "repo_tag": "main"
 }

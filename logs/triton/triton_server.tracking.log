@@ -1,6 +1,6 @@
-Running workflow/scripts/start_triton_server_for_validation.sh Mon 16 Jun 2025 10:42:01 PM PDT @ login19
+Running workflow/scripts/start_triton_server_for_validation.sh Mon 30 Jun 2025 09:23:19 PM PDT @ login01
 -----------------------------------
-Mon 16 Jun 2025 10:42:01 PM PDT login19
+Mon 30 Jun 2025 09:23:19 PM PDT login01
 Input File: /pscratch/sd/x/xju/code/autowork/projects/triton/triton_server.config.tracking.json
 Output File: /pscratch/sd/x/xju/code/autowork/results/triton/triton_server.tracking.ready.txt
 Start Triton Server for validation
@@ -9,9 +9,9 @@ OUTPUT: /pscratch/sd/x/xju/code/autowork/results/triton/triton_server.tracking.r
 REPO_URL: git@github.com:xju2/tracking-as-a-service.git
 SOURCE_DIR: /pscratch/sd/x/xju/ITk/ForFinalPaper
 JOB Name: triton_job
-Polling for job 39668944 (triton_job) to start...
-Job 39668944 is RUNNING.
-[slurm] starting nid008469
+Polling for job 40095438 (triton_job) to start...
+Job 40095438 is RUNNING.
+[slurm] starting nid008365
 
 =============================
 == Triton Inference Server ==
@@ -28,31 +28,31 @@ This container image and its contents are governed by the NVIDIA Deep Learning C
 By pulling and using the container, you accept the terms and conditions of this license:
 https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
 
-I0617 05:42:15.986533 1 pinned_memory_manager.cc:275] "Pinned memory pool is created at '0x7fd6ae000000' with size 268435456"
-I0617 05:42:15.993390 1 cuda_memory_manager.cc:107] "CUDA memory pool is created on device 0 with size 67108864"
-E0617 05:42:16.002185 1 server.cc:243] "CudaDriverHelper has not been initialized."
-I0617 05:42:16.032073 1 model_lifecycle.cc:472] "loading: GNN4Pixel:2"
-I0617 05:42:16.032189 1 model_lifecycle.cc:472] "loading: MetricLearning:2"
-DONE 2025-06-16T22:42:16
-I0617 05:42:26.360417 1 python_be.cc:2404] "TRITONBACKEND_ModelInstanceInitialize: GNN4Pixel_0_0 (GPU device 0)"
-I0617 05:42:26.646281 1 python_be.cc:2404] "TRITONBACKEND_ModelInstanceInitialize: MetricLearning_0_0 (GPU device 0)"
+I0701 04:23:29.958139 1 pinned_memory_manager.cc:275] "Pinned memory pool is created at '0x7f949a000000' with size 268435456"
+I0701 04:23:29.965533 1 cuda_memory_manager.cc:107] "CUDA memory pool is created on device 0 with size 67108864"
+E0701 04:23:29.980312 1 server.cc:243] "CudaDriverHelper has not been initialized."
+I0701 04:23:30.714012 1 model_lifecycle.cc:472] "loading: GNN4Pixel:2"
+I0701 04:23:30.714157 1 model_lifecycle.cc:472] "loading: MetricLearning:2"
+DONE 2025-06-30T21:23:32
+I0701 04:23:41.492255 1 python_be.cc:2404] "TRITONBACKEND_ModelInstanceInitialize: GNN4Pixel_0_0 (GPU device 0)"
+I0701 04:23:41.502130 1 python_be.cc:2404] "TRITONBACKEND_ModelInstanceInitialize: MetricLearning_0_0 (GPU device 0)"
 MetricLearningInferenceConfig(model_path=PosixPath('/models/MetricLearning/2'), device='cuda', auto_cast=False, compling=False, debug=False, save_debug_data=False, r_max=0.12, k_max=1000, filter_cut=0.05, filter_batches=10, cc_cut=0.01, walk_min=0.1, walk_max=0.6, embedding_node_features=['r', 'phi', 'z', 'cluster_x_1', 'cluster_y_1', 'cluster_z_1', 'cluster_x_2', 'cluster_y_2', 'cluster_z_2', 'count_1', 'charge_count_1', 'loc_eta_1', 'loc_phi_1', 'localDir0_1', 'localDir1_1', 'localDir2_1', 'lengthDir0_1', 'lengthDir1_1', 'lengthDir2_1', 'glob_eta_1', 'glob_phi_1', 'eta_angle_1', 'phi_angle_1', 'count_2', 'charge_count_2', 'loc_eta_2', 'loc_phi_2', 'localDir0_2', 'localDir1_2', 'localDir2_2', 'lengthDir0_2', 'lengthDir1_2', 'lengthDir2_2', 'glob_eta_2', 'glob_phi_2', 'eta_angle_2', 'phi_angle_2'], embedding_node_scale=[1000.0, 3.14, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1.0, 1.0, 3.14, 3.14, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 3.14, 3.14, 3.14, 3.14, 1.0, 1.0, 3.14, 3.14, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 3.14, 3.14, 3.14, 3.14], filter_node_features=['r', 'phi', 'z', 'cluster_x_1', 'cluster_y_1', 'cluster_z_1', 'cluster_x_2', 'cluster_y_2', 'cluster_z_2', 'count_1', 'charge_count_1', 'loc_eta_1', 'loc_phi_1', 'localDir0_1', 'localDir1_1', 'localDir2_1', 'lengthDir0_1', 'lengthDir1_1', 'lengthDir2_1', 'glob_eta_1', 'glob_phi_1', 'eta_angle_1', 'phi_angle_1', 'count_2', 'charge_count_2', 'loc_eta_2', 'loc_phi_2', 'localDir0_2', 'localDir1_2', 'localDir2_2', 'lengthDir0_2', 'lengthDir1_2', 'lengthDir2_2', 'glob_eta_2', 'glob_phi_2', 'eta_angle_2', 'phi_angle_2'], filter_node_scale=[1000.0, 3.14, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1000.0, 1.0, 1.0, 3.14, 3.14, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 3.14, 3.14, 3.14, 3.14, 1.0, 1.0, 3.14, 3.14, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 3.14, 3.14, 3.14, 3.14], gnn_node_features=['r', 'phi', 'z', 'eta', 'cluster_r_1', 'cluster_phi_1', 'cluster_z_1', 'cluster_eta_1', 'cluster_r_2', 'cluster_phi_2', 'cluster_z_2', 'cluster_eta_2'], gnn_node_scale=[1000.0, 3.14159265359, 1000.0, 1.0, 1000.0, 3.14159265359, 1000.0, 1.0, 1000.0, 3.14159265359, 1000.0, 1.0])
-I0617 05:42:30.340961 1 model_lifecycle.cc:838] "successfully loaded 'GNN4Pixel'"
-I0617 05:42:30.415007 1 model_lifecycle.cc:838] "successfully loaded 'MetricLearning'"
-I0617 05:42:30.415065 1 server.cc:606]
+I0701 04:23:45.612385 1 model_lifecycle.cc:838] "successfully loaded 'GNN4Pixel'"
+I0701 04:23:45.645187 1 model_lifecycle.cc:838] "successfully loaded 'MetricLearning'"
+I0701 04:23:45.645261 1 server.cc:606]
 +------------------+------+
 | Repository Agent | Path |
 +------------------+------+
 +------------------+------+
 
-I0617 05:42:30.415099 1 server.cc:633]
+I0701 04:23:45.645293 1 server.cc:633]
 +---------+-------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Backend | Path                                                  | Config                                                                                                                                                        |
 +---------+-------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | python  | /opt/tritonserver/backends/python/libtriton_python.so | {"cmdline":{"auto-complete-config":"true","backend-directory":"/opt/tritonserver/backends","min-compute-capability":"6.000000","default-max-batch-size":"4"}} |
 +---------+-------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-I0617 05:42:30.415139 1 server.cc:676]
+I0701 04:23:45.645331 1 server.cc:676]
 +----------------+---------+--------+
 | Model          | Version | Status |
 +----------------+---------+--------+
@@ -60,9 +60,9 @@ I0617 05:42:30.415139 1 server.cc:676]
 | MetricLearning | 2       | READY  |
 +----------------+---------+--------+
 
-I0617 05:42:30.487756 1 metrics.cc:877] "Collecting metrics for GPU 0: NVIDIA A100-SXM4-80GB"
-I0617 05:42:30.493764 1 metrics.cc:770] "Collecting CPU metrics"
-I0617 05:42:30.493860 1 tritonserver.cc:2557]
+I0701 04:23:45.703540 1 metrics.cc:877] "Collecting metrics for GPU 0: NVIDIA A100-SXM4-80GB"
+I0701 04:23:45.706725 1 metrics.cc:770] "Collecting CPU metrics"
+I0701 04:23:45.706827 1 tritonserver.cc:2557]
 +----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Option                           | Value                                                                                                                                                                                                           |
 +----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -82,249 +82,6 @@ I0617 05:42:30.493860 1 tritonserver.cc:2557]
 | cache_enabled                    | 0                                                                                                                                                                                                               |
 +----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-I0617 05:42:30.498533 1 grpc_server.cc:2463] "Started GRPCInferenceService at 0.0.0.0:8001"
-I0617 05:42:30.498731 1 http_server.cc:4692] "Started HTTPService at 0.0.0.0:8000"
-I0617 05:42:30.539792 1 http_server.cc:362] "Started Metrics Service at 0.0.0.0:8002"
-147,248 space points with 15 features.
-after embedding, shape = torch.Size([147248, 8])
-Number of edges after embedding: 7,178,666
-after removing duplications: 3,589,334
-Number of edges after filtering: 341,600
-After GNN...
-Number of tracks found by CC: 173
-Number of tracks found by Walkthrough: 1131
-output shape: (6023,)
-161,357 space points with 15 features.
-after embedding, shape = torch.Size([161357, 8])
-Number of edges after embedding: 8,695,840
-after removing duplications: 4,348,104
-Number of edges after filtering: 412,193
-After GNN...
-Number of tracks found by CC: 194
-Number of tracks found by Walkthrough: 1251
-output shape: (6446,)
-177,993 space points with 15 features.
-after embedding, shape = torch.Size([177993, 8])
-Number of edges after embedding: 10,258,307
-after removing duplications: 5,129,474
-Number of edges after filtering: 482,833
-After GNN...
-Number of tracks found by CC: 206
-Number of tracks found by Walkthrough: 1748
-output shape: (8696,)
-139,499 space points with 15 features.
-after embedding, shape = torch.Size([139499, 8])
-Number of edges after embedding: 6,454,942
-after removing duplications: 3,227,472
-Number of edges after filtering: 311,171
-After GNN...
-Number of tracks found by CC: 167
-Number of tracks found by Walkthrough: 851
-output shape: (4670,)
-170,235 space points with 15 features.
-after embedding, shape = torch.Size([170235, 8])
-Number of edges after embedding: 9,480,187
-after removing duplications: 4,740,220
-Number of edges after filtering: 445,537
-After GNN...
-Number of tracks found by CC: 191
-Number of tracks found by Walkthrough: 1502
-output shape: (7682,)
-172,139 space points with 15 features.
-after embedding, shape = torch.Size([172139, 8])
-Number of edges after embedding: 9,617,231
-after removing duplications: 4,809,011
-Number of edges after filtering: 451,762
-After GNN...
-Number of tracks found by CC: 191
-Number of tracks found by Walkthrough: 1341
-output shape: (6902,)
-146,462 space points with 15 features.
-after embedding, shape = torch.Size([146462, 8])
-Number of edges after embedding: 7,166,702
-after removing duplications: 3,583,354
-Number of edges after filtering: 339,009
-After GNN...
-Number of tracks found by CC: 172
-Number of tracks found by Walkthrough: 934
-output shape: (4876,)
-234,900 space points with 15 features.
-after embedding, shape = torch.Size([234900, 8])
-Number of edges after embedding: 17,903,602
-after removing duplications: 9,011,898
-Number of edges after filtering: 824,313
-After GNN...
-Number of tracks found by CC: 223
-Number of tracks found by Walkthrough: 3223
-output shape: (15611,)
-187,929 space points with 15 features.
-after embedding, shape = torch.Size([187929, 8])
-Number of edges after embedding: 11,589,040
-after removing duplications: 5,796,412
-Number of edges after filtering: 538,902
-After GNN...
-Number of tracks found by CC: 218
-Number of tracks found by Walkthrough: 1782
-output shape: (9029,)
-169,980 space points with 15 features.
-after embedding, shape = torch.Size([169980, 8])
-Number of edges after embedding: 9,367,946
-after removing duplications: 4,684,005
-Number of edges after filtering: 438,600
-After GNN...
-Number of tracks found by CC: 200
-Number of tracks found by Walkthrough: 1408
-output shape: (7332,)
-192,047 space points with 15 features.
-after embedding, shape = torch.Size([192047, 8])
-Number of edges after embedding: 12,232,738
-after removing duplications: 6,121,332
-Number of edges after filtering: 569,647
-After GNN...
-Number of tracks found by CC: 197
-Number of tracks found by Walkthrough: 1843
-output shape: (9057,)
-146,893 space points with 15 features.
-after embedding, shape = torch.Size([146893, 8])
-Number of edges after embedding: 7,059,866
-after removing duplications: 3,529,933
-Number of edges after filtering: 334,578
-After GNN...
-Number of tracks found by CC: 175
-Number of tracks found by Walkthrough: 902
-output shape: (4789,)
-165,468 space points with 15 features.
-after embedding, shape = torch.Size([165468, 8])
-Number of edges after embedding: 8,915,576
-after removing duplications: 4,457,822
-Number of edges after filtering: 420,709
-After GNN...
-Number of tracks found by CC: 199
-Number of tracks found by Walkthrough: 1399
-output shape: (7165,)
-178,160 space points with 15 features.
-after embedding, shape = torch.Size([178160, 8])
-Number of edges after embedding: 10,418,607
-after removing duplications: 5,209,955
-Number of edges after filtering: 491,293
-After GNN...
-Number of tracks found by CC: 224
-Number of tracks found by Walkthrough: 1790
-output shape: (9203,)
-158,558 space points with 15 features.
-after embedding, shape = torch.Size([158558, 8])
-Number of edges after embedding: 8,523,163
-after removing duplications: 4,261,638
-Number of edges after filtering: 406,002
-After GNN...
-Number of tracks found by CC: 173
-Number of tracks found by Walkthrough: 1248
-output shape: (6358,)
-192,966 space points with 15 features.
-after embedding, shape = torch.Size([192966, 8])
-Number of edges after embedding: 12,132,845
-after removing duplications: 6,072,503
-Number of edges after filtering: 566,210
-After GNN...
-Number of tracks found by CC: 230
-Number of tracks found by Walkthrough: 2020
-output shape: (10475,)
-170,707 space points with 15 features.
-after embedding, shape = torch.Size([170707, 8])
-Number of edges after embedding: 9,484,582
-after removing duplications: 4,742,375
-Number of edges after filtering: 444,853
-After GNN...
-Number of tracks found by CC: 210
-Number of tracks found by Walkthrough: 1369
-output shape: (7141,)
-187,068 space points with 15 features.
-after embedding, shape = torch.Size([187068, 8])
-Number of edges after embedding: 11,120,244
-after removing duplications: 5,561,624
-Number of edges after filtering: 512,184
-After GNN...
-Number of tracks found by CC: 182
-Number of tracks found by Walkthrough: 1655
-output shape: (8273,)
-162,473 space points with 15 features.
-after embedding, shape = torch.Size([162473, 8])
-Number of edges after embedding: 8,554,872
-after removing duplications: 4,277,802
-Number of edges after filtering: 403,463
-After GNN...
-Number of tracks found by CC: 195
-Number of tracks found by Walkthrough: 1214
-output shape: (6378,)
-199,076 space points with 15 features.
-after embedding, shape = torch.Size([199076, 8])
-Number of edges after embedding: 13,316,361
-after removing duplications: 6,670,391
-Number of edges after filtering: 617,743
-After GNN...
-Number of tracks found by CC: 215
-Number of tracks found by Walkthrough: 1944
-output shape: (9887,)
-174,076 space points with 15 features.
-after embedding, shape = torch.Size([174076, 8])
-Number of edges after embedding: 10,182,967
-after removing duplications: 5,092,710
-Number of edges after filtering: 479,561
-After GNN...
-Number of tracks found by CC: 180
-Number of tracks found by Walkthrough: 1543
-output shape: (7656,)
-177,150 space points with 15 features.
-after embedding, shape = torch.Size([177150, 8])
-Number of edges after embedding: 10,339,202
-after removing duplications: 5,170,133
-Number of edges after filtering: 482,766
-After GNN...
-Number of tracks found by CC: 191
-Number of tracks found by Walkthrough: 1667
-output shape: (8462,)
-179,388 space points with 15 features.
-after embedding, shape = torch.Size([179388, 8])
-Number of edges after embedding: 10,675,382
-after removing duplications: 5,338,558
-Number of edges after filtering: 498,260
-After GNN...
-Number of tracks found by CC: 200
-Number of tracks found by Walkthrough: 1406
-output shape: (7231,)
-189,283 space points with 15 features.
-after embedding, shape = torch.Size([189283, 8])
-Number of edges after embedding: 11,493,095
-after removing duplications: 5,747,939
-Number of edges after filtering: 534,689
-After GNN...
-Number of tracks found by CC: 238
-Number of tracks found by Walkthrough: 1655
-output shape: (8712,)
-191,995 space points with 15 features.
-after embedding, shape = torch.Size([191995, 8])
-Number of edges after embedding: 11,882,857
-after removing duplications: 5,943,246
-Number of edges after filtering: 550,861
-After GNN...
-Number of tracks found by CC: 265
-Number of tracks found by Walkthrough: 1822
-output shape: (9637,)
-175,716 space points with 15 features.
-after embedding, shape = torch.Size([175716, 8])
-Number of edges after embedding: 10,040,528
-after removing duplications: 5,020,787
-Number of edges after filtering: 468,810
-After GNN...
-Number of tracks found by CC: 209
-Number of tracks found by Walkthrough: 1397
-output shape: (7334,)
-183,504 space points with 15 features.
-after embedding, shape = torch.Size([183504, 8])
-Number of edges after embedding: 10,934,550
-after removing duplications: 5,469,439
-Number of edges after filtering: 512,868
-After GNN...
-Number of tracks found by CC: 217
-Number of tracks found by Walkthrough: 1633
-output shape: (8356,)
+I0701 04:23:45.711659 1 grpc_server.cc:2463] "Started GRPCInferenceService at 0.0.0.0:8001"
+I0701 04:23:45.711862 1 http_server.cc:4692] "Started HTTPService at 0.0.0.0:8000"
+I0701 04:23:45.752900 1 http_server.cc:362] "Started Metrics Service at 0.0.0.0:8002"

@@ -72,6 +72,7 @@ sampleLabels=(
     ["MuonPU0"]="#mu, <#mu> = 0"
     ["ElectronPU0"]="e, <#mu> = 0"
     ["PionPU0"]="#pi, <#mu> = 0"
+    ["test"]="t#bar{t}, <#mu> = 200"
 )
 
 COMMAND_OPTS=(
