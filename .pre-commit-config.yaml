@@ -8,8 +8,8 @@ repos:
       - id: check-toml
       - id: check-case-conflict
       - id: check-added-large-files
+        args: ["--maxkb=2000"]
       - id: check-executables-have-shebangs
-      - id: check-added-large-files
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
     # Ruff version.

@@ -156,7 +156,7 @@ elif [[ "$CHAINNAME" == "GNN4ITk_ML_TRITON-NoEndcapOLSP" ]]; then
         --steering 'doRAWtoALL' \
         --digiSteeringConf 'StandardInTimeOnlyTruth' \
         --postInclude 'all:PyJobTransforms.UseFrontier' \
-        --preExec "all:flags.ITk.doEndcapEtaNeighbour=True; flags.Tracking.ITkGNNPass.minClusters = [7,7,7]; flags.Tracking.ITkGNNPass.maxHoles = [4,4,2]; " \
+        --preExec "all:flags.Tracking.ITkGNNPass.minClusters = [7,7,7]; flags.Tracking.ITkGNNPass.maxHoles = [4,4,2]; " \
         --preInclude 'all:Campaigns.PhaseIIPileUp200' 'InDetConfig.ConfigurationHelpers.OnlyTrackingPreInclude' 'InDetGNNTracking.InDetGNNTrackingFlags.gnnTritonValidation' \
         --preExec "flags.Tracking.GNN.Triton.model = \"$TRITON_MODEL_NAME\"; flags.Tracking.GNN.Triton.url = \"$TRITON_URL\";" \
         --inputRDOFile "${RDO_FILENAME}" \
