@@ -126,7 +126,7 @@ rule run_gnn4itk_triton:
     input:
         "results/athena/athena.default.{ath_dev_name}.built.json",
         "projects/tracking/rdo_files.{dataset}.txt",
-        ancient("results/triton/triton_server.{triton_dev_name}.ready.txt")
+        ancient("results/triton/triton_server.{triton_dev_name}.ready.json")
     output:
         "workarea/{trk_study_tag}/{dataset}/aod.{trk_chain_name}.triton.{ath_dev_name}.{triton_dev_name}.{dataset}.root"
     log:
@@ -145,7 +145,7 @@ rule run_gnn4itk_triton:
         -m {params.max_evts} \
         -c {params.chain_name} \
         -s {input[0]} \
-        -u `cat {input[2]}` \
+        -u {input[2]} \
         -p {params.model_name} \
         -o "{output}" > "{log}" 2>&1 \
         """

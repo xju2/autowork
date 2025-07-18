@@ -33,22 +33,6 @@ if [[ ! -f "$INPUT_FILE" ]]; then
   exit 1
 fi
 
-# Check if the output file exists
-if [[ -f "$OUTPUT" ]]; then
-  echo "Output file $OUTPUT already exists."
-  # now check if the Triton server is runnning.
-  TritonServerName=`cat $OUPUT`
-  curl -v ${TritonServerName}:8000/v2/health/ready
-  if [[ $? -ne 0 ]]; then
-    echo "Triton server is not running."
-    echo "remove the $OUTPUT file and launch the server"
-    rm -f $OUTPUT
-  else
-    echo "Triton server is running. Exiting."
-    exit 0
-  fi
-fi
-
 # parse the input json file.
 SOURCE_DIR=$(jq -r '.source_dir' "$INPUT_FILE")
 REPO_URL=$(jq -r '.repo_url' "$INPUT_FILE")

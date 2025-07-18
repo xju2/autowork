@@ -47,12 +47,6 @@ echo "Mode: $MODE"
 echo "Number of Threads: $WORKERS"
 echo "Setup File: $SETUP_FILE"
 
-# mode must be in ["build", "run"]
-if [[ "$MODE" != "build_athena" && "$MODE" != "run_athena" && "${MODE}" != "build_external" && "${MODE}" != "build_external_athena" ]]; then
-    echo "Error: Invalid mode. Must be one of [build_athena, run_athena, build_external, build_external_athena]."
-    exit 1
-fi
-
 # Ensure the input file exists
 if [[ ! -f "$INPUT_FILE" ]]; then
     echo "Error: Input file $INPUT_FILE does not exist."
@@ -105,14 +99,12 @@ fetch_athena_repo() {
         echo "Cloning Athena repository...${src_dir}"
         git clone "$repo" "$src_dir"
         cd "$src_dir"
+        echo "Checking out tag/branch: $tag"
+        git checkout "$tag"
     else
-        echo "Athena repository already exists. Fetching latest..."
+        echo "Athena repository already exists."
         cd "$src_dir"
-        git fetch --all
     fi
-
-    echo "Checking out tag/branch: $tag"
-    git checkout "$tag"
 
     if [[ -f .gitmodules ]]; then
         echo "Updating submodules..."
@@ -144,6 +136,7 @@ fi
 SOURCE_DIR=$(realpath "$SOURCE_DIR")
 if [[ ! -d "$SOURCE_DIR" ]]; then
     echo "Source directory $SOURCE_DIR does not exist."
+    echo "Creating directory $SOURCE_DIR"
     mkdir -p "$SOURCE_DIR" || { echo "Failed to create directory $SOURCE_DIR"; exit 1; }
 fi
 cd ${SOURCE_DIR} || { echo "Failed to change directory to $SOURCE_DIR"; exit 1; }
@@ -201,7 +194,11 @@ elif [[ "$MODE" == "run_athena" ]]; then
 
     # Run the Athena job
     asetup ${RELEASE}
-    source ${SPARSE_BUILD_DIR}/x86_64-el9-gcc*-opt/setup.sh
+
+    if [[ -d ${SPARSE_BUILD_DIR} ]]; then
+        echo "Sparse build directory exists. Using it."
+        source ${SPARSE_BUILD_DIR}/x86_64-el9-gcc*-opt/setup.sh
+    fi
     export ATHENA_CORE_NUMBER=${WORKERS}
 
     echo "Executing command: " > "${OUTPUT_FILE}"
@@ -210,6 +207,7 @@ elif [[ "$MODE" == "run_athena" ]]; then
         eval "$cmd" || { echo "Error: Validation command failed."; exit 1; }
         echo $cmd >> "${OUTPUT_FILE}"
     done <<< "${EXE_CMDS}"
+    echo "DONE." >> "${OUTPUT_FILE}"
 
 elif [[ "$MODE" == "build_external" ]]; then
     echo "Building atlasexternals in $SOURCE_DIR"

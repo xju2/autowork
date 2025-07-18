@@ -100,13 +100,13 @@ rule build_custom_athena_with_external:
 rule validate_custom_athena:
     input:
         "projects/athena/athena.config.{ath_dev_name}.json",
-        "results/athena/athena.custom.{ath_dev_name}.built.json"
+        "results/athena/athena.default.{ath_dev_name}.built.json"
     output:
-        "results/athena/athena.{ath_dev_name}.validated"
+        "results/athena/athena.default.{ath_dev_name}.validated.txt"
     params:
         container_name = config["athena_dev_gpu_container"]
     log:
-        "logs/athena/athena.{ath_dev_name}.validated.log"
+        "logs/athena/athena.default.{ath_dev_name}.validated.log"
     threads:
         4
     shell:

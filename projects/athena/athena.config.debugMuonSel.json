@@ -1,0 +1,14 @@
+{
+    "source_dir": "/pscratch/sd/x/xju/athena_dev/20250717_debugMuonSel",
+    "athena_repository": "ssh://git@gitlab.cern.ch:7999/mvanadia/athena.git",
+    "athena_tag": "mvdev",
+    "release": "Athena,main,latest,here",
+    "packages": [
+        "PhysicsAnalysis/Interfaces/MuonAnalysisInterfaces",
+        "PhysicsAnalysis/MuonID/MuonSelectorTools"
+    ],
+    "exe_cmd": [
+        "mkdir run ; cd run",
+        "ATHENA_CORE_NUMBER=4 Derivation_tf.py --formats PHYS --multiprocess --multithreadedFileValidation True --athenaMPMergeTargetSize 'DAOD_*:0' --sharedWriter True --outputDAODFile myOutput.pool.root --imf False  --maxEvents 8 --preExec 'flags.Output.TreeAutoFlush={\"DAOD_PHYS\": 80}' --inputAODFile /cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/CampaignInputs/mc20/AOD/mc20_13TeV.410470.PhPy8EG_A14_ttbar_hdamp258p75_nonallhad.recon.AOD.e6337_s3681_r13145/1000events.AOD.27121237._002005.pool.root.1"
+    ]
+}
