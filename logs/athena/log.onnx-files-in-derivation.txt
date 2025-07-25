@@ -1,0 +1,24 @@
+16:32:52 ToolSvc.DFCommonMuonsS...OnnxRuntimeSessionToolCPU   INFO Loading model from: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/MuonSelectorTools/TightNN_Experimental_18062025/model_DNN3norm_MC20ade.onnx
+16:32:56 jetrecalg_AntiKt4EMPFlowJets.BoostedJet...MLHelper   INFO JSSTaggerUtils::MLBosonTagger()   + ModelPath /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/BoostedJetTaggers/QGConstituentTagger/May2025/model_QGTagger_AntiKt04PFlow_Transformer_v2.onnx
+16:32:57 ToolSvc.TauJets_TauIDDecoratorWrapper.TauGNN_v0      INFO Using network config: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/tauRecTools/R22_preprod/GNTau_pruned_MC23.onnx
+16:32:57 ToolSvc.TauJets_TauIDDecoratorWrapper.TauGNN_v1      INFO Using network config: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/tauRecTools/R22_preprod/GNTau_trunc_MC23.onnx
+16:32:58 FTagNNSharingSvc                                     INFO building BTagging/20231205/GN2v01/antikt4empflow/network_fold0.onnx from onnx file
+16:32:58 FTagNNSharingSvc                                     INFO building BTagging/20231205/GN2v01/antikt4empflow/network_fold1.onnx from onnx file
+16:32:58 FTagNNSharingSvc                                     INFO building BTagging/20231205/GN2v01/antikt4empflow/network_fold2.onnx from onnx file
+16:32:58 FTagNNSharingSvc                                     INFO building BTagging/20231205/GN2v01/antikt4empflow/network_fold3.onnx from onnx file
+16:32:58 FTagNNSharingSvc                                     INFO building BTagging/20250213/GN3V00/antikt4empflow/network.onnx from onnx file
+16:32:58 FTagNNSharingSvc                                     INFO building BTagging/20250213/GN3PflowV00/antikt4empflow/network.onnx from onnx file
+16:32:59 FTagNNSharingSvc                                     INFO building BTagging/20250213/GN3MuonsV00/antikt4empflow/network.onnx from onnx file
+16:32:59 FTagNNSharingSvc                                     INFO building BTagging/20250213/GN3PflowMuonsV00/antikt4empflow/network.onnx from onnx file
+16:32:59 FTagNNSharingSvc                                     INFO building BTagging/20250527/GN3PflowMuonsChargeV00/antikt4empflow/network.onnx from onnx file
+16:32:59 FTagNNSharingSvc                                     INFO building BTagging/20250527/GN3PflowMuonsElectronsHybridV00/antikt4empflow/network.onnx from onnx file
+16:32:59 FTagNNSharingSvc                                     INFO building BTagging/20250527/GN3V01/antikt4empflow/network.onnx from onnx file
+16:32:59 AntiKt10UFOCSSKSoftDropBeta100Zcut10Jets...gn2xv00   INFO Initialize bTagging Tool (GNN) from: BTagging/20230413/gn2xv00/antikt10ufo/network.onnx
+16:32:59 AntiKt10UFOCSSKSoftDropBeta100Zc...gn2xwithmassv00   INFO Initialize bTagging Tool (GNN) from: BTagging/20230413/gn2xwithmassv00/antikt10ufo/network.onnx
+16:32:59 AntiKt10UFOCSSKSoftDropBeta100Zcut10Jets...gn2xv01   INFO Initialize bTagging Tool (GNN) from: BTagging/20230705/gn2xv01/antikt10ufo/network.onnx
+16:33:00 AntiKt10UFOCSSKSoftDropBeta100Zcut10Jets...GN2Xv02   INFO Initialize bTagging Tool (GNN) from: BTagging/20240925/GN2Xv02/antikt10ufo/network.onnx
+16:33:00 AntiKt10UFOCSSKSoftDropBeta100Zcut10Jet...20250310   INFO Initialize bTagging Tool (GNN) from: BTagging/20250310/antikt10ufo/GN2XTauV00.onnx
+16:33:00 AntiKt10UFOCSSKSoftDropBeta100Zcut10Jets...GN3XV00   INFO Initialize bTagging Tool (GNN) from: BTagging/20250522/GN3XV00/antikt10ufo/network.onnx
+16:33:00 AntiKt10UFOCSSKSoftDropBeta100Zcut10JetsSe...Sep24   INFO Initialize bTagging Tool (GNN) from: JetCalibTools/CalibArea-00-04-83/CalibrationFactors/MC20_bbJES_ak10csskufo_Sep24_calibFactors.onnx
+16:33:00 AntiKt10UFOCSSKSoftDropBeta100Zcut10...bJR10v00Ext   INFO Initialize bTagging Tool (GNN) from: JetCalibTools/CalibArea-00-04-83/CalibrationFactors/bbJESJMS_calibFactors_R22_MC20_CSSKUFO_bJR10v00Ext_20250212.onnx
+16:33:00 AntiKt10UFOCSSKSoftDropBeta100Zcut10Jet...bJR10v01   INFO Initialize bTagging Tool (GNN) from: JetCalibTools/CalibArea-00-04-83/CalibrationFactors/bbJESJMS_calibFactors_R22_MC20MC23_CSSKUFO_bJR10v01_20250212.onnx

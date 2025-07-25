@@ -1,0 +1,68 @@
+ATHENA_CORE_NUMBER=4 Derivation_tf.py --formats PHYS --multiprocess --multithreadedFileValidation True --athenaMPMergeTargetSize 'DAOD_*:0' --sharedWriter True --outputDAODFile myOutput.pool.root --imf False  --maxEvents 4 --preExec 'flags.Output.TreeAutoFlush={\"DAOD_PHYS\": 80}' --inputAODFile /cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/CampaignInputs/mc20/AOD/mc20_13TeV.410470.PhPy8EG_A14_ttbar_hdamp258p75_nonallhad.recon.AOD.e6337_s3681_r13145/1000events.AOD.27121237._002005.pool.root.1
+16:30:02 Py:ComponentAccumulator    INFO ['OnnxRuntimeSvc']
+16:30:06 Py:ComponentAccumulator    INFO ['OnnxRuntimeSvc']
+16:30:06 Py:ComponentAccumulator    INFO ['OnnxRuntimeSvc']
+16:30:06 Py:ComponentAccumulator    INFO ['OnnxRuntimeSvc']
+16:30:06 Py:ComponentAccumulator    INFO ['OnnxRuntimeSvc']
+16:30:06 Py:ComponentAccumulator    INFO ['OnnxRuntimeSvc']
+16:30:06 Py:ComponentAccumulator    INFO ['OnnxRuntimeSvc']
+16:30:06 Py:ComponentAccumulator    INFO ['OnnxRuntimeSvc']
+16:30:06 Py:ComponentAccumulator    INFO ['OnnxRuntimeSvc']
+16:32:52 ToolSvc.DFCommonMuonsSelector                        INFO Retrieving ONNX tool: DFCommonMuonsSelector_ORTInferenceTool
+16:32:52 ToolSvc.DFCommonMuonsS...OnnxRuntimeSessionToolCPU   INFO  OnnxRuntime release: 1.19.2
+16:32:52 ToolSvc.DFCommonMuonsS...OnnxRuntimeSessionToolCPU   INFO Asking model from: MuonSelectorTools/TightNN_Experimental_18062025/model_DNN3norm_MC20ade.onnx
+16:32:52 ToolSvc.DFCommonMuonsS...OnnxRuntimeSessionToolCPU   INFO Loading model from: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/MuonSelectorTools/TightNN_Experimental_18062025/model_DNN3norm_MC20ade.onnx
+16:32:52 ToolSvc.DFCommonMuonsSelector                        INFO End of ONNX tool retrieve
+16:32:56 jetrecalg_AntiKt4EMPFlowJets.BoostedJet...MLHelper   INFO JSSTaggerUtils::MLBosonTagger()   + ModelPath /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/BoostedJetTaggers/QGConstituentTagger/May2025/model_QGTagger_AntiKt04PFlow_Transformer_v2.onnx
+16:32:56 jetrecalg_AntiKt4EMPFlowJets.Boost...MLBosonTagger   INFO Using model file: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/BoostedJetTaggers/QGConstituentTagger/May2025/model_QGTagger_AntiKt04PFlow_Transformer_v2.onnx
+16:32:56 jetrecalg_AntiKt4EMPFlowJets.Boost...MLBosonTagger   INFO Created the ONNX Runtime session
+16:32:57 ToolSvc.TauJets_TauIDDecoratorWrapper.TauGNN_v0      INFO Using network config: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/tauRecTools/R22_preprod/GNTau_pruned_MC23.onnx
+16:32:57 ToolSvc.TauJets_TauIDDecoratorWrapper.TauGNN_v1      INFO Using network config: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/tauRecTools/R22_preprod/GNTau_trunc_MC23.onnx
+16:32:58 ToolSvc.TauJets_MuonRM_TauIDDecoratorW...TauGNN_v0   INFO Using network config: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/tauRecTools/R22_preprod/GNTau_pruned_MC23.onnx
+16:32:58 ToolSvc.TauJets_MuonRM_TauIDDecoratorW...TauGNN_v1   INFO Using network config: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/tauRecTools/R22_preprod/GNTau_trunc_MC23.onnx
+16:32:58 FTagNNSharingSvc                                     INFO building BTagging/20231205/GN2v01/antikt4empflow/network_fold0.onnx from onnx file
+16:32:58 FTagNNSharingSvc                                     INFO building BTagging/20231205/GN2v01/antikt4empflow/network_fold1.onnx from onnx file
+16:32:58 FTagNNSharingSvc                                     INFO building BTagging/20231205/GN2v01/antikt4empflow/network_fold2.onnx from onnx file
+16:32:58 FTagNNSharingSvc                                     INFO building BTagging/20231205/GN2v01/antikt4empflow/network_fold3.onnx from onnx file
+16:32:58 FTagNNSharingSvc                                     INFO adapting BTagging/20231205/GN2v01/antikt4empflow/network_fold0.onnx from cached NNs, new opts
+16:32:58 FTagNNSharingSvc                                     INFO adapting BTagging/20231205/GN2v01/antikt4empflow/network_fold1.onnx from cached NNs, new opts
+16:32:58 FTagNNSharingSvc                                     INFO adapting BTagging/20231205/GN2v01/antikt4empflow/network_fold2.onnx from cached NNs, new opts
+16:32:58 FTagNNSharingSvc                                     INFO adapting BTagging/20231205/GN2v01/antikt4empflow/network_fold3.onnx from cached NNs, new opts
+16:32:58 FTagNNSharingSvc                                     INFO building BTagging/20250213/GN3V00/antikt4empflow/network.onnx from onnx file
+16:32:58 FTagNNSharingSvc                                     INFO adapting BTagging/20250213/GN3V00/antikt4empflow/network.onnx from cached NNs, new opts
+16:32:58 FTagNNSharingSvc                                     INFO building BTagging/20250213/GN3PflowV00/antikt4empflow/network.onnx from onnx file
+16:32:58 FTagNNSharingSvc                                     INFO adapting BTagging/20250213/GN3PflowV00/antikt4empflow/network.onnx from cached NNs, new opts
+16:32:59 TrackLeptonDecoratorAlg.ftagMuonID                   INFO Retrieving ONNX tool: ftagMuonID_ORTInferenceTool
+16:32:59 TrackLeptonDecoratorAl...OnnxRuntimeSessionToolCPU   INFO  OnnxRuntime release: 1.19.2
+16:32:59 TrackLeptonDecoratorAl...OnnxRuntimeSessionToolCPU   INFO Asking model from: MuonSelectorTools/TightNN_Experimental_18062025/model_DNN3norm_MC20ade.onnx
+16:32:59 TrackLeptonDecoratorAl...OnnxRuntimeSessionToolCPU   INFO Loading model from: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/MuonSelectorTools/TightNN_Experimental_18062025/model_DNN3norm_MC20ade.onnx
+16:32:59 TrackLeptonDecoratorAlg.ftagMuonID                   INFO End of ONNX tool retrieve
+16:32:59 FTagNNSharingSvc                                     INFO building BTagging/20250213/GN3MuonsV00/antikt4empflow/network.onnx from onnx file
+16:32:59 FTagNNSharingSvc                                     INFO adapting BTagging/20250213/GN3MuonsV00/antikt4empflow/network.onnx from cached NNs, new opts
+16:32:59 FTagNNSharingSvc                                     INFO building BTagging/20250213/GN3PflowMuonsV00/antikt4empflow/network.onnx from onnx file
+16:32:59 FTagNNSharingSvc                                     INFO adapting BTagging/20250213/GN3PflowMuonsV00/antikt4empflow/network.onnx from cached NNs, new opts
+16:32:59 FTagNNSharingSvc                                     INFO building BTagging/20250527/GN3PflowMuonsChargeV00/antikt4empflow/network.onnx from onnx file
+16:32:59 FTagNNSharingSvc                                     INFO adapting BTagging/20250527/GN3PflowMuonsChargeV00/antikt4empflow/network.onnx from cached NNs, new opts
+16:32:59 FTagNNSharingSvc                                     INFO building BTagging/20250527/GN3PflowMuonsElectronsHybridV00/antikt4empflow/network.onnx from onnx file
+16:32:59 FTagNNSharingSvc                                     INFO adapting BTagging/20250527/GN3PflowMuonsElectronsHybridV00/antikt4empflow/network.onnx from cached NNs, new opts
+16:32:59 FTagNNSharingSvc                                     INFO building BTagging/20250527/GN3V01/antikt4empflow/network.onnx from onnx file
+16:32:59 FTagNNSharingSvc                                     INFO adapting BTagging/20250527/GN3V01/antikt4empflow/network.onnx from cached NNs, new opts
+16:32:59 AntiKt10UFOCSSKSoftDropBeta100Zcut10Jets...gn2xv00   INFO Initialize bTagging Tool (GNN) from: BTagging/20230413/gn2xv00/antikt10ufo/network.onnx
+16:32:59 AntiKt10UFOCSSKSoftDropBeta100Zc...gn2xwithmassv00   INFO Initialize bTagging Tool (GNN) from: BTagging/20230413/gn2xwithmassv00/antikt10ufo/network.onnx
+16:32:59 AntiKt10UFOCSSKSoftDropBeta100Zcut10Jets...gn2xv01   INFO Initialize bTagging Tool (GNN) from: BTagging/20230705/gn2xv01/antikt10ufo/network.onnx
+16:33:00 AntiKt10UFOCSSKSoftDropBeta100Zcut10Jets...GN2Xv02   INFO Initialize bTagging Tool (GNN) from: BTagging/20240925/GN2Xv02/antikt10ufo/network.onnx
+16:33:00 AntiKt10UFOCSSKSoftDropBeta100Zcut10Jet...20250310   INFO Initialize bTagging Tool (GNN) from: BTagging/20250310/antikt10ufo/GN2XTauV00.onnx
+16:33:00 AntiKt10UFOCSSKSoftDropBeta100Zcut10Jets...GN3XV00   INFO Initialize bTagging Tool (GNN) from: BTagging/20250522/GN3XV00/antikt10ufo/network.onnx
+16:33:00 AntiKt10UFOCSSKSoftDropBeta100Zcut10JetsSe...Sep24   INFO Initialize bTagging Tool (GNN) from: JetCalibTools/CalibArea-00-04-83/CalibrationFactors/MC20_bbJES_ak10csskufo_Sep24_calibFactors.onnx
+16:33:00 AntiKt10UFOCSSKSoftDropBeta100Zcut10...bJR10v00Ext   INFO Initialize bTagging Tool (GNN) from: JetCalibTools/CalibArea-00-04-83/CalibrationFactors/bbJESJMS_calibFactors_R22_MC20_CSSKUFO_bJR10v00Ext_20250212.onnx
+16:33:00 AntiKt10UFOCSSKSoftDropBeta100Zcut10Jet...bJR10v01   INFO Initialize bTagging Tool (GNN) from: JetCalibTools/CalibArea-00-04-83/CalibrationFactors/bbJESJMS_calibFactors_R22_MC20MC23_CSSKUFO_bJR10v01_20250212.onnx
+16:33:00 FourLeptonVertexAlg.MuonSelectionTool                INFO Retrieving ONNX tool: MuonSelectionTool_ORTInferenceTool
+16:33:00 FourLeptonVertexAlg.Mu...OnnxRuntimeSessionToolCPU   INFO  OnnxRuntime release: 1.19.2
+16:33:00 FourLeptonVertexAlg.Mu...OnnxRuntimeSessionToolCPU   INFO Asking model from: MuonSelectorTools/TightNN_Experimental_18062025/model_DNN3norm_MC20ade.onnx
+16:33:00 FourLeptonVertexAlg.Mu...OnnxRuntimeSessionToolCPU   INFO Loading model from: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/MuonSelectorTools/TightNN_Experimental_18062025/model_DNN3norm_MC20ade.onnx
+16:33:00 FourLeptonVertexAlg.MuonSelectionTool                INFO End of ONNX tool retrieve
+16:33:01 IsoCloseByCorrAlg.MuonSelectionTool                  INFO Retrieving ONNX tool: MuonSelectionTool_ORTInferenceTool
+16:33:01 IsoCloseByCorrAlg.Muon...OnnxRuntimeSessionToolCPU   INFO  OnnxRuntime release: 1.19.2
+16:33:01 IsoCloseByCorrAlg.Muon...OnnxRuntimeSessionToolCPU   INFO Asking model from: MuonSelectorTools/TightNN_Experimental_18062025/model_DNN3norm_MC20ade.onnx
+16:33:01 IsoCloseByCorrAlg.Muon...OnnxRuntimeSessionToolCPU   INFO Loading model from: /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/MuonSelectorTools/TightNN_Experimental_18062025/model_DNN3norm_MC20ade.onnx
+16:33:01 IsoCloseByCorrAlg.MuonSelectionTool                  INFO End of ONNX tool retrieve
