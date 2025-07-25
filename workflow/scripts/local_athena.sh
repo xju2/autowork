@@ -201,6 +201,7 @@ elif [[ "$MODE" == "run_athena" ]]; then
 
     # Run the Athena job
     asetup ${RELEASE}
+    echo "Using athena from: $(which athena)"
 
     if [[ -d ${SPARSE_BUILD_DIR} ]]; then
         echo "Sparse build directory exists. Using it."
@@ -215,11 +216,11 @@ elif [[ "$MODE" == "run_athena" ]]; then
         echo $cmd >> "${OUTPUT_FILE}"
     done <<< "${EXE_CMDS}"
 
-    # append all log.* files to the output file.
-    echo "Appending log files to ${OUTPUT_FILE}"
+    # append all log.* files to the log file.
+    echo "Appending athena logs"
     for log_file in log.*; do
-        echo "Appending $log_file" >> "${OUTPUT_FILE}"
-        cat "$log_file" >> "${OUTPUT_FILE}"
+        echo "+++ $log_file"
+        cat "$log_file"
 
     echo "DONE." >> "${OUTPUT_FILE}"
 
@@ -244,6 +245,7 @@ elif [[ "$MODE" == "build_external" ]]; then
 
 
     asetup ${EXTERNAL_ASETUP}
+    echo "Using athena from: $(which athena)"
     export AtlasExternals_URL=$EXTERNAL_URL
     export AtlasExternals_REF=$EXTERNAL_REF
 
