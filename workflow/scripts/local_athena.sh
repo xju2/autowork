@@ -214,6 +214,13 @@ elif [[ "$MODE" == "run_athena" ]]; then
         eval "$cmd" || { echo "Error: Validation command failed."; exit 1; }
         echo $cmd >> "${OUTPUT_FILE}"
     done <<< "${EXE_CMDS}"
+
+    # append all log.* files to the output file.
+    echo "Appending log files to ${OUTPUT_FILE}"
+    for log_file in log.*; do
+        echo "Appending $log_file" >> "${OUTPUT_FILE}"
+        cat "$log_file" >> "${OUTPUT_FILE}"
+
     echo "DONE." >> "${OUTPUT_FILE}"
 
 elif [[ "$MODE" == "build_external" ]]; then
