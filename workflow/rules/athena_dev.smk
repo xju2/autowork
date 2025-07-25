@@ -115,3 +115,21 @@ rule validate_custom_athena:
         -i {input[0]} -o "{output}" -t {threads} \
         > "{log}" 2>&1
         """
+
+rule validate_athena:
+    input:
+        "projects/athena/athena.config.{ath_config}.json"
+    output:
+        "results/athena/athena.default.{ath_config}.release_validated.txt"
+    params:
+        container_name = config["athena_dev_gpu_container"]
+    log:
+        "logs/athena/athena.default.{ath_config}.release_validated.log"
+    threads:
+        4
+    shell:
+        """shifter --image={params.container_name} --module=cvmfs,gpu \
+        workflow/scripts/local_athena.sh -m run_athena \
+        -i {input} -o "{output}" -t {threads} \
+        > "{log}" 2>&1
+        """

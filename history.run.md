@@ -1,3 +1,17 @@
+## 2025-07-25
+Validate the AthenaTriton with GNN4ITk as a Service.
+```bash
+snakemake --cores 6 results/athena/athena.default.mainValidateAthenaTritonWithGNN4ITk.release_validated.txt
+```
+
+## 2025-07-18
+Make the GNN4ITk ready. The NERSC Triton server is running on the port 443.
+```bash
+snakemake --cores 6 results/athena/athena.default.gnn4itkMoreOpt.built.json
+
+snakemake --cores 2 workarea/tracking/MuonPU0/aod.gnn4itkML.triton.gnn4itkMoreOpt.tracking.MuonPU0.root --config max_evts=2 --set-threads run_gnn4itk_triton=1 -p
+```
+
 ## 2025-07-17
 Debug the MuonSelection Tool
 ```bash

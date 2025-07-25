@@ -67,7 +67,14 @@ parse_json() {
     SOURCE_DIR=$(jq -r '.source_dir' "$json_file")
     RELEASE=$(jq -r '.release' "$json_file")
     PACKAGES=$(jq -r '.packages[]' "$json_file")
-    EXE_CMDS=$(jq -r '.exe_cmd[]' "$json_file")
+    EXE_CMDS=$(jq -r '
+        .exe_cmd[] |
+        if type == "string" then
+            .
+        else
+            join(" ")
+        end
+        ' "$json_file")
 
     # Athena Repository URL and reference
     ATHENA_URL=$(jq -r '.athena_repository' "$json_file")
@@ -203,7 +210,7 @@ elif [[ "$MODE" == "run_athena" ]]; then
 
     echo "Executing command: " > "${OUTPUT_FILE}"
     while IFS= read -r cmd; do
-        echo "Running validation command: $cmd"
+        echo "Running: $cmd"
         eval "$cmd" || { echo "Error: Validation command failed."; exit 1; }
         echo $cmd >> "${OUTPUT_FILE}"
     done <<< "${EXE_CMDS}"
