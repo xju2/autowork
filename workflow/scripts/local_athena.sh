@@ -221,6 +221,7 @@ elif [[ "$MODE" == "run_athena" ]]; then
     for log_file in log.*; do
         echo "+++ $log_file"
         cat "$log_file"
+    done
 
     echo "DONE." >> "${OUTPUT_FILE}"
 
