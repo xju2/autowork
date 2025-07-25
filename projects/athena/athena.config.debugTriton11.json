@@ -1,7 +1,7 @@
 {
     "source_dir": "/pscratch/sd/x/xju/athena_dev/20250725_debugTriton",
-    "athena_repository": "ssh://git@gitlab.cern.ch:7999/atlas/athena.git",
-    "athena_tag": "main",
+    "athena_repository": "ssh://git@gitlab.cern.ch:7999/xju/athena.git",
+    "athena_tag": "debug_triton",
     "release": "Athena,main,latest,here",
     "packages": [
         "Control/AthTriton/AthTritonComps",
