@@ -1,0 +1,133 @@
+Running workflow/scripts/local_athena.sh \n Thu Jul 31 16:06:59 PDT 2025 @ login17
+Running custom Athena build with the following parameters:
+Input File: projects/athena/athena.config.12changeTritonInterface.json
+Output File: /pscratch/sd/x/xju/code/autowork/results/athena/athena.default.12changeTritonInterface.built.json
+Mode: build_athena
+Number of Threads: 6
+Setup File:
+virtual environment detected, deactivating...
+[7mlsetup              [0m lsetup <tool1> [ <tool2> ...] (see lsetup -h):
+[7m lsetup asetup      [0m  (or asetup) to setup an Athena release
+[7m lsetup astyle      [0m  ATLAS style macros
+[7m lsetup atlantis    [0m  Atlantis: event display
+[7m lsetup centralpage [0m  Find samples
+[7m lsetup eiclient    [0m  Event Index
+[7m lsetup emi         [0m  EMI: grid middleware user interface
+[7m lsetup lcgenv      [0m  lcgenv: setup tools from cvmfs SFT repository
+[7m lsetup panda       [0m  Panda: Production ANd Distributed Analysis
+[7m lsetup pyami       [0m  pyAMI: ATLAS Metadata Interface python client
+[7m lsetup root        [0m  ROOT data processing framework
+[7m lsetup rucio       [0m  distributed data management system client
+[7m lsetup scikit      [0m  python data analysis ecosystem
+[7m lsetup views       [0m  Set up a full LCG release
+[7m lsetup xcache      [0m  XRootD local proxy cache
+[7m lsetup xrootd      [0m  XRootD data access
+[7madvancedTools       [0m advanced tools menu
+[7mdiagnostics         [0m diagnostic tools menu
+[7mhelpMe              [0m more help
+[7minstallPip          [0m install relocatable pip modules locally
+[7minstallRpm          [0m install relocatable rpms locally
+[7mprintMenu           [0m show this menu
+[7mqueryC              [0m find / whatis container query
+[7mshowVersions        [0m show versions of installed software
+
+
+[1m[4m30 Nov 2023[0m
+
+A serious security issue in ROOT's web-based GUI has been identified:
+
+  You should not use the web-based browser until further notice and instead
+  set the old-style TBrowser as the default. Please see the Twiki page linked
+  below for instructions on how to do this.
+
+  https://twiki.cern.ch/twiki/bin/view/AtlasComputing/AtlasComputingArchive/RootBrowserSecurityIssue
+
+  More details of this issue:
+  https://root.cern/about/security/#2023-11-26-open-port-for-control-of-web-gui-allows-read-and-write-access-to-file-system
+
+  [0;31mReason for this message: $HOME/.rootrc is missing[0m
+
+Athena repository already exists.
+Using Athena/25.0.39 [cmake] with platform x86_64-el9-gcc14-opt
+	at /cvmfs/atlas-nightlies.cern.ch/repo/sw/main_Athena_x86_64-el9-gcc14-opt/2025-07-30T2100
+Test area: /pscratch/sd/x/xju/athena_dev/20250725_debugTriton
+Unchanged: COOL_ORA_ENABLE_ADAPTIVE_OPT=Y
+Building customized Athena in /pscratch/sd/x/xju/athena_dev/20250725_debugTriton
+Original athena: /cvmfs/atlas-nightlies.cern.ch/repo/sw/main_Athena_x86_64-el9-gcc14-opt/2025-07-30T2100/Athena/25.0.39/InstallArea/x86_64-el9-gcc14-opt/bin/athena
+Package filter file already exists. Overwriting...
+Creating package filter file at: /pscratch/sd/x/xju/athena_dev/20250725_debugTriton/package_filters.txt
+-- Setting up LCG release "LCG_108_ATLAS_1" for platform: x86_64-el9-gcc14-opt
+-- found Acts version 42.1.1 commit GITDIR-NO-dirty
+-- loading components:
+--   Core
+--   PluginGeoModel
+--   PluginJson
+--   Fatras
+-- Setting up the tdaq-common externals...
+-- Setting ATLAS specific build flags
+-- Found checker_gccplugins library under: /cvmfs/atlas-nightlies.cern.ch/repo/sw/main_Athena_x86_64-el9-gcc14-opt/2025-07-30T2100/AthenaExternals/25.0.39/InstallArea/x86_64-el9-gcc14-opt/lib/libchecker_gccplugins.so
+-- Enabling Python code checker: /cvmfs/atlas-nightlies.cern.ch/repo/sw/main_Athena_x86_64-el9-gcc14-opt/2025-07-30T2100/AthenaExternals/25.0.39/InstallArea/x86_64-el9-gcc14-opt/bin/flake8_atlas
+-- Setting up LCG release "LCG_108_ATLAS_1" for platform: x86_64-el9-gcc14-opt
+-- Found ROOT: /cvmfs/atlas-nightlies.cern.ch/repo/sw/main_Athena_x86_64-el9-gcc14-opt/sw/lcg/releases/LCG_108_ATLAS_1/ROOT/6.36.02/x86_64-el9-gcc14-opt/cmake (found version 6.36.02)
+-- Found Gaudi: /cvmfs/atlas-nightlies.cern.ch/repo/sw/main_Athena_x86_64-el9-gcc14-opt/2025-07-30T2100/AthenaExternals/25.0.39/InstallArea/x86_64-el9-gcc14-opt/lib/cmake/Gaudi (found version 40.0)
+-- Checking C/C++ files with: /cvmfs/atlas-nightlies.cern.ch/repo/sw/main_Athena_x86_64-el9-gcc14-opt/2025-07-30T2100/Athena/25.0.39/InstallArea/x86_64-el9-gcc14-opt/bin/cppcheck_atlas --enable=warning,portability,performance --quiet --inline-suppr --template=gcc -D__CPPCHECK__ -DATOMIC_POINTER_LOCK_FREE=2 --library=boost --library=googletest --library=python --library=/pscratch/sd/x/xju/athena_dev/20250725_debugTriton/athena/Control/CxxUtils/share/cppcheck_athena.cfg --suppressions-list=/pscratch/sd/x/xju/athena_dev/20250725_debugTriton/athena/Control/CxxUtils/share/cppcheck_suppress.txt --suppress=*:/cvmfs/atlas-nightlies.cern.ch/repo/sw/main_Athena_x86_64-el9-gcc14-opt/sw/lcg/releases/* --suppress=*:/cvmfs/atlas.cern.ch/repo/sw/tdaq/tdaq-common/tdaq-common-12-02-00/installed/include/* --suppress=*:/cvmfs/atlas-nightlies.cern.ch/repo/sw/main_Athena_x86_64-el9-gcc14-opt/2025-07-30T2100/AthenaExternals/25.0.39/InstallArea/x86_64-el9-gcc14-opt/include/*
+-- Configuring ATLAS project with name "WorkDir" and version "25.0.39"
+-- Using build type: RelWithDebInfo
+-- Using platform name: x86_64-el9-gcc14-opt
+-- Cleaning stale files from build area
+-- Unit tests will be built by default
+-- Found 2007 package(s)
+-- Considering package 1 / 2007
+-- Package filtering rules read:
+--   + Control/AthTriton/AthTritonComps
+--   + InnerDetector/InDetGNNTracking
+--   + Control/AthenaExamples/AthExTriton
+--   - .*
+-- Configuring the build of package: AthTritonComps
+-- Considering package 101 / 2007
+-- Configuring the build of package: AthExTriton
+-- Considering package 201 / 2007
+-- Considering package 301 / 2007
+-- Considering package 401 / 2007
+-- Considering package 501 / 2007
+-- Considering package 601 / 2007
+-- Configuring the build of package: InDetGNNTracking
+-- Considering package 701 / 2007
+-- Considering package 801 / 2007
+-- Considering package 901 / 2007
+-- Considering package 1001 / 2007
+-- Considering package 1101 / 2007
+-- Considering package 1201 / 2007
+-- Considering package 1301 / 2007
+-- Considering package 1401 / 2007
+-- Considering package 1501 / 2007
+-- Considering package 1601 / 2007
+-- Considering package 1701 / 2007
+-- Considering package 1801 / 2007
+-- Considering package 1901 / 2007
+-- Considering package 2001 / 2007
+-- Number of packages configured: 3
+-- Time for package configuration: 1 second(s)
+-- Generated file: /pscratch/sd/x/xju/athena_dev/20250725_debugTriton/sparse_build/x86_64-el9-gcc14-opt/packages.txt
+-- Including the packages from project Athena - 25.0.39...
+-- Including the packages from project AthenaExternals - 25.0.39...
+-- Generated file: /pscratch/sd/x/xju/athena_dev/20250725_debugTriton/sparse_build/x86_64-el9-gcc14-opt/compilers.txt
+-- Setting up the 'doc' target using Doxygen
+-- Generated file: /pscratch/sd/x/xju/athena_dev/20250725_debugTriton/sparse_build/x86_64-el9-gcc14-opt/ReleaseData
+-- Generating external environment configuration
+-- Writing runtime environment to file: /pscratch/sd/x/xju/athena_dev/20250725_debugTriton/sparse_build/x86_64-el9-gcc14-opt/env_setup.sh
+--
+--             In order to test your updates, please don't forget to
+--             set up the environment with e.g.:
+--             --->   source x86_64-el9-gcc14-opt/setup.sh
+--
+-- Configuring done (32.0s)
+-- Generating done (0.4s)
+-- Build files have been written to: /pscratch/sd/x/xju/athena_dev/20250725_debugTriton/sparse_build
+[0/2] Re-checking globbed directories...
+[1/5] Built /pscratch/sd/x/xju/athena_dev/20250725_debugTriton/sparse_build/x86_64-el9-gcc14-opt/lib/WorkDir.rootmap
+[2/5] Compiling python modules
+[3/5] Compiling python modules
+[4/5] Running AthTritonCompsPythonInstall post-command
+[5/5] Running InDetGNNTrackingPythonInstall post-command
+DONE on 2025-07-31T16:07:48

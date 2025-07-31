@@ -128,6 +128,7 @@ if [[ "$CHAINNAME" == "CKF_LEGACY" ]]; then
         --outputAODFile "${OUTFILE}"  \
         --jobNumber '1' \
         --athenaopts='--loglevel=INFO' \
+        --perfmonmt 'fullmonmt' \
         --maxEvents ${MAX_EVENTS}
 elif [[ "$CHAINNAME" == "GNN4ITk_ML_LOCAL" ]]; then
     mkdir gnn4itk_ml_local
@@ -146,6 +147,7 @@ elif [[ "$CHAINNAME" == "GNN4ITk_ML_LOCAL" ]]; then
         --outputAODFile "${OUTFILE}"  \
         --jobNumber '1' \
         --athenaopts='--loglevel=INFO' \
+        --perfmonmt 'fullmonmt' \
         --maxEvents ${MAX_EVENTS}
 elif [[ "$CHAINNAME" == "GNN4ITk_ML_TRITON" ]]; then
     mkdir gnn4itk_ml_triton
@@ -164,6 +166,7 @@ elif [[ "$CHAINNAME" == "GNN4ITk_ML_TRITON" ]]; then
         --outputAODFile "${OUTFILE}"  \
         --jobNumber '1' \
         --athenaopts='--loglevel=INFO' \
+        --perfmonmt 'fullmonmt' \
         --maxEvents ${MAX_EVENTS}
 elif [[ "$CHAINNAME" == "GNN4ITk_ML_TRITON-NoEndcapOLSP" ]]; then
     # should be the same as GNN4ITk_ML_TRITON, but with no endcap overlap SPs for Strip subdetector.
@@ -183,6 +186,7 @@ elif [[ "$CHAINNAME" == "GNN4ITk_ML_TRITON-NoEndcapOLSP" ]]; then
         --outputAODFile "${OUTFILE}"  \
         --jobNumber '1' \
         --athenaopts='--loglevel=INFO' \
+        --perfmonmt 'fullmonmt' \
         --maxEvents ${MAX_EVENTS}
 elif [[ "$CHAINNAME" == "GNN4ITk_ML_TRITON-DefaultCuts" ]]; then
     mkdir gnn4itk_ml_triton-defaultcuts
@@ -201,6 +205,7 @@ elif [[ "$CHAINNAME" == "GNN4ITk_ML_TRITON-DefaultCuts" ]]; then
         --outputAODFile "${OUTFILE}"  \
         --jobNumber '1' \
         --athenaopts='--loglevel=INFO' \
+        --perfmonmt 'fullmonmt' \
         --maxEvents ${MAX_EVENTS}
 elif [[ "$CHAINNAME" == "CKF_LEGACY_LRT" ]]; then
     mkdir ckf_legacy_lrt
@@ -215,6 +220,7 @@ elif [[ "$CHAINNAME" == "CKF_LEGACY_LRT" ]]; then
         --digiSteeringConf 'StandardInTimeOnlyTruth' \
         --preInclude 'all:Campaigns.PhaseIIPileUp200' 'InDetConfig.ConfigurationHelpers.OnlyTrackingPreInclude' \
         --preExec "flags.Tracking.doLargeD0=True;" \
+        --perfmonmt 'fullmonmt' \
         --maxEvents ${MAX_EVENTS}
 elif [[ "$CHAINNAME" == "GNN4Pixel_ML_TRITON" ]]; then
     mkdir gnn4pixel_ml_triton
@@ -234,6 +240,7 @@ elif [[ "$CHAINNAME" == "GNN4Pixel_ML_TRITON" ]]; then
         --outputAODFile "${OUTFILE}"  \
         --jobNumber '1' \
         --athenaopts='--loglevel=INFO' \
+        --perfmonmt 'fullmonmt' \
         --maxEvents ${MAX_EVENTS}
 else
     echo "not implemented yet."

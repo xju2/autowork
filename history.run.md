@@ -2,6 +2,7 @@
 Validate the AthenaTriton with GNN4ITk as a Service.
 ```bash
 snakemake --cores 6 results/athena/athena.default.mainValidateAthenaTritonWithGNN4ITk.release_validated.txt
+snakemake --cores 6 results/athena/athena.default.debugTriton11.validated.txt
 ```
 
 ## 2025-07-18
