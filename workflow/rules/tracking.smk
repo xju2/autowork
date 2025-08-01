@@ -174,14 +174,14 @@ rule run_idpvm:
         -o "{output}" > "{log}" 2>&1 \
         """
 
-rule compare_two_tracking_chain:
+rule compare_ckf_with_gnn_triton:
     input:
-        "workarea/{trk_study_tag}/{dataset}/idpvm.ckf.{idpvm_mode}.local.gnn4itkTriton.none.{dataset}.root",
-        "workarea/{trk_study_tag}/{dataset}/idpvm.gnn4itkML.{idpvm_mode}.triton.gnn4itkTriton.tracking.{dataset}.root",
+        "workarea/{trk_study_tag}/{dataset}/idpvm.ckf.{idpvm_mode}.local.{ath_dev_name}.none.{dataset}.root",
+        "workarea/{trk_study_tag}/{dataset}/idpvm.gnn4itkML.{idpvm_mode}.triton.{ath_dev_name}.{triton_dev_name}.{dataset}.root",
     output:
-        "results/{trk_study_tag}/idpvm.comparison.{idpvm_mode}.{dataset}.txt",
+        "results/{trk_study_tag}/idpvm.comparison.{ath_dev_name}.{triton_dev_name}.{idpvm_mode}.{dataset}.txt",
     log:
-        "logs/tracking/${trk_study_tag}/idpvm.comparison.{idpvm_mode}.{dataset}.log",
+        "logs/tracking/{trk_study_tag}/idpvm.comparison.{ath_dev_name}.{triton_dev_name}.{idpvm_mode}.{dataset}.log",
     conda:
         "../envs/vroot.yaml"
     shell:
