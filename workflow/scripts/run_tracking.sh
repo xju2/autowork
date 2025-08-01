@@ -83,6 +83,30 @@ export ATHENA_CORE_NUMBER=$NUM_WORKERS
 cd ${RUN_DIR} || { echo "Failed to change directory to ${RUN_DIR}"; exit 1; }
 echo "Running ${CHAINNAME} in ${RUN_DIR} with ${NUM_WORKERS} workers"
 
+# Extract unique identifiers for directory naming to avoid conflicts
+ATH_DEV_NAME="default"
+TRITON_DEV_NAME="none"
+
+# Extract ath_dev_name from setup file path if available
+if [[ -n "$SETUP_FILE" && "$SETUP_FILE" =~ athena\.([^.]+)\.([^.]+)\.built\.json$ ]]; then
+    # Pattern: athena.{prefix}.{ath_dev_name}.built.json
+    # If prefix is "default", use it; otherwise use the second part
+    if [[ "${BASH_REMATCH[1]}" == "default" ]]; then
+        ATH_DEV_NAME="${BASH_REMATCH[2]}"
+    else
+        # For external builds like athena.{external}.{ath_dev_name}.built.json
+        ATH_DEV_NAME="${BASH_REMATCH[2]}"
+    fi
+fi
+
+# Extract triton_dev_name from triton config file path if available  
+if [[ -n "$TRITON_CONFIG" && "$TRITON_CONFIG" =~ triton_server\.([^.]+)\.ready\.json$ ]]; then
+    TRITON_DEV_NAME="${BASH_REMATCH[1]}"
+fi
+
+echo "Athena Dev Name: $ATH_DEV_NAME"
+echo "Triton Dev Name: $TRITON_DEV_NAME"
+
 if [ -f "PoolFileCatalog.xml" ]; then
     echo "Cleanup workarea."
     rm InDetIdDict.xml PoolFileCatalog.xml hostnamelookup.tmp eventLoopHeartBeat.txt
@@ -113,8 +137,9 @@ DETECTOR_CONDITIONS="all:OFLCOND-MC15c-SDR-14-05"
 GEOMETRY_VERSION="all:ATLAS-P2-RUN4-03-00-00"
 
 if [[ "$CHAINNAME" == "CKF_LEGACY" ]]; then
-    mkdir ckf_legacy
-    cd ckf_legacy || { echo "Failed to create or change directory to ckf_legacy"; exit 1; }
+    WORK_DIR="ckf_legacy_${ATH_DEV_NAME}_${TRITON_DEV_NAME}"
+    mkdir -p "$WORK_DIR"
+    cd "$WORK_DIR" || { echo "Failed to create or change directory to $WORK_DIR"; exit 1; }
     Reco_tf.py \
         --CA 'all:True' --autoConfiguration 'everything' \
         --conditionsTag ${DETECTOR_CONDITIONS} \
@@ -131,8 +156,9 @@ if [[ "$CHAINNAME" == "CKF_LEGACY" ]]; then
         --perfmonmt 'fullmonmt' \
         --maxEvents ${MAX_EVENTS}
 elif [[ "$CHAINNAME" == "GNN4ITk_ML_LOCAL" ]]; then
-    mkdir gnn4itk_ml_local
-    cd gnn4itk_ml_local || { echo "Failed to create or change directory to gnn4itk_ml_local"; exit 1; }
+    WORK_DIR="gnn4itk_ml_local_${ATH_DEV_NAME}_${TRITON_DEV_NAME}"
+    mkdir -p "$WORK_DIR"
+    cd "$WORK_DIR" || { echo "Failed to create or change directory to $WORK_DIR"; exit 1; }
     Reco_tf.py \
         --CA 'all:True' --autoConfiguration 'everything' \
         --conditionsTag ${DETECTOR_CONDITIONS} \
@@ -150,8 +176,9 @@ elif [[ "$CHAINNAME" == "GNN4ITk_ML_LOCAL" ]]; then
         --perfmonmt 'fullmonmt' \
         --maxEvents ${MAX_EVENTS}
 elif [[ "$CHAINNAME" == "GNN4ITk_ML_TRITON" ]]; then
-    mkdir gnn4itk_ml_triton
-    cd gnn4itk_ml_triton || { echo "Failed to create or change directory to gnn4itk_ml_triton"; exit 1; }
+    WORK_DIR="gnn4itk_ml_triton_${ATH_DEV_NAME}_${TRITON_DEV_NAME}"
+    mkdir -p "$WORK_DIR"
+    cd "$WORK_DIR" || { echo "Failed to create or change directory to $WORK_DIR"; exit 1; }
     Reco_tf.py \
         --CA 'all:True' --autoConfiguration 'everything' \
         --conditionsTag ${DETECTOR_CONDITIONS} \
@@ -170,8 +197,9 @@ elif [[ "$CHAINNAME" == "GNN4ITk_ML_TRITON" ]]; then
         --maxEvents ${MAX_EVENTS}
 elif [[ "$CHAINNAME" == "GNN4ITk_ML_TRITON-NoEndcapOLSP" ]]; then
     # should be the same as GNN4ITk_ML_TRITON, but with no endcap overlap SPs for Strip subdetector.
-    mkdir gnn4itk_ml_triton-noendcapolsp
-    cd gnn4itk_ml_triton-noendcapolsp || { echo "Failed to create or change directory to gnn4itk_ml_triton-noendcapolsp"; exit 1; }
+    WORK_DIR="gnn4itk_ml_triton-noendcapolsp_${ATH_DEV_NAME}_${TRITON_DEV_NAME}"
+    mkdir -p "$WORK_DIR"
+    cd "$WORK_DIR" || { echo "Failed to create or change directory to $WORK_DIR"; exit 1; }
     Reco_tf.py \
         --CA 'all:True' --autoConfiguration 'everything' \
         --conditionsTag ${DETECTOR_CONDITIONS} \
@@ -189,8 +217,9 @@ elif [[ "$CHAINNAME" == "GNN4ITk_ML_TRITON-NoEndcapOLSP" ]]; then
         --perfmonmt 'fullmonmt' \
         --maxEvents ${MAX_EVENTS}
 elif [[ "$CHAINNAME" == "GNN4ITk_ML_TRITON-DefaultCuts" ]]; then
-    mkdir gnn4itk_ml_triton-defaultcuts
-    cd gnn4itk_ml_triton-defaultcuts || { echo "Failed to create or change directory to gnn4itk_ml_triton-defaultcuts"; exit 1; }
+    WORK_DIR="gnn4itk_ml_triton-defaultcuts_${ATH_DEV_NAME}_${TRITON_DEV_NAME}"
+    mkdir -p "$WORK_DIR"
+    cd "$WORK_DIR" || { echo "Failed to create or change directory to $WORK_DIR"; exit 1; }
     Reco_tf.py \
         --CA 'all:True' --autoConfiguration 'everything' \
         --conditionsTag ${DETECTOR_CONDITIONS} \
@@ -208,8 +237,9 @@ elif [[ "$CHAINNAME" == "GNN4ITk_ML_TRITON-DefaultCuts" ]]; then
         --perfmonmt 'fullmonmt' \
         --maxEvents ${MAX_EVENTS}
 elif [[ "$CHAINNAME" == "CKF_LEGACY_LRT" ]]; then
-    mkdir ckf_legacy_lrt
-    cd ckf_legacy_lrt || { echo "Failed to create or change directory to ckf_legacy_lrt"; exit 1; }
+    WORK_DIR="ckf_legacy_lrt_${ATH_DEV_NAME}_${TRITON_DEV_NAME}"
+    mkdir -p "$WORK_DIR"
+    cd "$WORK_DIR" || { echo "Failed to create or change directory to $WORK_DIR"; exit 1; }
     Reco_tf.py --CA 'all:True' \
         --inputRDOFile "${RDO_FILENAME}" \
         --outputAODFile "${OUTFILE}"  \
@@ -223,8 +253,9 @@ elif [[ "$CHAINNAME" == "CKF_LEGACY_LRT" ]]; then
         --perfmonmt 'fullmonmt' \
         --maxEvents ${MAX_EVENTS}
 elif [[ "$CHAINNAME" == "GNN4Pixel_ML_TRITON" ]]; then
-    mkdir gnn4pixel_ml_triton
-    cd gnn4pixel_ml_triton || { echo "Failed to create or change directory to gnn4pixel_ml_triton"; exit 1; }
+    WORK_DIR="gnn4pixel_ml_triton_${ATH_DEV_NAME}_${TRITON_DEV_NAME}"
+    mkdir -p "$WORK_DIR"
+    cd "$WORK_DIR" || { echo "Failed to create or change directory to $WORK_DIR"; exit 1; }
     FEATURE_NAMES="r,phi,z,cluster_x_1,cluster_y_1,cluster_z_1,charge_count_1,count_1,loc_eta_1,loc_phi_1,glob_eta_1,glob_phi_1,localDir0_1,localDir1_1,localDir2_1"
     Reco_tf.py \
         --CA 'all:True' --autoConfiguration 'everything' \
