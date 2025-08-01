@@ -90,13 +90,8 @@ TRITON_DEV_NAME="none"
 # Extract ath_dev_name from setup file path if available
 if [[ -n "$SETUP_FILE" && "$SETUP_FILE" =~ athena\.([^.]+)\.([^.]+)\.built\.json$ ]]; then
     # Pattern: athena.{prefix}.{ath_dev_name}.built.json
-    # If prefix is "default", use it; otherwise use the second part
-    if [[ "${BASH_REMATCH[1]}" == "default" ]]; then
-        ATH_DEV_NAME="${BASH_REMATCH[2]}"
-    else
-        # For external builds like athena.{external}.{ath_dev_name}.built.json
-        ATH_DEV_NAME="${BASH_REMATCH[2]}"
-    fi
+    # Use both matched items for more unique identifier
+    ATH_DEV_NAME="${BASH_REMATCH[1]}_${BASH_REMATCH[2]}"
 fi
 
 # Extract triton_dev_name from triton config file path if available  
