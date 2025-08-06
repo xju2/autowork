@@ -1,0 +1,9 @@
+{
+    "source_dir": "/pscratch/sd/x/xju/athena_dev/20250806_mmClient",
+    "athena_repository": "ssh://git@gitlab.cern.ch:7999/xju/athena.git",
+    "athena_tag": "mm_client",
+    "release": "Athena,main,latest,here",
+    "packages": [
+        "InnerDetector/InDetGNNTracking"
+    ]
+}
