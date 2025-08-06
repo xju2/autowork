@@ -120,6 +120,10 @@ gnn4itk_config_map = {
         "model_name": "MetricLearning",
         "chain_name": "GNN4ITk_ML_TRITON-NoEndcapOLSP",
     },
+    "gnn4itkMM": {
+        "model_name": "ModuleMap",
+        "chain_name": "GNN4ITk_MM_TRITON",
+    }
 }
 
 rule run_gnn4itk_triton:

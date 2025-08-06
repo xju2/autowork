@@ -190,6 +190,27 @@ elif [[ "$CHAINNAME" == "GNN4ITk_ML_TRITON" ]]; then
         --athenaopts='--loglevel=INFO' \
         --perfmon 'fullmonmt' \
         --maxEvents ${MAX_EVENTS}
+elif [[ "$CHAINNAME" == "GNN4ITk_MM_TRITON" ]]; then
+    WORK_DIR="gnn4itk_mm_triton_${ATH_DEV_NAME}_${TRITON_DEV_NAME}"
+    mkdir -p "$WORK_DIR"
+    cd "$WORK_DIR" || { echo "Failed to create or change directory to $WORK_DIR"; exit 1; }
+    TRITON_FEATURENAMES="x,y,z,module_id,r,phi,eta,cluster_r_1,cluster_phi_1,cluster_z_1,cluster_r_2,cluster_phi_2,cluster_z_2,cluster_eta_2"
+    Reco_tf.py \
+        --CA 'all:True' --autoConfiguration 'everything' \
+        --conditionsTag ${DETECTOR_CONDITIONS} \
+        --geometryVersion ${GEOMETRY_VERSION} \
+        --multithreaded 'True' \
+        --steering 'doRAWtoALL' \
+        --digiSteeringConf 'StandardInTimeOnlyTruth' \
+        --postInclude 'all:PyJobTransforms.UseFrontier' \
+        --preExec "all:flags.ITk.doEndcapEtaNeighbour=True; flags.Tracking.ITkGNNPass.minClusters = [7,7,7]; flags.Tracking.ITkGNNPass.maxHoles = [4,4,2]; flags.Tracking.GNN.Triton.model = \"$TRITON_MODEL_NAME\"; flags.Tracking.GNN.Triton.url = \"$TRITON_URL\"; flags.Tracking.GNN.Triton.port = ${TRITON_PORT}; flags.Tracking.GNN.Triton.featureNames = \"$TRITON_FEATURENAMES\"" \
+        --preInclude 'all:Campaigns.PhaseIIPileUp200' 'InDetConfig.ConfigurationHelpers.OnlyTrackingPreInclude' 'InDetGNNTracking.InDetGNNTrackingFlags.gnnTritonValidation' \
+        --inputRDOFile "${RDO_FILENAME}" \
+        --outputAODFile "${OUTFILE}"  \
+        --jobNumber '1' \
+        --athenaopts='--loglevel=INFO' \
+        --perfmon 'fullmonmt' \
+        --maxEvents ${MAX_EVENTS}
 elif [[ "$CHAINNAME" == "GNN4ITk_ML_TRITON-NoEndcapOLSP" ]]; then
     # should be the same as GNN4ITk_ML_TRITON, but with no endcap overlap SPs for Strip subdetector.
     WORK_DIR="gnn4itk_ml_triton-noendcapolsp_${ATH_DEV_NAME}_${TRITON_DEV_NAME}"
