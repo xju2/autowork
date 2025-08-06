@@ -94,7 +94,7 @@ if [[ -n "$SETUP_FILE" && "$SETUP_FILE" =~ athena\.([^.]+)\.([^.]+)\.built\.json
     ATH_DEV_NAME="${BASH_REMATCH[1]}_${BASH_REMATCH[2]}"
 fi
 
-# Extract triton_dev_name from triton config file path if available  
+# Extract triton_dev_name from triton config file path if available
 if [[ -n "$TRITON_CONFIG" && "$TRITON_CONFIG" =~ triton_server\.([^.]+)\.ready\.json$ ]]; then
     TRITON_DEV_NAME="${BASH_REMATCH[1]}"
 fi
@@ -148,7 +148,7 @@ if [[ "$CHAINNAME" == "CKF_LEGACY" ]]; then
         --outputAODFile "${OUTFILE}"  \
         --jobNumber '1' \
         --athenaopts='--loglevel=INFO' \
-        --perfmonmt 'fullmonmt' \
+        --perfmon 'fullmonmt' \
         --maxEvents ${MAX_EVENTS}
 elif [[ "$CHAINNAME" == "GNN4ITk_ML_LOCAL" ]]; then
     WORK_DIR="gnn4itk_ml_local_${ATH_DEV_NAME}_${TRITON_DEV_NAME}"
@@ -168,7 +168,7 @@ elif [[ "$CHAINNAME" == "GNN4ITk_ML_LOCAL" ]]; then
         --outputAODFile "${OUTFILE}"  \
         --jobNumber '1' \
         --athenaopts='--loglevel=INFO' \
-        --perfmonmt 'fullmonmt' \
+        --perfmon 'fullmonmt' \
         --maxEvents ${MAX_EVENTS}
 elif [[ "$CHAINNAME" == "GNN4ITk_ML_TRITON" ]]; then
     WORK_DIR="gnn4itk_ml_triton_${ATH_DEV_NAME}_${TRITON_DEV_NAME}"
@@ -188,7 +188,7 @@ elif [[ "$CHAINNAME" == "GNN4ITk_ML_TRITON" ]]; then
         --outputAODFile "${OUTFILE}"  \
         --jobNumber '1' \
         --athenaopts='--loglevel=INFO' \
-        --perfmonmt 'fullmonmt' \
+        --perfmon 'fullmonmt' \
         --maxEvents ${MAX_EVENTS}
 elif [[ "$CHAINNAME" == "GNN4ITk_ML_TRITON-NoEndcapOLSP" ]]; then
     # should be the same as GNN4ITk_ML_TRITON, but with no endcap overlap SPs for Strip subdetector.
@@ -209,7 +209,7 @@ elif [[ "$CHAINNAME" == "GNN4ITk_ML_TRITON-NoEndcapOLSP" ]]; then
         --outputAODFile "${OUTFILE}"  \
         --jobNumber '1' \
         --athenaopts='--loglevel=INFO' \
-        --perfmonmt 'fullmonmt' \
+        --perfmon 'fullmonmt' \
         --maxEvents ${MAX_EVENTS}
 elif [[ "$CHAINNAME" == "GNN4ITk_ML_TRITON-DefaultCuts" ]]; then
     WORK_DIR="gnn4itk_ml_triton-defaultcuts_${ATH_DEV_NAME}_${TRITON_DEV_NAME}"
@@ -229,7 +229,7 @@ elif [[ "$CHAINNAME" == "GNN4ITk_ML_TRITON-DefaultCuts" ]]; then
         --outputAODFile "${OUTFILE}"  \
         --jobNumber '1' \
         --athenaopts='--loglevel=INFO' \
-        --perfmonmt 'fullmonmt' \
+        --perfmon 'fullmonmt' \
         --maxEvents ${MAX_EVENTS}
 elif [[ "$CHAINNAME" == "CKF_LEGACY_LRT" ]]; then
     WORK_DIR="ckf_legacy_lrt_${ATH_DEV_NAME}_${TRITON_DEV_NAME}"
@@ -245,7 +245,7 @@ elif [[ "$CHAINNAME" == "CKF_LEGACY_LRT" ]]; then
         --digiSteeringConf 'StandardInTimeOnlyTruth' \
         --preInclude 'all:Campaigns.PhaseIIPileUp200' 'InDetConfig.ConfigurationHelpers.OnlyTrackingPreInclude' \
         --preExec "flags.Tracking.doLargeD0=True;" \
-        --perfmonmt 'fullmonmt' \
+        --perfmon 'fullmonmt' \
         --maxEvents ${MAX_EVENTS}
 elif [[ "$CHAINNAME" == "GNN4Pixel_ML_TRITON" ]]; then
     WORK_DIR="gnn4pixel_ml_triton_${ATH_DEV_NAME}_${TRITON_DEV_NAME}"
@@ -266,7 +266,7 @@ elif [[ "$CHAINNAME" == "GNN4Pixel_ML_TRITON" ]]; then
         --outputAODFile "${OUTFILE}"  \
         --jobNumber '1' \
         --athenaopts='--loglevel=INFO' \
-        --perfmonmt 'fullmonmt' \
+        --perfmon 'fullmonmt' \
         --maxEvents ${MAX_EVENTS}
 else
     echo "not implemented yet."
