@@ -1,0 +1,12 @@
+{
+    "worktree_base_dir": "/tmp/athena_worktrees",
+    "worktree_name": "triton_debug_dev",
+    "athena_repository": "ssh://git@gitlab.cern.ch:7999/xju/athena.git",
+    "athena_tag": "changeTritonInterface",
+    "release": "Athena,main,latest,here",
+    "packages": [
+        "Control/AthTriton/AthTritonComps",
+        "InnerDetector/InDetGNNTracking",
+        "Control/AthenaExamples/AthExTriton"
+    ]
+}
