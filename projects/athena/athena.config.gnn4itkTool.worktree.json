@@ -1,9 +1,0 @@
-{
-    "worktree_base": "/pscratch/sd/x/xju/athena_dev/dev_worktrees/athena",
-    "athena_repository": "ssh://git@gitlab.cern.ch:7999/atlas/athena.git",
-    "athena_tag": "main",
-    "release": "Athena,main,latest,here",
-    "packages": [
-        "InnerDetector/InDetGNNTracking"
-    ]
-}

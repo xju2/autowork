@@ -9,9 +9,7 @@ setup_athena_from_json() {
     echo "Setup Athena from JSON file: $input_file"
     CURRENT_LOC=$(realpath $(pwd))
     echo "Current directory: $CURRENT_LOC"
-
-    # Parse both traditional and worktree configuration
-    SOURCE_DIR=$(jq -r '.source_dir // empty' "$input_file")
+    SOURCE_DIR=$(jq -r '.source_dir' "$input_file")
     RELEASE=$(jq -r '.release' "$input_file")
     LOCAL_SETUP=$(jq -r '.local_setup' "$input_file")
 

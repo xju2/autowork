@@ -272,12 +272,6 @@ if [[ "$MODE" == "build_athena" ]]; then
     done
     echo "- .*" >> "$package_filer_file"
 
-    # Determine the correct athena source path
-    if [[ "$USE_WORKTREE" == "true" ]]; then
-        ATHENA_SOURCE_DIR="Projects/WorkDir"
-    else
-        ATHENA_SOURCE_DIR="athena/Projects/WorkDir"
-    fi
 
     cmake -B ${SPARSE_BUILD_DIR} -S athena/Projects/WorkDir -DATLAS_PACKAGE_FILTER_FILE=./package_filters.txt -G "Ninja" -DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE || { echo "Error: CMake configuration failed."; exit 1; }
     cmake --build ${SPARSE_BUILD_DIR} -- -j ${WORKERS} || { echo "Error: CMake build failed."; exit 1; }
