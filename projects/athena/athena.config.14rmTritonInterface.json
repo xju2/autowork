@@ -1,6 +1,6 @@
 {
     "worktree_base": "/pscratch/sd/x/xju/athena_dev/dev_worktree/athena",
-    "source_dir": "pscratch/sd/x/xju/athena_dev/dev_worktree/20250816_rmTritonInterface",
+    "source_dir": "/pscratch/sd/x/xju/athena_dev/dev_worktree/20250816_rmTritonInterface",
     "athena_repository": "ssh://git@gitlab.cern.ch:7999/xju/athena.git",
     "athena_tag": "rmTritonInterface",
     "release": "Athena,main,latest,here",
