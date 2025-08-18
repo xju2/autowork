@@ -1,6 +1,5 @@
 {
-    "worktree_base_dir": "/tmp/athena_worktrees",
-    "worktree_name": "gnn4itk_tool_dev",
+    "worktree_base": "/pscratch/sd/x/xju/athena_dev/dev_worktrees/athena",
     "athena_repository": "ssh://git@gitlab.cern.ch:7999/atlas/athena.git",
     "athena_tag": "main",
     "release": "Athena,main,latest,here",

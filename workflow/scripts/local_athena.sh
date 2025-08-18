@@ -81,8 +81,7 @@ parse_json() {
     ATHENA_REF=$(jq -r '.athena_tag' "$json_file")
 
     # Worktree related variables
-    WORKTREE_BASE_DIR=$(jq -r '.worktree_base_dir // empty' "$json_file")
-    WORKTREE_NAME=$(jq -r '.worktree_name // empty' "$json_file")
+    WORKTREE_BASE_DIR=$(jq -r '.worktree_base // empty' "$json_file")
 
     # atlasexternal related variables
     EXTERNAL_URL=$(jq -r '.external_url' "$json_file")
@@ -93,114 +92,70 @@ parse_json() {
 
 # Function to set up worktree-based athena development
 setup_athena_worktree() {
+
     local repo="$1"
     local tag="$2"
-    local base_dir="$3"
-    local worktree_name="$4"
-    
+    local worktree_base="$3"
+    local src_dir="$4"
+
     if ! command -v git &>/dev/null; then
         echo "Error: git is required but not installed." >&2
         exit 1
     fi
 
-    if [[ -z "$repo" || -z "$tag" || -z "$base_dir" || -z "$worktree_name" ]]; then
+    if [[ -z "$repo" || -z "$tag" || -z "$worktree_base" || -z "$src_dir" ]]; then
         echo "Error: setup_athena_worktree missing arguments." >&2
-        echo "Usage: setup_athena_worktree <repo> <tag> <base_dir> <worktree_name>" >&2
+        echo "Usage: setup_athena_worktree <repo> <tag> <worktree_base> <src_dir>" >&2
         exit 1
     fi
-
-    # Ensure base directory exists
-    mkdir -p "$base_dir"
-    cd "$base_dir"
-
-    local main_repo_dir="athena-main"
-    local worktree_dir="$worktree_name"
-    local worktree_path="$base_dir/$worktree_dir"
+    local worktree_dir="$src_dir/athena"
 
     # Initialize main repository if it doesn't exist
-    if [[ ! -d "$main_repo_dir/.git" ]]; then
-        echo "Creating main Athena repository at $base_dir/$main_repo_dir" >&2
-        git clone "$repo" "$main_repo_dir" >&2
-        cd "$main_repo_dir"
-        
-        # Update to get all branches and tags
-        git fetch --all --tags >&2
-        
-        if [[ -f .gitmodules ]]; then
-            echo "Updating submodules..." >&2
-            git submodule update --init --recursive >&2
-        fi
-        
-        cd "$base_dir"
+    if [[ ! -d "$worktree_base" ]]; then
+        echo "Creating main Athena repository at $worktree_base"
+        git clone ssh://git@gitlab.cern.ch:7999/atlas/athena.git "$worktree_base"
     else
-        echo "Main Athena repository already exists at $base_dir/$main_repo_dir" >&2
-        cd "$main_repo_dir"
-        
-        # Update the repository
-        echo "Updating main repository..." >&2
-        git fetch --all --tags >&2
-        cd "$base_dir"
+        echo "Main Athena repository already exists at $worktree_base"
+    fi
+    OLD_DIR=$(pwd)
+    cd "$worktree_base"
+
+    # Update the repository
+    echo "Updating main repository..."
+    git fetch --all --tags
+
+    git worktree list
+
+    # add the athena repository as a remote if not already added.
+    REMOTES=$(git remote | awk '{print $1}')
+    USER_NAME=$(echo $repo | awk -F'/' '{print $4}')
+    # if user name is not in the remote list, add it.
+    if ! echo "$REMOTES" | grep -q "$USER_NAME"; then
+        echo "Adding remote repository: $repo"
+        git remote add "$USER_NAME" "$repo"
     fi
 
     # Create or update worktree
     if [[ -d "$worktree_dir" ]]; then
-        echo "Worktree $worktree_name already exists. Updating..." >&2
+        echo "Worktree $worktree_dir already exists."
+        # check if the worktree is already checked out to the correct tag
         cd "$worktree_dir"
-        
-        # Check if we're on the right branch/tag
-        current_ref=$(git rev-parse HEAD)
-        target_ref=$(cd "../$main_repo_dir" && git rev-parse "$tag" 2>/dev/null || echo "")
-        
-        if [[ "$current_ref" != "$target_ref" ]]; then
-            echo "Checking out $tag in existing worktree" >&2
-            git checkout "$tag" >&2 || { echo "Error: Failed to checkout $tag" >&2; exit 1; }
+        current_tag=$(git rev-parse --abbrev-ref HEAD)
+        if [[ "$current_tag" != "$tag" ]]; then
+            echo "Error: Worktree is not checked out to the correct tag. Expected $tag, but found $current_tag."
+            exit 2
         fi
-        
-        cd "$base_dir"
     else
-        echo "Creating new worktree: $worktree_name for $tag" >&2
-        cd "$main_repo_dir"
-        
-        # Check if the branch/tag is the same as the current branch in main repo
-        current_branch=$(git rev-parse --abbrev-ref HEAD)
-        if [[ "$current_branch" == "$tag" ]]; then
-            # Create a new branch for the worktree to avoid conflict
-            worktree_branch="${worktree_name}_${tag}"
-            echo "Creating worktree branch: $worktree_branch based on $tag" >&2
-            git checkout -b "$worktree_branch" "$tag" >&2 || true
-            git worktree add "../$worktree_dir" "$worktree_branch" >&2 || { echo "Error: Failed to create worktree" >&2; exit 1; }
-        else
-            # Create the worktree directly
-            git worktree add "../$worktree_dir" "$tag" >&2 || { echo "Error: Failed to create worktree" >&2; exit 1; }
-        fi
-        
-        # Update submodules in the worktree
-        cd "../$worktree_dir"
-        if [[ -f .gitmodules ]]; then
-            echo "Updating submodules in worktree..." >&2
-            git submodule update --init --recursive >&2
-        fi
-        
-        cd "$base_dir"
+        echo "Creating new worktree: $worktree_dir for $tag"
+        cd "$worktree_base"
+        git worktree add $worktree_dir -b $tag || { echo "Error: Failed to create worktree"; exit 3; }
+        cd $worktree_dir
+        git branch -l
+        git push -u "$USER_NAME" "$tag" || { echo "Error: Failed to push new branch to remote"; exit 4; }
     fi
-
-    echo "Worktree setup complete: $worktree_path" >&2
-    echo "$worktree_path"
-}
-
-# Function to compute source directory from worktree configuration or fallback to source_dir
-compute_source_dir() {
-    local worktree_base_dir="$1"
-    local worktree_name="$2"
-    local fallback_source_dir="$3"
-    
-    if [[ -n "$worktree_base_dir" && -n "$worktree_name" ]]; then
-        # Use worktree configuration
-        echo "$(realpath "$worktree_base_dir")/$worktree_name"
-    else
-        # Use fallback source_dir
-        echo "$fallback_source_dir"
-    fi
+    echo "Worktree setup complete at $worktree_dir"
+    # Return the actual source directory
+    cd $OLD_DIR
 }
 
 fetch_athena_repo() {
@@ -257,9 +212,8 @@ if [[ -f "$SETUP_FILE" ]]; then
 fi
 
 # Compute SOURCE_DIR: use worktree configuration if available, otherwise fallback to source_dir
-if [[ -n "$WORKTREE_BASE_DIR" && -n "$WORKTREE_NAME" ]]; then
-    echo "Using worktree configuration: base_dir=$WORKTREE_BASE_DIR, name=$WORKTREE_NAME"
-    SOURCE_DIR=$(compute_source_dir "$WORKTREE_BASE_DIR" "$WORKTREE_NAME" "$SOURCE_DIR")
+if [[ -n "$WORKTREE_BASE_DIR" ]]; then
+    echo "Using worktree configuration: base_dir=$WORKTREE_BASE_DIR"
     USE_WORKTREE=true
 else
     echo "Using traditional source_dir: $SOURCE_DIR"
@@ -269,13 +223,10 @@ fi
 SOURCE_DIR=$(realpath "$SOURCE_DIR")
 if [[ ! -d "$SOURCE_DIR" ]]; then
     echo "Source directory $SOURCE_DIR does not exist."
-    if [[ "$USE_WORKTREE" == "true" ]]; then
-        echo "Will create worktree at: $SOURCE_DIR"
-    else
-        echo "Creating directory $SOURCE_DIR"
-        mkdir -p "$SOURCE_DIR" || { echo "Failed to create directory $SOURCE_DIR"; exit 1; }
-    fi
+    echo "Creating directory $SOURCE_DIR"
+    mkdir -p "$SOURCE_DIR" || { echo "Failed to create directory $SOURCE_DIR"; exit 1; }
 fi
+
 cd ${SOURCE_DIR} || { echo "Failed to change directory to $SOURCE_DIR"; exit 1; }
 
 SPARSE_BUILD_DIR="sparse_build"
@@ -285,14 +236,7 @@ if [[ "$MODE" == "build_athena" ]]; then
     # Set up Athena repository - use worktree if configured, otherwise traditional approach
     if [[ "$USE_WORKTREE" == "true" ]]; then
         echo "Setting up Athena using worktree approach"
-        if [[ -z "$ATHENA_URL" || -z "$ATHENA_REF" ]]; then
-            echo "Error: athena_repository and athena_tag are required for worktree setup"
-            exit 1
-        fi
-        actual_source_dir=$(setup_athena_worktree "$ATHENA_URL" "$ATHENA_REF" "$WORKTREE_BASE_DIR" "$WORKTREE_NAME")
-        # Update SOURCE_DIR to the actual worktree path
-        SOURCE_DIR="$actual_source_dir"
-        cd "$SOURCE_DIR"
+        setup_athena_worktree "$ATHENA_URL" "$ATHENA_REF" "$WORKTREE_BASE_DIR" "$SOURCE_DIR"
     else
         echo "Setting up Athena using traditional approach"
         # Fetch Athena repository only at build_athena stage
@@ -335,7 +279,7 @@ if [[ "$MODE" == "build_athena" ]]; then
         ATHENA_SOURCE_DIR="athena/Projects/WorkDir"
     fi
 
-    cmake -B ${SPARSE_BUILD_DIR} -S ${ATHENA_SOURCE_DIR} -DATLAS_PACKAGE_FILTER_FILE=./package_filters.txt -G "Ninja" -DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE || { echo "Error: CMake configuration failed."; exit 1; }
+    cmake -B ${SPARSE_BUILD_DIR} -S athena/Projects/WorkDir -DATLAS_PACKAGE_FILTER_FILE=./package_filters.txt -G "Ninja" -DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE || { echo "Error: CMake configuration failed."; exit 1; }
     cmake --build ${SPARSE_BUILD_DIR} -- -j ${WORKERS} || { echo "Error: CMake build failed."; exit 1; }
 
     echo "  \"local_setup\": \"${SPARSE_BUILD_DIR}/x86_64-el9-gcc*-opt/setup.sh\"" >> "${OUTPUT_FILE}"
