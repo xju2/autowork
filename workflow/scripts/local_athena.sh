@@ -220,13 +220,13 @@ else
     USE_WORKTREE=false
 fi
 
-SOURCE_DIR=$(realpath "$SOURCE_DIR")
 if [[ ! -d "$SOURCE_DIR" ]]; then
     echo "Source directory $SOURCE_DIR does not exist."
     echo "Creating directory $SOURCE_DIR"
     mkdir -p "$SOURCE_DIR" || { echo "Failed to create directory $SOURCE_DIR"; exit 1; }
 fi
 
+SOURCE_DIR=$(realpath "$SOURCE_DIR")
 cd ${SOURCE_DIR} || { echo "Failed to change directory to $SOURCE_DIR"; exit 1; }
 
 SPARSE_BUILD_DIR="sparse_build"
