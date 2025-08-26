@@ -1,0 +1,46 @@
+{
+    "worktree_base": "/pscratch/sd/x/xju/athena_dev/dev_worktree/athena",
+    "source_dir": "/pscratch/sd/x/xju/athena_dev/dev_worktree/20250825_debugGNNReader",
+    "athena_repository": "ssh://git@gitlab.cern.ch:7999/xju/athena.git",
+    "athena_tag": "debugGNNReader",
+    "release": "Athena,main,latest,here",
+    "packages": [
+        "InnerDetector/InDetGNNTracking"
+    ],
+    "exe_cmd": [
+        "mkdir run_gnn4itk_reader ; cd run_gnn4itk_reader",
+        [
+            "RDO_FILENAME='/global/cfs/projectdirs/m3443/data/GNN4ITK/EFT_ttbar/RDOFiles/RDO.39626672._000001.pool.root.1'",
+            "OUTFILE='test.aod.pool.root'",
+            "ATHENA_CORE_NUMBER=4"
+        ],
+        [
+            "Reco_tf.py",
+            "--CA 'all:True'",
+            "--autoConfiguration 'everything'",
+            "--conditionsTag 'all:OFLCOND-MC15c-SDR-14-05'",
+            "--geometryVersion 'all:ATLAS-P2-RUN4-03-00-00'",
+            "--multithreaded 'True'",
+            "--perfmon 'fullmonmt'",
+            "--steering 'doRAWtoALL'",
+            "--digiSteeringConf 'StandardInTimeOnlyTruth'",
+            "--postInclude 'all:PyJobTransforms.UseFrontier'",
+            "--preExec \"all:flags.ITk.doEndcapEtaNeighbour=True; flags.Tracking.ITkGNNPass.minClusters = [7,7,7];",
+            "flags.Tracking.ITkGNNPass.maxHoles = [4,4,2];",
+            "flags.Tracking.GNN.TrackReader.inputTracksDir='/global/cfs/projectdirs/m3443/usr/jay/acorn_dev_forMR/examples/EFT_ttbar/debug_tracks_csv'\"",
+            "--preInclude 'all:Campaigns.PhaseIIPileUp200' 'InDetConfig.ConfigurationHelpers.OnlyTrackingPreInclude'",
+            "'InDetGNNTracking.InDetGNNTrackingFlags.gnnReaderValidation'",
+            "--inputRDOFile=\"${RDO_FILENAME}\"",
+            "--outputAODFile=\"${OUTFILE}\"",
+            "--athenaopts='--loglevel=DEBUG'",
+            "--postExec 'msg=cfg.getService(\"MessageSvc\"); msg.infoLimit = 9999999; msg.debugLimit = 9999999; msg.verboseLimit = 9999999;'",
+            "--maxEvents 2"
+        ],
+        "mkdir run_idpvm ; cd run_idpvm",
+        [
+            "runIDPVM.py --maxEvents 2 --filesInput ../${OUTFILE}",
+            "--outputFile idpvm.root --truthMinPt 1000 --HSFlag HardScatter",
+            "--doTruthToRecoNtuple", "--doLoose", "--OnlyTrackingPreInclude"
+        ]
+    ]
+}
