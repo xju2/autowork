@@ -1,0 +1,7 @@
+{
+    "worktree_base": "/pscratch/sd/x/xju/athena_dev/dev_worktree/athena",
+    "source_dir": "/pscratch/sd/x/xju/athena_dev/dev_worktree/20250922_runAthenaMain",
+    "athena_repository": "ssh://git@gitlab.cern.ch:7999/xju/athena.git",
+    "athena_tag": "mainCopy",
+    "release": "Athena,main,latest,here"
+}
