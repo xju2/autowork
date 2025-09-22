@@ -1,10 +1,11 @@
-Running workflow/scripts/local_athena.sh \n Thu Jul 31 16:06:59 PDT 2025 @ login17
+Running workflow/scripts/local_athena.sh \n Wed Aug  6 10:58:08 PDT 2025 @ login17
 Running custom Athena build with the following parameters:
 Input File: projects/athena/athena.config.12changeTritonInterface.json
 Output File: /pscratch/sd/x/xju/code/autowork/results/athena/athena.default.12changeTritonInterface.built.json
 Mode: build_athena
 Number of Threads: 6
 Setup File:
+jq: error (at projects/athena/athena.config.12changeTritonInterface.json:11): Cannot iterate over null (null)
 virtual environment detected, deactivating...
 [7mlsetup              [0m lsetup <tool1> [ <tool2> ...] (see lsetup -h):
 [7m lsetup asetup      [0m  (or asetup) to setup an Athena release
@@ -49,11 +50,11 @@ A serious security issue in ROOT's web-based GUI has been identified:
 
 Athena repository already exists.
 Using Athena/25.0.39 [cmake] with platform x86_64-el9-gcc14-opt
-	at /cvmfs/atlas-nightlies.cern.ch/repo/sw/main_Athena_x86_64-el9-gcc14-opt/2025-07-30T2100
+	at /cvmfs/atlas-nightlies.cern.ch/repo/sw/main_Athena_x86_64-el9-gcc14-opt/2025-08-05T2100
 Test area: /pscratch/sd/x/xju/athena_dev/20250725_debugTriton
 Unchanged: COOL_ORA_ENABLE_ADAPTIVE_OPT=Y
 Building customized Athena in /pscratch/sd/x/xju/athena_dev/20250725_debugTriton
-Original athena: /cvmfs/atlas-nightlies.cern.ch/repo/sw/main_Athena_x86_64-el9-gcc14-opt/2025-07-30T2100/Athena/25.0.39/InstallArea/x86_64-el9-gcc14-opt/bin/athena
+Original athena: /cvmfs/atlas-nightlies.cern.ch/repo/sw/main_Athena_x86_64-el9-gcc14-opt/2025-08-05T2100/Athena/25.0.39/InstallArea/x86_64-el9-gcc14-opt/bin/athena
 Package filter file already exists. Overwriting...
 Creating package filter file at: /pscratch/sd/x/xju/athena_dev/20250725_debugTriton/package_filters.txt
 -- Setting up LCG release "LCG_108_ATLAS_1" for platform: x86_64-el9-gcc14-opt
@@ -66,7 +67,7 @@ Creating package filter file at: /pscratch/sd/x/xju/athena_dev/20250725_debugTri
 -- Setting up the tdaq-common externals...
 -- Setting ATLAS specific build flags
 -- Found checker_gccplugins library under: /cvmfs/atlas-nightlies.cern.ch/repo/sw/main_Athena_x86_64-el9-gcc14-opt/2025-07-30T2100/AthenaExternals/25.0.39/InstallArea/x86_64-el9-gcc14-opt/lib/libchecker_gccplugins.so
--- Enabling Python code checker: /cvmfs/atlas-nightlies.cern.ch/repo/sw/main_Athena_x86_64-el9-gcc14-opt/2025-07-30T2100/AthenaExternals/25.0.39/InstallArea/x86_64-el9-gcc14-opt/bin/flake8_atlas
+-- Enabling Python code checker: /cvmfs/atlas-nightlies.cern.ch/repo/sw/main_Athena_x86_64-el9-gcc14-opt/2025-08-05T2100/AthenaExternals/25.0.39/InstallArea/x86_64-el9-gcc14-opt/bin/flake8_atlas
 -- Setting up LCG release "LCG_108_ATLAS_1" for platform: x86_64-el9-gcc14-opt
 -- Found ROOT: /cvmfs/atlas-nightlies.cern.ch/repo/sw/main_Athena_x86_64-el9-gcc14-opt/sw/lcg/releases/LCG_108_ATLAS_1/ROOT/6.36.02/x86_64-el9-gcc14-opt/cmake (found version 6.36.02)
 -- Found Gaudi: /cvmfs/atlas-nightlies.cern.ch/repo/sw/main_Athena_x86_64-el9-gcc14-opt/2025-07-30T2100/AthenaExternals/25.0.39/InstallArea/x86_64-el9-gcc14-opt/lib/cmake/Gaudi (found version 40.0)
@@ -121,13 +122,11 @@ Creating package filter file at: /pscratch/sd/x/xju/athena_dev/20250725_debugTri
 --             set up the environment with e.g.:
 --             --->   source x86_64-el9-gcc14-opt/setup.sh
 --
--- Configuring done (32.0s)
+-- Configuring done (31.5s)
 -- Generating done (0.4s)
 -- Build files have been written to: /pscratch/sd/x/xju/athena_dev/20250725_debugTriton/sparse_build
 [0/2] Re-checking globbed directories...
-[1/5] Built /pscratch/sd/x/xju/athena_dev/20250725_debugTriton/sparse_build/x86_64-el9-gcc14-opt/lib/WorkDir.rootmap
-[2/5] Compiling python modules
-[3/5] Compiling python modules
-[4/5] Running AthTritonCompsPythonInstall post-command
-[5/5] Running InDetGNNTrackingPythonInstall post-command
-DONE on 2025-07-31T16:07:48
+[1/3] Built /pscratch/sd/x/xju/athena_dev/20250725_debugTriton/sparse_build/x86_64-el9-gcc14-opt/lib/WorkDir.rootmap
+[2/3] Compiling python modules
+[3/3] Running AthTritonCompsPythonInstall post-command
+DONE on 2025-08-06T10:58:57
