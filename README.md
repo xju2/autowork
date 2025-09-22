@@ -4,10 +4,21 @@ HEP Workflow based on Snakemake
 ## Example usage
 
 ### GNN4ITk as a Service
+First launch the Triton server:
 ```bash
 snakemake --cores 6 results/triton/triton_server.tracking.ready.txt
+```
+
+Then run a tracking job to test if the server is set up correctly:
+```bash
 snakemake --cores 2 workarea/tracking/MuonPU0/aod.gnn4itkML.triton.gnn4itkTriton.tracking.MuonPU0.root --dry-run --config max_evts=10
 ```
+
+To run the comparison between GNN4ITK and the legacy CKF:
+```bash
+snakemake --cores 6 --config samples='["MuonPU0","PionPU0"]' max_evts=-1 -p --set-threads run_idpvm=4 run_gnn4itk_triton=4 --dry-run
+```
+
 
 ### Other stuff
 
