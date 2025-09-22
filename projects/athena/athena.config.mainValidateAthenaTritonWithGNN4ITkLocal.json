@@ -5,7 +5,7 @@
         "mkdir run_gnn4itk_ml_triton ; cd run_gnn4itk_ml_triton",
         [
             "TRITON_MODEL_NAME='MetricLearning'",
-            "TRITON_URL='nid008536'",
+            "TRITON_URL='nid008461'",
             "TRITON_PORT=8001",
             "RDO_FILENAME='/global/cfs/cdirs/atlas/xju/data/inputData/RDO.37737772._000213.pool.root.1'",
             "OUTFILE='test.aod.pool.root'",
@@ -24,7 +24,7 @@
             "--preExec \"all:flags.ITk.doEndcapEtaNeighbour=True; flags.Tracking.ITkGNNPass.minClusters = [7,7,7];",
             "flags.Tracking.ITkGNNPass.maxHoles = [4,4,2]; flags.Tracking.GNN.Triton.model = \\\"$TRITON_MODEL_NAME\\\";",
             "flags.Tracking.GNN.Triton.url = \\\"$TRITON_URL\\\"; flags.Tracking.GNN.Triton.port = ${TRITON_PORT}\"",
-            "--preInclude 'all:Campaigns.PhaseIIPileUp200' 'InDetConfig.ConfigurationHelpers.OnlyTrackingPreInclude'",
+            "--preInclude \"all:Campaigns.PhaseIIPileUp200' 'InDetConfig.ConfigurationHelpers.OnlyTrackingPreInclude' 'InDetGNNTracking.InDetGNNTrackingFlags.gnnTritonValidation\"",
             "'InDetGNNTracking.InDetGNNTrackingFlags.gnnTritonValidation'",
             "--inputRDOFile=\"${RDO_FILENAME}\"",
             "--outputAODFile=\"OUTFILE\"",

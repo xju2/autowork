@@ -37,6 +37,7 @@ fi
 SOURCE_DIR=$(jq -r '.source_dir' "$INPUT_FILE")
 REPO_URL=$(jq -r '.repo_url' "$INPUT_FILE")
 REPO_TAG=$(jq -r '.repo_tag // empty' "$INPUT_FILE")
+NUM_GPUS=$(jq -r '.num_gpus // 1' "$INPUT_FILE")
 
 JOB_NAME="triton_job"
 
@@ -62,7 +63,8 @@ if [[ -n "$REPO_TAG" ]]; then
   git checkout "$REPO_TAG"
 fi
 
-srun --job-name="$JOB_NAME" -C "gpu&hbm80g" -N 1 -G 1 -c 10 -n 1 -t 4:00:00 -A m3443 \
+CPU_COUNTS=$(expr $NUM_GPUS \* 10)
+srun --job-name="$JOB_NAME" -C "gpu&hbm80g" -N 1 -G $NUM_GPUS -c $CPU_COUNTS -n 1 -t 4:00:00 -A m3443 \
   -q interactive /bin/bash -c "./scripts/start-tritonserver.sh -o $OUTPUT " &
 
 SRUN_PID=$!

@@ -256,27 +256,26 @@ if [[ "$MODE" == "build_athena" ]]; then
 
     # check if required variables are in the json file
     if [[ -z "$PACKAGES" ]]; then
-        echo "Error: Missing required fields in the JSON file."
-        exit 1
+        echo "Missing required fields in the JSON file."
+        echo "Do not build athena."
+    else
+        package_filer_file=${SOURCE_DIR}/package_filters.txt
+        # loop over the packages and create a package filter file
+        if [[ -f "$package_filer_file" ]]; then
+            echo "Package filter file already exists. Overwriting..."
+            rm "$package_filer_file"
+        fi
+        echo "Creating package filter file at: $package_filer_file"
+        for package in ${PACKAGES}; do
+            echo "+ $package" >> "$package_filer_file"
+        done
+        echo "- .*" >> "$package_filer_file"
+
+        cmake -B ${SPARSE_BUILD_DIR} -S athena/Projects/WorkDir -DATLAS_PACKAGE_FILTER_FILE=./package_filters.txt -G "Ninja" -DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE || { echo "Error: CMake configuration failed."; exit 1; }
+        cmake --build ${SPARSE_BUILD_DIR} -- -j ${WORKERS} || { echo "Error: CMake build failed."; exit 1; }
+
+        echo "  \"local_setup\": \"${SPARSE_BUILD_DIR}/x86_64-el9-gcc*-opt/setup.sh\"" >> "${OUTPUT_FILE}"
     fi
-
-    package_filer_file=${SOURCE_DIR}/package_filters.txt
-    # loop over the packages and create a package filter file
-    if [[ -f "$package_filer_file" ]]; then
-        echo "Package filter file already exists. Overwriting..."
-        rm "$package_filer_file"
-    fi
-    echo "Creating package filter file at: $package_filer_file"
-    for package in ${PACKAGES}; do
-        echo "+ $package" >> "$package_filer_file"
-    done
-    echo "- .*" >> "$package_filer_file"
-
-
-    cmake -B ${SPARSE_BUILD_DIR} -S athena/Projects/WorkDir -DATLAS_PACKAGE_FILTER_FILE=./package_filters.txt -G "Ninja" -DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE || { echo "Error: CMake configuration failed."; exit 1; }
-    cmake --build ${SPARSE_BUILD_DIR} -- -j ${WORKERS} || { echo "Error: CMake build failed."; exit 1; }
-
-    echo "  \"local_setup\": \"${SPARSE_BUILD_DIR}/x86_64-el9-gcc*-opt/setup.sh\"" >> "${OUTPUT_FILE}"
     echo "}" >> "$OUTPUT_FILE"
 
 elif [[ "$MODE" == "run_athena" ]]; then
