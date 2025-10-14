@@ -123,6 +123,7 @@ setup_athena_worktree() {
     # Update the repository
     echo "Updating main repository..."
     git fetch --all --tags
+    git pull
 
     git worktree list
 
