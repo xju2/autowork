@@ -24,7 +24,6 @@ authors = [
   {name = "X. Ju", email = "xju@lbl.gov" }
 ]
 dependencies = [
-  "snakemake",
 ]
 
 [tool.poetry.group.dev]
