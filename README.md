@@ -14,12 +14,16 @@ poetry install --with dev,docs --no-root
 ### GNN4ITk as a Service
 First launch the Triton server:
 ```bash
-snakemake --cores 6 results/triton/triton_server.tracking.ready.txt
+snakemake --cores 6 results/triton/triton_server.tracking.ready.json
 ```
 
 Then run a tracking job to test if the server is set up correctly:
 ```bash
 snakemake --cores 2 workarea/tracking/MuonPU0/aod.gnn4itkML.triton.gnn4itkTriton.tracking.MuonPU0.root --dry-run --config max_evts=10
+```
+
+```bash
+snakemake --cores 6 --config samples='["MuonPU0"]' max_evts=100 gnn_chains='["gnn4itkDoubleML", "gnn4itkDoubleMLDefaultCuts"]' -p --set-threads run_idpvm=4 run_gnn4itk_triton=4 --dry-run
 ```
 
 To run the comparison between GNN4ITK and the legacy CKF:

@@ -259,6 +259,7 @@ if [[ "$MODE" == "build_athena" ]]; then
     if [[ -z "$PACKAGES" ]]; then
         echo "Missing required fields in the JSON file."
         echo "Do not build athena."
+        echo "  \"local_setup\": \"--help\"" >> "${OUTPUT_FILE}"
     else
         package_filer_file=${SOURCE_DIR}/package_filters.txt
         # loop over the packages and create a package filter file

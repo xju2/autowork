@@ -123,7 +123,15 @@ gnn4itk_config_map = {
     "gnn4itkMM": {
         "model_name": "ModuleMap",
         "chain_name": "GNN4ITk_MM_TRITON",
-    }
+    },
+    "gnn4itkDoubleML": {
+        "model_name": "DoubleMetricLearning",
+        "chain_name": "GNN4ITk_ML_TRITON",
+    },
+    "gnn4itkDoubleMLDefaultCuts": {
+        "model_name": "DoubleMetricLearning",
+        "chain_name": "GNN4ITk_ML_TRITON-DefaultCuts",
+    },
 }
 
 rule run_gnn4itk_triton:

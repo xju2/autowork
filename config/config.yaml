@@ -6,3 +6,4 @@ nersc_project_name: "m3443"
 gitlab_username: "xju"
 
 samples: ["MuonPU0", "ElectronPU0", "PionPU0"]
+gnn_chains: ["gnn4itkDoubleML"]

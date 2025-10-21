@@ -14,6 +14,7 @@ include: "rules/triton.smk"
 include: "rules/test.smk"
 
 SAMPLES = config["samples"]
+GNNCHAINS = config["gnn_chains"]
 rule all:
     input:
-        expand("results/tracking/idpvm.comparison.main.tracking.primary.{sample}.txt", sample=SAMPLES)
+        expand("workarea/trackingCTD2025/{dataset}/idpvm.{chain}.primary.triton.main.tracking.{dataset}.root", dataset=SAMPLES, chain=GNNCHAINS)
