@@ -131,6 +131,8 @@ echo "Triton Port: $TRITON_PORT"
 DETECTOR_CONDITIONS="all:OFLCOND-MC15c-SDR-14-05"
 GEOMETRY_VERSION="all:ATLAS-P2-RUN4-03-00-00"
 
+WORK_DIR_POSTFIX="${ATH_DEV_NAME}_${ATH_DEV_NAME}_${TRITON_DEV_NAME}"
+
 if [[ "$CHAINNAME" == "CKF_LEGACY" ]]; then
     WORK_DIR="ckf_legacy_${ATH_DEV_NAME}_${TRITON_DEV_NAME}"
     mkdir -p "$WORK_DIR"
@@ -151,7 +153,7 @@ if [[ "$CHAINNAME" == "CKF_LEGACY" ]]; then
         --perfmon 'fullmonmt' \
         --maxEvents ${MAX_EVENTS}
 elif [[ "$CHAINNAME" == "GNN4ITk_ML_LOCAL" ]]; then
-    WORK_DIR="gnn4itk_ml_local_${ATH_DEV_NAME}_${TRITON_DEV_NAME}"
+    WORK_DIR="gnn4itk_ml_local_${WORK_DIR_POSTFIX}"
     mkdir -p "$WORK_DIR"
     cd "$WORK_DIR" || { echo "Failed to create or change directory to $WORK_DIR"; exit 1; }
     Reco_tf.py \
@@ -171,7 +173,7 @@ elif [[ "$CHAINNAME" == "GNN4ITk_ML_LOCAL" ]]; then
         --perfmon 'fullmonmt' \
         --maxEvents ${MAX_EVENTS}
 elif [[ "$CHAINNAME" == "GNN4ITk_ML_TRITON" ]]; then
-    WORK_DIR="gnn4itk_ml_triton_${ATH_DEV_NAME}_${TRITON_DEV_NAME}"
+    WORK_DIR="gnn4itk_ml_triton_${WORK_DIR_POSTFIX}"
     mkdir -p "$WORK_DIR"
     cd "$WORK_DIR" || { echo "Failed to create or change directory to $WORK_DIR"; exit 1; }
     Reco_tf.py \
@@ -191,7 +193,7 @@ elif [[ "$CHAINNAME" == "GNN4ITk_ML_TRITON" ]]; then
         --perfmon 'fullmonmt' \
         --maxEvents ${MAX_EVENTS}
 elif [[ "$CHAINNAME" == "GNN4ITk_MM_TRITON" ]]; then
-    WORK_DIR="gnn4itk_mm_triton_${ATH_DEV_NAME}_${TRITON_DEV_NAME}"
+    WORK_DIR="gnn4itk_mm_triton_${WORK_DIR_POSTFIX}"
     mkdir -p "$WORK_DIR"
     cd "$WORK_DIR" || { echo "Failed to create or change directory to $WORK_DIR"; exit 1; }
     TRITON_FEATURENAMES="x,y,z,module_id,r,phi,eta,cluster_r_1,cluster_phi_1,cluster_z_1,cluster_r_2,cluster_phi_2,cluster_z_2,cluster_eta_2"
@@ -213,7 +215,7 @@ elif [[ "$CHAINNAME" == "GNN4ITk_MM_TRITON" ]]; then
         --maxEvents ${MAX_EVENTS}
 elif [[ "$CHAINNAME" == "GNN4ITk_ML_TRITON-NoEndcapOLSP" ]]; then
     # should be the same as GNN4ITk_ML_TRITON, but with no endcap overlap SPs for Strip subdetector.
-    WORK_DIR="gnn4itk_ml_triton-noendcapolsp_${ATH_DEV_NAME}_${TRITON_DEV_NAME}"
+    WORK_DIR="gnn4itk_ml_triton-noendcapolsp_${WORK_DIR_POSTFIX}"
     mkdir -p "$WORK_DIR"
     cd "$WORK_DIR" || { echo "Failed to create or change directory to $WORK_DIR"; exit 1; }
     Reco_tf.py \
@@ -233,7 +235,7 @@ elif [[ "$CHAINNAME" == "GNN4ITk_ML_TRITON-NoEndcapOLSP" ]]; then
         --perfmon 'fullmonmt' \
         --maxEvents ${MAX_EVENTS}
 elif [[ "$CHAINNAME" == "GNN4ITk_ML_TRITON-DefaultCuts" ]]; then
-    WORK_DIR="gnn4itk_ml_triton-defaultcuts_${ATH_DEV_NAME}_${TRITON_DEV_NAME}"
+    WORK_DIR="gnn4itk_ml_triton-defaultcuts_${WORK_DIR_POSTFIX}"
     mkdir -p "$WORK_DIR"
     cd "$WORK_DIR" || { echo "Failed to create or change directory to $WORK_DIR"; exit 1; }
     Reco_tf.py \
@@ -253,7 +255,7 @@ elif [[ "$CHAINNAME" == "GNN4ITk_ML_TRITON-DefaultCuts" ]]; then
         --perfmon 'fullmonmt' \
         --maxEvents ${MAX_EVENTS}
 elif [[ "$CHAINNAME" == "CKF_LEGACY_LRT" ]]; then
-    WORK_DIR="ckf_legacy_lrt_${ATH_DEV_NAME}_${TRITON_DEV_NAME}"
+    WORK_DIR="ckf_legacy_lrt_${WORK_DIR_POSTFIX}"
     mkdir -p "$WORK_DIR"
     cd "$WORK_DIR" || { echo "Failed to create or change directory to $WORK_DIR"; exit 1; }
     Reco_tf.py --CA 'all:True' \
@@ -269,7 +271,7 @@ elif [[ "$CHAINNAME" == "CKF_LEGACY_LRT" ]]; then
         --perfmon 'fullmonmt' \
         --maxEvents ${MAX_EVENTS}
 elif [[ "$CHAINNAME" == "GNN4Pixel_ML_TRITON" ]]; then
-    WORK_DIR="gnn4pixel_ml_triton_${ATH_DEV_NAME}_${TRITON_DEV_NAME}"
+    WORK_DIR="gnn4pixel_ml_triton_${WORK_DIR_POSTFIX}"
     mkdir -p "$WORK_DIR"
     cd "$WORK_DIR" || { echo "Failed to create or change directory to $WORK_DIR"; exit 1; }
     FEATURE_NAMES="r,phi,z,cluster_x_1,cluster_y_1,cluster_z_1,charge_count_1,count_1,loc_eta_1,loc_phi_1,glob_eta_1,glob_phi_1,localDir0_1,localDir1_1,localDir2_1"
