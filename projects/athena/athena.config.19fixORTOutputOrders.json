@@ -1,0 +1,11 @@
+{
+    "worktree_base": "/pscratch/sd/x/xju/athena_dev/dev_worktree/athena",
+    "source_dir": "/pscratch/sd/x/xju/athena_dev/dev_worktree/20251014_fixORTOutputOrders",
+    "athena_repository": "ssh://git@gitlab.cern.ch:7999/xju/athena.git",
+    "athena_tag": "fixORTOutputOrders",
+    "release": "Athena,main,latest,here",
+    "packages": [
+        "Control/AthOnnx/AthOnnxComps",
+        "Calorimeter/CaloClusterCorrection"
+    ]
+}
