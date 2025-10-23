@@ -51,16 +51,22 @@ mkdir -p "${SOURCE_DIR}"
 
 cd ${SOURCE_DIR} || { echo "Failed to change directory to $SOURCE_DIR"; exit 1; }
 
-REPO_NAME=$(basename "$REPO_URL" .git)
+# check if the SOURCE_DIR is a git repository.
+# by checking if .git exists.
+if [[ ! -e "$SOURCE_DIR/.git" ]]; then
+  echo "Error: $SOURCE_DIR is not a git repository."
 
-if [[ ! -d "$REPO_NAME" ]]; then
-  echo "Cloning repository $REPO_URL into $SOURCE_DIR"
-  git clone "$REPO_URL"
-fi
-cd "$REPO_NAME" || { echo "Failed to change directory to $REPO_NAME"; exit 1; }
+  REPO_NAME=$(basename "$REPO_URL" .git)
 
-if [[ -n "$REPO_TAG" ]]; then
+  if [[ ! -d "$REPO_NAME" ]]; then
+    echo "Cloning repository $REPO_URL into $SOURCE_DIR"
+    git clone "$REPO_URL"
+  fi
+  cd "$REPO_NAME" || { echo "Failed to change directory to $REPO_NAME"; exit 1; }
+
+  if [[ -n "$REPO_TAG" ]]; then
   git checkout "$REPO_TAG"
+  fi
 fi
 
 CPU_COUNTS=$(expr $NUM_GPUS \* 10)
