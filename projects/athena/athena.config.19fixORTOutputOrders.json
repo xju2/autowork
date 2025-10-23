@@ -6,6 +6,23 @@
     "release": "Athena,main,latest,here",
     "packages": [
         "Control/AthOnnx/AthOnnxComps",
-        "Calorimeter/CaloClusterCorrection"
+        "Calorimeter/CaloClusterCorrection",
+        "Calorimeter/CaloRec",
+        "PhysicsAnalysis/DerivationFramework/DerivationFrameworkFlavourTag"
+    ],
+    "exe_cmd": [
+        "mkdir run_derivation ; cd run_derivation",
+        [
+            "INFILE='/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/CampaignInputs/mc23/AOD/mc23_13p6TeV.601229.PhPy8EG_A14_ttbar_hdamp258p75_SingleLep.recon.AOD.e8514_s4162_r14622/1000events.AOD.33799166._000073.pool.root.1'",
+            "OUTFILE='test.DAOD.pool.root'"
+        ],
+        [
+            "Derivation_tf.py",
+            "--CA",
+            "--formats FTAG1",
+            "--maxEvents 20",
+            "--inputAODFile \"${INFILE}\"",
+            "--outputDAODFile \"${OUTFILE}\""
+        ]
     ]
 }
