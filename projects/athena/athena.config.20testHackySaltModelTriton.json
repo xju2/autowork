@@ -1,0 +1,26 @@
+{
+    "worktree_base": "/pscratch/sd/x/xju/athena_dev/dev_worktree/athena",
+    "source_dir": "/pscratch/sd/x/xju/athena_dev/dev_worktree/main-saltmodeltriton/",
+    "athena_repository": "ssh://git@gitlab.cern.ch:7999/xju/athena.git",
+    "athena_tag": "main-saltmodeltriton",
+    "release": "Athena,main,latest,here",
+    "packages": [
+        "PhysicsAnalysis/JetTagging/FlavorTagInference"
+    ],
+    "exe_cmd": [
+        "mkdir run_derivation ; cd run_derivation",
+        [
+            "INFILE='/cvmfs/atlas-nightlies.cern.ch/repo/data/data-art/CampaignInputs/mc20/AOD/mc20_13TeV.410470.PhPy8EG_A14_ttbar_hdamp258p75_nonallhad.recon.AOD.e6337_s3681_r13145/1000events.AOD.27121237._002005.pool.root.1'",
+            "OUTFILE='test.DAOD_ORT.pool.root'"
+        ],
+        [
+            "Derivation_tf.py",
+            "--formats PHYS",
+            "--outputDAODFile=\"${OUTFILE}\"",
+            "--imf False",
+            "--maxEvents 4",
+            "--preExec 'flags.Output.TreeAutoFlush={\"DAOD_PHYS\": 80}'",
+            "--inputAODFile \"${INFILE}\""
+        ]
+    ]
+}

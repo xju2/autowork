@@ -1,0 +1,6 @@
+{
+    "source_dir": "/pscratch/sd/x/xju/ITk/ForFinalPaper/taas-dev/daod-models",
+    "repo_url": "git@github.com:xju2/tracking-as-a-service.git",
+    "repo_tag": "daod-models",
+    "num_gpus": 1
+}
