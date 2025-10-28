@@ -1,0 +1,18 @@
+{
+    "worktree_base": "/pscratch/sd/x/xju/athena_dev/dev_worktree/athena",
+    "source_dir": "/pscratch/sd/x/xju/athena_dev/dev_worktree/20251028_fixORTTestingError",
+    "athena_repository": "ssh://git@gitlab.cern.ch:7999/xju/athena.git",
+    "athena_tag": "fixORTTestingError",
+    "release": "Athena,main,latest,here",
+    "packages": [
+        "Control/AthenaExamples/AthExOnnxRuntime"
+    ],
+    "exe_cmd": [
+        "cd sparse_build",
+        [
+         "ctest",
+         "-R",
+         "AthInferORTTest"
+        ]
+    ]
+}

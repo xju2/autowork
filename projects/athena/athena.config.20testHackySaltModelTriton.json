@@ -16,11 +16,9 @@
         [
             "Derivation_tf.py",
             "--formats PHYS",
-            "--outputDAODFile=\"${OUTFILE}\"",
-            "--imf False",
-            "--maxEvents 4",
-            "--preExec 'flags.Output.TreeAutoFlush={\"DAOD_PHYS\": 80}'",
-            "--inputAODFile \"${INFILE}\""
+            "--maxEvents 6",
+            "--inputAODFile \"${INFILE}\"",
+            "--outputDAODFile=\"${OUTFILE}\""
         ]
     ]
 }
