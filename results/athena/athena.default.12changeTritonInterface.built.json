@@ -1,0 +1,5 @@
+{
+  "source_dir": "/pscratch/sd/x/xju/athena_dev/20250725_debugTriton",
+  "release": "Athena,main,latest,here",
+  "local_setup": "sparse_build/x86_64-el9-gcc*-opt/setup.sh"
+}
