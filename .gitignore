@@ -180,3 +180,4 @@ cython_debug/
 run_vroot.log
 *.log
 logs/
+results/
