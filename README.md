@@ -3,7 +3,7 @@ HEP Workflow based on Snakemake
 
 ## Installation
 Install Poetry first:
-<script src="https://gist.github.com/xju2/b4fd9d7db62a7a5345b190aae75d231e.js"></script>
+https://gist.github.com/xju2/b4fd9d7db62a7a5345b190aae75d231e
 
 Then install autowork:
 ```bash
