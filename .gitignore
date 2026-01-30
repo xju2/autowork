@@ -178,3 +178,5 @@ cython_debug/
 *workarea*
 *asetup.save
 run_vroot.log
+*.log
+logs/
