@@ -1,0 +1,14 @@
+{
+    "worktree_base": "/pscratch/sd/x/xju/atlas_software/athena/code_main",
+    "source_dir": "/pscratch/sd/x/xju/atlas_software/athena/code_dev/testTritonServer",
+    "athena_repository": "ssh://git@gitlab.cern.ch:7999/xju/athena.git",
+    "external_repository": "ssh://git@gitlab.cern.ch:7999/xju/atlasexternals.git",
+    "athena_tag": "testTritonServer",
+    "external_tag": "testTritonServer",
+    "athena_asetup": "Athena,main,latest,here",
+    "packages": [
+        "Control/AthTriton/AthTritonComps"
+    ],
+    "extra_cmake_args": "-DATLAS_ONNXRUNTIME_USE_CUDA=True -DCUDNN_INCLUDE_DIR=/usr/include -G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS=TRUE",
+    "external_asetup": "none,gcc15,cmakesetup"
+}

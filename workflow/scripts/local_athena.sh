@@ -65,7 +65,7 @@ parse_json() {
 
     # Extract packages from the JSON file
     SOURCE_DIR=$(jq -r '.source_dir' "$json_file")
-    RELEASE=$(jq -r '.release' "$json_file")
+    RELEASE=$(jq -r '.release // .athena_asetup' "$json_file")
     PACKAGES=$(jq -r '.packages[]' "$json_file")
     EXE_CMDS=$(jq -r '
         .exe_cmd[] |
@@ -84,36 +84,38 @@ parse_json() {
     WORKTREE_BASE_DIR=$(jq -r '.worktree_base // empty' "$json_file")
 
     # atlasexternal related variables
-    EXTERNAL_URL=$(jq -r '.external_url' "$json_file")
-    EXTERNAL_REF=$(jq -r '.external_ref' "$json_file")
+    EXTERNAL_DIR=$(jq -r '.external_dir // empty' "$json_file")
+    EXTERNAL_URL=$(jq -r '.external_repository // .external_url // empty' "$json_file")
+    EXTERNAL_REF=$(jq -r '.external_tag // .external_ref // empty' "$json_file")
     EXCMAKEARGS=$(jq -r '.extra_cmake_args' "$json_file")
     EXTERNAL_ASETUP=$(jq -r '.external_asetup' "$json_file")
 }
 
-# Function to set up worktree-based athena development
-setup_athena_worktree() {
+# Function to set up worktree-based development
+setup_git_worktree() {
 
     local repo="$1"
     local tag="$2"
     local worktree_base="$3"
-    local src_dir="$4"
+    local worktree_dir="$4"
+    local upstream_repo="$5"
 
     if ! command -v git &>/dev/null; then
         echo "Error: git is required but not installed." >&2
         exit 1
     fi
 
-    if [[ -z "$repo" || -z "$tag" || -z "$worktree_base" || -z "$src_dir" ]]; then
-        echo "Error: setup_athena_worktree missing arguments." >&2
-        echo "Usage: setup_athena_worktree <repo> <tag> <worktree_base> <src_dir>" >&2
+    if [[ -z "$repo" || -z "$tag" || -z "$worktree_base" || -z "$worktree_dir" || -z "$upstream_repo" ]]; then
+        echo "Error: setup_git_worktree missing arguments." >&2
+        echo "Usage: setup_git_worktree <repo> <tag> <worktree_base> <worktree_dir> <upstream_repo>" >&2
         exit 1
     fi
-    local worktree_dir="$src_dir/athena"
 
     # Initialize main repository if it doesn't exist
+    mkdir -p "$(dirname "$worktree_base")" "$(dirname "$worktree_dir")"
     if [[ ! -d "$worktree_base" ]]; then
-        echo "Creating main Athena repository at $worktree_base"
-        git clone ssh://git@gitlab.cern.ch:7999/atlas/athena.git "$worktree_base"
+        echo "Creating main repository at $worktree_base"
+        git clone "$upstream_repo" "$worktree_base"
     else
         echo "Main Athena repository already exists at $worktree_base"
     fi
@@ -237,7 +239,8 @@ if [[ "$MODE" == "build_athena" ]]; then
     # Set up Athena repository - use worktree if configured, otherwise traditional approach
     if [[ "$USE_WORKTREE" == "true" ]]; then
         echo "Setting up Athena using worktree approach"
-        setup_athena_worktree "$ATHENA_URL" "$ATHENA_REF" "$WORKTREE_BASE_DIR" "$SOURCE_DIR"
+        setup_git_worktree "$ATHENA_URL" "$ATHENA_REF" "$WORKTREE_BASE_DIR"/athena "$SOURCE_DIR/athena" \
+            "ssh://git@gitlab.cern.ch:7999/atlas/athena.git"
     else
         echo "Setting up Athena using traditional approach"
         # Fetch Athena repository only at build_athena stage
@@ -321,8 +324,23 @@ elif [[ "$MODE" == "build_external" ]]; then
         echo "Error: Missing required fields in the JSON file."
         exit 1
     fi
+    if [[ "$USE_WORKTREE" == "true" ]]; then
+        setup_git_worktree "$ATHENA_URL" "$ATHENA_REF" "$WORKTREE_BASE_DIR"/athena "$SOURCE_DIR/athena" \
+            "ssh://git@gitlab.cern.ch:7999/atlas/athena.git"
+
+        EXTERNAL_WORKTREE_BASE="$(dirname "$WORKTREE_BASE_DIR")/atlasexternals"
+        setup_git_worktree "$EXTERNAL_URL" "$EXTERNAL_REF" "$EXTERNAL_WORKTREE_BASE" "$SOURCE_DIR"/atlasexternals \
+            "https://gitlab.cern.ch/atlas/atlasexternals.git"
+
+        mkdir -p build/src
+        if [[ -e build/src/AthenaExternals && ! -L build/src/AthenaExternals ]]; then
+            echo "Error: build/src/AthenaExternals exists and is not a symlink."
+            exit 1
+        fi
+        ln -sfn "$SOURCE_DIR"/atlasexternals build/src/AthenaExternals
+        EXTERNAL_URL=current
     # check if athena directory is there.
-    if [[ ! -d "athena" ]]; then
+    elif [[ ! -d "athena" ]]; then
         echo "Error: athena directory does not exist."
         echo "Checkout the latest ATLAS athena code from git."
         echo "and create a new branch."
